@@ -20,5 +20,8 @@ export default {
     require('@tailwindcss/typography'),
     require('daisyui')
   ],
+  purgeCSS: {
+    whitelistPatterns: [/svg.*/, /fa.*/]
+  },
 }
 
