@@ -10,7 +10,10 @@
       </ul>
     </div>
     <div class="navbar-end">
-      <a class="btn">Get in touch</a>
+      <a class="btn">
+        Get in touch
+        <font-awesome-icon icon="fa-solid fa-envelope-open" />
+      </a>
     </div>
   </div>
 </template>
