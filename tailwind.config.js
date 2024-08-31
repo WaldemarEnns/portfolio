@@ -8,10 +8,16 @@ export default {
     "./app.vue",
     "./error.vue",
   ],
+  daisyui: {
+    themes: [
+      'forest'
+    ]
+  },
   theme: {
     extend: {},
   },
   plugins: [
+    require('@tailwindcss/typography'),
     require('daisyui')
   ],
 }
