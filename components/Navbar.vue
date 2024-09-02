@@ -1,5 +1,13 @@
+<script setup lang="ts">
+function scrollToContact () {
+  document.querySelector('#contact')!.scrollIntoView({
+    behavior: 'smooth'
+  })
+}
+</script>
+
 <template>
-  <div class="navbar bg-base-100">
+  <div class="navbar bg-base-100 sticky top-0 z-10">
     <div class="navbar-start">
       <a class="btn btn-ghost text-xl">waldemar enns</a>
     </div>
@@ -10,7 +18,7 @@
       </ul>
     </div>
     <div class="navbar-end">
-      <a class="btn">
+      <a class="btn" @click="scrollToContact">
         Get in touch
         <font-awesome-icon icon="fa-solid fa-envelope-open" />
       </a>
