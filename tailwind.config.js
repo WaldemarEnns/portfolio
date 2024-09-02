@@ -14,6 +14,9 @@ export default {
     ]
   },
   theme: {
+    container: {
+      padding: '2rem',
+    },
     extend: {},
   },
   plugins: [
