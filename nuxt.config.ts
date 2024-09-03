@@ -16,7 +16,4 @@ export default defineNuxtConfig({
     }
   },
   pages: true,
-  plugins: [
-    { src: '~/plugins/matomo.js', mode: 'client' },
-  ]
 })

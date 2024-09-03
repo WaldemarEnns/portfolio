@@ -5,5 +5,10 @@ export default defineNuxtPlugin((nuxtApp) => {
     host: 'https://waldemarenns.matomo.cloud',
     siteId: 1,
     disableCookies: true,
+    router: nuxtApp.$router,
+    enableLinkTracking: true,
+    requireConsent: false,
+    trackInitialView: true,
+    requireCookieConsent: false,
   })
 })
