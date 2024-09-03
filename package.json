@@ -15,7 +15,8 @@
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@fortawesome/vue-fontawesome": "^3.0.8",
     "nuxt": "^3.13.0",
-    "vue": "latest"
+    "vue": "latest",
+    "vue-matomo": "^4.2.0"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.15",

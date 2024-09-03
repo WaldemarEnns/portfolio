@@ -15,5 +15,8 @@ export default defineNuxtConfig({
       autoprefixer: {},
     }
   },
-  pages: true
+  pages: true,
+  plugins: [
+    { src: '~/plugins/matomo.js', mode: 'client' },
+  ]
 })
