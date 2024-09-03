@@ -3,7 +3,7 @@
     <nav>
       <h6 class="footer-title">Legal</h6>
       <NuxtLink to="/imprint" class="link link-hover">Imprint</NuxtLink>
-      <a class="link link-hover">Privacy policy</a>
+      <NuxtLink to="/privacy-policy" class="link link-hover">Privacy policy</NuxtLink>
       <a class="link link-hover">Cookie policy</a>
     </nav>
   </footer>
