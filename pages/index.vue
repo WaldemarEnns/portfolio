@@ -89,7 +89,7 @@ function scrollToAbout () {
     </article>
   </section>
 
-  <section class="container m-auto py-12">
+  <section id="services" class="container m-auto py-12">
     <article class="prose mb-4">
       <h2>Services</h2>
     </article>

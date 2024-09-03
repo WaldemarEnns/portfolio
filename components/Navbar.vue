@@ -1,6 +1,21 @@
 <script setup lang="ts">
+const { currentRoute } = useRouter()
+const isHome = computed(() => currentRoute.value.path === '/')
+
 function scrollToContact () {
   document.querySelector('#contact')!.scrollIntoView({
+    behavior: 'smooth'
+  })
+}
+
+function scrollToAbout () {
+  document.querySelector('#about')!.scrollIntoView({
+    behavior: 'smooth'
+  })
+}
+
+function scrollToServices () {
+  document.querySelector('#services')!.scrollIntoView({
     behavior: 'smooth'
   })
 }
@@ -11,10 +26,10 @@ function scrollToContact () {
     <div class="navbar-start">
       <NuxtLink to="/" class="btn btn-ghost text-xl">waldemar enns</NuxtLink>
     </div>
-    <div class="navbar-center hidden lg:flex">
+    <div v-if="isHome" class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1">
-        <li><a>About me</a></li>
-        <li><a>Service</a></li>
+        <li><a @click="scrollToAbout">About me</a></li>
+        <li><a @click="scrollToServices">Service</a></li>
       </ul>
     </div>
     <div class="navbar-end">
