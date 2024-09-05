@@ -22,6 +22,7 @@ export default defineNuxtConfig({
   pages: true,
   modules: ['@nuxtjs/i18n'],
   i18n: {
+    baseUrl: 'https://waldemarenns.de',
     locales: [{
       code: 'en',
       file: 'en-US.json'
