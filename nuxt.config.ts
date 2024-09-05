@@ -25,13 +25,16 @@ export default defineNuxtConfig({
     baseUrl: 'https://waldemarenns.de',
     locales: [{
       code: 'en',
-      file: 'en-US.json'
+      file: 'en-US.json',
+      iso: 'en-US',
     }, {
       code: 'de',
-      file: 'de-DE.json'
+      file: 'de-DE.json',
+      iso: 'de-DE',
     }, {
       code: 'es',
-      file: 'es-ES.json'
+      file: 'es-ES.json',
+      iso: 'es-ES',
     }],
     lazy: true,
     langDir: 'lang',
