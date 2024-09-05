@@ -1,0 +1,69 @@
+{
+  "home": {
+    "nice_to_meet_you": "bienvenido, encantado 👋🏼",
+    "welcome": "¡Hola! Gracias por visitar mi página y conocerme\n¡Déjame presentarte mi trabajo y mi persona 🚀",
+    "tell_me_more": "Cuéntame más",
+    "about_me": {
+      "about_me": "Sobre mí",
+      "who_am_i": "¿Quién soy?",
+      "who_i_am": "Soy un desarrollador Fullstack experimentado y líder de equipo, enfocado en soluciones con VueJS, TypeScript y Laravel. Durante muchos años he apoyado a empresas en la construcción de soluciones robustas y escalables.",
+      "experience": "Experiencia",
+      "my_experience": "En los últimos 7+ años he contribuido a muchos proyectos diferentes, incluidas plataformas para empresas como https://monkeybox.de, https://impax-tours.com y https://aedifion.com. Mi objetivo es proporcionar código limpio, procesos estructurados y mantener el valor.",
+      "values": "Valores",
+      "values_text": "La fiabilidad, la precisión y el aprendizaje continuo son el corazón de mi trabajo. Valoro la comunicación abierta y la estrecha colaboración con mis clientes para lograr los mejores resultados posibles."
+    },
+    "services": {
+      "services": "Servicios",
+      "frontend_title": "Desarrollo frontend con Vue & TypeScript",
+      "fronten_text_1": "Implementación de aplicaciones web y sitios web modernos y eficientes.",
+      "frontend_text_2": "Mi profunda experiencia en Vue y su ecosistema garantiza que mis soluciones estén actualizadas con la tecnología más avanzada y las mejores prácticas.",
+      "saas": "SaaS y más con Laravel",
+      "saas_text_1": "Desde la configuración y el desarrollo hasta el lanzamiento y la implementación. Soluciones escalables y estables para las necesidades de su negocio.",
+      "saas_text_2": "Soluciones personalizadas para sistemas de reservas, gestión de inventario, pasarelas de pago y desarrollo de API.",
+      "consultancy": "Consultoría",
+      "consultancy_text_1": "Ofrezco asesoramiento sólido y planificación estratégica para sus proyectos de desarrollo web.",
+      "consultancy_text_2": "Con mi experiencia en desarrollo frontend y backend y en gestión de equipos, puedo ayudarlo a tomar las decisiones tecnológicas correctas e implementar sus proyectos de manera eficiente."
+    }
+  },
+  "badges": {
+    "laravel": "Laravel",
+    "vue": "VueJS",
+    "typescript": "TypeScript",
+    "nuxt": "NuxtJS",
+    "nestjs": "NestJS",
+    "python": "Python"
+  },
+  "cta": {
+    "lets_talk": "Hablemos",
+    "start_your_business_idea": "Comienza tu idea de negocio",
+    "get_consultancy": "Obtener consultoría",
+    "connect": "Conectar",
+    "get_in_touch": "contactar"
+  },
+  "dividers": {
+    "interested": "¿Interesado?"
+  },
+  "contact": {
+    "title": "Ponte en contacto",
+    "text": "Construyamos algo genial, escríbeme un mensaje:"
+  },
+  "form": {
+    "labels": {
+      "email": "Email"
+    },
+    "placeholders": {
+      "email": "Email",
+      "contact_message": "Hablemos sobre ..."
+    }
+  },
+  "footer": {
+    "imprint": "Aviso legal",
+    "privacy": "Privacidad"
+  },
+  "navbar": {
+    "links": {
+      "about_me": "Sobre mí",
+      "services": "Servicios"
+    }
+  }
+}

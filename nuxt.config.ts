@@ -21,4 +21,19 @@ export default defineNuxtConfig({
 
   pages: true,
   modules: ['@nuxtjs/i18n'],
+  i18n: {
+    locales: [{
+      code: 'en',
+      file: 'en-US.json'
+    }, {
+      code: 'de',
+      file: 'de-DE.json'
+    }, {
+      code: 'es',
+      file: 'es-ES.json'
+    }],
+    lazy: true,
+    langDir: 'lang',
+    defaultLocale: 'de',
+  }
 })

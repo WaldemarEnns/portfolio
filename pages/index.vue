@@ -1,4 +1,8 @@
 <script setup lang="ts">
+const { setLocale } = useI18n()
+
+setLocale('de')
+
 definePageMeta({
   title: 'Waldemar Enns',
   name: 'home'
@@ -26,16 +30,15 @@ function scrollToAbout () {
           src="/assets/images/me-nice.webp"
           alt="A picture of me in a suit."
         />
-        <h1 class="text-5xl font-bold mb-0">it's a pleasure to meet you</h1>
+        <h1 class="text-5xl font-bold mb-0">{{ $t('home.nice_to_meet_you') }}</h1>
         <p class="py-6">
-          Hi! Thank you for visiting my page and getting to know me!
-          Let me introduce myself and my work 🚀
+          {{  $t('home.welcome') }}
         </p>
         <button
           class="btn btn-primary"
           @click="scrollToAbout"
         >
-          tell me more
+          {{ $t('home.tell_me_more') }}
           <font-awesome-icon icon="fa-solid fa-arrow-down"></font-awesome-icon>
         </button>
       </div>
@@ -44,54 +47,58 @@ function scrollToAbout () {
 
   <section id="about" class="container m-auto py-12">
     <article class="prose">
-      <h2>About me</h2>
+      <h2>{{ $t('home.about_me.about_me') }}</h2>
     </article>
     <article class="prose m-auto">
       <h3>
         <font-awesome-icon icon="fa-solid fa-user-astronaut"></font-awesome-icon>
-        Who am I?
+       {{ $t('home.about_me.who_am_i') }}
       </h3>
-      <p>I am an experienced fullstack-developer and team-lead, focussed on solutions with VueJS, TypeScript and Laravel. For many years I support companies, building robust and scalable solutions.</p>
+      <p>{{ $t('home.about_me.who_i_am')}}</p>
 
       <h3>
         <font-awesome-icon icon="fa-solid fa-wand-magic-sparkles"></font-awesome-icon>
-        Experience
+        {{  $t('home.about_me.experience') }}
       </h3>
-      <p>In the past 7+ years I contributed across many different projects, including platforms for companies like https://monkeybox.de, https://impax-tours.com and https://aedifion.com. It's my goal to provide clean code, structured processes and onholding value.</p>
+      <p>{{ $t('home.about_me.my_experience') }}</p>
       <div class="badge badge-neutral mr-2">
         <font-awesome-icon icon="fa-brands fa-laravel" class="mr-2"></font-awesome-icon>
-        Laravel
+        {{ $t('badges.laravel') }}
       </div>
 
       <div class="badge badge-neutral mr-2">
         <font-awesome-icon icon="fa-brands fa-vuejs" class="mr-2"></font-awesome-icon>
-        Vue
+        {{ $t('badges.vue') }}
       </div>
 
       <div class="badge badge-neutral mr-2">
-        TypeScript
+        {{ $t('badges.nuxt') }}
       </div>
 
       <div class="badge badge-neutral mr-2">
-        NestJS
+        {{ $t('badges.typescript') }}
       </div>
 
       <div class="badge badge-neutral mr-2">
-        Python
+        {{ $t('badges.nestjs') }}
+      </div>
+
+      <div class="badge badge-neutral mr-2">
+        {{ $t('badges.python') }}
       </div>
 
       <h3>
         <font-awesome-icon icon="fa-solid fa-hand-spock"></font-awesome-icon>
-        Values
+        {{  $t('home.about_me.values') }}
       </h3>
-      <p>Reliability, precision and continuous learning are at the heart of my work. I value open communication and close collaboration with my clients in order to achieve the best possible results.</p>
+      <p>{{ $t('home.about_me.values_text') }}</p>
 
     </article>
   </section>
 
   <section id="services" class="container m-auto py-12">
     <article class="prose mb-4">
-      <h2>Services</h2>
+      <h2>{{ $t('home.services.services')}}</h2>
     </article>
 
     <div class="flex flex-row flex-wrap justify-between items-start">
@@ -99,17 +106,17 @@ function scrollToAbout () {
         <div class="card-body">
           <h2 class="card-title">
             <font-awesome-icon class="mr-2" icon="fa-solid fa-palette"></font-awesome-icon>
-            Frontend development with Vue & TypeScript
+            {{  $t('home.services.frontend_title') }}
           </h2>
-          <p>Implementation of modern and efficient web-applications and websites.</p>
-          <p>My deep expertise of Vue and it's ecosystem ensures that my solutions are up-to-date with state of the art technology and best practises.</p>
+          <p>{{ $t('home.services.frontend_text_1') }}</p>
+          <p>{{ $t('home.services.frontend_text_2') }}</p>
           <div class="card-actions justify-end mt-4">
-            <button class="btn btn-secondary btn-outline w-full sm:w-full md:w-full lg:w-fit xl:w-fit 2xl:w-fit" @click="scrollToContact">Let's talk</button>
+            <button class="btn btn-secondary btn-outline w-full sm:w-full md:w-full lg:w-fit xl:w-fit 2xl:w-fit" @click="scrollToContact">{{ $t('cta.lets_talk') }}</button>
           </div>
           <div class="mt-4">
             <div class="badge badge-neutral">
               <font-awesome-icon class="mr-2" icon="fa-brands fa-vuejs"></font-awesome-icon>
-              Vue
+              {{ $t('badges.vue')}}
             </div>
           </div>
         </div>
@@ -119,17 +126,17 @@ function scrollToAbout () {
         <div class="card-body">
           <h2 class="card-title">
             <font-awesome-icon class="mr-2" icon="fa-solid fa-sitemap"></font-awesome-icon>
-            SaaS and more with Laravel
+            {{ $t('home.services.saas') }}
           </h2>
-          <p>From setup & development up to release and rollout. Scalable and stable solutions for your business needs.</p>
-          <p>Custom solutions for booking-systems, inventory management, payment gateways and API development.</p>
+          <p>{{ $t('home.services.saas_text_1') }}</p>
+          <p>{{ $t('home.services.saas_text_2') }}</p>
           <div class="card-actions justify-end mt-4">
-            <button class="btn btn-secondary btn-outline w-full sm:w-full md:w-full lg:w-fit xl:w-fit 2xl:w-fit" @click="scrollToContact">Start your business idea</button>
+            <button class="btn btn-secondary btn-outline w-full sm:w-full md:w-full lg:w-fit xl:w-fit 2xl:w-fit" @click="scrollToContact">{{ $t('cta.start_your_business_idea') }}</button>
           </div>
           <div class="mt-4">
             <div class="badge badge-neutral">
               <font-awesome-icon class="mr-2" icon="fa-brands fa-laravel"></font-awesome-icon>
-              Laravel
+              {{ $t('badges.laravel') }}
             </div>
           </div>
         </div>
@@ -139,21 +146,21 @@ function scrollToAbout () {
         <div class="card-body">
           <h2 class="card-title">
             <font-awesome-icon class="mr-2" icon="fa-solid fa-user-check"></font-awesome-icon>
-            Consultancy
+            {{ $t('home.services.consultancy') }}
           </h2>
           <p>
-            I offer sound advice and strategic planning for your web development projects.
+            {{ $t('home.services.consultancy_text_1') }}
           </p>
           <p>
-            With my experience in front-end and back-end development and team management, I can help you make the right technological decisions and implement your projects efficiently.
+            {{ $t('home.services.consultancy_text_2') }}
           </p>
           <div class="card-actions justify-end mt-4">
-            <button class="btn btn-secondary btn-outline w-full sm:w-full md:w-full lg:w-fit xl:w-fit 2xl:w-fit" @click="scrollToContact">Get consultancy</button>
+            <button class="btn btn-secondary btn-outline w-full sm:w-full md:w-full lg:w-fit xl:w-fit 2xl:w-fit" @click="scrollToContact">{{ $t('cta.get_consultancy') }}</button>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <div class="divider">Interested?</div>
+  <div class="divider">{{ $t('dividers.interested') }}</div>
 </template>

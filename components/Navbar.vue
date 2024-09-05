@@ -28,13 +28,13 @@ function scrollToServices () {
     </div>
     <div v-if="isHome" class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1">
-        <li><a @click="scrollToAbout">About me</a></li>
-        <li><a @click="scrollToServices">Service</a></li>
+        <li><a @click="scrollToAbout">{{ $t('navbar.links.about_me') }}</a></li>
+        <li><a @click="scrollToServices">{{ $t('navbar.links.services') }}</a></li>
       </ul>
     </div>
     <div class="navbar-end">
       <a class="btn" @click="scrollToContact">
-        Get in touch
+        {{ $t('cta.get_in_touch') }}
         <font-awesome-icon icon="fa-solid fa-envelope-open"></font-awesome-icon>
       </a>
     </div>

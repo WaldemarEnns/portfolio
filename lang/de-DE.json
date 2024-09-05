@@ -1,0 +1,66 @@
+{
+  "home": {
+    "nice_to_meet_you": "waldemar lässt grüßen 👋🏼",
+    "welcome": "Hey! Danke für deinen Besuch\nLass mich dir meine Arbeit und meine Person zeigenzeigen 🚀",
+    "tell_me_more": "erzähl mir mehr",
+    "about_me": {
+      "about_me": "Über mich",
+      "who_am_i": "Wer bin ich?",
+      "who_i_am": "Ich bin ein erfahrener Fullstack-Entwickler und Teamleiter, der sich auf Lösungen mit VueJS, TypeScript und Laravel konzentriert. Seit vielen Jahren unterstütze ich Unternehmen beim Aufbau robuster und skalierbarer Lösungen.",
+      "experience": "Erfahrung",
+      "my_experience": "In den letzten 7+ Jahren habe ich zu vielen verschiedenen Projekten beigetragen, darunter Plattformen für Unternehmen wie https://monkeybox.de, https://impax-tours.com und https://aedifion.com. Mein Ziel ist es, sauberen Code, strukturierte Prozesse und Werterhalt zu bieten.",
+      "values": "Werte",
+      "values_text": "Zuverlässigkeit, Präzision und kontinuierliches Lernen stehen im Mittelpunkt meiner Arbeit. Ich schätze offene Kommunikation und enge Zusammenarbeit mit meinen Kunden, um die bestmöglichen Ergebnisse zu erzielen."
+    },
+    "services": {
+      "services": "Dienstleistungen",
+      "frontend_title": "Frontend-Entwicklung mit Vue & TypeScript",
+      "frontend_text_1": "Implementierung moderner und effizienter Webanwendungen und Websites.",
+      "frontend_text_2": "Meine umfassende Expertise in Vue und seinem Ökosystem gewährleistet, dass meine Lösungen auf dem neuesten Stand der Technik und den besten Praktiken sind.",
+      "saas": "SaaS mit Laravel",
+      "saas_text_1": "Von der Einrichtung & Entwicklung bis zur Veröffentlichung und Bereitstellung. Skalierbare und stabile Lösungen für Ihre Geschäftsanforderungen.",
+      "saas_text_2": "Maßgeschneiderte Lösungen für Buchungssysteme, Bestandsverwaltung, Zahlungsgateways und API-Entwicklung.",
+      "consultancy": "Beratung",
+      "consultancy_text_1": "Ich biete fundierte Beratung und strategische Planung für Ihre Webentwicklungsprojekte.",
+      "consultancy_text_2": "Mit meiner Erfahrung in der Frontend- und Backend-Entwicklung und im Teammanagement kann ich Ihnen helfen, die richtigen technologischen Entscheidungen zu treffen und Ihre Projekte effizient umzusetzen."
+    }
+  },
+  "badges": {
+    "laravel": "Laravel",
+    "vue": "VueJS",
+    "typescript": "TypeScript",
+    "nuxt": "NuxtJS",
+    "nestjs": "NestJS",
+    "python": "Python"
+  },
+  "cta": {
+    "lets_talk": "Lass uns reden",
+    "start_your_business_idea": "Beginne mit deiner Geschäftsidee",
+    "get_consultancy": "Beratung anfragen",
+    "connect": "Verbinden",
+    "get_in_touch": "Kontakt"
+  },
+  "dividers": {
+    "interested": "Interessiert?"
+  },
+  "contact": {
+    "title": "Kontakt aufnehmen",
+    "text": "Lass uns etwas Großartiges bauen, schreib mir eine Nachricht:"
+  },
+  "form": {
+    "placeholders": {
+      "email": "Email",
+      "contact_message": "Lass uns sprechen, über ..."
+    }
+  },
+  "footer": {
+    "imprint": "Impressum",
+    "privacy": "Datenschutz"
+  },
+  "navbar": {
+    "links": {
+      "about_me": "Über mich",
+      "services": "Dienstleistungen"
+    }
+  }
+}

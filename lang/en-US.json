@@ -1,0 +1,66 @@
+{
+  "home": {
+    "nice_to_meet_you": "it's a pleasure to meet you 👋🏼",
+    "welcome": "Hi! Thank you for visiting my page and getting to know me!\nLet me introduce myself and my work 🚀",
+    "tell_me_more": "tell me more",
+    "about_me": {
+      "about_me": "About me",
+      "who_am_i": "Who am I?",
+      "who_i_am": "I am an experienced fullstack-developer and team-lead, focussed on solutions with VueJS, TypeScript and Laravel. For many years I support companies, building robust and scalable solutions.",
+      "experience": "Experience",
+      "my_experience": "In the past 7+ years I contributed across many different projects, including platforms for companies like https://monkeybox.de, https://impax-tours.com and https://aedifion.com. It's my goal to provide clean code, structured processes and onholding value.",
+      "values": "Values",
+      "values_text": "Reliability, precision and continuous learning are at the heart of my work. I value open communication and close collaboration with my clients in order to achieve the best possible results."
+    },
+    "services": {
+      "services": "Services",
+      "frontend_title": "Frontend development with Vue & TypeScript",
+      "fronten_text_1": "Implementation of modern and efficient web-applications and websites.",
+      "frontend_text_2": "My deep expertise of Vue and it's ecosystem ensures that my solutions are up-to-date with state of the art technology and best practises.",
+      "saas": "SaaS and more with Laravel",
+      "saas_text_1": "From setup & development up to release and rollout. Scalable and stable solutions for your business needs.",
+      "saas_text_2": "Custom solutions for booking-systems, inventory management, payment gateways and API development.",
+      "consultancy": "Consultancy",
+      "consultancy_text_1": "I offer sound advice and strategic planning for your web development projects.",
+      "consultancy_text_2": "With my experience in front-end and back-end development and team management, I can help you make the right technological decisions and implement your projects efficiently."
+    }
+  },
+  "badges": {
+    "laravel": "Laravel",
+    "vue": "VueJS",
+    "typescript": "TypeScript",
+    "nuxt": "NuxtJS",
+    "nestjs": "NestJS",
+    "python": "Python"
+  },
+  "cta": {
+    "lets_talk": "Let's talk",
+    "start_your_business_idea": "Start your business idea",
+    "get_consultancy": "Get consultancy",
+    "connect": "Connect",
+    "get_in_touch": "get in touch"
+  },
+  "dividers": {
+    "interested": "Interested?"
+  },
+  "contact": {
+    "title": "Get in touch",
+    "text": "Let's build something great, drop me a message:"
+  },
+  "form": {
+    "placeholders": {
+      "email": "Email",
+      "contact_message": "Let's talk about ..."
+    }
+  },
+  "footer": {
+    "imprint": "Imprint",
+    "privacy": "Privacy"
+  },
+  "navbar": {
+    "links": {
+      "about_me":"About me",
+      "services":"Services"
+    }
+  }
+}
