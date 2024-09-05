@@ -1,8 +1,4 @@
 <script setup lang="ts">
-const { setLocale } = useI18n()
-
-setLocale('de')
-
 definePageMeta({
   title: 'Waldemar Enns',
   name: 'home'
