@@ -50,7 +50,8 @@
   "form": {
     "placeholders": {
       "email": "Email",
-      "contact_message": "Lass uns sprechen, über ..."
+      "contact_message": "Lass uns sprechen, über ...",
+      "name": "Dein Name"
     }
   },
   "footer": {

@@ -53,7 +53,8 @@
     },
     "placeholders": {
       "email": "Email",
-      "contact_message": "Hablemos sobre ..."
+      "contact_message": "Hablemos sobre ...",
+      "name": "Tu nombre"
     }
   },
   "footer": {
