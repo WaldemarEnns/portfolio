@@ -22,10 +22,17 @@ const [name, nameAttrs] = defineField('senderName')
 const [message, messageAttrs] = defineField('message')
 const [privacyPolicyAgreed, privacyPolicyAgreedAttrs] = defineField('privacyPolicyAgreed')
 
-const onSubmit = handleSubmit(values => {
-  // TODO: Implement sending the form data
-})
+const onSubmit = handleSubmit(async values => {
+  console.log(values)
 
+  const response = await fetch('http://127.0.0.1:54321/functions/v1/send-contact-mail', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(values),
+  })
+})
 </script>
 
 <template>
@@ -86,6 +93,7 @@ const onSubmit = handleSubmit(values => {
         <button
           class="btn btn-primary w-full"
           :disabled="!meta.valid"
+          type="submit"
         >
           {{ $t('cta.connect')}}
           <font-awesome-icon icon="fa-solid fa-wand-magic-sparkles"></font-awesome-icon>
