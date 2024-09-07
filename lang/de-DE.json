@@ -45,7 +45,11 @@
   },
   "contact": {
     "title": "Kontakt aufnehmen",
-    "text": "Lass uns etwas Großartiges bauen, schreib mir eine Nachricht:"
+    "text": "Lass uns etwas Großartiges bauen, schreib mir eine Nachricht:",
+    "mail": {
+      "error": "Beim Senden deiner Kontaktdaten ist ein Fehler aufgetreten. Bitte versuche es später erneut.",
+      "success": "Deine Nachricht wurde erfolgreich gesendet. Ich werde mich so schnell wie möglich bei dir melden."
+    }
   },
   "form": {
     "placeholders": {

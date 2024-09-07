@@ -62,7 +62,7 @@ const onSubmit = handleSubmit(async (values, { resetForm }) => {
         class="alert alert-error"
       >
         <font-awesome-icon icon="fa-solid fa-exclamation-triangle"></font-awesome-icon>
-        <span>An error occurred while sending your contact information. Please try it again later.</span>
+        <span>{{ $t('contact.mail.error') }}</span>
       </div>
       <div
         v-if="contactMailSuccess"
@@ -70,7 +70,7 @@ const onSubmit = handleSubmit(async (values, { resetForm }) => {
         class="alert alert-success"
       >
         <font-awesome-icon icon="fa-solid fa-check"></font-awesome-icon>
-        <span>Your contact information has been successfully sent. I will get back to you as soon as possible.</span>
+        <span>{{ $t('contact.mail.success') }}</span>
       </div>
     </article>
     <form novlaidate @submit.prevent="onSubmit" class="w-full sm:w-full md:w-full lg:w-1/2 xl:w-1/2 2xl:w-1/3">

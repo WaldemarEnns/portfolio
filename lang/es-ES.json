@@ -45,7 +45,11 @@
   },
   "contact": {
     "title": "Ponte en contacto",
-    "text": "Construyamos algo genial, escríbeme un mensaje:"
+    "text": "Construyamos algo genial, escríbeme un mensaje:",
+    "mail": {
+      "error": "Se produjo un error al enviar su información de contacto. Por favor, inténtelo de nuevo más tarde.",
+      "success": "Tu mensaje se ha enviado correctamente. Me pondré en contacto contigo lo antes posible."
+    }
   },
   "form": {
     "labels": {
