@@ -5,7 +5,7 @@ import *  as yup from 'yup'
 
 const localePath = useLocalePath()
 
-const CONTACT_MAIL_ENDPOINT = 'hhttps://dvmfmuzikosgxgnpehiu.supabase.co/functions/v1/send-contact-mail'
+const CONTACT_MAIL_ENDPOINT = 'https://dvmfmuzikosgxgnpehiu.supabase.co/functions/v1/send-contact-mail'
 
 const schema = toTypedSchema(
   yup.object({
