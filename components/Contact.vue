@@ -5,6 +5,8 @@ import *  as yup from 'yup'
 
 const localePath = useLocalePath()
 
+const CONTACT_MAIL_ENDPOINT = 'hhttps://dvmfmuzikosgxgnpehiu.supabase.co/functions/v1/send-contact-mail'
+
 const schema = toTypedSchema(
   yup.object({
     fromMail: yup.string().email().required(),
@@ -22,16 +24,30 @@ const [name, nameAttrs] = defineField('senderName')
 const [message, messageAttrs] = defineField('message')
 const [privacyPolicyAgreed, privacyPolicyAgreedAttrs] = defineField('privacyPolicyAgreed')
 
-const onSubmit = handleSubmit(async values => {
-  console.log(values)
+const contactMailPending = ref(false)
+const contactMailError = ref(false)
+const contactMailSuccess = ref(false)
 
-  const response = await fetch('https://dvmfmuzikosgxgnpehiu.supabase.co/functions/v1/send-contact-mail', {
+const onSubmit = handleSubmit(async (values, { resetForm }) => {
+  contactMailPending.value = true
+
+  const { status } = await useFetch(CONTACT_MAIL_ENDPOINT, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(values),
+    body: values,
   })
+
+  if (status.value === 'error') {
+    contactMailError.value = true
+  } else if (status.value === 'success') {
+    contactMailError.value = false
+    contactMailSuccess.value = true
+    resetForm()
+  }
+
+  contactMailPending.value = false
 })
 </script>
 
@@ -40,6 +56,22 @@ const onSubmit = handleSubmit(async values => {
     <article class="prose mb-2">
       <h2 class="text-center">{{ $t('contact.title') }}</h2>
       <p class="text-center">{{ $t('contact.text') }}</p>
+      <div
+        v-if="contactMailError"
+        role="alert"
+        class="alert alert-error"
+      >
+        <font-awesome-icon icon="fa-solid fa-exclamation-triangle"></font-awesome-icon>
+        <span>An error occurred while sending your contact information. Please try it again later.</span>
+      </div>
+      <div
+        v-if="contactMailSuccess"
+        role="alert"
+        class="alert alert-success"
+      >
+        <font-awesome-icon icon="fa-solid fa-check"></font-awesome-icon>
+        <span>Your contact information has been successfully sent. I will get back to you as soon as possible.</span>
+      </div>
     </article>
     <form novlaidate @submit.prevent="onSubmit" class="w-full sm:w-full md:w-full lg:w-1/2 xl:w-1/2 2xl:w-1/3">
       <label class="input input-bordered flex items-center gap-2 mb-4">
@@ -47,6 +79,7 @@ const onSubmit = handleSubmit(async values => {
         <input
           v-model="name"
           v-bind="nameAttrs"
+          :disabled=contactMailPending
           name="senderName"
           type="text"
           class="grow"
@@ -58,6 +91,7 @@ const onSubmit = handleSubmit(async values => {
         <input
           v-model="email"
           v-bind="emailAttrs"
+          :disabled="contactMailPending"
           name="fromMail"
           type="email"
           class="grow"
@@ -67,6 +101,7 @@ const onSubmit = handleSubmit(async values => {
       <textarea
         v-model="message"
         v-bind="messageAttrs"
+        :disabled="contactMailPending"
         :placeholder="$t('form.placeholders.contact_message')"
         class="textarea textarea-bordered w-full mb-4 resize-none"
         rows="4"
@@ -78,6 +113,7 @@ const onSubmit = handleSubmit(async values => {
           <input
             v-model="privacyPolicyAgreed"
             v-bind="privacyPolicyAgreedAttrs"
+            :disabled="contactMailPending"
             required
             name="privacyPolicyAgreed"
             type="checkbox"
@@ -92,9 +128,10 @@ const onSubmit = handleSubmit(async values => {
       <div class="flex justify-center">
         <button
           class="btn btn-primary w-full"
-          :disabled="!meta.valid"
+          :disabled="!meta.valid || contactMailPending"
           type="submit"
         >
+          <span v-if="contactMailPending" class="loading loading-spinner loading-sm mr-2"></span>
           {{ $t('cta.connect')}}
           <font-awesome-icon icon="fa-solid fa-wand-magic-sparkles"></font-awesome-icon>
         </button>
