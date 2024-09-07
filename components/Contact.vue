@@ -25,7 +25,7 @@ const [privacyPolicyAgreed, privacyPolicyAgreedAttrs] = defineField('privacyPoli
 const onSubmit = handleSubmit(async values => {
   console.log(values)
 
-  const response = await fetch('http://127.0.0.1:54321/functions/v1/send-contact-mail', {
+  const response = await fetch('https://dvmfmuzikosgxgnpehiu.supabase.co/functions/v1/send-contact-mail', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
