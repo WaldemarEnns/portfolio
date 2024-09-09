@@ -26,7 +26,7 @@ export default defineNuxtConfig({
   },
 
   pages: true,
-  modules: ['@nuxtjs/i18n'],
+  modules: ['@nuxtjs/i18n', '@nuxtjs/sitemap'],
   i18n: {
     baseUrl: 'https://waldemarenns.de',
     locales: [{
@@ -45,5 +45,10 @@ export default defineNuxtConfig({
     lazy: true,
     langDir: 'lang',
     defaultLocale: 'de',
+  },
+
+  site: {
+    url: 'https://waldemarenns.de',
+    name: 'Waldemar Enns',
   }
 })
