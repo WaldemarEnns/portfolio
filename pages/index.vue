@@ -99,7 +99,7 @@ function scrollToAbout () {
 
     <!-- w-full sm:w-full md:w-full lg:w-full xl:w-3/12 2xl:min-w-[450px] -->
 
-    <div class="flex gap-4 flex-row sm:flex-col md:flex-col lg:flex-row xl:flex-row 2xl:flex-row">
+    <div class="flex gap-4 flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row 2xl:flex-row">
       <div class="card flex-1 bg-base-300 mb-4 shadow-xl border border-secondary">
         <div class="card-body">
           <h2 class="card-title">
