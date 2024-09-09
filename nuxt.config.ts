@@ -50,5 +50,9 @@ export default defineNuxtConfig({
   site: {
     url: 'https://waldemarenns.de',
     name: 'Waldemar Enns',
+  },
+
+  robots: {
+    sitemap: '/sitemap_index.xml',
   }
 })
