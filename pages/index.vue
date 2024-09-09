@@ -97,8 +97,10 @@ function scrollToAbout () {
       <h2>{{ $t('home.services.services')}}</h2>
     </article>
 
-    <div class="flex flex-row flex-wrap justify-between items-start">
-      <div class="card bg-base-300 mb-4 mx-2 w-full sm:w-full md:w-full lg:w-full xl:w-3/12 2xl:min-w-[450px] shadow-xl border border-secondary">
+    <!-- w-full sm:w-full md:w-full lg:w-full xl:w-3/12 2xl:min-w-[450px] -->
+
+    <div class="flex gap-4 flex-row sm:flex-col md:flex-col lg:flex-row xl:flex-row 2xl:flex-row">
+      <div class="card flex-1 bg-base-300 mb-4 shadow-xl border border-secondary">
         <div class="card-body">
           <h2 class="card-title">
             <font-awesome-icon class="mr-2" icon="fa-solid fa-palette"></font-awesome-icon>
@@ -118,7 +120,7 @@ function scrollToAbout () {
         </div>
       </div>
 
-      <div class="card bg-base-300 mb-4 mx-2 w-full sm:w-full md:w-full lg:w-full xl:w-3/12 2xl:min-w-[450px] shadow-xl border border-secondary">
+      <div class="card flex-1 bg-base-300 mb-4 shadow-xl border border-secondary">
         <div class="card-body">
           <h2 class="card-title">
             <font-awesome-icon class="mr-2" icon="fa-solid fa-sitemap"></font-awesome-icon>
@@ -138,7 +140,7 @@ function scrollToAbout () {
         </div>
       </div>
 
-      <div class="card bg-base-300 mb-4 mx-2 w-full sm:w-full md:w-full lg:w-full xl:w-3/12 2xl:min-w-[450px] shadow-xl border border-secondary">
+      <div class="card flex-1 bg-base-300 mb-4 shadow-xl border border-secondary">
         <div class="card-body">
           <h2 class="card-title">
             <font-awesome-icon class="mr-2" icon="fa-solid fa-user-check"></font-awesome-icon>
