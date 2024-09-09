@@ -73,6 +73,11 @@
     "titles": {
       "imprint": "Impressum",
       "privacy": "Datenschutz"
+    },
+    "descriptions": {
+      "home": "Waldemar Enns, Experte für Frontend- und Software-Entwicklung, spezialisiert auf Vue.js, TypeScript und Laravel. Biete Beratungsdienstleistungen, Entwicklung komplexer Webanwendungen und Unterstützung bei bestehenden Technologien für Unternehmen und Institutionen.",
+      "imprint": "Impressum von Waldemar Enns",
+      "privacy": "Datenschutzerklärung von Waldemar Enns"
     }
   }
 }

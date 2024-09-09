@@ -12,6 +12,12 @@ const title = computed(() => {
     ? `${t(route.meta.title as string)} | waldemar enns`
     : 'waldemar enns'
 })
+
+const description = computed(() => {
+  return route.meta.description
+    ? t(route.meta.description as string)
+    : null
+})
 </script>
 
 <template>
@@ -25,6 +31,7 @@ const title = computed(() => {
         <template v-for="meta in head.meta" :key="meta.id">
           <Meta :id="meta.id" :property="meta.property" :content="meta.content" />
         </template>
+        <Meta v-if="description" name="description" :content="description" />
       </Head>
       <Body>
         <Navbar />
