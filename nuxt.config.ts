@@ -19,6 +19,12 @@ export default defineNuxtConfig({
     }
   },
 
+  routeRules: {
+    '/': { prerender: true },
+    '/imprint': { prerender: true },
+    '/privacy-policy': { prerender: true },
+  },
+
   pages: true,
   modules: ['@nuxtjs/i18n'],
   i18n: {

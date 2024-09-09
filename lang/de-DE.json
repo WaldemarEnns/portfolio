@@ -60,12 +60,19 @@
   },
   "footer": {
     "imprint": "Impressum",
-    "privacy": "Datenschutz"
+    "privacy": "Datenschutz",
+    "legal": "Rechtliches"
   },
   "navbar": {
     "links": {
       "about_me": "Über mich",
       "services": "Dienstleistungen"
+    }
+  },
+  "meta": {
+    "titles": {
+      "imprint": "Impressum",
+      "privacy": "Datenschutz"
     }
   }
 }

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 definePageMeta({
-  title: 'Impressum',
-  name: 'imprint'
+  name: 'imprint',
+  title: 'meta.titles.imprint'
 })
 </script>
 

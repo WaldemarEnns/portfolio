@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { currentRoute } = useRouter()
-const isHome = computed(() => currentRoute.value.path === '/')
+const localePath = useLocalePath()
 
 function scrollToContact () {
   document.querySelector('#contact')!.scrollIntoView({
@@ -24,9 +24,9 @@ function scrollToServices () {
 <template>
   <div class="navbar bg-base-100 sticky top-0 z-10">
     <div class="navbar-start">
-      <NuxtLink to="/" class="btn btn-ghost text-xl">waldemar enns</NuxtLink>
+      <NuxtLink :to="localePath('home')" class="btn btn-ghost text-xl">waldemar enns</NuxtLink>
     </div>
-    <div v-if="isHome" class="navbar-center hidden lg:flex">
+    <div class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1">
         <li><a @click="scrollToAbout">{{ $t('navbar.links.about_me') }}</a></li>
         <li><a @click="scrollToServices">{{ $t('navbar.links.services') }}</a></li>

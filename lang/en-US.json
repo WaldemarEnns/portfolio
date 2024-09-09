@@ -60,12 +60,19 @@
   },
   "footer": {
     "imprint": "Imprint",
-    "privacy": "Privacy"
+    "privacy": "Privacy",
+    "legal": "Legal"
   },
   "navbar": {
     "links": {
       "about_me":"About me",
       "services":"Services"
+    }
+  },
+  "meta": {
+    "titles": {
+      "imprint": "Imprint",
+      "privacy": "Privacy"
     }
   }
 }

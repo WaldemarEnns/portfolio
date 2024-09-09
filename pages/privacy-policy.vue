@@ -1,3 +1,10 @@
+<script setup lang="ts">
+definePageMeta({
+  name: 'privacy-policy',
+  title: 'meta.titles.privacy'
+})
+</script>
+
 <template>
   <article class="container prose mt-12 text-center m-auto">
     <h1>Datenschutz&shy;erkl&auml;rung</h1>

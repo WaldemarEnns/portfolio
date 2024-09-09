@@ -1,6 +1,5 @@
 <script setup lang="ts">
 definePageMeta({
-  title: 'Waldemar Enns',
   name: 'home'
 })
 
