@@ -24,6 +24,8 @@ function scrollToAbout () {
         <img
           class="mask mask-squircle sepia-0  w-[100px] sm:w-[200px] md:w-[200px] lg:w-[200px] xl:w-[200px] m-auto mb-8"
           src="/assets/images/me-nice.webp"
+          width="100"
+          height="100"
           alt="A picture of me in a suit."
         />
         <h1 class="text-5xl font-bold mb-0">{{ $t('home.nice_to_meet_you') }}</h1>

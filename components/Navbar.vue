@@ -28,12 +28,12 @@ function scrollToServices () {
     </div>
     <div class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1">
-        <li><a @click="scrollToAbout">{{ $t('navbar.links.about_me') }}</a></li>
-        <li><a @click="scrollToServices">{{ $t('navbar.links.services') }}</a></li>
+        <li><a @click="scrollToAbout" href="#about">{{ $t('navbar.links.about_me') }}</a></li>
+        <li><a @click="scrollToServices" href="#services">{{ $t('navbar.links.services') }}</a></li>
       </ul>
     </div>
     <div class="navbar-end">
-      <a class="btn" @click="scrollToContact">
+      <a class="btn" @click="scrollToContact" href="#contact">
         {{ $t('cta.get_in_touch') }}
         <font-awesome-icon icon="fa-solid fa-envelope-open"></font-awesome-icon>
       </a>
