@@ -28,6 +28,8 @@ const description = computed(() => {
         <template v-for="link in head.link" :key="link.id">
           <Link :id="link.id" :rel="link.rel" :href="link.href" :hreflang="link.hreflang" />
         </template>
+        <Link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <Link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <template v-for="meta in head.meta" :key="meta.id">
           <Meta :id="meta.id" :property="meta.property" :content="meta.content" />
         </template>
