@@ -9,8 +9,8 @@ const head = useLocaleHead({
 
 const title = computed(() => {
   return route.meta.title
-    ? `${t(route.meta.title as string)} | waldemar enns`
-    : 'waldemar enns'
+    ? `${t(route.meta.title as string)} | waldemar enns software solutions`
+    : 'waldemar enns software solutions'
 })
 
 const description = computed(() => {
