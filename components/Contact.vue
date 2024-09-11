@@ -2,6 +2,9 @@
 import { useForm } from 'vee-validate'
 import { toTypedSchema } from '@vee-validate/yup'
 import *  as yup from 'yup'
+const { t } = useI18n({
+  useScope: 'local'
+})
 
 const localePath = useLocalePath()
 
@@ -120,7 +123,7 @@ const onSubmit = handleSubmit(async (values, { resetForm }) => {
             class="checkbox checkbox-primary mr-4"
           />
           <span class="label-text">
-            I agree to the <NuxtLink class="link" :to="localePath('privacy-policy')">Privacy Policy</NuxtLink> and allow you to store my submitted information for responding to my inquiry.
+            {{t('i_agree')}} <NuxtLink class="link" :to="localePath('privacy-policy')">{{ $t('meta.titles.privacy') }}</NuxtLink> {{ t('data_processing') }}
           </span>
         </label>
       </div>
@@ -139,3 +142,20 @@ const onSubmit = handleSubmit(async (values, { resetForm }) => {
     </form>
   </section>
 </template>
+
+<i18n lang="json">
+  {
+    "de": {
+      "i_agree": "I stimme zu, dass meine Daten gemäß dem",
+      "data_processing": "für die Kontaktaufnahme gespeichert und verarbeitet werden."
+    },
+    "en": {
+      "i_agree": "I agree that my data will be stored and processed according to the",
+      "data_processing": "document, for contacting me."
+    },
+    "es": {
+      "i_agree": "Estoy de acuerdo en que mis datos se almacenen y procesen de acuerdo con la",
+      "data_processing": "para ponerse en contacto conmigo."
+    }
+  }
+</i18n>
