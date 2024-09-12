@@ -1,7 +1,8 @@
 <script setup lang="ts">
 definePageMeta({
   name: 'privacy-policy',
-  title: 'meta.titles.privacy'
+  title: 'meta.titles.privacy',
+  description: 'meta.descriptions.privacy'
 })
 </script>
 

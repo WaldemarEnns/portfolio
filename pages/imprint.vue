@@ -1,7 +1,8 @@
 <script setup lang="ts">
 definePageMeta({
   name: 'imprint',
-  title: 'meta.titles.imprint'
+  title: 'meta.titles.imprint',
+  description: 'meta.descriptions.imprint'
 })
 </script>
 
