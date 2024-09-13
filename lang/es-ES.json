@@ -23,6 +23,19 @@
       "consultancy": "Consultoría",
       "consultancy_text_1": "Ofrezco asesoramiento sólido y planificación estratégica para sus proyectos de desarrollo web.",
       "consultancy_text_2": "Con mi experiencia en desarrollo frontend y backend y en gestión de equipos, puedo ayudarlo a tomar las decisiones tecnológicas correctas e implementar sus proyectos de manera eficiente."
+    },
+    "methods": {
+      "methods": "Mis métodos de trabajo",
+      "titles": {
+        "agile": "Métodos ágiles",
+        "ci_cd": "CI/CD",
+        "git_flow": "Git Flow y resultados limpios",
+        "testing": "Pruebas y aseguramiento de la calidad"
+      },
+      "agile": "Aplico métodos ágiles como SCRUM, Kanban o Scrumban para adaptarme de manera flexible a los cambios durante el proyecto e incorporar retroalimentación regular para la mejora continua. A través de iteraciones cortas y reuniones regulares, aseguro que los requisitos se mantengan actualizados y factibles.",
+      "ci_cd": "Usando CI/CD en GitHub y GitLab, optimizo el proceso de desarrollo con pruebas automáticas y despliegue continuo, asegurando que los cambios en el código se transfieran de manera segura y rápida a producción. Esto me permite entregar software funcional en cualquier momento mientras mantengo la calidad. Dependiendo del stack, también utilizo herramientas como Laravel Forge en proyectos de Laravel.",
+      "git_flow": "Trabajo con una combinación de Git Flow y GitHub Flow para garantizar ramas bien estructuradas tanto para ciclos de desarrollo a largo plazo como de ritmo rápido. Me aseguro de que las ramas para características, correcciones y lanzamientos estén claramente separadas, evitando errores comunes como trabajar directamente en la rama master, mensajes de commit poco claros o saltarse revisiones de código. Las buenas prácticas, como el rebasing regular y el uso de pull requests, mantienen la base de código limpia y rastreable.",
+      "testing": "Las pruebas son una parte fundamental de mi trabajo, de las que nunca o rara vez me salto. Las pruebas unitarias con TDD, las pruebas de componentes con Cypress para elementos de UI o las pruebas E2E para verificar la funcionalidad principal del software de principio a fin, aseguran que el código sea robusto y mantenible desde el principio, reduciendo los riesgos para futuros cambios."
     }
   },
   "badges": {

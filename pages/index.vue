@@ -162,5 +162,35 @@ function scrollToAbout () {
     </div>
   </section>
 
+  <section id="methods" class="container m-auto py-12">
+    <article class="prose mb-4">
+      <h2>{{ $t('home.methods.methods')}}</h2>
+    </article>
+    <Method
+      icon="fa-fas fa-arrows-split-up-and-left"
+      :content="$t('home.methods.agile')"
+      :title="$t('home.methods.titles.agile')"
+      class="mb-4"
+    />
+    <Method
+      icon="fa-fas fa-flask-vial"
+      :content="$t('home.methods.testing')"
+      :title="$t('home.methods.titles.testing')"
+      class="mb-4"
+    />
+    <Method
+      icon="fa-fas fa-code-branch"
+      :content="$t('home.methods.git_flow')"
+      :title="$t('home.methods.titles.git_flow')"
+      class="mb-4"
+    />
+    <Method
+      icon="fa-fas fa-server"
+      :content="$t('home.methods.ci_cd')"
+      :title="$t('home.methods.titles.ci_cd')"
+      class="mb-4"
+    />
+  </section>
+
   <div class="divider">{{ $t('dividers.interested') }}</div>
 </template>

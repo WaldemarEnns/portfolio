@@ -23,6 +23,19 @@
       "consultancy": "Consultancy",
       "consultancy_text_1": "I offer sound advice and strategic planning for your web development projects.",
       "consultancy_text_2": "With my experience in front-end and back-end development and team management, I can help you make the right technological decisions and implement your projects efficiently."
+    },
+    "methods": {
+      "methods": "My working methods",
+      "titles": {
+        "agile": "Agile methods",
+        "ci_cd": "CI/CD",
+        "git_flow": "Git Flow and clean work results",
+        "testing": "Testing and quality assurance"
+      },
+      "agile": "I apply agile methods like SCRUM, Kanban, or Scrumban to adapt flexibly to changes during the project and incorporate regular feedback for continuous improvement. Through short iterations and regular check-ins, I ensure that requirements stay up-to-date and actionable.",
+      "ci_cd": "Using CI/CD in GitHub and GitLab, I optimize the development process with automated testing and continuous deployment, ensuring code changes are securely and swiftly transferred to production. This allows me to deliver functioning software at any time while maintaining quality. Depending on the stack, I also use tools like Laravel Forge for Laravel projects.",
+      "git_flow": "I work with a mix of Git Flow and GitHub Flow to ensure well-structured branches for both long-term and fast-paced development cycles. I make sure branches for features, fixes, and releases are clearly separated, avoiding common mistakes like working directly on the master branch, unclear commit messages, or skipping code reviews. Best practices like regular rebasing and the use of pull requests keep the codebase clean and traceable.",
+      "testing": "Testing is a fundamental part of my work, which I never or rarely skip. Unit tests with TDD, component tests with Cypress for UI elements, or E2E tests to verify the core functionality of the software from A to Z ensure that the code is robust and maintainable from the start, reducing risks for future changes."
     }
   },
   "badges": {
