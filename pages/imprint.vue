@@ -13,7 +13,7 @@ definePageMeta({
     <p>
       Waldemar Enns<br>
       Software Development<br>
-      Burggrenstraße 13<br>
+      Burggrafenstraße 13<br>
       52068 Aachen
     </p>
 
