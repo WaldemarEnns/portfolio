@@ -92,5 +92,9 @@
       "imprint": "Legal notice of Waldemar Enns’ website, including contact information and legal details in accordance with applicable online transparency laws.",
       "privacy": "Waldemar Enns’ privacy policy. Information on personal data protection and compliance with privacy regulations."
     }
+  },
+  "errors": {
+    "return_back_home": "Take me back home",
+    "title": "Oh no, something weird happened!"
   }
 }

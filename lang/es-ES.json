@@ -95,5 +95,9 @@
       "imprint": "Información legal del sitio web de Waldemar Enns, incluyendo datos de contacto y detalles de acuerdo a las leyes aplicables para la transparencia online.",
       "privacy": "Política de privacidad de Waldemar Enns. Información sobre la protección de datos personales y el cumplimiento de las normativas de privacidad."
     }
+  },
+  "errors": {
+    "return_back_home": "Volver a inicio",
+    "title": "¡Vaya! Algo salió mal."
   }
 }

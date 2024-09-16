@@ -92,5 +92,9 @@
       "imprint": "Impressum der Website von Waldemar Enns mit Kontaktinformationen und rechtlichen Details gemäß den geltenden Vorschriften zur Transparenz im Internet.",
       "privacy": "Datenschutzerklärung von Waldemar Enns. Informationen zum Schutz personenbezogener Daten und zur Einhaltung der Datenschutzbestimmungen der DSGVO."
     }
+  },
+  "errors": {
+    "return_back_home": "Bringe mich zurück",
+    "title": "Hoppla! Etwas ist schief gelaufen."
   }
 }
