@@ -26,7 +26,10 @@ function scrollToServices () {
     <div class="navbar-start">
       <NuxtLink :to="localePath('home')" class="btn btn-ghost text-xl">waldemar enns</NuxtLink>
     </div>
-    <div class="navbar-center hidden lg:flex">
+    <div
+      v-if="currentRoute.path === '/'"
+      class="navbar-center hidden lg:flex"
+    >
       <ul class="menu menu-horizontal px-1">
         <li><a @click="scrollToAbout" href="#about">{{ $t('navbar.links.about_me') }}</a></li>
         <li><a @click="scrollToServices" href="#services">{{ $t('navbar.links.services') }}</a></li>
