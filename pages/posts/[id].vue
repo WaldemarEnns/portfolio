@@ -32,10 +32,10 @@ const updatedAt = computed(() => new Date(data.value?.data?.attributes?.updatedA
 </script>
 
 <template>
-  <article class="container prose py-12 mx-auto">
+  <article class="container prose my-12 mx-auto">
     <i v-if="publicationDate">Veröffentlicht am {{ publicationDate }}</i>
     <i v-else>Zuletzt bearbeitet am {{ updatedAt }}</i>
-    <h1>{{ title }}</h1>
+    <h1 class="block mt-4">{{ title }}</h1>
     <StrapiBlocks
       v-if="content"
       :content="content"
