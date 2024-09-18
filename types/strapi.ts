@@ -6,4 +6,5 @@ export type Post = {
   publishedAt: string|null;
   createdAt: string;
   updatedAt: string;
+  locale: string;
 }
