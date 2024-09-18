@@ -33,7 +33,8 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     '@nuxtjs/sitemap',
     '@nuxtjs/robots',
-    '@nuxtjs/strapi'
+    '@nuxtjs/strapi',
+    '@nuxt/test-utils/module'
   ],
   i18n: {
     baseUrl: 'https://waldemarenns.de',
