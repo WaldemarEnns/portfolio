@@ -2,11 +2,11 @@
 import type { Post } from '@/types/strapi'
 import { StrapiBlocks } from 'vue-strapi-blocks-renderer'
 
-const { findOne } = useStrapi<Post>()
-
 definePageMeta({
-  layout: 'post'
+  layout: 'post',
 })
+
+const { findOne } = useStrapi<Post>()
 
 const { currentRoute } = useRouter()
 
@@ -16,6 +16,16 @@ const { data } = await useAsyncData(
   'post',
   () => findOne('posts', postId.value)
 )
+
+useSeoMeta({
+  title: `${data.value?.data?.attributes?.meta_title} | waldemar enns software solutions`,
+  meta: [
+    {
+      name: 'description',
+      content: data.value?.data?.attributes?.meta_description
+    }
+  ]
+})
 
 const content = computed(() => data.value?.data?.attributes?.Content)
 const title = computed(() => data.value?.data?.attributes?.Title)
