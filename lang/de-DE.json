@@ -74,7 +74,9 @@
   "footer": {
     "imprint": "Impressum",
     "privacy": "Datenschutz",
-    "legal": "Rechtliches"
+    "legal": "Rechtliches",
+    "more": "Mehr",
+    "blog": "Blog"
   },
   "navbar": {
     "links": {

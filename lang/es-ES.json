@@ -77,7 +77,9 @@
   "footer": {
     "imprint": "Aviso legal",
     "privacy": "Privacidad",
-    "legal": "Legal"
+    "legal": "Legal",
+    "more": "Más",
+    "blog": "Blog"
   },
   "navbar": {
     "links": {

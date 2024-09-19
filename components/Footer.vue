@@ -4,10 +4,17 @@ const localePath = useLocalePath()
 
 <template>
   <footer class="footer bg-neutral text-neutral-content p-10">
-    <nav>
-      <span class="footer-title text-white">{{ $t('footer.legal') }}</span>
-      <NuxtLink :to="localePath('imprint')" class="link link-hover">{{ $t('footer.imprint') }}</NuxtLink>
-      <NuxtLink :to="localePath('privacy-policy')" class="link link-hover">{{ $t('footer.privacy') }}</NuxtLink>
+    <nav class="w-full flex flex-row justify-start items-start">
+      <div class="flex flex-col justify-start items-start mr-12">
+        <span class="footer-title text-white mb-4">{{ $t('footer.legal') }}</span>
+        <NuxtLink :to="localePath('imprint')" class="link link-hover mb-2">{{ $t('footer.imprint') }}</NuxtLink>
+        <NuxtLink :to="localePath('privacy-policy')" class="link link-hover mb-2">{{ $t('footer.privacy') }}</NuxtLink>
+      </div>
+
+      <div class="flex flex-col justify-start items-start">
+        <span class="footer-title text-white mb-4">{{ $t('footer.more') }}</span>
+        <NuxtLink :to="localePath('/posts')" class="link link-hover mb-2">{{ $t('footer.blog') }}</NuxtLink>
+      </div>
     </nav>
   </footer>
 </template>
