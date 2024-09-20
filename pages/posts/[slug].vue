@@ -6,15 +6,15 @@ definePageMeta({
   layout: 'post',
 })
 
-const { findOne } = useStrapi<Post>()
+const client = useStrapiClient()
 
 const { currentRoute } = useRouter()
 
-const postId = computed(() => currentRoute.value.params.id as string)
+const slug = computed(() => currentRoute.value.params.slug as string)
 
 const { data } = await useAsyncData(
   'post',
-  () => findOne('posts', postId.value)
+  () => client<Post>(`/posts/bySlug/${slug.value}`),
 )
 
 useSeoMeta({

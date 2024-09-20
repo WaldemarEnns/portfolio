@@ -39,7 +39,7 @@ const isPublished = (post: Strapi4ResponseData<Post>) => post.attributes.publish
             {{ formatToLocaleDate(post.attributes.publishedAt || post.attributes.updatedAt) }}
           </i>
         </div>
-        <NuxtLink :to="`/posts/${post.id}`" class="btn btn-primary btn-outline btn-wide">Have a read</NuxtLink>
+        <NuxtLink :to="`/posts/${post.attributes.slug}`" class="btn btn-primary btn-outline btn-wide">Have a read</NuxtLink>
       </div>
     </div>
 

@@ -74,12 +74,11 @@ export default defineNuxtConfig({
       const routes = posts.data.map((post: Strapi4ResponseData<Post>) => {
         const locale = post.attributes.locale
         const slug = post.attributes.slug
-        const id = post.id
 
         if (locale === 'de') {
-          return `/posts/${id}`
+          return `/posts/${slug}`
         } else {
-          return `/${locale}/posts/${id}`
+          return `/${locale}/posts/${slug}`
         }
       })
 
