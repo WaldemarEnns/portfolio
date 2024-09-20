@@ -29,6 +29,7 @@ export default defineNuxtConfig({
   },
 
   pages: true,
+
   modules: [
     '@nuxtjs/i18n',
     '@nuxtjs/sitemap',
@@ -36,6 +37,7 @@ export default defineNuxtConfig({
     '@nuxtjs/strapi',
     '@nuxt/test-utils/module'
   ],
+
   i18n: {
     baseUrl: 'https://waldemarenns.de',
     locales: [{
@@ -65,10 +67,13 @@ export default defineNuxtConfig({
     sitemap: '/sitemap_index.xml',
   },
 
-  hooks: {
+  // TODO: this doesn't work since the default language 'de' will also prerender the routes for translated content
+  // TODO: that results in duplicate content, e.g. /posts/nice-to-meet-you and /en/posts/nice-to-meet-you
+  // TODO: for now, I will just go with /posts/nice-to-meet-you, /posts/bienvenido and /posts/schoen-dass-du-hier-bist
+  /* hooks: {
     async 'prerender:routes'(ctx) {
       const strapiUrl = process.env.STRAPI_URL || 'http://localhost:1337'
-      const postsResponse = await fetch(`${strapiUrl}/api/posts?publicationState=preview&locale=de&locale=en&locale=es&pagination[page]=1&pagination[pageSize=1000]`)
+      const postsResponse = await fetch(`${strapiUrl}/api/posts?publicationState=preview&locale=all&pagination[page]=1&pagination[pageSize=1000]`)
       const posts: Strapi4ResponseMany<Post> = await postsResponse.json()
 
       const routes = posts.data.map((post: Strapi4ResponseData<Post>) => {
@@ -86,5 +91,5 @@ export default defineNuxtConfig({
         ctx.routes.add(route)
       }
     }
-  }
+  } */
 })
