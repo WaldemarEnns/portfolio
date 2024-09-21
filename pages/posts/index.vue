@@ -2,6 +2,8 @@
 import type { Strapi4ResponseData, StrapiLocale } from '@nuxtjs/strapi';
 import type { Post } from '~/types/strapi';
 
+const localePath = useLocalePath()
+
 definePageMeta({
   layout: 'post'
 })
@@ -39,7 +41,7 @@ const isPublished = (post: Strapi4ResponseData<Post>) => post.attributes.publish
             {{ formatToLocaleDate(post.attributes.publishedAt || post.attributes.updatedAt) }}
           </i>
         </div>
-        <NuxtLink :to="`/posts/${post.attributes.slug}`" class="btn btn-primary btn-outline btn-wide">Have a read</NuxtLink>
+        <NuxtLink :to="localePath(`/posts/${post.attributes.slug}`)" class="btn btn-primary btn-outline btn-wide">Have a read</NuxtLink>
       </div>
     </div>
 
