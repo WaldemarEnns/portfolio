@@ -7,16 +7,15 @@ const head = useLocaleHead({
   addSeoAttributes: true
 })
 
-const title = ref('Post Title')
-const description = ref('Post Description')
-
+const description = computed(() => {
+  return route.meta.description as string
+})
 </script>
 
 <template>
   <div>
     <Html :lang="head.htmlAttrs.lang" :dir="head.htmlAttrs.dir">
       <Head>
-        <Title>{{ title }}</Title>
         <template v-for="link in head.link" :key="link.id">
           <Link :id="link.id" :rel="link.rel" :href="link.href" :hreflang="link.hreflang" />
         </template>
