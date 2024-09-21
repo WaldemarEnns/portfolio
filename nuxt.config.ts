@@ -26,6 +26,7 @@ export default defineNuxtConfig({
     '/': { prerender: true },
     '/imprint': { prerender: true },
     '/privacy-policy': { prerender: true },
+    '/posts': { prerender: true },
   },
 
   pages: true,
@@ -67,10 +68,7 @@ export default defineNuxtConfig({
     sitemap: '/sitemap_index.xml',
   },
 
-  // TODO: this doesn't work since the default language 'de' will also prerender the routes for translated content
-  // TODO: that results in duplicate content, e.g. /posts/nice-to-meet-you and /en/posts/nice-to-meet-you
-  // TODO: for now, I will just go with /posts/nice-to-meet-you, /posts/bienvenido and /posts/schoen-dass-du-hier-bist
-  /* hooks: {
+  hooks: {
     async 'prerender:routes'(ctx) {
       const strapiUrl = process.env.STRAPI_URL || 'http://localhost:1337'
       const postsResponse = await fetch(`${strapiUrl}/api/posts?publicationState=preview&locale=all&pagination[page]=1&pagination[pageSize=1000]`)
@@ -91,5 +89,5 @@ export default defineNuxtConfig({
         ctx.routes.add(route)
       }
     }
-  } */
+  }
 })
