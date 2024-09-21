@@ -10,21 +10,24 @@ const client = useStrapiClient()
 
 const { currentRoute } = useRouter()
 
+const { locale } = useI18n()
+
 const slug = computed(() => currentRoute.value.params.slug as string)
 
 const { data } = await useAsyncData(
   'post',
-  () => client<Post>(`/posts/bySlug/${slug.value}`),
+  () => client<Post>(
+    `/posts/bySlug/${slug.value}`,
+    {
+      query: {
+        locale: locale.value
+      }
+    }
+  ),
 )
 
 useSeoMeta({
-  title: `${data.value?.data?.attributes?.meta_title} | waldemar enns software solutions`,
-  meta: [
-    {
-      name: 'description',
-      content: data.value?.data?.attributes?.meta_description
-    }
-  ]
+  title: `${data?.value?.data?.attributes?.meta_title} | waldemar enns software solutions`,
 })
 
 const content = computed(() => data.value?.data?.attributes?.Content)
