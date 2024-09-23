@@ -64,6 +64,27 @@ export default defineNuxtConfig({
     name: 'Waldemar Enns',
   },
 
+  sitemap: {
+    urls: async () => {
+      const strapiUrl = process.env.STRAPI_URL || 'http://localhost:1337'
+      const postsResponse = await fetch(`${strapiUrl}/api/posts?publicationState=preview&locale=all&pagination[page]=1&pagination[pageSize=1000]`)
+      const posts: Strapi4ResponseMany<Post> = await postsResponse.json()
+
+      const routes = posts.data.map((post: Strapi4ResponseData<Post>) => {
+        const locale = post.attributes.locale
+        const slug = post.attributes.slug
+
+        if (locale === 'de') {
+          return `/posts/${slug}`
+        } else {
+          return `/${locale}/posts/${slug}`
+        }
+      })
+
+      return routes
+    }
+  },
+
   robots: {
     sitemap: '/sitemap_index.xml',
   },
