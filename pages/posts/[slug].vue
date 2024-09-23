@@ -6,6 +6,8 @@ definePageMeta({
   layout: 'post',
 })
 
+const robotsRule = useRobotsRule(true)
+
 const client = useStrapiClient()
 
 const { currentRoute } = useRouter()
