@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Post } from '@/types/strapi'
+import type { PostBySlug } from '@/types/strapi'
 import { StrapiBlocks } from 'vue-strapi-blocks-renderer'
 
 definePageMeta({
@@ -18,7 +18,7 @@ const slug = computed(() => currentRoute.value.params.slug as string)
 
 const { data } = await useAsyncData(
   'post',
-  () => client<Post>(
+  () => client<PostBySlug>(
     `/posts/bySlug/${slug.value}`,
     {
       query: {
@@ -37,7 +37,7 @@ const title = computed(() => data.value?.data?.attributes?.Title)
 
 const publicationDate = computed(() => {
   if (data.value?.data?.attributes?.publishedAt) {
-    return new Date(data.value?.data.attributes.publishedAt).toLocaleDateString()
+    return new Date(data.value?.data?.attributes.publishedAt).toLocaleDateString()
   } else {
     return null
   }
