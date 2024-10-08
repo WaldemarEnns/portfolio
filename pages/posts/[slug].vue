@@ -6,6 +6,13 @@ definePageMeta({
   layout: 'post',
 })
 
+const { locales } = useI18n()
+const localePath = useLocalePath()
+
+const availableLocales = computed(() => {
+  return locales.value.filter(i => i.code !== locale.value)
+})
+
 const robotsRule = useRobotsRule(true)
 
 const client = useStrapiClient()
@@ -44,6 +51,11 @@ const publicationDate = computed(() => {
 })
 
 const updatedAt = computed(() => new Date(data.value?.data?.attributes?.updatedAt!).toLocaleDateString())
+
+function switchTranslation (locale: string) {
+  const localeSlug = data.value?.data?.attributes?.localeSlugs[locale]
+  return localePath(`/posts/${localeSlug}`, locale)
+}
 </script>
 
 <template>
@@ -51,6 +63,14 @@ const updatedAt = computed(() => new Date(data.value?.data?.attributes?.updatedA
     <i v-if="publicationDate">Veröffentlicht am {{ publicationDate }}</i>
     <i v-else>Zuletzt bearbeitet am {{ updatedAt }}</i>
     <h1 class="block mt-4">{{ title }}</h1>
+    <div class="my-4 flex flex-row justify-start items-center">
+      <NuxtLink
+        v-for="locale in availableLocales"
+        :key="locale.code"
+        class="first:ml-0 mx-2 btn btn-sm btn-info btn-outline"
+        :to="switchTranslation(locale.code)"
+      >{{ locale.flag }} {{ locale.name }}</NuxtLink>
+    </div>
     <StrapiBlocks
       v-if="content"
       :content="content"

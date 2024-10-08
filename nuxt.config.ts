@@ -45,17 +45,20 @@ export default defineNuxtConfig({
       code: 'en',
       file: 'en-US.json',
       iso: 'en-US',
-      name: 'English'
+      name: 'English',
+      flag: '🇺🇸'
     }, {
       code: 'de',
       file: 'de-DE.json',
       iso: 'de-DE',
-      name: 'Deutsch'
+      name: 'Deutsch',
+      flag: '🇩🇪'
     }, {
       code: 'es',
       file: 'es-ES.json',
       iso: 'es-ES',
-      name: 'Español'
+      name: 'Español',
+      flag: '🇪🇸'
     }],
     lazy: true,
     langDir: 'lang',
