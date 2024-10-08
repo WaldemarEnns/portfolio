@@ -76,12 +76,13 @@
     "privacy": "Privacy",
     "legal": "Legal",
     "more": "More",
-    "blog": "Blog"
+    "blog": "Blog",
+    "languages": "Languages"
   },
   "navbar": {
     "links": {
-      "about_me":"About me",
-      "services":"Services"
+      "about_me": "About me",
+      "services": "Services"
     }
   },
   "meta": {
