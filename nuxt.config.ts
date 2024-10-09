@@ -82,10 +82,15 @@ export default defineNuxtConfig({
   sitemap: {
     urls: async () => {
       const strapiUrl = process.env.STRAPI_URL || 'http://localhost:1337'
-      const postsResponse = await fetch(`${strapiUrl}/api/posts?publicationState=preview&locale=all&pagination[page]=1&pagination[pageSize=1000]`)
+      let postsResponse
+      if (process.env.NODE_ENV === 'production') {
+        postsResponse = await fetch(`${strapiUrl}/api/posts?publicationState=live&locale=all&pagination[page]=1&pagination[pageSize=1000]`)
+      } else {
+        postsResponse = await fetch(`${strapiUrl}/api/posts?publicationState=preview&locale=all&pagination[page]=1&pagination[pageSize=1000]`)
+      }
       const posts: Strapi4ResponseMany<Post> = await postsResponse.json()
 
-      const routes = posts.data.map((post: Strapi4ResponseData<Post>) => {
+      const routes = posts.data?.map((post: Strapi4ResponseData<Post>) => {
         const locale = post.attributes.locale
         const slug = post.attributes.slug
 
@@ -94,7 +99,7 @@ export default defineNuxtConfig({
         } else {
           return `/${locale}/posts/${slug}`
         }
-      })
+      }) || []
 
       return routes
     }
@@ -107,7 +112,7 @@ export default defineNuxtConfig({
   hooks: {
     async 'prerender:routes'(ctx) {
       const strapiUrl = process.env.STRAPI_URL
-      const postsResponse = await fetch(`${strapiUrl}/api/posts?publicationState=preview&locale=all&pagination[page]=1&pagination[pageSize=1000]`)
+      const postsResponse = await fetch(`${strapiUrl}/api/posts?publicationState=live&locale=all&pagination[page]=1&pagination[pageSize=1000]`)
       const posts: Strapi4ResponseMany<Post> = await postsResponse.json()
 
       const routes = posts.data.map((post: Strapi4ResponseData<Post>) => {

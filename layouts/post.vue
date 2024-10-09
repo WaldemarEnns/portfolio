@@ -10,8 +10,6 @@ const head = useLocaleHead({
 const description = computed(() => {
   return route.meta.description as string
 })
-
-console.debug('Head', head.value)
 </script>
 
 <template>

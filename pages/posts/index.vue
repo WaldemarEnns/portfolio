@@ -19,7 +19,7 @@ const { data } = await useAsyncData(
       page: 1,
       pageSize: 20
     },
-    publicationState: 'preview'
+    publicationState: process.env.NODE_ENV === 'production' ? 'live' : 'preview'
   }),
 )
 

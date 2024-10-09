@@ -25,17 +25,22 @@ const { locale } = useI18n()
 
 const slug = computed(() => currentRoute.value.params.slug as string)
 
-const { data } = await useAsyncData(
+const { data, error } = await useAsyncData(
   'post',
   () => client<PostBySlug>(
     `/posts/bySlug/${slug.value}`,
     {
       query: {
-        locale: locale.value
+        locale: locale.value,
+        publicationState: process.env.NODE_ENV === 'production' ? 'live' : 'preview'
       }
     }
   ),
 )
+
+if (error.value) {
+  navigateTo('/404')
+}
 
 useSeoMeta({
   title: `${data?.value?.data?.attributes?.meta_title} | waldemar enns software solutions`,
