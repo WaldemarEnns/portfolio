@@ -102,6 +102,10 @@
   },
   "post": {
     "published_at": "Published at",
-    "edited_at": "Updated at"
+    "edited_at": "Updated at",
+    "have_a_read": "Have a read"
+  },
+  "posts": {
+    "read_something_about": "Read something about:"
   }
 }

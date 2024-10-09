@@ -28,7 +28,7 @@ const isPublished = (post: Strapi4ResponseData<Post>) => post.attributes.publish
 
 <template>
   <section class="container mx-auto my-12">
-    <h1 class="font-bold text-2xl mb-8">My blogposts in {{ locale }}</h1>
+    <h1 class="font-bold text-2xl mb-8">{{ $t('posts.read_something_about') }}</h1>
     <div class="card bg-slate-800"
       v-for="post in data?.data"
       :key="post.id"
@@ -37,11 +37,11 @@ const isPublished = (post: Strapi4ResponseData<Post>) => post.attributes.publish
         <div>
           <h2 class="card-title block">{{ post.attributes.Title }}</h2>
           <i class="block mt-2">
-            {{ isPublished(post) ? 'Published' : 'Updated' }} on
+            {{ isPublished(post) ? $t('post.published_at') : $t('post.edited_at') }} on
             {{ formatToLocaleDate(post.attributes.publishedAt || post.attributes.updatedAt) }}
           </i>
         </div>
-        <NuxtLink :to="localePath(`/posts/${post.attributes.slug}`)" class="btn btn-primary btn-outline btn-wide">Have a read</NuxtLink>
+        <NuxtLink :to="localePath(`/posts/${post.attributes.slug}`)" class="btn btn-primary btn-outline btn-wide">{{ $t('post.have_a_read') }}</NuxtLink>
       </div>
     </div>
 

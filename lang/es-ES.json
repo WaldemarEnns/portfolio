@@ -105,6 +105,10 @@
   },
   "post": {
     "published_at": "Publicado el",
-    "edited_at": "Procesado el"
+    "edited_at": "Procesado el",
+    "have_a_read": "Leer ahora"
+  },
+  "posts": {
+    "read_something_about": "Lea algo sobre:"
   }
 }
