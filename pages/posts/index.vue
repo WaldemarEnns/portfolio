@@ -11,9 +11,6 @@ definePageMeta({
 const { locale } = useI18n()
 const { find } = useStrapi<Post>()
 
-console.debug('🤖 Prerendering this page: Using the following environment: ', process.env.NODE_ENV)
-console.debug('🤖 Prerendering this page: Using the following publication state for the strapi query: ', process.env.NODE_ENV === 'production' ? 'live' : 'preview')
-
 const { data } = await useAsyncData(
   'posts',
   () => find('posts', {

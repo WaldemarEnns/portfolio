@@ -88,15 +88,10 @@ export default defineNuxtConfig({
       let postsResponse
       if (process.env.NODE_ENV === 'production') {
         postsResponse = await fetch(`${strapiUrl}/api/posts?publicationState=live&locale=all&pagination[page]=1&pagination[pageSize=1000]`)
-        console.log('🤖 Dynamic Prerender: Using endpoint ', `${strapiUrl}/api/posts?publicationState=live&locale=all&pagination[page]=1&pagination[pageSize=1000]`)
       } else {
         postsResponse = await fetch(`${strapiUrl}/api/posts?publicationState=preview&locale=all&pagination[page]=1&pagination[pageSize=1000]`)
-        console.log('🤖 Dynamic Prerender: Using endpoint ', `${strapiUrl}/api/posts?publicationState=preview&locale=all&pagination[page]=1&pagination[pageSize=1000]`)
       }
       const posts: Strapi4ResponseMany<Post> = await postsResponse.json()
-
-      console.log('🤖 Dynamic Prerender: Found ', posts.data.length, ' posts:')
-      console.log(posts.data.map((post: Strapi4ResponseData<Post>) => post.attributes.slug))
 
       const routes = posts.data?.map((post: Strapi4ResponseData<Post>) => {
         const locale = post.attributes.locale
@@ -108,8 +103,6 @@ export default defineNuxtConfig({
           return `/${locale}/posts/${slug}`
         }
       }) || []
-
-      console.log('🤖 Dynamic Prerender: Generated ', routes.length, ' routes: ', routes)
 
       return routes
     }
