@@ -8,18 +8,19 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      STRAPI_URL: ${{ secrets.STRAPI_URL }}
-      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
     steps:
       - uses: actions/checkout@v3
       - run: corepack enable
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v3 
         with:
           node-version: "20"
       # Pick your own package manager and build script
       - run: npm install
-      - run: npx nuxt build --preset github_pages
+      - name: Build portfolio site
+        env:
+          STRAPI_URL: ${{ secrets.STRAPI_URL }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+        run: npx nuxt build --preset github_pages
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
