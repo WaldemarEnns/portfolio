@@ -31,10 +31,10 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     strapi: {
-      url: process.env.STRAPI_URL
+      url: process.env.NUXT_STRAPI_URL
     },
     public: {
-      supabaseUrl: process.env.SUPABASE_URL
+      supabaseUrl: process.env.NUXT_SUPABASE_URL
     }
   },
 
@@ -81,7 +81,7 @@ export default defineNuxtConfig({
 
   sitemap: {
     urls: async () => {
-      const strapiUrl = process.env.STRAPI_URL || 'http://localhost:1337'
+      const strapiUrl = process.env.NUXT_STRAPI_URL || 'http://localhost:1337'
       let postsResponse
       if (process.env.NODE_ENV === 'production') {
         postsResponse = await fetch(`${strapiUrl}/api/posts?publicationState=live&locale=all&pagination[page]=1&pagination[pageSize=1000]`)
@@ -111,7 +111,7 @@ export default defineNuxtConfig({
 
   hooks: {
     async 'prerender:routes'(ctx) {
-      const strapiUrl = process.env.STRAPI_URL
+      const strapiUrl = process.env.NUXT_STRAPI_URL
       const postsResponse = await fetch(`${strapiUrl}/api/posts?publicationState=live&locale=all&pagination[page]=1&pagination[pageSize=1000]`)
       const posts: Strapi4ResponseMany<Post> = await postsResponse.json()
 
