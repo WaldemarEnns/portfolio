@@ -17,10 +17,9 @@ jobs:
       # Pick your own package manager and build script
       - run: npm install
       - name: Build portfolio site
-        env:
-          STRAPI_URL: ${{ secrets.STRAPI_URL }}
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-        run: npx nuxt build --preset github_pages
+        run: echo "STRAPI_URL=${{ secrets.STRAPI_URL }}" >> .env && \
+             echo "SUPABASE_URL=${{ secrets.SUPABASE_URL }}" >> .env && \
+             npx nuxt build --preset github_pages
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
