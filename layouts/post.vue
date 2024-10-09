@@ -18,9 +18,9 @@ console.debug('Head', head.value)
   <div>
     <Html :lang="head.htmlAttrs.lang" :dir="head.htmlAttrs.dir">
       <Head>
-        <!-- <template v-for="link in head.link" :key="link.id">
+        <template v-for="link in head.link" :key="link.id">
           <Link :id="link.id" :rel="link.rel" :href="link.href" :hreflang="link.hreflang" />
-        </template> -->
+        </template>
         <Link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <Link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <template v-for="meta in head.meta" :key="meta.id">

@@ -9,6 +9,8 @@ definePageMeta({
 const { locales } = useI18n()
 const localePath = useLocalePath()
 
+const setI18nParams = useSetI18nParams()
+
 const availableLocales = computed(() => {
   return locales.value.filter(i => i.code !== locale.value)
 })
@@ -37,6 +39,12 @@ const { data } = await useAsyncData(
 
 useSeoMeta({
   title: `${data?.value?.data?.attributes?.meta_title} | waldemar enns software solutions`,
+})
+
+setI18nParams({
+  en: { slug: data?.value?.data?.attributes?.localeSlugs.en },
+  es: { slug: data?.value?.data?.attributes?.localeSlugs.es },
+  de: { slug: data?.value?.data?.attributes?.localeSlugs.de }
 })
 
 const content = computed(() => data.value?.data?.attributes?.Content)
