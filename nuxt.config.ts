@@ -29,6 +29,15 @@ export default defineNuxtConfig({
     '/posts': { prerender: true },
   },
 
+  runtimeConfig: {
+    strapi: {
+      url: process.env.STRAPI_URL
+    },
+    public: {
+      supabaseUrl: process.env.SUPABASE_URL
+    }
+  },
+
   pages: true,
 
   modules: [
@@ -97,7 +106,7 @@ export default defineNuxtConfig({
 
   hooks: {
     async 'prerender:routes'(ctx) {
-      const strapiUrl = process.env.STRAPI_URL || 'http://localhost:1337'
+      const strapiUrl = process.env.STRAPI_URL
       const postsResponse = await fetch(`${strapiUrl}/api/posts?publicationState=preview&locale=all&pagination[page]=1&pagination[pageSize=1000]`)
       const posts: Strapi4ResponseMany<Post> = await postsResponse.json()
 
