@@ -35,6 +35,9 @@ export default defineNuxtConfig({
     },
     public: {
       supabaseUrl: process.env.SUPABASE_URL,
+      strapi: {
+        url: process.env.STRAPI_URL
+      }
     }
   },
 
@@ -81,7 +84,7 @@ export default defineNuxtConfig({
 
   sitemap: {
     urls: async () => {
-      const strapiUrl = process.env.STRAPI_URL || 'http://localhost:1337'
+      const strapiUrl = process.env.STRAPI_URL
       let postsResponse
       if (process.env.NODE_ENV === 'production') {
         postsResponse = await fetch(`${strapiUrl}/api/posts?publicationState=live&locale=all&pagination[page]=1&pagination[pageSize=1000]`)
