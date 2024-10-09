@@ -102,5 +102,9 @@
   "errors": {
     "return_back_home": "Volver a inicio",
     "title": "¡Vaya! Algo salió mal."
+  },
+  "post": {
+    "published_at": "Publicado el",
+    "edited_at": "Procesado el"
   }
 }

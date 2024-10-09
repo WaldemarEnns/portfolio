@@ -99,5 +99,9 @@
   "errors": {
     "return_back_home": "Take me back home",
     "title": "Oh no, something weird happened!"
+  },
+  "post": {
+    "published_at": "Published at",
+    "edited_at": "Updated at"
   }
 }

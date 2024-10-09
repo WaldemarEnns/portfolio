@@ -99,5 +99,9 @@
   "errors": {
     "return_back_home": "Bringe mich zurück",
     "title": "Hoppla! Etwas ist schief gelaufen."
+  },
+  "post": {
+    "published_at": "Veröffentlicht am",
+    "edited_at": "Zuletzt bearbeitet am"
   }
 }

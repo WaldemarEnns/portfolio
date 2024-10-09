@@ -68,8 +68,8 @@ function switchTranslation (locale: string) {
 
 <template>
   <article class="container prose my-12 mx-auto">
-    <i v-if="publicationDate">Veröffentlicht am {{ publicationDate }}</i>
-    <i v-else>Zuletzt bearbeitet am {{ updatedAt }}</i>
+    <i v-if="publicationDate">{{ $t('post.published_at') }} {{ publicationDate }}</i>
+    <i v-else>{{ $t('post.edited_at') }} {{ updatedAt }}</i>
     <h1 class="block mt-4">{{ title }}</h1>
     <div class="my-4 flex flex-row justify-start items-center">
       <NuxtLink
