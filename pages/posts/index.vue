@@ -37,7 +37,7 @@ const isPublished = (post: Strapi4ResponseData<Post>) => post.attributes.publish
         <div>
           <h2 class="card-title block">{{ post.attributes.Title }}</h2>
           <i class="block mt-2">
-            {{ isPublished(post) ? $t('post.published_at') : $t('post.edited_at') }} on
+            {{ isPublished(post) ? $t('post.published_at') : $t('post.edited_at') }}
             {{ formatToLocaleDate(post.attributes.publishedAt || post.attributes.updatedAt) }}
           </i>
         </div>
@@ -45,7 +45,7 @@ const isPublished = (post: Strapi4ResponseData<Post>) => post.attributes.publish
       </div>
     </div>
 
-    <div class="flex flex-row justify-center items-start">
+    <!-- <div class="flex flex-row justify-center items-start">
       <div class="join mt-4">
         <button
           v-for="i in data?.meta.pagination.total"
@@ -54,6 +54,6 @@ const isPublished = (post: Strapi4ResponseData<Post>) => post.attributes.publish
           {{ i }}
         </button>
       </div>
-    </div>
+    </div> -->
   </section>
 </template>
