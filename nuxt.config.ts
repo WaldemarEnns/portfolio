@@ -22,6 +22,10 @@ export default defineNuxtConfig({
     }
   },
 
+  plausible: {
+    ignoredHostnames: ['localhost'],
+  },
+
   routeRules: {
     '/': { prerender: true },
     '/imprint': { prerender: true },
