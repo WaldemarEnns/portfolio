@@ -30,7 +30,7 @@ export default defineNuxtConfig({
     '/': { prerender: true },
     '/imprint': { prerender: true },
     '/privacy-policy': { prerender: true },
-    '/posts': { prerender: true },
+    '/posts': { prerender: false },
   },
 
   runtimeConfig: {
@@ -108,28 +108,5 @@ export default defineNuxtConfig({
 
   robots: {
     sitemap: '/sitemap_index.xml',
-  },
-
-  hooks: {
-    async 'prerender:routes'(ctx) {
-      const strapiUrl = process.env.STRAPI_URL
-      const postsResponse = await fetch(`${strapiUrl}/api/posts?publicationState=live&locale=all&pagination[page]=1&pagination[pageSize=1000]`)
-      const posts: Strapi4ResponseMany<Post> = await postsResponse.json()
-
-      const routes = posts.data.map((post: Strapi4ResponseData<Post>) => {
-        const locale = post.attributes.locale
-        const slug = post.attributes.slug
-
-        if (locale === 'de') {
-          return `/posts/${slug}`
-        } else {
-          return `/${locale}/posts/${slug}`
-        }
-      })
-
-      for (const route of routes) {
-        ctx.routes.add(route)
-      }
-    }
   }
 })
