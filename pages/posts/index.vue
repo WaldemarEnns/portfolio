@@ -44,15 +44,15 @@ const isPublished = (post: Strapi4ResponseData<Post>) => post.attributes.publish
       v-for="post in data?.data"
       :key="post.id"
     >
-      <div class="card-body flex flex-row justify-between items-center">
+      <div class="card-body flex flex-col sm:flex-row justify-between items-center">
         <div>
           <h2 class="card-title block">{{ post.attributes.Title }}</h2>
-          <i class="block mt-2">
+          <i class="block text-sm mt-1">
             {{ isPublished(post) ? t('post.published_at') : t('post.edited_at') }}
             {{ formatToLocaleDate(post.attributes.publishedAt || post.attributes.updatedAt) }}
           </i>
         </div>
-        <NuxtLink :to="getPath(post)" class="btn btn-primary btn-outline btn-wide">{{ t('post.have_a_read') }}</NuxtLink>
+        <NuxtLink :to="getPath(post)" class="btn btn-primary btn-outline btn-sm sm:btn-md btn-wide mt-2 sm:mt-0">{{ t('post.have_a_read') }}</NuxtLink>
       </div>
     </div>
 
