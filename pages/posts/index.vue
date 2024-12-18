@@ -21,6 +21,7 @@ const { data } = await useAsyncData(
       page: 1,
       pageSize: 20
     },
+    sort: 'publishedAt:desc',
     publicationState: process.env.NODE_ENV === 'production' ? 'live' : 'preview'
   }),
 )
@@ -40,12 +41,12 @@ const isPublished = (post: Strapi4ResponseData<Post>) => post.attributes.publish
 <template>
   <section class="container mx-auto my-12">
     <h1 class="font-bold text-2xl mb-8">{{ t('posts.read_something_about') }}</h1>
-    <div class="card bg-slate-800"
+    <div class="card bg-slate-800 max-w-full mb-4"
       v-for="post in data?.data"
       :key="post.id"
     >
       <div class="card-body flex flex-col sm:flex-row justify-between items-center">
-        <div>
+        <div class="sm:mr-8">
           <h2 class="card-title block">{{ post.attributes.Title }}</h2>
           <i class="block text-sm mt-1">
             {{ isPublished(post) ? t('post.published_at') : t('post.edited_at') }}
