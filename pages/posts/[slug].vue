@@ -6,14 +6,10 @@ definePageMeta({
   layout: 'post',
 })
 
-const { locales } = useI18n()
+const { t, locales } = useI18n()
 const localePath = useLocalePath()
 
 const setI18nParams = useSetI18nParams()
-
-const availableLocales = computed(() => {
-  return locales.value.filter(i => i.code !== locale.value)
-})
 
 const robotsRule = useRobotsRule(true)
 
@@ -37,6 +33,13 @@ const { data, error } = await useAsyncData(
     }
   ),
 )
+
+const availableLocales = computed(() => {
+  return locales.value.filter((language) => {
+    const availableTranslatedContent = data.value?.data?.attributes?.localeSlugs[language.code]
+    return language.code !== locale.value && availableTranslatedContent
+  })
+})
 
 if (error.value) {
   navigateTo('/404')
@@ -73,10 +76,10 @@ function switchTranslation (locale: string) {
 
 <template>
   <article class="container prose my-12 mx-auto">
-    <i v-if="publicationDate">{{ $t('post.published_at') }} {{ publicationDate }}</i>
-    <i v-else>{{ $t('post.edited_at') }} {{ updatedAt }}</i>
+    <i v-if="publicationDate">{{ t('post.published_at') }} {{ publicationDate }}</i>
+    <i v-else>{{ t('post.edited_at') }} {{ updatedAt }}</i>
     <h1 class="block mt-4">{{ title }}</h1>
-    <div class="my-4 flex flex-row justify-start items-center">
+    <div v-if="availableLocales.length > 0" class="my-4 flex flex-row justify-start items-center">
       <NuxtLink
         v-for="locale in availableLocales"
         :key="locale.code"
