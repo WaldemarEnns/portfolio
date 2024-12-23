@@ -23,8 +23,6 @@ export type PostBySlug = {
   updatedAt: string;
   locale: string;
   localeSlugs: {
-    en: string;
-    de: string;
-    es: string;
+    [key: string]: string
   }
 }

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { PostBySlug } from '@/types/strapi'
+import type { Strapi4ResponseData, Strapi4ResponseSingle } from '@nuxtjs/strapi';
 import { StrapiBlocks } from 'vue-strapi-blocks-renderer'
 
 definePageMeta({
@@ -23,7 +24,7 @@ const slug = computed(() => currentRoute.value.params.slug as string)
 
 const { data, error } = await useAsyncData(
   'post',
-  () => client<PostBySlug>(
+  () => client<Strapi4ResponseSingle<PostBySlug>>(
     `/posts/bySlug/${slug.value}`,
     {
       query: {
@@ -35,10 +36,14 @@ const { data, error } = await useAsyncData(
 )
 
 const availableLocales = computed(() => {
-  return locales.value.filter((language) => {
-    const availableTranslatedContent = data.value?.data?.attributes?.localeSlugs[language.code]
-    return language.code !== locale.value && availableTranslatedContent
-  })
+  if (data.value === null) {
+    return []
+  } else {
+    return locales.value.filter((language) => {
+      const availableTranslatedContent = data.value!.data.attributes.localeSlugs[language.code]
+      return language.code !== locale.value && availableTranslatedContent
+    })
+  }
 })
 
 if (error.value) {
