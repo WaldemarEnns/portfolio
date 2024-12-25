@@ -10,7 +10,7 @@ const availableLocales = computed(() => {
 
 <template>
   <footer class="footer bg-neutral text-neutral-content p-10">
-    <nav class="w-full flex flex-row justify-start items-start">
+    <nav class="w-full flex flex-col justify-start items-start sm:flex-row sm:justify-start sm:items-start">
       <div class="flex flex-col justify-start items-start mr-12">
         <span class="footer-title text-white mb-4">{{ $t('footer.legal') }}</span>
         <NuxtLink :to="localePath('imprint')" class="link link-hover mb-2">{{ $t('footer.imprint') }}</NuxtLink>
@@ -24,7 +24,7 @@ const availableLocales = computed(() => {
 
       <div class="flex flex-col justify-start items-start">
         <span class="footer-title text-white mb-4">{{ $t('footer.languages') }}</span>
-        <NuxtLink v-for="locale in availableLocales" :key="locale.code" :to="switchLocalePath(locale.code)">
+        <NuxtLink v-for="locale in availableLocales" :key="locale.code" :to="switchLocalePath(locale.code)" class="mb-2">
           {{ locale.name }}
         </NuxtLink>
       </div>
