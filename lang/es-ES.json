@@ -36,6 +36,9 @@
       "ci_cd": "Usando CI/CD en GitHub y GitLab, optimizo el proceso de desarrollo con pruebas automáticas y despliegue continuo, asegurando que los cambios en el código se transfieran de manera segura y rápida a producción. Esto me permite entregar software funcional en cualquier momento mientras mantengo la calidad. Dependiendo del stack, también utilizo herramientas como Laravel Forge en proyectos de Laravel.",
       "git_flow": "Trabajo con una combinación de Git Flow y GitHub Flow para garantizar ramas bien estructuradas tanto para ciclos de desarrollo a largo plazo como de ritmo rápido. Me aseguro de que las ramas para características, correcciones y lanzamientos estén claramente separadas, evitando errores comunes como trabajar directamente en la rama master, mensajes de commit poco claros o saltarse revisiones de código. Las buenas prácticas, como el rebasing regular y el uso de pull requests, mantienen la base de código limpia y rastreable.",
       "testing": "Las pruebas son una parte fundamental de mi trabajo, de las que nunca o rara vez me salto. Las pruebas unitarias con TDD, las pruebas de componentes con Cypress para elementos de UI o las pruebas E2E para verificar la funcionalidad principal del software de principio a fin, aseguran que el código sea robusto y mantenible desde el principio, reduciendo los riesgos para futuros cambios."
+    },
+    "blog": {
+      "blog_text": "Las últimas ideas, consejos y actualizaciones de mi trabajo como desarrollador de software: prácticos y actuales."
     }
   },
   "badges": {

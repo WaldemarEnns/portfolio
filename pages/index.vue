@@ -118,6 +118,7 @@ const { data } = await useAsyncData<Strapi4ResponseMany<Post>>(
   <section id="blog" class="container m-auto py-12">
     <article class="prose mb-4">
       <h2>Blog & Insights</h2>
+      <p>{{ t('home.blog.blog_text') }}</p>
     </article>
     <BlogPost
       v-for="post in data!.data"
