@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
+
 definePageMeta({
   name: 'home',
   description: 'meta.descriptions.home'
@@ -28,15 +32,15 @@ function scrollToAbout () {
           height="100"
           alt="A picture of me in a suit."
         />
-        <h1 class="text-5xl font-bold mb-0">{{ $t('home.nice_to_meet_you') }}</h1>
+        <h1 class="text-5xl font-bold mb-0">{{ t('home.nice_to_meet_you') }}</h1>
         <p class="py-6">
-          {{  $t('home.welcome') }}
+          {{  t('home.welcome') }}
         </p>
         <button
           class="btn btn-primary"
           @click="scrollToAbout"
         >
-          {{ $t('home.tell_me_more') }}
+          {{ t('home.tell_me_more') }}
           <font-awesome-icon icon="fa-solid fa-arrow-down"></font-awesome-icon>
         </button>
       </div>
@@ -45,58 +49,58 @@ function scrollToAbout () {
 
   <section id="about" class="container m-auto py-12">
     <article class="prose">
-      <h2>{{ $t('home.about_me.about_me') }}</h2>
+      <h2>{{ t('home.about_me.about_me') }}</h2>
     </article>
     <article class="prose m-auto">
       <h3>
         <font-awesome-icon icon="fa-solid fa-user-astronaut"></font-awesome-icon>
-       {{ $t('home.about_me.who_am_i') }}
+       {{ t('home.about_me.who_am_i') }}
       </h3>
-      <p>{{ $t('home.about_me.who_i_am')}}</p>
+      <p>{{ t('home.about_me.who_i_am')}}</p>
 
       <h3>
         <font-awesome-icon icon="fa-solid fa-wand-magic-sparkles"></font-awesome-icon>
-        {{  $t('home.about_me.experience') }}
+        {{  t('home.about_me.experience') }}
       </h3>
-      <p>{{ $t('home.about_me.my_experience') }}</p>
+      <p>{{ t('home.about_me.my_experience') }}</p>
       <div class="badge badge-neutral mr-2">
         <font-awesome-icon icon="fa-brands fa-laravel" class="mr-2"></font-awesome-icon>
-        {{ $t('badges.laravel') }}
+        {{ t('badges.laravel') }}
       </div>
 
       <div class="badge badge-neutral mr-2">
         <font-awesome-icon icon="fa-brands fa-vuejs" class="mr-2"></font-awesome-icon>
-        {{ $t('badges.vue') }}
+        {{ t('badges.vue') }}
       </div>
 
       <div class="badge badge-neutral mr-2">
-        {{ $t('badges.nuxt') }}
+        {{ t('badges.nuxt') }}
       </div>
 
       <div class="badge badge-neutral mr-2">
-        {{ $t('badges.typescript') }}
+        {{ t('badges.typescript') }}
       </div>
 
       <div class="badge badge-neutral mr-2">
-        {{ $t('badges.nestjs') }}
+        {{ t('badges.nestjs') }}
       </div>
 
       <div class="badge badge-neutral mr-2">
-        {{ $t('badges.python') }}
+        {{ t('badges.python') }}
       </div>
 
       <h3>
         <font-awesome-icon icon="fa-solid fa-hand-spock"></font-awesome-icon>
-        {{  $t('home.about_me.values') }}
+        {{  t('home.about_me.values') }}
       </h3>
-      <p>{{ $t('home.about_me.values_text') }}</p>
+      <p>{{ t('home.about_me.values_text') }}</p>
 
     </article>
   </section>
 
   <section id="services" class="container m-auto py-12">
     <article class="prose mb-4">
-      <h2>{{ $t('home.services.services')}}</h2>
+      <h2>{{ t('home.services.services')}}</h2>
     </article>
 
     <!-- w-full sm:w-full md:w-full lg:w-full xl:w-3/12 2xl:min-w-[450px] -->
@@ -106,17 +110,17 @@ function scrollToAbout () {
         <div class="card-body">
           <h2 class="card-title">
             <font-awesome-icon class="mr-2" icon="fa-solid fa-palette"></font-awesome-icon>
-            {{  $t('home.services.frontend_title') }}
+            {{  t('home.services.frontend_title') }}
           </h2>
-          <p>{{ $t('home.services.frontend_text_1') }}</p>
-          <p>{{ $t('home.services.frontend_text_2') }}</p>
+          <p>{{ t('home.services.frontend_text_1') }}</p>
+          <p>{{ t('home.services.frontend_text_2') }}</p>
           <div class="card-actions justify-end mt-4">
-            <button class="btn btn-secondary btn-outline w-full sm:w-full md:w-full lg:w-fit xl:w-fit 2xl:w-fit" @click="scrollToContact">{{ $t('cta.lets_talk') }}</button>
+            <button class="btn btn-secondary btn-outline w-full sm:w-full md:w-full lg:w-fit xl:w-fit 2xl:w-fit" @click="scrollToContact">{{ t('cta.lets_talk') }}</button>
           </div>
           <div class="mt-4">
             <div class="badge badge-neutral">
               <font-awesome-icon class="mr-2" icon="fa-brands fa-vuejs"></font-awesome-icon>
-              {{ $t('badges.vue')}}
+              {{ t('badges.vue')}}
             </div>
           </div>
         </div>
@@ -126,17 +130,17 @@ function scrollToAbout () {
         <div class="card-body">
           <h2 class="card-title">
             <font-awesome-icon class="mr-2" icon="fa-solid fa-sitemap"></font-awesome-icon>
-            {{ $t('home.services.saas') }}
+            {{ t('home.services.saas') }}
           </h2>
-          <p>{{ $t('home.services.saas_text_1') }}</p>
-          <p>{{ $t('home.services.saas_text_2') }}</p>
+          <p>{{ t('home.services.saas_text_1') }}</p>
+          <p>{{ t('home.services.saas_text_2') }}</p>
           <div class="card-actions justify-end mt-4">
-            <button class="btn btn-secondary btn-outline w-full sm:w-full md:w-full lg:w-fit xl:w-fit 2xl:w-fit" @click="scrollToContact">{{ $t('cta.start_your_business_idea') }}</button>
+            <button class="btn btn-secondary btn-outline w-full sm:w-full md:w-full lg:w-fit xl:w-fit 2xl:w-fit" @click="scrollToContact">{{ t('cta.start_your_business_idea') }}</button>
           </div>
           <div class="mt-4">
             <div class="badge badge-neutral">
               <font-awesome-icon class="mr-2" icon="fa-brands fa-laravel"></font-awesome-icon>
-              {{ $t('badges.laravel') }}
+              {{ t('badges.laravel') }}
             </div>
           </div>
         </div>
@@ -146,16 +150,16 @@ function scrollToAbout () {
         <div class="card-body">
           <h2 class="card-title">
             <font-awesome-icon class="mr-2" icon="fa-solid fa-user-check"></font-awesome-icon>
-            {{ $t('home.services.consultancy') }}
+            {{ t('home.services.consultancy') }}
           </h2>
           <p>
-            {{ $t('home.services.consultancy_text_1') }}
+            {{ t('home.services.consultancy_text_1') }}
           </p>
           <p>
-            {{ $t('home.services.consultancy_text_2') }}
+            {{ t('home.services.consultancy_text_2') }}
           </p>
           <div class="card-actions justify-end mt-4">
-            <button class="btn btn-secondary btn-outline w-full sm:w-full md:w-full lg:w-fit xl:w-fit 2xl:w-fit" @click="scrollToContact">{{ $t('cta.get_consultancy') }}</button>
+            <button class="btn btn-secondary btn-outline w-full sm:w-full md:w-full lg:w-fit xl:w-fit 2xl:w-fit" @click="scrollToContact">{{ t('cta.get_consultancy') }}</button>
           </div>
         </div>
       </div>
@@ -164,33 +168,33 @@ function scrollToAbout () {
 
   <section id="methods" class="container m-auto py-12">
     <article class="prose mb-4">
-      <h2>{{ $t('home.methods.methods')}}</h2>
+      <h2>{{ t('home.methods.methods')}}</h2>
     </article>
     <Method
       icon="fa-fas fa-arrows-split-up-and-left"
-      :content="$t('home.methods.agile')"
-      :title="$t('home.methods.titles.agile')"
+      :content="t('home.methods.agile')"
+      :title="t('home.methods.titles.agile')"
       class="mb-4"
     />
     <Method
       icon="fa-fas fa-flask-vial"
-      :content="$t('home.methods.testing')"
-      :title="$t('home.methods.titles.testing')"
+      :content="t('home.methods.testing')"
+      :title="t('home.methods.titles.testing')"
       class="mb-4"
     />
     <Method
       icon="fa-fas fa-code-branch"
-      :content="$t('home.methods.git_flow')"
-      :title="$t('home.methods.titles.git_flow')"
+      :content="t('home.methods.git_flow')"
+      :title="t('home.methods.titles.git_flow')"
       class="mb-4"
     />
     <Method
       icon="fa-fas fa-server"
-      :content="$t('home.methods.ci_cd')"
-      :title="$t('home.methods.titles.ci_cd')"
+      :content="t('home.methods.ci_cd')"
+      :title="t('home.methods.titles.ci_cd')"
       class="mb-4"
     />
   </section>
 
-  <div class="divider">{{ $t('dividers.interested') }}</div>
+  <div class="divider">{{ t('dividers.interested') }}</div>
 </template>
