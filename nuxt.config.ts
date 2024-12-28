@@ -27,7 +27,7 @@ export default defineNuxtConfig({
   },
 
   routeRules: {
-    '/': { prerender: true },
+    '/': { prerender: false },
     '/imprint': { prerender: true },
     '/privacy-policy': { prerender: true },
     '/posts': { prerender: false },
