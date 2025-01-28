@@ -54,7 +54,7 @@ const { data } = await useAsyncData<Strapi4ResponseMany<Post>>(
           {{  t('home.welcome') }}
         </p>
         <button
-          class="btn btn-primary"
+          class="btn btn-primary animate-bounce"
           @click="scrollToAbout"
         >
           {{ t('home.tell_me_more') }}
