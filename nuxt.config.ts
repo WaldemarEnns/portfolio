@@ -37,8 +37,8 @@ export default defineNuxtConfig({
     strapi: {
       url: process.env.STRAPI_URL
     },
+    postmarkServerToken: process.env.POSTMARK_SERVER_TOKEN,
     public: {
-      supabaseUrl: process.env.SUPABASE_URL,
       strapi: {
         url: process.env.STRAPI_URL
       }
