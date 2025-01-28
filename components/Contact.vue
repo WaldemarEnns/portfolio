@@ -8,11 +8,7 @@ const { t } = useI18n({
 
 const localePath = useLocalePath()
 
-const runtimeConfig = useRuntimeConfig()
-
-console.debug('runtimeConfig', runtimeConfig)
-
-const CONTACT_MAIL_ENDPOINT = `${runtimeConfig.public.supabaseUrl}/functions/v1/send-contact-mail`
+const CONTACT_MAIL_ENDPOINT = `/contact-mail`
 
 const schema = toTypedSchema(
   yup.object({
