@@ -39,7 +39,7 @@ const { data } = await useAsyncData<Strapi4ResponseMany<Post>>(
 </script>
 
 <template>
-  <div class="hero bg-base-200 min-h-screen">
+  <div class="hero relative bg-base-200 min-h-screen">
     <div class="hero-content text-center">
       <div class="max-w-md prose">
         <img
@@ -62,6 +62,15 @@ const { data } = await useAsyncData<Strapi4ResponseMany<Post>>(
         </button>
       </div>
     </div>
+
+    <ParticlesBg
+      class="absolute inset-0"
+      :quantity="100"
+      :ease="100"
+      :color="'#FFF'"
+      :staticity="10"
+      refresh
+    />
   </div>
 
   <section id="about" class="container m-auto py-12">
