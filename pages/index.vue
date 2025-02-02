@@ -40,7 +40,7 @@ const { data } = await useAsyncData<Strapi4ResponseMany<Post>>(
 
 <template>
   <div class="hero relative bg-base-200 min-h-screen">
-    <div class="hero-content text-center">
+    <div class="hero-content text-center z-10">
       <div class="max-w-md prose">
         <img
           class="mask mask-squircle sepia-0  w-[100px] sm:w-[200px] md:w-[200px] lg:w-[200px] xl:w-[200px] m-auto mb-8"
