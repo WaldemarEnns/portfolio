@@ -53,13 +53,13 @@ const { data } = await useAsyncData<Strapi4ResponseMany<Post>>(
         <p class="py-6">
           {{  t('home.welcome') }}
         </p>
-        <button
-          class="btn btn-primary animate-bounce"
+        <RainbowButton
+          class="btn btn-primary text-white"
           @click="scrollToAbout"
         >
           {{ t('home.tell_me_more') }}
-          <font-awesome-icon icon="fa-solid fa-arrow-down"></font-awesome-icon>
-        </button>
+          <font-awesome-icon icon="fa-solid fa-arrow-down ml-2"></font-awesome-icon>
+        </RainbowButton>
       </div>
     </div>
 
