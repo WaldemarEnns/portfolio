@@ -22,7 +22,7 @@ function scrollToServices () {
 </script>
 
 <template>
-  <div class="navbar bg-base-100 sticky top-0 z-10">
+  <div class="navbar bg-base-100 sticky top-0 z-20">
     <div class="navbar-start">
       <NuxtLink :to="localePath('home')" class="btn btn-ghost text-xl">waldemar enns</NuxtLink>
     </div>
