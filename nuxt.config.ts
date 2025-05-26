@@ -1,6 +1,3 @@
-import type { Strapi4ResponseMany, Strapi4ResponseData } from "@nuxtjs/strapi"
-import type { Post } from "./types/strapi"
-
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
@@ -34,20 +31,12 @@ export default defineNuxtConfig({
   },
 
   runtimeConfig: {
-    strapi: {
-      url: process.env.STRAPI_URL
-    },
     postmarkServerToken: process.env.POSTMARK_SERVER_TOKEN,
-    public: {
-      strapi: {
-        url: process.env.STRAPI_URL
-      }
-    }
   },
 
   pages: true,
 
-  modules: ['@nuxtjs/i18n', '@nuxtjs/sitemap', '@nuxtjs/robots', '@nuxtjs/strapi', '@nuxt/test-utils/module', '@nuxtjs/plausible'],
+  modules: ['@nuxtjs/i18n', '@nuxtjs/sitemap', '@nuxtjs/robots', '@nuxt/test-utils/module', '@nuxtjs/plausible'],
 
   i18n: {
     baseUrl: 'https://waldemarenns.de',
@@ -78,32 +67,6 @@ export default defineNuxtConfig({
   site: {
     url: 'https://waldemarenns.de',
     name: 'Waldemar Enns',
-  },
-
-  sitemap: {
-    urls: async () => {
-      const strapiUrl = process.env.STRAPI_URL
-      let postsResponse
-      if (process.env.NODE_ENV === 'production') {
-        postsResponse = await fetch(`${strapiUrl}/api/posts?publicationState=live&locale=all&pagination[page]=1&pagination[pageSize=1000]`)
-      } else {
-        postsResponse = await fetch(`${strapiUrl}/api/posts?publicationState=preview&locale=all&pagination[page]=1&pagination[pageSize=1000]`)
-      }
-      const posts: Strapi4ResponseMany<Post> = await postsResponse.json()
-
-      const routes = posts.data?.map((post: Strapi4ResponseData<Post>) => {
-        const locale = post.attributes.locale
-        const slug = post.attributes.slug
-
-        if (locale === 'de') {
-          return `/posts/${slug}`
-        } else {
-          return `/${locale}/posts/${slug}`
-        }
-      }) || []
-
-      return routes
-    }
   },
 
   robots: {

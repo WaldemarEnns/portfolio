@@ -18,7 +18,6 @@
     "@nuxtjs/plausible": "^1.0.3",
     "@nuxtjs/robots": "^4.1.7",
     "@nuxtjs/sitemap": "^6.0.1",
-    "@nuxtjs/strapi": "^1.12.0",
     "@vee-validate/yup": "^4.13.2",
     "@vueuse/core": "^12.5.0",
     "motion-v": "^0.8.1",
@@ -26,7 +25,6 @@
     "postmark": "^4.0.5",
     "vee-validate": "^4.13.2",
     "vue": "latest",
-    "vue-strapi-blocks-renderer": "^0.2.2",
     "yup": "^1.4.0"
   },
   "devDependencies": {

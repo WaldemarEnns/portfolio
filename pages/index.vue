@@ -1,10 +1,7 @@
 <script setup lang="ts">
-import type { Strapi4ResponseMany, StrapiLocale } from '@nuxtjs/strapi';
-import type { Post } from '~/types/strapi';
 import { useI18n } from 'vue-i18n'
 
 const { t, locale } = useI18n()
-const { find } = useStrapi<Post>()
 const localePath = useLocalePath()
 
 definePageMeta({
@@ -23,19 +20,6 @@ function scrollToAbout () {
     behavior: 'smooth'
   })
 }
-
-const { data } = await useAsyncData<Strapi4ResponseMany<Post>>(
-  'posts',
-  () => find('posts', {
-    locale: locale.value as StrapiLocale,
-    pagination: {
-      page: 1,
-      pageSize: 3
-    },
-    sort: 'publishedAt:desc',
-    publicationState: process.env.NODE_ENV === 'production' ? 'live' : 'preview'
-  }),
-)
 </script>
 
 <template>
@@ -122,28 +106,6 @@ const { data } = await useAsyncData<Strapi4ResponseMany<Post>>(
       <p>{{ t('home.about_me.values_text') }}</p>
 
     </article>
-  </section>
-
-  <section id="blog" class="container m-auto py-12">
-    <article class="prose mb-4">
-      <h2>Blog & Insights</h2>
-      <p>{{ t('home.blog.blog_text') }}</p>
-    </article>
-    <BlogPost
-      v-for="post in data!.data"
-      :key="post.id"
-      :post="post"
-    />
-
-    <div class="flex justify-center w-full">
-      <NuxtLink
-        class="btn btn-primary btn-wide mt-4"
-        :to="localePath('posts')"
-      >
-      <span>{{ t('read_more') }}</span>
-      <font-awesome-icon icon="fa-solid fa-book" class="mr-2"></font-awesome-icon>
-      </NuxtLink>
-    </div>
   </section>
 
   <section id="services" class="container m-auto py-12">

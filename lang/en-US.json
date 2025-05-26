@@ -109,7 +109,10 @@
     "have_a_read": "Have a read"
   },
   "posts": {
-    "read_something_about": "Read something about:"
+    "read_something_about": "Read something about:",
+    "coming_soon": "Coming Soon",
+    "coming_soon_description": "My blog is currently under construction. Soon you'll find articles about web development, best practices, and insights from my projects.",
+    "blog_placeholder": "Blog content coming soon!"
   },
   "read_more": "read more"
 }

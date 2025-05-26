@@ -112,7 +112,10 @@
     "have_a_read": "Leer ahora"
   },
   "posts": {
-    "read_something_about": "Lea algo sobre:"
+    "read_something_about": "Lea algo sobre:",
+    "coming_soon": "Próximamente",
+    "coming_soon_description": "Mi blog está actualmente en construcción. Pronto encontrarás artículos sobre desarrollo web, mejores prácticas e ideas de mis proyectos.",
+    "blog_placeholder": "¡Contenido del blog próximamente!"
   },
   "read_more": "leer más"
 }
