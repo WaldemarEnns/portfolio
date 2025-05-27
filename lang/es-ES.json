@@ -13,13 +13,24 @@
       "cta_secondary": "Saber Más"
     },
     "about_me": {
-      "about_me": "Sobre mí",
-      "who_am_i": "¿Quién soy?",
-      "who_i_am": "Soy un desarrollador Fullstack experimentado y líder de equipo, enfocado en soluciones con VueJS, TypeScript y Laravel. Durante muchos años he apoyado a empresas en la construcción de soluciones robustas y escalables.",
-      "experience": "Experiencia",
-      "my_experience": "En los últimos 7+ años he contribuido a muchos proyectos diferentes, incluidas plataformas para empresas como https://monkeybox.de, https://impax-tours.com y https://aedifion.com. Mi objetivo es proporcionar código limpio, procesos estructurados y mantener el valor.",
-      "values": "Valores",
-      "values_text": "La fiabilidad, la precisión y el aprendizaje continuo son el corazón de mi trabajo. Valoro la comunicación abierta y la estrecha colaboración con mis clientes para lograr los mejores resultados posibles."
+      "title": "Por qué elegirme",
+      "subtitle": "Transformo desafíos empresariales complejos en soluciones digitales elegantes que generan resultados reales.",
+      "what_i_do": {
+        "title": "Lo que hago",
+        "content": "Me especializo en crear aplicaciones web de alto rendimiento y plataformas SaaS que ayudan a las empresas a crecer. Desde el concepto hasta el despliegue, entrego soluciones que no solo funcionan, sino que están diseñadas para crecer con tu negocio."
+      },
+      "my_approach": {
+        "title": "Mi enfoque",
+        "content": "Cada proyecto comienza entendiendo tus objetivos. Combino experiencia técnica con perspicacia empresarial para crear soluciones que resuelven problemas reales y entregan valor medible a tus clientes."
+      },
+      "track_record": {
+        "title": "Resultados comprobados",
+        "content": "7+ años entregando proyectos exitosos para empresas de diversas industrias. He ayudado a negocios a lanzar productos, optimizar operaciones y escalar su presencia digital con código moderno y mantenible."
+      },
+      "why_work_with_me": {
+        "title": "Asociación, no solo desarrollo",
+        "content": "Obtienes más que código – consigues un socio estratégico que entiende las necesidades del negocio. Comunicación clara, entrega confiable y soluciones construidas para el éxito a largo plazo."
+      }
     },
     "services": {
       "services": "Servicios",
@@ -96,7 +107,7 @@
   },
   "navbar": {
     "links": {
-      "about_me": "Sobre mí",
+      "about_me": "Por qué elegirme",
       "services": "Servicios"
     }
   },

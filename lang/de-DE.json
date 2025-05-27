@@ -13,13 +13,24 @@
       "cta_secondary": "Mehr erfahren"
     },
     "about_me": {
-      "about_me": "Über mich",
-      "who_am_i": "Wer bin ich?",
-      "who_i_am": "Ich bin ein erfahrener Fullstack-Entwickler und Teamleiter, der sich auf Lösungen mit VueJS, TypeScript und Laravel konzentriert. Seit vielen Jahren unterstütze ich Unternehmen beim Aufbau robuster und skalierbarer Lösungen.",
-      "experience": "Erfahrung",
-      "my_experience": "In den letzten 7+ Jahren habe ich zu vielen verschiedenen Projekten beigetragen, darunter Plattformen für Unternehmen wie https://monkeybox.de, https://impax-tours.com und https://aedifion.com. Mein Ziel ist es, sauberen Code, strukturierte Prozesse und Werterhalt zu bieten.",
-      "values": "Werte",
-      "values_text": "Zuverlässigkeit, Präzision und kontinuierliches Lernen stehen im Mittelpunkt meiner Arbeit. Ich schätze offene Kommunikation und enge Zusammenarbeit mit meinen Kunden, um die bestmöglichen Ergebnisse zu erzielen."
+      "title": "Warum mich wählen",
+      "subtitle": "Ich verwandle komplexe Geschäftsherausforderungen in elegante digitale Lösungen, die echte Ergebnisse liefern.",
+      "what_i_do": {
+        "title": "Was ich mache",
+        "content": "Ich spezialisiere mich auf hochperformante Webanwendungen und SaaS-Plattformen, die Unternehmen beim Wachstum helfen. Von der Konzeption bis zur Bereitstellung liefere ich Lösungen, die nicht nur funktional sind, sondern mit deinem Unternehmen mitwachsen."
+      },
+      "my_approach": {
+        "title": "Mein Ansatz",
+        "content": "Jedes Projekt beginnt mit dem Verständnis deiner Ziele. Ich kombiniere technische Expertise mit Geschäftsverständnis, um Lösungen zu schaffen, die echte Probleme lösen und messbaren Wert für deine Kunden liefern."
+      },
+      "track_record": {
+        "title": "Bewährte Ergebnisse",
+        "content": "7+ Jahre erfolgreiche Projekte für Unternehmen verschiedener Branchen. Ich habe Unternehmen beim Produktlaunch, der Optimierung von Abläufen und der Skalierung ihrer digitalen Präsenz mit modernem, wartbarem Code geholfen."
+      },
+      "why_work_with_me": {
+        "title": "Partnerschaft, nicht nur Entwicklung",
+        "content": "Du erhältst mehr als Code – du bekommst einen strategischen Partner, der Geschäftsbedürfnisse versteht. Klare Kommunikation, zuverlässige Lieferung und Lösungen für langfristigen Erfolg."
+      }
     },
     "services": {
       "services": "Dienstleistungen",
@@ -27,11 +38,11 @@
       "frontend_text_1": "Implementierung moderner und effizienter Webanwendungen und Websites.",
       "frontend_text_2": "Meine umfassende Expertise in Vue und seinem Ökosystem gewährleistet, dass meine Lösungen auf dem neuesten Stand der Technik und den besten Praktiken sind.",
       "saas": "SaaS mit Laravel",
-      "saas_text_1": "Von der Einrichtung & Entwicklung bis zur Veröffentlichung und Bereitstellung. Skalierbare und stabile Lösungen für Ihre Geschäftsanforderungen.",
+      "saas_text_1": "Von der Einrichtung & Entwicklung bis zur Veröffentlichung und Bereitstellung. Skalierbare und stabile Lösungen für deine Geschäftsanforderungen.",
       "saas_text_2": "Maßgeschneiderte Lösungen für Buchungssysteme, Bestandsverwaltung, Zahlungsgateways und API-Entwicklung.",
       "consultancy": "Beratung",
-      "consultancy_text_1": "Ich biete fundierte Beratung und strategische Planung für Ihre Webentwicklungsprojekte.",
-      "consultancy_text_2": "Mit meiner Erfahrung in der Frontend- und Backend-Entwicklung und im Teammanagement kann ich Ihnen helfen, die richtigen technologischen Entscheidungen zu treffen und Ihre Projekte effizient umzusetzen."
+      "consultancy_text_1": "Ich biete fundierte Beratung und strategische Planung für deine Webentwicklungsprojekte.",
+      "consultancy_text_2": "Mit meiner Erfahrung in der Frontend- und Backend-Entwicklung und im Teammanagement kann ich dir helfen, die richtigen technologischen Entscheidungen zu treffen und deine Projekte effizient umzusetzen."
     },
     "methods": {
       "methods": "Meine Arbeitsmethoden",
@@ -93,7 +104,7 @@
   },
   "navbar": {
     "links": {
-      "about_me": "Über mich",
+      "about_me": "Warum mich wählen",
       "services": "Dienstleistungen"
     }
   },

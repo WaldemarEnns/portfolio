@@ -73,55 +73,83 @@ function scrollToAbout () {
     />
   </div>
 
-  <section id="about" class="container m-auto py-12">
-    <article class="prose">
-      <h2>{{ t('home.about_me.about_me') }}</h2>
-    </article>
-    <article class="prose m-auto">
-      <h3>
-        <font-awesome-icon icon="fa-solid fa-user-astronaut"></font-awesome-icon>
-       {{ t('home.about_me.who_am_i') }}
-      </h3>
-      <p>{{ t('home.about_me.who_i_am')}}</p>
+  <section id="about" class="container m-auto py-16">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">{{ t('home.about_me.title') }}</h2>
+      <p class="text-xl text-base-content/70 max-w-2xl mx-auto">{{ t('home.about_me.subtitle') }}</p>
+    </div>
+    
+    <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+      <!-- Left Column -->
+      <div class="space-y-8">
+        <div class="card bg-base-200 shadow-lg hover-card">
+          <div class="card-body">
+            <h3 class="card-title text-xl mb-4">
+              <font-awesome-icon icon="fa-solid fa-rocket" class="text-primary"></font-awesome-icon>
+              {{ t('home.about_me.what_i_do.title') }}
+            </h3>
+            <p class="text-base-content/80">{{ t('home.about_me.what_i_do.content') }}</p>
+          </div>
+        </div>
 
-      <h3>
-        <font-awesome-icon icon="fa-solid fa-wand-magic-sparkles"></font-awesome-icon>
-        {{  t('home.about_me.experience') }}
-      </h3>
-      <p>{{ t('home.about_me.my_experience') }}</p>
-      <div class="badge badge-neutral mr-2">
-        <font-awesome-icon icon="fa-brands fa-laravel" class="mr-2"></font-awesome-icon>
-        {{ t('badges.laravel') }}
+        <div class="card bg-base-200 shadow-lg hover-card">
+          <div class="card-body">
+            <h3 class="card-title text-xl mb-4">
+              <font-awesome-icon icon="fa-solid fa-target" class="text-secondary"></font-awesome-icon>
+              {{ t('home.about_me.my_approach.title') }}
+            </h3>
+            <p class="text-base-content/80">{{ t('home.about_me.my_approach.content') }}</p>
+          </div>
+        </div>
       </div>
 
-      <div class="badge badge-neutral mr-2">
-        <font-awesome-icon icon="fa-brands fa-vuejs" class="mr-2"></font-awesome-icon>
-        {{ t('badges.vue') }}
+      <!-- Right Column -->
+      <div class="space-y-8">
+        <div class="card bg-base-200 shadow-lg hover-card">
+          <div class="card-body">
+            <h3 class="card-title text-xl mb-4">
+              <font-awesome-icon icon="fa-solid fa-chart-line" class="text-accent"></font-awesome-icon>
+              {{ t('home.about_me.track_record.title') }}
+            </h3>
+            <p class="text-base-content/80 mb-4">{{ t('home.about_me.track_record.content') }}</p>
+            
+            <!-- Technology Stack -->
+            <div class="flex flex-wrap gap-2">
+              <div class="badge badge-primary">
+                <font-awesome-icon icon="fa-brands fa-laravel" class="mr-1"></font-awesome-icon>
+                {{ t('badges.laravel') }}
+              </div>
+              <div class="badge badge-primary">
+                <font-awesome-icon icon="fa-brands fa-vuejs" class="mr-1"></font-awesome-icon>
+                {{ t('badges.vue') }}
+              </div>
+              <div class="badge badge-primary">
+                {{ t('badges.nuxt') }}
+              </div>
+              <div class="badge badge-primary">
+                {{ t('badges.typescript') }}
+              </div>
+              <div class="badge badge-primary">
+                {{ t('badges.nestjs') }}
+              </div>
+              <div class="badge badge-primary">
+                {{ t('badges.python') }}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card bg-gradient-to-br from-primary/10 to-secondary/10 border border-primary/20 shadow-lg hover-card-special">
+          <div class="card-body">
+            <h3 class="card-title text-xl mb-4">
+              <font-awesome-icon icon="fa-solid fa-handshake" class="text-primary"></font-awesome-icon>
+              {{ t('home.about_me.why_work_with_me.title') }}
+            </h3>
+            <p class="text-base-content/80">{{ t('home.about_me.why_work_with_me.content') }}</p>
+          </div>
+        </div>
       </div>
-
-      <div class="badge badge-neutral mr-2">
-        {{ t('badges.nuxt') }}
-      </div>
-
-      <div class="badge badge-neutral mr-2">
-        {{ t('badges.typescript') }}
-      </div>
-
-      <div class="badge badge-neutral mr-2">
-        {{ t('badges.nestjs') }}
-      </div>
-
-      <div class="badge badge-neutral mr-2">
-        {{ t('badges.python') }}
-      </div>
-
-      <h3>
-        <font-awesome-icon icon="fa-solid fa-hand-spock"></font-awesome-icon>
-        {{  t('home.about_me.values') }}
-      </h3>
-      <p>{{ t('home.about_me.values_text') }}</p>
-
-    </article>
+    </div>
   </section>
 
   <section id="services" class="container m-auto py-12">

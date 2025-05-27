@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom hover effects for About Me cards */
+.hover-card {
+  @apply transition-all duration-300 ease-in-out cursor-pointer;
+  transform-style: preserve-3d;
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+}
+
+.hover-card:hover {
+  transform: perspective(1000px) rotateX(-2deg) rotateY(3deg) scale(1.02) translateY(-4px);
+  @apply shadow-2xl;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 
+              0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.hover-card-special {
+  @apply transition-all duration-300 ease-in-out cursor-pointer;
+  transform-style: preserve-3d;
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+}
+
+.hover-card-special:hover {
+  transform: perspective(1000px) rotateX(-3deg) rotateY(-2deg) scale(1.03) translateY(-6px);
+  @apply shadow-2xl;
+  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.3), 
+              0 0 0 1px rgba(255, 255, 255, 0.15),
+              0 0 20px rgba(59, 130, 246, 0.1);
+}

@@ -13,13 +13,24 @@
       "cta_secondary": "Learn More"
     },
     "about_me": {
-      "about_me": "About me",
-      "who_am_i": "Who am I?",
-      "who_i_am": "I am an experienced fullstack-developer and team-lead, focussed on solutions with VueJS, TypeScript and Laravel. For many years I support companies, building robust and scalable solutions.",
-      "experience": "Experience",
-      "my_experience": "In the past 7+ years I contributed across many different projects, including platforms for companies like https://monkeybox.de, https://impax-tours.com and https://aedifion.com. It's my goal to provide clean code, structured processes and onholding value.",
-      "values": "Values",
-      "values_text": "Reliability, precision and continuous learning are at the heart of my work. I value open communication and close collaboration with my clients in order to achieve the best possible results."
+      "title": "Why Choose Me",
+      "subtitle": "I turn complex business challenges into elegant digital solutions that drive real results.",
+      "what_i_do": {
+        "title": "What I Do",
+        "content": "I specialize in building high-performance web applications and SaaS platforms that help businesses scale. From concept to deployment, I deliver solutions that are not just functional, but built to grow with your business."
+      },
+      "my_approach": {
+        "title": "My Approach",
+        "content": "Every project starts with understanding your goals. I combine technical expertise with business insight to create solutions that solve real problems and deliver measurable value to your customers."
+      },
+      "track_record": {
+        "title": "Proven Results",
+        "content": "7+ years delivering successful projects for companies across various industries. I've helped businesses launch products, optimize operations, and scale their digital presence with modern, maintainable code."
+      },
+      "why_work_with_me": {
+        "title": "Partnership, Not Just Development",
+        "content": "You get more than code – you get a strategic partner who understands business needs. Clear communication, reliable delivery, and solutions built for long-term success."
+      }
     },
     "services": {
       "services": "Services",
@@ -93,7 +104,7 @@
   },
   "navbar": {
     "links": {
-      "about_me": "About me",
+      "about_me": "Why Choose Me",
       "services": "Services"
     }
   },
