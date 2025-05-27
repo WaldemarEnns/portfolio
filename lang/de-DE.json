@@ -3,6 +3,15 @@
     "nice_to_meet_you": "waldemar lässt grüßen 👋🏼",
     "welcome": "Hey! Danke für deinen Besuch\nLass mich dir meine Arbeit und meine Person zeigen 🚀",
     "tell_me_more": "erzähl mir mehr",
+    "hero": {
+      "developer": "Softwareentwickler",
+      "freelancer": "Freelancer",
+      "consultant": "Berater",
+      "headline": "Digitale Lösungen entwickeln, die dein Business voranbringen",
+      "subtitle": "Ich entwickle digitale Lösungen und biete strategische Beratung für erfolgreiches Unternehmenswachstum.",
+      "cta_primary": "Projekt starten",
+      "cta_secondary": "Mehr erfahren"
+    },
     "about_me": {
       "about_me": "Über mich",
       "who_am_i": "Wer bin ich?",

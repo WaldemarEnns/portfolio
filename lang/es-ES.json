@@ -3,6 +3,15 @@
     "nice_to_meet_you": "bienvenido, encantado 👋🏼",
     "welcome": "¡Hola! Gracias por visitar mi página y conocerme\n¡Déjame presentarte mi trabajo y mi persona 🚀",
     "tell_me_more": "Cuéntame más",
+    "hero": {
+      "developer": "Desarrollador de Software",
+      "freelancer": "Freelancer",
+      "consultant": "Consultor",
+      "headline": "Construyendo soluciones digitales que impulsan tu negocio",
+      "subtitle": "Creo soluciones digitales y proporciono consultoría estratégica para ayudar a las empresas a crecer.",
+      "cta_primary": "Iniciar Tu Proyecto",
+      "cta_secondary": "Saber Más"
+    },
     "about_me": {
       "about_me": "Sobre mí",
       "who_am_i": "¿Quién soy?",

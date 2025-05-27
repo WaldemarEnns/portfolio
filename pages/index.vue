@@ -25,25 +25,41 @@ function scrollToAbout () {
 <template>
   <div class="hero relative bg-base-200 min-h-screen">
     <div class="hero-content text-center z-10">
-      <div class="max-w-md prose">
+      <div class="max-w-2xl">
         <img
-          class="mask mask-squircle sepia-0  w-[100px] sm:w-[200px] md:w-[200px] lg:w-[200px] xl:w-[200px] m-auto mb-8"
+          class="mask mask-squircle sepia-0 w-[120px] sm:w-[160px] md:w-[180px] lg:w-[200px] xl:w-[200px] m-auto mb-8"
           src="/assets/images/me-nice.webp"
-          width="100"
-          height="100"
+          width="200"
+          height="200"
           alt="A picture of me in a suit."
         />
-        <h1 class="text-5xl font-bold mb-0">{{ t('home.nice_to_meet_you') }}</h1>
-        <p class="py-6">
-          {{  t('home.welcome') }}
-        </p>
-        <RainbowButton
-          class="btn btn-primary text-white"
-          @click="scrollToAbout"
-        >
-          {{ t('home.tell_me_more') }}
-          <font-awesome-icon icon="fa-solid fa-arrow-down ml-2"></font-awesome-icon>
-        </RainbowButton>
+        
+        <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
+          Waldemar Enns
+        </h1>
+
+        <!-- Role text with dots -->
+        <div class="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-6 text-base-content font-bold">
+          {{ t('home.hero.developer') }} • {{ t('home.hero.freelancer') }} • {{ t('home.hero.consultant') }}
+        </div>
+
+        <div class="relative mb-8">
+          <h2 class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold leading-tight bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+            {{ t('home.hero.headline') }}
+          </h2>
+          <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-primary to-secondary rounded-full"></div>
+        </div>
+
+        <!-- CTA Button -->
+        <div class="flex justify-center">
+          <RainbowButton
+            class="btn btn-primary btn-lg text-white"
+            @click="scrollToContact"
+          >
+            {{ t('home.hero.cta_primary') }}
+            <font-awesome-icon icon="fa-solid fa-rocket" class="ml-2"></font-awesome-icon>
+          </RainbowButton>
+        </div>
       </div>
     </div>
 

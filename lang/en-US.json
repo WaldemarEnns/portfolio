@@ -3,6 +3,15 @@
     "nice_to_meet_you": "it's a pleasure to meet you 👋🏼",
     "welcome": "Hi! Thank you for visiting my page and getting to know me!\nLet me introduce myself and my work 🚀",
     "tell_me_more": "tell me more",
+    "hero": {
+      "developer": "Software Developer",
+      "freelancer": "Freelancer",
+      "consultant": "Consultant",
+      "headline": "Building digital solutions that drive your business forward",
+      "subtitle": "I create digital solutions and provide strategic consulting to help businesses grow.",
+      "cta_primary": "Start Your Project",
+      "cta_secondary": "Learn More"
+    },
     "about_me": {
       "about_me": "About me",
       "who_am_i": "Who am I?",
