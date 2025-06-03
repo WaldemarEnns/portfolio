@@ -73,6 +73,33 @@
       "consultancy_text_2": "Mit meiner Erfahrung in der Frontend- und Backend-Entwicklung sowie im Teammanagement helfe ich dir, die richtigen technologischen Entscheidungen zu treffen und deine Projekte effizient umzusetzen."
     },
     "methods": {
+      "title": "So arbeite ich",
+      "subtitle": "Ein bewährter Ansatz, der den Erfolg deines Projekts sicherstellt - pünktlich und im Budget.",
+      
+      "agile_title": "Agil & Anpassungsfähig",
+      "agile_description": "Dein Projekt entwickelt sich mit deinen Bedürfnissen. Regelmäßige Abstimmungen und iterative Entwicklung bedeuten, dass du immer die Kontrolle behältst.",
+      "agile_badge_1": "Wöchentliche Updates",
+      "agile_badge_2": "Flexibler Umfang",
+      "agile_badge_3": "Schnelle Iterationen",
+      
+      "quality_title": "Nachhaltig gebaut",
+      "quality_description": "Jede Zeile Code wird getestet und dokumentiert. Deine Investition ist durch wartbare, skalierbare Lösungen geschützt, die mit deinem Unternehmen wachsen.",
+      "quality_badge_1": "Automatisierte Tests",
+      "quality_badge_2": "Code Reviews",
+      "quality_badge_3": "Dokumentation",
+      
+      "infrastructure_title": "Modern & Sicher",
+      "infrastructure_description": "Bereitstellung auf zuverlässiger Cloud-Infrastruktur mit automatischen Backups, Monitoring und Sicherheitsupdates. Deine Anwendung bleibt schnell und sicher.",
+      "infrastructure_badge_1": "Cloud Hosting",
+      "infrastructure_badge_2": "Auto Scaling",
+      "infrastructure_badge_3": "24/7 Monitoring",
+      
+      "communication_title": "Klare Kommunikation",
+      "communication_description": "Kein Fachchinesisch, nur klare Updates zum Fortschritt. Du weißt immer, wo dein Projekt steht und was als nächstes kommt.",
+      "communication_badge_1": "Regelmäßige Updates",
+      "communication_badge_2": "Direkter Zugang",
+      "communication_badge_3": "Transparente Preise",
+      
       "methods": "Meine Arbeitsmethoden",
       "titles": {
         "agile": "Agile Methoden",

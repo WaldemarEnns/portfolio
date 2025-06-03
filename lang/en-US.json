@@ -72,6 +72,33 @@
       "consultancy_text_2": "With my experience in front-end and back-end development and team management, I can help you make the right technological decisions and implement your projects efficiently."
     },
     "methods": {
+      "title": "How I Work",
+      "subtitle": "A proven approach that ensures your project succeeds, on time and on budget.",
+      
+      "agile_title": "Agile & Adaptive",
+      "agile_description": "Your project evolves with your needs. Regular check-ins and iterative development mean you're always in control and can pivot when needed.",
+      "agile_badge_1": "Weekly Updates",
+      "agile_badge_2": "Flexible Scope",
+      "agile_badge_3": "Quick Iterations",
+      
+      "quality_title": "Built to Last",
+      "quality_description": "Every line of code is tested and documented. Your investment is protected with maintainable, scalable solutions that grow with your business.",
+      "quality_badge_1": "Automated Testing",
+      "quality_badge_2": "Code Reviews",
+      "quality_badge_3": "Documentation",
+      
+      "infrastructure_title": "Modern & Secure",
+      "infrastructure_description": "Deployed on reliable cloud infrastructure with automated backups, monitoring, and security updates. Your application stays fast and secure.",
+      "infrastructure_badge_1": "Cloud Hosting",
+      "infrastructure_badge_2": "Auto Scaling",
+      "infrastructure_badge_3": "24/7 Monitoring",
+      
+      "communication_title": "Clear Communication",
+      "communication_description": "No technical jargon, just clear updates on progress. You'll always know where your project stands and what comes next.",
+      "communication_badge_1": "Regular Updates",
+      "communication_badge_2": "Direct Access",
+      "communication_badge_3": "Transparent Pricing",
+      
       "methods": "My working methods",
       "titles": {
         "agile": "Agile methods",

@@ -303,34 +303,85 @@ function scrollToAbout () {
     </div>
   </section>
 
-  <section id="methods" class="container m-auto py-12">
-    <article class="prose mb-4">
-      <h2>{{ t('home.methods.methods')}}</h2>
-    </article>
-    <Method
-      icon="fa-fas fa-arrows-split-up-and-left"
-      :content="t('home.methods.agile')"
-      :title="t('home.methods.titles.agile')"
-      class="mb-4"
-    />
-    <Method
-      icon="fa-fas fa-flask-vial"
-      :content="t('home.methods.testing')"
-      :title="t('home.methods.titles.testing')"
-      class="mb-4"
-    />
-    <Method
-      icon="fa-fas fa-code-branch"
-      :content="t('home.methods.git_flow')"
-      :title="t('home.methods.titles.git_flow')"
-      class="mb-4"
-    />
-    <Method
-      icon="fa-fas fa-server"
-      :content="t('home.methods.ci_cd')"
-      :title="t('home.methods.titles.ci_cd')"
-      class="mb-4"
-    />
+  <section id="methods" class="container m-auto py-16">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">{{ t('home.methods.title') }}</h2>
+      <p class="text-xl text-base-content/70 max-w-2xl mx-auto">{{ t('home.methods.subtitle') }}</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+      <!-- Agile Development -->
+      <div class="card bg-base-200 shadow-lg hover-card">
+        <div class="card-body">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-3">
+              <font-awesome-icon icon="fa-solid fa-arrows-rotate" class="text-primary text-xl"></font-awesome-icon>
+            </div>
+            <h3 class="card-title text-xl">{{ t('home.methods.agile_title') }}</h3>
+          </div>
+          <p class="text-base-content/80 mb-4">{{ t('home.methods.agile_description') }}</p>
+          <div class="flex flex-wrap gap-2">
+            <div class="badge badge-primary badge-outline">{{ t('home.methods.agile_badge_1') }}</div>
+            <div class="badge badge-primary badge-outline">{{ t('home.methods.agile_badge_2') }}</div>
+            <div class="badge badge-primary badge-outline">{{ t('home.methods.agile_badge_3') }}</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quality Assurance -->
+      <div class="card bg-base-200 shadow-lg hover-card">
+        <div class="card-body">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mr-3">
+              <font-awesome-icon icon="fa-solid fa-shield-halved" class="text-secondary text-xl"></font-awesome-icon>
+            </div>
+            <h3 class="card-title text-xl">{{ t('home.methods.quality_title') }}</h3>
+          </div>
+          <p class="text-base-content/80 mb-4">{{ t('home.methods.quality_description') }}</p>
+          <div class="flex flex-wrap gap-2">
+            <div class="badge badge-secondary badge-outline">{{ t('home.methods.quality_badge_1') }}</div>
+            <div class="badge badge-secondary badge-outline">{{ t('home.methods.quality_badge_2') }}</div>
+            <div class="badge badge-secondary badge-outline">{{ t('home.methods.quality_badge_3') }}</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modern Infrastructure -->
+      <div class="card bg-base-200 shadow-lg hover-card">
+        <div class="card-body">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mr-3">
+              <font-awesome-icon icon="fa-solid fa-cloud" class="text-accent text-xl"></font-awesome-icon>
+            </div>
+            <h3 class="card-title text-xl">{{ t('home.methods.infrastructure_title') }}</h3>
+          </div>
+          <p class="text-base-content/80 mb-4">{{ t('home.methods.infrastructure_description') }}</p>
+          <div class="flex flex-wrap gap-2">
+            <div class="badge badge-accent badge-outline">{{ t('home.methods.infrastructure_badge_1') }}</div>
+            <div class="badge badge-accent badge-outline">{{ t('home.methods.infrastructure_badge_2') }}</div>
+            <div class="badge badge-accent badge-outline">{{ t('home.methods.infrastructure_badge_3') }}</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Transparent Communication -->
+      <div class="card bg-gradient-to-br from-primary/5 to-secondary/5 border border-primary/10 shadow-lg hover-card-special">
+        <div class="card-body">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-3">
+              <font-awesome-icon icon="fa-solid fa-comments" class="text-primary text-xl"></font-awesome-icon>
+            </div>
+            <h3 class="card-title text-xl">{{ t('home.methods.communication_title') }}</h3>
+          </div>
+          <p class="text-base-content/80 mb-4">{{ t('home.methods.communication_description') }}</p>
+          <div class="flex flex-wrap gap-2">
+            <div class="badge badge-primary badge-outline">{{ t('home.methods.communication_badge_1') }}</div>
+            <div class="badge badge-primary badge-outline">{{ t('home.methods.communication_badge_2') }}</div>
+            <div class="badge badge-primary badge-outline">{{ t('home.methods.communication_badge_3') }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <div class="divider">{{ t('dividers.interested') }}</div>

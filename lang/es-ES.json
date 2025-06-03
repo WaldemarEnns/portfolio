@@ -73,6 +73,33 @@
       "consultancy_text_2": "Con mi experiencia en desarrollo frontend y backend y gestión de equipos, puedo ayudarte a tomar las decisiones tecnológicas correctas e implementar tus proyectos de manera eficiente."
     },
     "methods": {
+      "title": "Cómo trabajo",
+      "subtitle": "Un enfoque probado que garantiza el éxito de tu proyecto, a tiempo y dentro del presupuesto.",
+      
+      "agile_title": "Ágil y Adaptable",
+      "agile_description": "Tu proyecto evoluciona con tus necesidades. Reuniones regulares y desarrollo iterativo significan que siempre tienes el control y puedes cambiar cuando sea necesario.",
+      "agile_badge_1": "Actualizaciones Semanales",
+      "agile_badge_2": "Alcance Flexible",
+      "agile_badge_3": "Iteraciones Rápidas",
+      
+      "quality_title": "Construido para Durar",
+      "quality_description": "Cada línea de código es probada y documentada. Tu inversión está protegida con soluciones mantenibles y escalables que crecen con tu negocio.",
+      "quality_badge_1": "Pruebas Automatizadas",
+      "quality_badge_2": "Revisiones de Código",
+      "quality_badge_3": "Documentación",
+      
+      "infrastructure_title": "Moderno y Seguro",
+      "infrastructure_description": "Desplegado en infraestructura cloud confiable con copias de seguridad automáticas, monitoreo y actualizaciones de seguridad. Tu aplicación se mantiene rápida y segura.",
+      "infrastructure_badge_1": "Alojamiento Cloud",
+      "infrastructure_badge_2": "Escalado Automático",
+      "infrastructure_badge_3": "Monitoreo 24/7",
+      
+      "communication_title": "Comunicación Clara",
+      "communication_description": "Sin jerga técnica, solo actualizaciones claras sobre el progreso. Siempre sabrás dónde está tu proyecto y qué viene después.",
+      "communication_badge_1": "Actualizaciones Regulares",
+      "communication_badge_2": "Acceso Directo",
+      "communication_badge_3": "Precios Transparentes",
+      
       "methods": "Mis métodos de trabajo",
       "titles": {
         "agile": "Métodos ágiles",
