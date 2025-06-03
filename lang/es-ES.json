@@ -33,16 +33,44 @@
       }
     },
     "services": {
+      "title": "Cómo puedo ayudarte",
+      "subtitle": "Soluciones integrales adaptadas a las necesidades de tu negocio, desde el concepto hasta la implementación y más allá.",
       "services": "Servicios",
-      "frontend_title": "Desarrollo frontend con Vue & TypeScript",
+      "popular_badge": "Más Popular",
+      
+      "frontend_title": "Aplicaciones Web Modernas",
+      "frontend_description": "Transforma tus ideas en experiencias web impresionantes y de alto rendimiento que los usuarios aman y en las que las empresas confían.",
+      "frontend_feature_1": "Aplicaciones ultrarrápidas optimizadas para SEO",
+      "frontend_feature_2": "Diseño responsive que funciona en todos los dispositivos",
+      "frontend_feature_3": "Progressive Web Apps con capacidades offline",
+      "frontend_cta": "Construye tu Web App",
+      
+      "saas_title": "Soluciones SaaS Full-Stack",
+      "saas_description": "Lanza tu producto SaaS con confianza. Construyo plataformas escalables que crecen con tu negocio.",
+      "saas_feature_1": "Arquitectura multi-tenant con aislamiento seguro de datos",
+      "saas_feature_2": "Facturación por suscripción e integración de pagos",
+      "saas_feature_3": "Funciones en tiempo real y desarrollo de API",
+      "saas_cta": "Lanza tu SaaS",
+      
+      "consulting_title": "Consultoría Técnica",
+      "consulting_description": "Orientación estratégica para navegar decisiones técnicas complejas y optimizar tu proceso de desarrollo.",
+      "consulting_feature_1": "Revisiones y optimización de arquitectura",
+      "consulting_feature_2": "Selección y migración de stack tecnológico",
+      "consulting_feature_3": "Formación de equipos e implementación de mejores prácticas",
+      "consulting_cta": "Obtén Asesoría Experta",
+      
+      "value_prop_title": "¿Por qué trabajar conmigo?",
+      "value_prop_description": "No solo escribo código: me asocio contigo para entender tus objetivos comerciales y entregar soluciones que generen resultados reales. Con un enfoque en código limpio y mantenible y las mejores prácticas modernas, me aseguro de que tu inversión continúe generando valor mucho después del lanzamiento.",
+      
+      "frontend_title_old": "Desarrollo frontend con Vue y TypeScript",
       "frontend_text_1": "Implementación de aplicaciones web y sitios web modernos y eficientes.",
-      "frontend_text_2": "Mi profunda experiencia en Vue y su ecosistema garantiza que mis soluciones estén actualizadas con la tecnología más avanzada y las mejores prácticas.",
+      "frontend_text_2": "Mi profunda experiencia en Vue y su ecosistema garantiza que mis soluciones estén actualizadas con tecnología de vanguardia y mejores prácticas.",
       "saas": "SaaS y más con Laravel",
-      "saas_text_1": "Desde la configuración y el desarrollo hasta el lanzamiento y la implementación. Soluciones escalables y estables para las necesidades de su negocio.",
+      "saas_text_1": "Desde la configuración y el desarrollo hasta el lanzamiento y la implementación. Soluciones escalables y estables para las necesidades de tu negocio.",
       "saas_text_2": "Soluciones personalizadas para sistemas de reservas, gestión de inventario, pasarelas de pago y desarrollo de API.",
       "consultancy": "Consultoría",
-      "consultancy_text_1": "Ofrezco asesoramiento sólido y planificación estratégica para sus proyectos de desarrollo web.",
-      "consultancy_text_2": "Con mi experiencia en desarrollo frontend y backend y en gestión de equipos, puedo ayudarlo a tomar las decisiones tecnológicas correctas e implementar sus proyectos de manera eficiente."
+      "consultancy_text_1": "Ofrezco asesoramiento sólido y planificación estratégica para tus proyectos de desarrollo web.",
+      "consultancy_text_2": "Con mi experiencia en desarrollo frontend y backend y gestión de equipos, puedo ayudarte a tomar las decisiones tecnológicas correctas e implementar tus proyectos de manera eficiente."
     },
     "methods": {
       "methods": "Mis métodos de trabajo",

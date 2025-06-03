@@ -33,8 +33,35 @@
       }
     },
     "services": {
+      "title": "How I Can Help You",
+      "subtitle": "Comprehensive solutions tailored to your business needs, from concept to deployment and beyond.",
       "services": "Services",
-      "frontend_title": "Frontend development with Vue & TypeScript",
+      "popular_badge": "Most Popular",
+      
+      "frontend_title": "Modern Web Applications",
+      "frontend_description": "Transform your ideas into stunning, high-performance web experiences that users love and businesses rely on.",
+      "frontend_feature_1": "Lightning-fast, SEO-optimized applications",
+      "frontend_feature_2": "Responsive design that works on all devices",
+      "frontend_feature_3": "Progressive Web Apps with offline capabilities",
+      "frontend_cta": "Build Your Web App",
+      
+      "saas_title": "Full-Stack SaaS Solutions",
+      "saas_description": "Launch your SaaS product with confidence. I build scalable platforms that grow with your business.",
+      "saas_feature_1": "Multi-tenant architecture with secure data isolation",
+      "saas_feature_2": "Subscription billing and payment integration",
+      "saas_feature_3": "Real-time features and API development",
+      "saas_cta": "Launch Your SaaS",
+      
+      "consulting_title": "Technical Consulting",
+      "consulting_description": "Strategic guidance to navigate complex technical decisions and optimize your development process.",
+      "consulting_feature_1": "Architecture reviews and optimization",
+      "consulting_feature_2": "Technology stack selection and migration",
+      "consulting_feature_3": "Team training and best practices implementation",
+      "consulting_cta": "Get Expert Advice",
+      
+      "value_prop_title": "Why Work With Me?",
+      "value_prop_description": "I don't just write code – I partner with you to understand your business goals and deliver solutions that drive real results. With a focus on clean, maintainable code and modern best practices, I ensure your investment continues to deliver value long after launch.",
+      
       "frontend_text_1": "Implementation of modern and efficient web-applications and websites.",
       "frontend_text_2": "My deep expertise of Vue and it's ecosystem ensures that my solutions are up-to-date with state of the art technology and best practises.",
       "saas": "SaaS and more with Laravel",
@@ -115,8 +142,8 @@
     },
     "descriptions": {
       "home": "Waldemar Enns, a Frontend and Software Development expert for custom solutions, web-applications and SaaS, specialized in Vue.js, TypeScript, Laravel and more.",
-      "imprint": "Legal notice of Waldemar Enns’ website, including contact information and legal details in accordance with applicable online transparency laws.",
-      "privacy": "Waldemar Enns’ privacy policy. Information on personal data protection and compliance with privacy regulations."
+      "imprint": "Legal notice of Waldemar Enns' website, including contact information and legal details in accordance with applicable online transparency laws.",
+      "privacy": "Waldemar Enns' privacy policy. Information on personal data protection and compliance with privacy regulations."
     }
   },
   "errors": {

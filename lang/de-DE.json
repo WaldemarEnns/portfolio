@@ -33,16 +33,44 @@
       }
     },
     "services": {
-      "services": "Dienstleistungen",
-      "frontend_title": "Frontend-Entwicklung mit Vue & TypeScript",
-      "frontend_text_1": "Implementierung moderner und effizienter Webanwendungen und Websites.",
-      "frontend_text_2": "Meine umfassende Expertise in Vue und seinem Ökosystem gewährleistet, dass meine Lösungen auf dem neuesten Stand der Technik und den besten Praktiken sind.",
-      "saas": "SaaS mit Laravel",
-      "saas_text_1": "Von der Einrichtung & Entwicklung bis zur Veröffentlichung und Bereitstellung. Skalierbare und stabile Lösungen für deine Geschäftsanforderungen.",
+      "title": "Wie ich dir helfen kann",
+      "subtitle": "Maßgeschneiderte Lösungen für deine Geschäftsanforderungen, von der Konzeption bis zur Bereitstellung und darüber hinaus.",
+      "services": "Leistungen",
+      "popular_badge": "Beliebteste Wahl",
+      
+      "frontend_title": "Moderne Web-Anwendungen",
+      "frontend_description": "Verwandle deine Ideen in beeindruckende, hochperformante Web-Erlebnisse, die Nutzer lieben und auf die Unternehmen vertrauen.",
+      "frontend_feature_1": "Blitzschnelle, SEO-optimierte Anwendungen",
+      "frontend_feature_2": "Responsive Design für alle Geräte",
+      "frontend_feature_3": "Progressive Web Apps mit Offline-Funktionen",
+      "frontend_cta": "Web-App erstellen",
+      
+      "saas_title": "Full-Stack SaaS-Lösungen",
+      "saas_description": "Starte dein SaaS-Produkt mit Vertrauen. Ich entwickle skalierbare Plattformen, die mit deinem Unternehmen wachsen.",
+      "saas_feature_1": "Multi-Tenant-Architektur mit sicherer Datenisolierung",
+      "saas_feature_2": "Abonnement-Abrechnung und Zahlungsintegration",
+      "saas_feature_3": "Echtzeit-Features und API-Entwicklung",
+      "saas_cta": "SaaS starten",
+      
+      "consulting_title": "Technische Beratung",
+      "consulting_description": "Strategische Begleitung bei komplexen technischen Entscheidungen und Optimierung deiner Entwicklungsprozesse.",
+      "consulting_feature_1": "Architektur-Reviews und Optimierung",
+      "consulting_feature_2": "Technologie-Stack-Auswahl und Migration",
+      "consulting_feature_3": "Team-Schulungen und Best-Practice-Implementierung",
+      "consulting_cta": "Expertenrat einholen",
+      
+      "value_prop_title": "Warum mit mir arbeiten?",
+      "value_prop_description": "Ich schreibe nicht nur Code – ich arbeite partnerschaftlich mit dir zusammen, um deine Geschäftsziele zu verstehen und Lösungen zu liefern, die echte Ergebnisse erzielen. Mit Fokus auf sauberen, wartbaren Code und moderne Best Practices stelle ich sicher, dass deine Investition auch lange nach dem Launch Wert liefert.",
+      
+      "frontend_title_old": "Frontend-Entwicklung mit Vue & TypeScript",
+      "frontend_text_1": "Umsetzung moderner und effizienter Web-Applikationen und Websites.",
+      "frontend_text_2": "Meine tiefgreifende Expertise in Vue und dessen Ökosystem stellt sicher, dass meine Lösungen auf dem neuesten Stand der Technik und Best Practices sind.",
+      "saas": "SaaS und mehr mit Laravel",
+      "saas_text_1": "Von der Einrichtung & Entwicklung bis zur Veröffentlichung und Rollout. Skalierbare und stabile Lösungen für deine Geschäftsanforderungen.",
       "saas_text_2": "Maßgeschneiderte Lösungen für Buchungssysteme, Bestandsverwaltung, Zahlungsgateways und API-Entwicklung.",
       "consultancy": "Beratung",
       "consultancy_text_1": "Ich biete fundierte Beratung und strategische Planung für deine Webentwicklungsprojekte.",
-      "consultancy_text_2": "Mit meiner Erfahrung in der Frontend- und Backend-Entwicklung und im Teammanagement kann ich dir helfen, die richtigen technologischen Entscheidungen zu treffen und deine Projekte effizient umzusetzen."
+      "consultancy_text_2": "Mit meiner Erfahrung in der Frontend- und Backend-Entwicklung sowie im Teammanagement helfe ich dir, die richtigen technologischen Entscheidungen zu treffen und deine Projekte effizient umzusetzen."
     },
     "methods": {
       "methods": "Meine Arbeitsmethoden",

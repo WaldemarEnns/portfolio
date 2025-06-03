@@ -152,69 +152,152 @@ function scrollToAbout () {
     </div>
   </section>
 
-  <section id="services" class="container m-auto py-12">
-    <article class="prose mb-4">
-      <h2>{{ t('home.services.services')}}</h2>
-    </article>
+  <section id="services" class="container m-auto py-16">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">{{ t('home.services.title') }}</h2>
+      <p class="text-xl text-base-content/70 max-w-2xl mx-auto">{{ t('home.services.subtitle') }}</p>
+    </div>
 
-    <!-- w-full sm:w-full md:w-full lg:w-full xl:w-3/12 2xl:min-w-[450px] -->
-
-    <div class="flex gap-4 flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row 2xl:flex-row">
-      <div class="card flex-1 bg-base-300 mb-4 shadow-xl border border-secondary">
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <!-- Frontend Development Card -->
+      <div class="card bg-base-200 shadow-lg hover-card">
         <div class="card-body">
-          <h2 class="card-title">
-            <font-awesome-icon class="mr-2" icon="fa-solid fa-palette"></font-awesome-icon>
-            {{  t('home.services.frontend_title') }}
-          </h2>
-          <p>{{ t('home.services.frontend_text_1') }}</p>
-          <p>{{ t('home.services.frontend_text_2') }}</p>
-          <div class="card-actions justify-end mt-4">
-            <button class="btn btn-secondary btn-outline w-full sm:w-full md:w-full lg:w-fit xl:w-fit 2xl:w-fit" @click="scrollToContact">{{ t('cta.lets_talk') }}</button>
-          </div>
-          <div class="mt-4">
-            <div class="badge badge-neutral">
-              <font-awesome-icon class="mr-2" icon="fa-brands fa-vuejs"></font-awesome-icon>
-              {{ t('badges.vue')}}
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-3">
+              <font-awesome-icon icon="fa-solid fa-palette" class="text-primary text-xl"></font-awesome-icon>
             </div>
+            <h3 class="card-title text-xl">{{ t('home.services.frontend_title') }}</h3>
+          </div>
+          
+          <p class="text-base-content/80 mb-4">{{ t('home.services.frontend_description') }}</p>
+          
+          <ul class="space-y-2 mb-6">
+            <li class="flex items-start">
+              <font-awesome-icon icon="fa-solid fa-check" class="text-primary mt-1 mr-2 flex-shrink-0"></font-awesome-icon>
+              <span class="text-sm text-base-content/70">{{ t('home.services.frontend_feature_1') }}</span>
+            </li>
+            <li class="flex items-start">
+              <font-awesome-icon icon="fa-solid fa-check" class="text-primary mt-1 mr-2 flex-shrink-0"></font-awesome-icon>
+              <span class="text-sm text-base-content/70">{{ t('home.services.frontend_feature_2') }}</span>
+            </li>
+            <li class="flex items-start">
+              <font-awesome-icon icon="fa-solid fa-check" class="text-primary mt-1 mr-2 flex-shrink-0"></font-awesome-icon>
+              <span class="text-sm text-base-content/70">{{ t('home.services.frontend_feature_3') }}</span>
+            </li>
+          </ul>
+
+          <div class="flex flex-wrap gap-2 mb-4">
+            <div class="badge badge-primary badge-sm">Vue 3</div>
+            <div class="badge badge-primary badge-sm">Nuxt</div>
+            <div class="badge badge-primary badge-sm">TypeScript</div>
+            <div class="badge badge-primary badge-sm">Tailwind</div>
+          </div>
+
+          <div class="card-actions">
+            <button class="btn btn-primary btn-sm w-full" @click="scrollToContact">
+              {{ t('home.services.frontend_cta') }}
+              <font-awesome-icon icon="fa-solid fa-arrow-right" class="ml-1"></font-awesome-icon>
+            </button>
           </div>
         </div>
       </div>
 
-      <div class="card flex-1 bg-base-300 mb-4 shadow-xl border border-secondary">
+      <!-- SaaS Development Card -->
+      <div class="card bg-gradient-to-br from-secondary/5 to-accent/5 border border-secondary/20 shadow-lg hover-card-special">
         <div class="card-body">
-          <h2 class="card-title">
-            <font-awesome-icon class="mr-2" icon="fa-solid fa-sitemap"></font-awesome-icon>
-            {{ t('home.services.saas') }}
-          </h2>
-          <p>{{ t('home.services.saas_text_1') }}</p>
-          <p>{{ t('home.services.saas_text_2') }}</p>
-          <div class="card-actions justify-end mt-4">
-            <button class="btn btn-secondary btn-outline w-full sm:w-full md:w-full lg:w-fit xl:w-fit 2xl:w-fit" @click="scrollToContact">{{ t('cta.start_your_business_idea') }}</button>
+          <div class="absolute top-2 right-2">
+            <div class="badge badge-secondary badge-sm">{{ t('home.services.popular_badge') }}</div>
           </div>
-          <div class="mt-4">
-            <div class="badge badge-neutral">
-              <font-awesome-icon class="mr-2" icon="fa-brands fa-laravel"></font-awesome-icon>
-              {{ t('badges.laravel') }}
+          
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mr-3">
+              <font-awesome-icon icon="fa-solid fa-rocket" class="text-secondary text-xl"></font-awesome-icon>
             </div>
+            <h3 class="card-title text-xl">{{ t('home.services.saas_title') }}</h3>
+          </div>
+          
+          <p class="text-base-content/80 mb-4">{{ t('home.services.saas_description') }}</p>
+          
+          <ul class="space-y-2 mb-6">
+            <li class="flex items-start">
+              <font-awesome-icon icon="fa-solid fa-check" class="text-secondary mt-1 mr-2 flex-shrink-0"></font-awesome-icon>
+              <span class="text-sm text-base-content/70">{{ t('home.services.saas_feature_1') }}</span>
+            </li>
+            <li class="flex items-start">
+              <font-awesome-icon icon="fa-solid fa-check" class="text-secondary mt-1 mr-2 flex-shrink-0"></font-awesome-icon>
+              <span class="text-sm text-base-content/70">{{ t('home.services.saas_feature_2') }}</span>
+            </li>
+            <li class="flex items-start">
+              <font-awesome-icon icon="fa-solid fa-check" class="text-secondary mt-1 mr-2 flex-shrink-0"></font-awesome-icon>
+              <span class="text-sm text-base-content/70">{{ t('home.services.saas_feature_3') }}</span>
+            </li>
+          </ul>
+
+          <div class="flex flex-wrap gap-2 mb-4">
+            <div class="badge badge-secondary badge-sm">Laravel</div>
+            <div class="badge badge-secondary badge-sm">NestJS</div>
+            <div class="badge badge-secondary badge-sm">PostgreSQL</div>
+            <div class="badge badge-secondary badge-sm">Redis</div>
+          </div>
+
+          <div class="card-actions">
+            <button class="btn btn-secondary btn-sm w-full" @click="scrollToContact">
+              {{ t('home.services.saas_cta') }}
+              <font-awesome-icon icon="fa-solid fa-arrow-right" class="ml-1"></font-awesome-icon>
+            </button>
           </div>
         </div>
       </div>
 
-      <div class="card flex-1 bg-base-300 mb-4 shadow-xl border border-secondary">
+      <!-- Consulting Card -->
+      <div class="card bg-base-200 shadow-lg hover-card">
         <div class="card-body">
-          <h2 class="card-title">
-            <font-awesome-icon class="mr-2" icon="fa-solid fa-user-check"></font-awesome-icon>
-            {{ t('home.services.consultancy') }}
-          </h2>
-          <p>
-            {{ t('home.services.consultancy_text_1') }}
-          </p>
-          <p>
-            {{ t('home.services.consultancy_text_2') }}
-          </p>
-          <div class="card-actions justify-end mt-4">
-            <button class="btn btn-secondary btn-outline w-full sm:w-full md:w-full lg:w-fit xl:w-fit 2xl:w-fit" @click="scrollToContact">{{ t('cta.get_consultancy') }}</button>
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mr-3">
+              <font-awesome-icon icon="fa-solid fa-lightbulb" class="text-accent text-xl"></font-awesome-icon>
+            </div>
+            <h3 class="card-title text-xl">{{ t('home.services.consulting_title') }}</h3>
           </div>
+          
+          <p class="text-base-content/80 mb-4">{{ t('home.services.consulting_description') }}</p>
+          
+          <ul class="space-y-2 mb-6">
+            <li class="flex items-start">
+              <font-awesome-icon icon="fa-solid fa-check" class="text-accent mt-1 mr-2 flex-shrink-0"></font-awesome-icon>
+              <span class="text-sm text-base-content/70">{{ t('home.services.consulting_feature_1') }}</span>
+            </li>
+            <li class="flex items-start">
+              <font-awesome-icon icon="fa-solid fa-check" class="text-accent mt-1 mr-2 flex-shrink-0"></font-awesome-icon>
+              <span class="text-sm text-base-content/70">{{ t('home.services.consulting_feature_2') }}</span>
+            </li>
+            <li class="flex items-start">
+              <font-awesome-icon icon="fa-solid fa-check" class="text-accent mt-1 mr-2 flex-shrink-0"></font-awesome-icon>
+              <span class="text-sm text-base-content/70">{{ t('home.services.consulting_feature_3') }}</span>
+            </li>
+          </ul>
+
+          <div class="flex flex-wrap gap-2 mb-4">
+            <div class="badge badge-accent badge-sm">Architecture</div>
+            <div class="badge badge-accent badge-sm">Strategy</div>
+            <div class="badge badge-accent badge-sm">Optimization</div>
+          </div>
+
+          <div class="card-actions">
+            <button class="btn btn-accent btn-sm w-full" @click="scrollToContact">
+              {{ t('home.services.consulting_cta') }}
+              <font-awesome-icon icon="fa-solid fa-arrow-right" class="ml-1"></font-awesome-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Value Proposition -->
+    <div class="mt-12 text-center">
+      <div class="card bg-gradient-to-r from-primary/5 via-secondary/5 to-accent/5 border border-primary/10 max-w-4xl mx-auto">
+        <div class="card-body">
+          <h3 class="text-2xl font-bold mb-4">{{ t('home.services.value_prop_title') }}</h3>
+          <p class="text-lg text-base-content/80">{{ t('home.services.value_prop_description') }}</p>
         </div>
       </div>
     </div>
