@@ -37,7 +37,7 @@ export default defineNuxtConfig({
 
   pages: true,
 
-  modules: ['@nuxtjs/i18n', '@nuxtjs/sitemap', '@nuxtjs/robots', '@nuxt/test-utils/module', '@nuxtjs/plausible', '@nuxt/content'],
+  modules: ['@nuxtjs/i18n', '@nuxt/test-utils/module', '@nuxtjs/plausible', '@nuxt/content'],
 
   content: {
     // Content configuration
@@ -47,12 +47,6 @@ export default defineNuxtConfig({
     markdown: {
       anchorLinks: false
     }
-  },
-
-  sitemap: {
-    // Basic sitemap configuration without content integration
-    autoLastmod: false,
-    credits: false
   },
 
   i18n: {
@@ -84,9 +78,5 @@ export default defineNuxtConfig({
   site: {
     url: 'https://waldemarenns.de',
     name: 'Waldemar Enns',
-  },
-
-  robots: {
-    sitemap: '/sitemap_index.xml',
   }
 })
