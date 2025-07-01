@@ -28,6 +28,7 @@ export default defineNuxtConfig({
     '/imprint': { prerender: true },
     '/privacy-policy': { prerender: true },
     '/posts': { prerender: false },
+    '/posts/**': { prerender: false },
   },
 
   runtimeConfig: {
@@ -36,7 +37,23 @@ export default defineNuxtConfig({
 
   pages: true,
 
-  modules: ['@nuxtjs/i18n', '@nuxtjs/sitemap', '@nuxtjs/robots', '@nuxt/test-utils/module', '@nuxtjs/plausible'],
+  modules: ['@nuxtjs/i18n', '@nuxtjs/sitemap', '@nuxtjs/robots', '@nuxt/test-utils/module', '@nuxtjs/plausible', '@nuxt/content'],
+
+  content: {
+    // Content configuration
+    highlight: {
+      theme: 'github-dark'
+    },
+    markdown: {
+      anchorLinks: false
+    }
+  },
+
+  sitemap: {
+    sources: [
+      '/api/__sitemap__/urls'
+    ]
+  },
 
   i18n: {
     baseUrl: 'https://waldemarenns.de',
