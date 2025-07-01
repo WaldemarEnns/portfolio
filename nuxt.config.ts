@@ -50,9 +50,9 @@ export default defineNuxtConfig({
   },
 
   sitemap: {
-    sources: [
-      '/api/__sitemap__/urls'
-    ]
+    // Basic sitemap configuration without content integration
+    autoLastmod: false,
+    credits: false
   },
 
   i18n: {
@@ -60,19 +60,19 @@ export default defineNuxtConfig({
     locales: [{
       code: 'en',
       file: 'en-US.json',
-      iso: 'en-US',
+      language: 'en-US',
       name: 'English',
       flag: '🇺🇸'
     }, {
       code: 'de',
       file: 'de-DE.json',
-      iso: 'de-DE',
+      language: 'de-DE',
       name: 'Deutsch',
       flag: '🇩🇪'
     }, {
       code: 'es',
       file: 'es-ES.json',
-      iso: 'es-ES',
+      language: 'es-ES',
       name: 'Español',
       flag: '🇪🇸'
     }],
