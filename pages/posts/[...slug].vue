@@ -88,81 +88,101 @@ useHead({
 </script>
 
 <template>
-  <article v-if="post" class="container mx-auto my-12 px-4">
-    <div class="max-w-4xl mx-auto">
-      <!-- Post Header -->
-      <header class="mb-12 text-center border-b border-gray-200 pb-8">
-        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-          {{ post.title }}
-        </h1>
-        
-        <div class="flex flex-wrap items-center justify-center gap-4 text-gray-600 mb-6">
-          <time 
-            class="flex items-center gap-2"
-            :datetime="post.date"
-          >
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-            </svg>
-            {{ formatDate(post.date) }}
-          </time>
-          
-          <div class="flex items-center gap-2" v-if="post.author">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
-            </svg>
-            {{ post.author }}
-          </div>
-        </div>
+  <section v-if="post" class="relative overflow-hidden py-20">
+    <!-- Background decoration -->
+    <div class="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5"></div>
+    <div class="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2"></div>
+    
+    <div class="container relative z-10 mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <!-- Post Header -->
+        <header class="card bg-base-100 shadow-2xl border border-base-300/50 backdrop-blur-sm mb-12">
+          <div class="card-body p-8 md:p-12 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+              {{ post.title }}
+            </h1>
+            
+            <div class="flex flex-wrap items-center justify-center gap-6 text-base-content/60 mb-6">
+              <time 
+                class="flex items-center gap-2 font-medium"
+                :datetime="post.date"
+              >
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                </svg>
+                {{ formatDate(post.date) }}
+              </time>
+              
+              <div class="flex items-center gap-2" v-if="post.author">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                </svg>
+                <span class="font-medium">{{ post.author }}</span>
+              </div>
+            </div>
 
-        <div class="flex flex-wrap justify-center gap-2" v-if="post.tags">
-          <span 
-            v-for="tag in post.tags" 
-            :key="tag"
-            class="inline-block bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full"
-          >
-            #{{ tag }}
-          </span>
-        </div>
-      </header>
+            <div class="flex flex-wrap justify-center gap-3" v-if="post.tags">
+              <span 
+                v-for="tag in post.tags" 
+                :key="tag"
+                class="badge badge-primary badge-lg"
+              >
+                #{{ tag }}
+              </span>
+            </div>
+          </div>
+        </header>
 
-      <!-- Post Content -->
-      <div class="prose prose-lg prose-gray max-w-none">
-        <div class="text-lg leading-relaxed text-gray-700">
-          <p class="text-xl mb-6">{{ post.description }}</p>
-          <div v-if="post.content" class="space-y-4">
-            <p>{{ post.content }}</p>
+        <!-- Post Content -->
+        <article class="card bg-base-100 shadow-xl border border-base-300/50">
+          <div class="card-body p-8 md:p-12">
+            <div class="prose prose-lg max-w-none">
+              <div class="text-lg leading-relaxed text-base-content">
+                <p class="text-xl mb-8 text-base-content/80 font-medium">{{ post.description }}</p>
+                <div v-if="post.content" class="space-y-6">
+                  <div class="text-base-content/90 leading-relaxed">
+                    {{ post.content }}
+                  </div>
+                </div>
+                <div v-else class="alert alert-info">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                  <span><em>Content is being loaded from the markdown files...</em></span>
+                </div>
+              </div>
+            </div>
           </div>
-          <div v-else>
-            <p><em>Content is being loaded from the markdown files...</em></p>
+        </article>
+
+        <!-- Navigation -->
+        <footer class="mt-12 card bg-base-100 shadow-xl border border-base-300/50">
+          <div class="card-body p-6">
+            <div class="flex justify-between items-center">
+              <NuxtLink 
+                to="/posts" 
+                class="btn btn-primary btn-outline group"
+              >
+                <svg class="w-4 h-4 transform group-hover:-translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+                Back to all posts
+              </NuxtLink>
+              
+              <div class="text-base-content/60 text-sm">
+                Published {{ formatDate(post.date) }}
+              </div>
+            </div>
           </div>
-        </div>
+        </footer>
       </div>
-
-      <!-- Navigation -->
-      <footer class="mt-16 pt-8 border-t border-gray-200">
-        <div class="flex justify-between items-center">
-          <NuxtLink 
-            to="/posts" 
-            class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 transition-colors"
-          >
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
-            </svg>
-            Back to all posts
-          </NuxtLink>
-          
-          <div class="text-gray-500 text-sm">
-            Published {{ formatDate(post.date) }}
-          </div>
-        </div>
-      </footer>
     </div>
-  </article>
+  </section>
 </template>
 
 <style scoped>
-/* Custom styles for blog post layout */
+/* Remove custom styles since we're using daisyUI components */
 .prose {
   max-width: none;
 }
