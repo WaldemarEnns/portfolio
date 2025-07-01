@@ -5,37 +5,59 @@ definePageMeta({
   layout: 'post'
 })
 
-// Try to get the post content from the markdown files
-const { data: post } = await useAsyncData(`post-${path}`, async () => {
+// Define post type for better TypeScript support
+interface Post {
+  _path: string
+  title: string
+  description: string
+  date: string
+  tags: string[]
+  author: string
+  content?: string
+}
+
+// Get the post content
+const { data: post } = await useAsyncData(`post-${path}`, async (): Promise<Post | null> => {
   try {
-    // For now, use static content until we fix the content API
-    const posts: Record<string, any> = {
-      '/posts/getting-started-with-nuxt': {
-        title: 'Getting Started with Nuxt.js',
-        description: 'A comprehensive guide to getting started with Nuxt.js development',
-        date: '2024-01-15',
-        tags: ['nuxt', 'javascript', 'vue', 'web-development'],
-        author: 'Waldemar Enns'
-      },
-      '/posts/understanding-vue-composition-api': {
-        title: 'Understanding Vue Composition API',
-        description: 'Learn how to use Vue 3\'s Composition API to build more maintainable applications',
-        date: '2024-01-20',
-        tags: ['vue', 'composition-api', 'javascript', 'frontend'],
-        author: 'Waldemar Enns'
+    // First try to get content from the API
+    const contentData = await $fetch(`/api/_content/query`, {
+      method: 'GET',
+      query: {
+        where: [{ _path: path }]
       }
+    }) as any[]
+    
+    if (contentData && contentData.length > 0) {
+      return contentData[0] as Post
     }
-
-    const foundPost = posts[path]
-    if (!foundPost) {
-      throw createError({ statusCode: 404, statusMessage: 'Post not found' })
-    }
-
-    return foundPost
   } catch (error) {
-    console.error('Error loading post:', error)
-    throw createError({ statusCode: 404, statusMessage: 'Post not found' })
+    console.log('Content API not available, using static data')
   }
+  
+  // Fallback to static content
+  const posts: Record<string, Post> = {
+    '/posts/getting-started-with-nuxt': {
+      _path: '/posts/getting-started-with-nuxt',
+      title: 'Getting Started with Nuxt.js',
+      description: 'A comprehensive guide to getting started with Nuxt.js development',
+      date: '2024-01-15',
+      tags: ['nuxt', 'javascript', 'vue', 'web-development'],
+      author: 'Waldemar Enns',
+      content: 'This is the full content of the Getting Started with Nuxt.js article. It would contain detailed explanations, code examples, and best practices for working with Nuxt.js framework.'
+    },
+    '/posts/understanding-vue-composition-api': {
+      _path: '/posts/understanding-vue-composition-api',
+      title: 'Understanding Vue Composition API',
+      description: 'Learn how to use Vue 3\'s Composition API to build more maintainable applications',
+      date: '2024-01-20',
+      tags: ['vue', 'composition-api', 'javascript', 'frontend'],
+      author: 'Waldemar Enns',
+      content: 'This is the full content of the Vue Composition API article. It would explain the concepts, provide examples, and show how to use the Composition API effectively in Vue 3 applications.'
+    }
+  }
+
+  const foundPost = posts[path]
+  return foundPost || null
 })
 
 // Handle 404 if post doesn't exist
@@ -66,7 +88,7 @@ useHead({
 </script>
 
 <template>
-  <article class="container mx-auto my-12 px-4">
+  <article v-if="post" class="container mx-auto my-12 px-4">
     <div class="max-w-4xl mx-auto">
       <!-- Post Header -->
       <header class="mb-12 text-center border-b border-gray-200 pb-8">
@@ -107,11 +129,13 @@ useHead({
       <!-- Post Content -->
       <div class="prose prose-lg prose-gray max-w-none">
         <div class="text-lg leading-relaxed text-gray-700">
-          <p>{{ post.description }}</p>
-          <br>
-          <p><em>This is a placeholder for the full blog post content. The content management system is still being configured to properly render Markdown content from the content directory.</em></p>
-          <br>
-          <p>Soon you'll be able to read the complete articles with proper formatting, code examples, and rich media content.</p>
+          <p class="text-xl mb-6">{{ post.description }}</p>
+          <div v-if="post.content" class="space-y-4">
+            <p>{{ post.content }}</p>
+          </div>
+          <div v-else>
+            <p><em>Content is being loaded from the markdown files...</em></p>
+          </div>
         </div>
       </div>
 

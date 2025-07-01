@@ -39,16 +39,6 @@ export default defineNuxtConfig({
 
   modules: ['@nuxtjs/i18n', '@nuxt/test-utils/module', '@nuxtjs/plausible', '@nuxt/content'],
 
-  content: {
-    // Content configuration
-    highlight: {
-      theme: 'github-dark'
-    },
-    markdown: {
-      anchorLinks: false
-    }
-  },
-
   i18n: {
     baseUrl: 'https://waldemarenns.de',
     locales: [{
@@ -73,10 +63,5 @@ export default defineNuxtConfig({
     lazy: true,
     langDir: 'lang',
     defaultLocale: 'de',
-  },
-
-  site: {
-    url: 'https://waldemarenns.de',
-    name: 'Waldemar Enns',
   }
 })

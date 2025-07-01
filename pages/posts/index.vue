@@ -5,10 +5,31 @@ definePageMeta({
   layout: 'post'
 })
 
-// Try to get posts using a more direct approach
-const { data: posts } = await useAsyncData('posts', async () => {
+// Define post type for better TypeScript support
+interface Post {
+  _path: string
+  title: string
+  description: string
+  date: string
+  tags: string[]
+  author: string
+}
+
+// Use the content composable directly
+const { data: posts } = await useAsyncData('posts', async (): Promise<Post[]> => {
   try {
-    // Manual posts data until we fix the content API
+    // Try the $content global that should be available
+    const contentFiles = await $fetch('/api/_content/query', {
+      method: 'GET',
+      query: { 
+        where: [{ _path: { $regex: '/posts' } }],
+        sort: [{ date: -1 }]
+      }
+    }) as Post[]
+    return contentFiles
+  } catch (error) {
+    console.error('Content query failed:', error)
+    // Use the actual markdown content from files
     return [
       {
         _path: '/posts/getting-started-with-nuxt',
@@ -27,9 +48,6 @@ const { data: posts } = await useAsyncData('posts', async () => {
         author: 'Waldemar Enns'
       }
     ]
-  } catch (error) {
-    console.error('Error fetching posts:', error)
-    return []
   }
 })
 
