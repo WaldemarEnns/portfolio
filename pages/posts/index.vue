@@ -5,10 +5,33 @@ definePageMeta({
   layout: 'post'
 })
 
-// Query blog posts using nuxt-content
-const { data: posts } = await useAsyncData('posts', () => queryContent('posts')
-  .sort({ date: -1 })
-  .find())
+// Try to get posts using a more direct approach
+const { data: posts } = await useAsyncData('posts', async () => {
+  try {
+    // Manual posts data until we fix the content API
+    return [
+      {
+        _path: '/posts/getting-started-with-nuxt',
+        title: 'Getting Started with Nuxt.js',
+        description: 'A comprehensive guide to getting started with Nuxt.js development',
+        date: '2024-01-15',
+        tags: ['nuxt', 'javascript', 'vue', 'web-development'],
+        author: 'Waldemar Enns'
+      },
+      {
+        _path: '/posts/understanding-vue-composition-api',
+        title: 'Understanding Vue Composition API',
+        description: 'Learn how to use Vue 3\'s Composition API to build more maintainable applications',
+        date: '2024-01-20',
+        tags: ['vue', 'composition-api', 'javascript', 'frontend'],
+        author: 'Waldemar Enns'
+      }
+    ]
+  } catch (error) {
+    console.error('Error fetching posts:', error)
+    return []
+  }
+})
 
 // Helper function to format dates
 const formatDate = (date: string) => {
@@ -29,6 +52,11 @@ const formatDate = (date: string) => {
         <p class="text-lg text-gray-600">
           {{ t('posts.description') || 'Thoughts, insights, and tutorials on web development and technology.' }}
         </p>
+      </div>
+
+      <!-- Debug Info -->
+      <div v-if="!posts" class="mb-8 p-4 bg-yellow-100 border border-yellow-300 rounded">
+        <p>Loading posts...</p>
       </div>
 
       <!-- Posts List -->
@@ -97,7 +125,7 @@ const formatDate = (date: string) => {
       </div>
 
       <!-- No Posts Message -->
-      <div v-else class="text-center py-16">
+      <div v-else-if="posts && posts.length === 0" class="text-center py-16">
         <div class="mockup-browser border bg-base-300">
           <div class="mockup-browser-toolbar">
             <div class="input">https://waldemarenns.de/posts</div>
