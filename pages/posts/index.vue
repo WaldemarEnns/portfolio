@@ -1,5 +1,7 @@
 <script setup lang="ts">
 const { t } = useI18n()
+const localePath = useLocalePath()
+const { locale } = useI18n()
 
 definePageMeta({
   layout: 'post'
@@ -29,8 +31,8 @@ const { data: posts } = await useAsyncData('posts', async (): Promise<Post[]> =>
     return contentFiles
   } catch (error) {
     console.error('Content query failed:', error)
-    // Use the actual markdown content from files
-    return [
+    // Use the actual markdown content from files with proper locale-aware paths
+    const basePosts = [
       {
         _path: '/posts/getting-started-with-nuxt',
         title: 'Getting Started with Nuxt.js',
@@ -48,6 +50,12 @@ const { data: posts } = await useAsyncData('posts', async (): Promise<Post[]> =>
         author: 'Waldemar Enns'
       }
     ]
+    
+    // Add locale prefix if not default locale (German)
+    return basePosts.map(post => ({
+      ...post,
+      _path: locale.value === 'de' ? post._path : `/${locale.value}${post._path}`
+    }))
   }
 })
 
@@ -162,7 +170,7 @@ const formatDate = (date: string) => {
         <div v-else-if="posts && posts.length === 0" class="text-center py-16">
           <div class="mockup-browser border bg-base-300">
             <div class="mockup-browser-toolbar">
-              <div class="input">https://waldemarenns.de/posts</div>
+              <div class="input">https://waldemarenns.de{{ localePath('/posts') }}</div>
             </div>
             <div class="flex justify-center px-4 py-16 bg-base-200">
               <div class="text-center">

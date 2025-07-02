@@ -1,5 +1,7 @@
 <script setup lang="ts">
 const { path } = useRoute()
+const localePath = useLocalePath()
+const { locale } = useI18n()
 
 definePageMeta({
   layout: 'post'
@@ -34,10 +36,10 @@ const { data: post } = await useAsyncData(`post-${path}`, async (): Promise<Post
     console.log('Content API not available, using static data')
   }
   
-  // Fallback to static content
-  const posts: Record<string, Post> = {
-    '/posts/getting-started-with-nuxt': {
-      _path: '/posts/getting-started-with-nuxt',
+  // Fallback to static content with locale-aware paths
+  const basePosts: Record<string, Omit<Post, '_path'> & { slug: string }> = {
+    'getting-started-with-nuxt': {
+      slug: 'getting-started-with-nuxt',
       title: 'Getting Started with Nuxt.js',
       description: 'A comprehensive guide to getting started with Nuxt.js development',
       date: '2024-01-15',
@@ -45,8 +47,8 @@ const { data: post } = await useAsyncData(`post-${path}`, async (): Promise<Post
       author: 'Waldemar Enns',
       content: 'This is the full content of the Getting Started with Nuxt.js article. It would contain detailed explanations, code examples, and best practices for working with Nuxt.js framework.'
     },
-    '/posts/understanding-vue-composition-api': {
-      _path: '/posts/understanding-vue-composition-api',
+    'understanding-vue-composition-api': {
+      slug: 'understanding-vue-composition-api',
       title: 'Understanding Vue Composition API',
       description: 'Learn how to use Vue 3\'s Composition API to build more maintainable applications',
       date: '2024-01-20',
@@ -56,8 +58,27 @@ const { data: post } = await useAsyncData(`post-${path}`, async (): Promise<Post
     }
   }
 
-  const foundPost = posts[path]
-  return foundPost || null
+  // Extract slug from path (remove locale prefix and /posts/)
+  let slug = path
+  if (locale.value !== 'de' && slug.startsWith(`/${locale.value}`)) {
+    slug = slug.substring(`/${locale.value}`.length)
+  }
+  slug = slug.replace('/posts/', '')
+
+  const basePost = basePosts[slug]
+  if (!basePost) {
+    return null
+  }
+
+  // Construct the proper path with locale prefix
+  const properPath = locale.value === 'de' 
+    ? `/posts/${basePost.slug}` 
+    : `/${locale.value}/posts/${basePost.slug}`
+
+  return {
+    ...basePost,
+    _path: properPath
+  }
 })
 
 // Handle 404 if post doesn't exist
@@ -161,7 +182,7 @@ useHead({
           <div class="card-body p-6">
             <div class="flex justify-between items-center">
               <NuxtLink 
-                to="/posts" 
+                :to="localePath('/posts')" 
                 class="btn btn-primary btn-outline group"
               >
                 <svg class="w-4 h-4 transform group-hover:-translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
