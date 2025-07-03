@@ -23,7 +23,7 @@ jobs:
         run: npm install -g @unlighthouse/cli
 
       - name: Wait for Vercel Preview Deployment
-        uses: patrickedqvist/wait-for-vercel-preview@v1
+        uses: jakepartusch/wait-for-vercel@v1
         id: wait-for-vercel
         with:
           token: ${{ secrets.VERCEL_TOKEN }}
