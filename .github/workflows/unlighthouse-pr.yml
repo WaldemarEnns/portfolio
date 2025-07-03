@@ -1,0 +1,63 @@
+name: Unlighthouse PR Report
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  unlighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Unlighthouse
+        run: npm install -g @unlighthouse/cli
+
+      - name: Wait for Vercel Preview Deployment
+        uses: patrickedqvist/wait-for-vercel-preview@v1
+        id: wait-for-vercel
+        with:
+          token: ${{ secrets.VERCEL_TOKEN }}
+          max_timeout: 300
+
+      - name: Run Unlighthouse
+        env:
+          PREVIEW_URL: ${{ steps.wait-for-vercel.outputs.url }}
+        run: unlighthouse --site $PREVIEW_URL --output-path ./unlighthouse-report
+
+      - name: Format Unlighthouse Report
+        id: format-report
+        run: |
+          # Extract scores from report (example using jq or custom script)
+          PERFORMANCE=$(jq '.summary.categories.performance.averageScore' unlighthouse-report/report.json)
+          ACCESSIBILITY=$(jq '.summary.categories.accessibility.averageScore' unlighthouse-report/report.json)
+          SEO=$(jq '.summary.categories.seo.averageScore' unlighthouse-report/report.json)
+          BEST_PRACTICES=$(jq '.summary.categories["best-practices"].averageScore' unlighthouse-report/report.json)
+          
+          REPORT="### Unlighthouse Report\n"
+          REPORT+="🚀 Performance: ${PERFORMANCE}\n"
+          REPORT+="♿ Accessibility: ${ACCESSIBILITY}\n"
+          REPORT+="🔍 SEO: ${SEO}\n"
+          REPORT+="✅ Best Practices: ${BEST_PRACTICES}\n"
+          echo "report=$REPORT" >> $GITHUB_OUTPUT
+
+      - name: Post Report to PR
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const report = `${{ steps.format-report.outputs.report }}`;
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: report
+            });
