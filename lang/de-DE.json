@@ -115,6 +115,27 @@
     "blog": {
       "blog_text": "Neueste Einblicke, Tipps und Updates aus meiner Arbeit als Softwareentwickler - paxisnah und aktuell."
     }
+
+    "testimonials": {
+      "title": "Was Kunden sagen",
+      "subtitle": "Nimm nicht nur mein Wort dafür – hier ist, was meine Kunden über unsere Zusammenarbeiten sagen.",
+      "testimonial_1": {
+        "name": "Stephan Wiese",
+        "company": "CAMAO Tec",
+        "quote": "Waldemar hat außergewöhnliche Arbeit an unserem Projekt geleistet. Seine Expertise und Aufmerksamkeit für Details waren unschätzbar."
+      },
+      "testimonial_2": {
+        "name": "Jerome",
+        "company": "",
+        "quote": "Die Zusammenarbeit mit Waldemar war eine tolle Erfahrung. Er hat unsere Bedürfnisse perfekt verstanden und die Erwartungen übertroffen."
+      },
+      "testimonial_3": {
+        "name": "André Baumunk",
+        "company": "IMPAX Tours",
+        "quote": "Professionell, zuverlässig und innovativ. Waldemar hat uns geholfen, unsere Plattform effizient zu skalieren."
+      }
+    },
+
   },
   "badges": {
     "laravel": "Laravel",

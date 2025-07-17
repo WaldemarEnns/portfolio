@@ -113,6 +113,25 @@
     },
     "blog": {
       "blog_text": "Latest insights, tips, and updates from my work as a software developer – practical and up-to-date."
+    },
+    "testimonials": {
+      "title": "What Clients Say",
+      "subtitle": "Don't just take my word for it – here's what my clients have to say about our collaborations.",
+      "testimonial_1": {
+        "name": "Stephan Wiese",
+        "company": "CAMAO Tec",
+        "quote": "Waldemar delivered exceptional work on our project. His expertise and attention to detail were invaluable."
+      },
+      "testimonial_2": {
+        "name": "Jerome",
+        "company": "",
+        "quote": "Working with Waldemar was a great experience. He understood our needs perfectly and exceeded expectations."
+      },
+      "testimonial_3": {
+        "name": "André Baumunk",
+        "company": "IMPAX Tours",
+        "quote": "Professional, reliable, and innovative. Waldemar helped us scale our platform efficiently."
+      }
     }
   },
   "badges": {

@@ -115,6 +115,27 @@
     "blog": {
       "blog_text": "Las últimas ideas, consejos y actualizaciones de mi trabajo como desarrollador de software: prácticos y actuales."
     }
+
+    "testimonials": {
+      "title": "Lo que dicen los clientes",
+      "subtitle": "No tomes solo mi palabra – aquí está lo que mis clientes dicen sobre nuestras colaboraciones.",
+      "testimonial_1": {
+        "name": "Stephan Wiese",
+        "company": "CAMAO Tec",
+        "quote": "Waldemar entregó un trabajo excepcional en nuestro proyecto. Su experiencia y atención al detalle fueron invaluables."
+      },
+      "testimonial_2": {
+        "name": "Jerome",
+        "company": "",
+        "quote": "Trabajar con Waldemar fue una gran experiencia. Entendió perfectamente nuestras necesidades y superó las expectativas."
+      },
+      "testimonial_3": {
+        "name": "André Baumunk",
+        "company": "IMPAX Tours",
+        "quote": "Profesional, confiable e innovador. Waldemar nos ayudó a escalar nuestra plataforma de manera eficiente."
+      }
+    },
+
   },
   "badges": {
     "laravel": "Laravel",
