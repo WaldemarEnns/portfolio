@@ -147,7 +147,7 @@ const removeFocus = () => {
                       name="senderName"
                       type="text"
                       :class="[
-                        'input input-bordered w-full pl-12 transition-all duration-200',
+                        'input w-full pl-12 transition-all duration-200',
                         currentField === 'name' ? 'input-primary ring-2 ring-primary/20' : '',
                         errors.senderName ? 'input-error' : ''
                       ]"
@@ -183,7 +183,7 @@ const removeFocus = () => {
                       name="fromMail"
                       type="email"
                       :class="[
-                        'input input-bordered w-full pl-12 transition-all duration-200',
+                        'input w-full pl-12 transition-all duration-200',
                         currentField === 'email' ? 'input-primary ring-2 ring-primary/20' : '',
                         errors.fromMail ? 'input-error' : ''
                       ]"
@@ -219,7 +219,7 @@ const removeFocus = () => {
                     @blur="removeFocus"
                     :placeholder="$t('form.placeholders.contact_message')"
                     :class="[
-                      'textarea textarea-bordered w-full min-h-[120px] transition-all duration-200',
+                      'textarea w-full min-h-[120px] transition-all duration-200',
                       currentField === 'message' ? 'textarea-primary ring-2 ring-primary/20' : '',
                       errors.message ? 'textarea-error' : ''
                     ]"
