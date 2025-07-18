@@ -8,7 +8,8 @@
 @layer components {
   /* Custom hover effects for About Me cards */
 .hover-card {
-  @apply transition-all duration-300 ease-in-out cursor-pointer;
+  @apply transition-all duration-300 cursor-pointer;
+  transition-timing-function: ease-in-out;
   transform-style: preserve-3d;
   transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
 }
@@ -21,7 +22,8 @@
 }
 
 .hover-card-special {
-  @apply transition-all duration-300 ease-in-out cursor-pointer;
+  @apply transition-all duration-300 cursor-pointer;
+  transition-timing-function: ease-in-out;
   transform-style: preserve-3d;
   transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
 }
@@ -32,4 +34,5 @@
   box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.3), 
               0 0 0 1px rgba(255, 255, 255, 0.15),
               0 0 20px rgba(59, 130, 246, 0.1);
-}
+}}
+
