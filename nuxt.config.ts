@@ -14,18 +14,10 @@ export default defineNuxtConfig({
 
   postcss: {
     plugins: {
-      tailwindcss: {},
+      '@tailwindcss/postcss': {},
       autoprefixer: {},
     }
   },
-
-  plausible: {
-    ignoredHostnames: ['localhost'],
-  },
-
-  routeRules: {
-    '/': { prerender: false },
-    '/imprint': { prerender: true },
     '/privacy-policy': { prerender: true },
     '/posts': { prerender: false },
   },
