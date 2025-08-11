@@ -114,6 +114,26 @@
     },
     "blog": {
       "blog_text": "Las últimas ideas, consejos y actualizaciones de mi trabajo como desarrollador de software: prácticos y actuales."
+    },
+
+    "testimonials": {
+      "title": "Lo que dicen los clientes",
+      "subtitle": "No tomes solo mi palabra – aquí está lo que mis clientes dicen sobre nuestras colaboraciones.",
+      "testimonial_1": {
+        "name": "COO Block Group Stephan Wiese",
+        "company": "",
+        "quote": "Colaboración fantástica con un alto grado de fiabilidad, velocidad y calidad."
+      },
+      "testimonial_2": {
+        "name": "Jerome",
+        "company": "",
+        "quote": "Trabajar con Waldemar fue una gran experiencia. Entendió perfectamente nuestras necesidades y superó las expectativas."
+      },
+      "testimonial_3": {
+        "name": "André Baumunk",
+        "company": "IMPAX Tours",
+        "quote": "Profesional, confiable e innovador. Waldemar nos ayudó a escalar nuestra plataforma de manera eficiente."
+      }
     }
   },
   "badges": {

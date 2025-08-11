@@ -154,5 +154,74 @@ function scrollToAbout () {
  
   
 
+
+  <section id="testimonials" class="container m-auto py-16">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">{{ t('home.testimonials.title') }}</h2>
+      <p class="text-xl text-base-content/70 max-w-2xl mx-auto">{{ t('home.testimonials.subtitle') }}</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <!-- Testimonial 1 -->
+      <div class="card bg-base-200 shadow-lg hover-card">
+        <div class="card-body">
+          <font-awesome-icon icon="fa-solid fa-quote-left" class="text-primary text-2xl mb-4" />
+          <p class="text-base-content/80 mb-4">{{ t('home.testimonials.testimonial_1.quote') }}</p>
+          <div class="flex items-center">
+            <div class="avatar placeholder mr-3">
+              <div class="bg-neutral text-neutral-content rounded-full w-10">
+                <span class="text-xl">{{ t('home.testimonials.testimonial_1.name')[0] }}</span>
+              </div>
+            </div>
+            <div>
+              <h4 class="font-bold">{{ t('home.testimonials.testimonial_1.name') }}</h4>
+              <p class="text-sm text-base-content/70">{{ t('home.testimonials.testimonial_1.company') }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="card bg-base-200 shadow-lg hover-card">
+        <div class="card-body">
+          <font-awesome-icon icon="fa-solid fa-quote-left" class="text-primary text-2xl mb-4" />
+          <p class="text-base-content/80 mb-4">{{ t('home.testimonials.testimonial_2.quote') }}</p>
+          <div class="flex items-center">
+            <div class="avatar placeholder mr-3">
+              <div class="bg-neutral text-neutral-content rounded-full w-10">
+                <span class="text-xl">{{ t('home.testimonials.testimonial_2.name')[0] }}</span>
+              </div>
+            </div>
+            <div>
+              <h4 class="font-bold">{{ t('home.testimonials.testimonial_2.name') }}</h4>
+              <p class="text-sm text-base-content/70">{{ t('home.testimonials.testimonial_2.company') }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="card bg-base-200 shadow-lg hover-card">
+        <div class="card-body">
+          <font-awesome-icon icon="fa-solid fa-quote-left" class="text-primary text-2xl mb-4" />
+          <p class="text-base-content/80 mb-4">{{ t('home.testimonials.testimonial_3.quote') }}</p>
+          <div class="flex items-center">
+            <div class="avatar placeholder mr-3">
+              <div class="bg-neutral text-neutral-content rounded-full w-10">
+                <span class="text-xl">{{ t('home.testimonials.testimonial_3.name')[0] }}</span>
+              </div>
+            </div>
+            <div>
+              <h4 class="font-bold">{{ t('home.testimonials.testimonial_3.name') }}</h4>
+              <p class="text-sm text-base-content/70">{{ t('home.testimonials.testimonial_3.company') }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
   <div class="divider">{{ t('dividers.interested') }}</div>
 </template>
