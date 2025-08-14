@@ -20,6 +20,12 @@ function scrollToAbout () {
     behavior: 'smooth'
   })
 }
+
+function scrollToProjects () {
+  document.querySelector('#projects')!.scrollIntoView({
+    behavior: 'smooth'
+  })
+}
 </script>
 
 <template>
@@ -151,8 +157,8 @@ function scrollToAbout () {
       </div>
     </div>
   </section>
- 
-  
+
+  <Projects />
 
   <div class="divider">{{ t('dividers.interested') }}</div>
 </template>

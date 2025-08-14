@@ -32,6 +32,30 @@
         "content": "Du erhältst mehr als Code – du bekommst einen strategischen Partner, der Geschäftsbedürfnisse versteht. Klare Kommunikation, zuverlässige Lieferung und Lösungen für langfristigen Erfolg."
       }
     },
+    "projects": {
+      "title": "Ausgewählte Projekte",
+      "subtitle": "Entdecke einige der Lösungen, die ich für Kunden aus verschiedenen Branchen entwickelt habe.",
+      "problem_solution": "Problem & Lösung",
+      "tech_stack": "Tech-Stack",
+      "view_details": "Details ansehen",
+      "cta_text": "Bereit, dein Projekt zum Leben zu erwecken?",
+      "cta_button": "Starte dein Projekt",
+      "project1": {
+        "title": "E-Commerce-Plattform",
+        "description": "Eine umfassende Online-Shop-Lösung mit erweiterten Lagerverwaltungs- und Zahlungsabwicklungsfunktionen.",
+        "problem_solution": "Kunde benötigte eine skalierbare E-Commerce-Plattform mit Echtzeit-Lagerbestandsverfolgung und Integration mehrerer Zahlungsgateways."
+      },
+      "project2": {
+        "title": "SaaS Analytics Dashboard",
+        "description": "Eine Multi-Tenant-Analyseplattform mit Echtzeit-Einblicken und anpassbaren Berichten für B2B-Kunden.",
+        "problem_solution": "Unternehmen benötigte eine White-Label-Analyselösung mit rollenbasierter Zugriffskontrolle und automatisierter Berichtsgenerierung."
+      },
+      "project3": {
+        "title": "Aufgabenverwaltungs-App",
+        "description": "Ein kollaboratives Projektmanagement-Tool mit Echtzeit-Updates und intelligenten Aufgabenautomatisierungsfunktionen.",
+        "problem_solution": "Team benötigte ein zentralisiertes Workflow-Management-System mit automatisierten Benachrichtigungen und Fortschrittsverfolgung."
+      }
+    },
     "services": {
       "title": "Wie ich dir helfen kann",
       "subtitle": "Maßgeschneiderte Lösungen für deine Geschäftsanforderungen, von der Konzeption bis zur Bereitstellung und darüber hinaus.",
@@ -122,7 +146,11 @@
     "typescript": "TypeScript",
     "nuxt": "NuxtJS",
     "nestjs": "NestJS",
-    "python": "Python"
+    "python": "Python",
+    "stripe": "Stripe",
+    "postgresql": "PostgreSQL",
+    "fastapi": "FastAPI",
+    "redis": "Redis"
   },
   "cta": {
     "lets_talk": "Lass uns reden",
