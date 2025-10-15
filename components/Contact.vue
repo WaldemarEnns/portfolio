@@ -35,6 +35,8 @@ const contactMailSuccess = ref(false)
 const formFocused = ref(false)
 const currentField = ref('')
 
+const turnstileToken = ref('')
+
 const onSubmit = handleSubmit(async (values, { resetForm }) => {
   contactMailPending.value = true
 
@@ -43,7 +45,10 @@ const onSubmit = handleSubmit(async (values, { resetForm }) => {
     headers: {
       'Content-Type': 'application/json',
     },
-    body: values,
+    body: {
+      ...values,
+      'cf-turnstile-response': turnstileToken.value,
+    },
   })
 
   if (status.value === 'error') {
@@ -260,7 +265,7 @@ const removeFocus = () => {
               </div>
 
               <!-- Turnstile -->
-              <NuxtTurnstile />
+              <NuxtTurnstile v-model="turnstileToken" />
 
               <!-- Submit Button -->
               <div class="flex justify-center pt-4">
