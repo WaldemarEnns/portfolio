@@ -44,11 +44,7 @@ export default defineNuxtConfig({
 
   pages: true,
 
-  modules: ['@nuxtjs/i18n', '@nuxtjs/sitemap', '@nuxtjs/robots', '@nuxt/test-utils/module', '@nuxtjs/plausible', '@nuxtjs/turnstile'],
-
-  turnstile: {
-    siteKey: process.env.NUXT_PUBLIC_TURNSTILE_SITE_KEY,
-  },
+  modules: ['@nuxtjs/i18n', '@nuxtjs/sitemap', '@nuxtjs/robots', '@nuxt/test-utils/module', '@nuxtjs/plausible'],
 
   i18n: {
     baseUrl: 'https://waldemarenns.de',

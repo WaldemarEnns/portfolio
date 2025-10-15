@@ -271,7 +271,7 @@ const removeFocus = () => {
 
               <!-- CAPTCHA -->
               <div class="form-control flex items-center justify-center">
-                <NuxtTurnstile v-model="captchaToken" />
+                <CaptchaTurnstile v-model="captchaToken" />
               </div>
 
               <!-- Submit Button -->
