@@ -1,7 +1,26 @@
 import postmark from 'postmark'
 
 export default defineEventHandler(async (event) => {
-  const { fromMail, senderName, message, privacyPolicyAgreed } = await readBody(event)
+  const { fromMail, senderName, message, privacyPolicyAgreed, ...rest } = await readBody(event)
+
+  // read the turnstile token that is named as "cf-turnstile-response"
+  const turnstileToken = rest['cf-turnstile-response']
+
+  if (!turnstileToken) {
+    throw createError({
+      statusCode: 400,
+      statusMessage: 'Bad Request',
+    })
+  }
+
+  const { success } = await verifyTurnstileToken(turnstileToken)
+
+  if (!success) {
+    throw createError({
+      statusCode: 400,
+      statusMessage: 'Bad Request',
+    })
+  }
 
   if (!privacyPolicyAgreed) {
     throw createError({
