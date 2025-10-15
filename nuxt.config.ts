@@ -32,7 +32,9 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     postmarkServerToken: process.env.POSTMARK_SERVER_TOKEN,
-    turnstile: {},
+    turnstile: {
+      secretKey: process.env.NUXT_TURNSTILE_SECRET_KEY,
+    },
   },
 
   pages: true,
