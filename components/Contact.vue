@@ -259,6 +259,9 @@ const removeFocus = () => {
                 </label>
               </div>
 
+              <!-- Turnstile -->
+              <NuxtTurnstile />
+
               <!-- Submit Button -->
               <div class="flex justify-center pt-4">
                 <button

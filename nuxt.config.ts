@@ -32,11 +32,24 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     postmarkServerToken: process.env.POSTMARK_SERVER_TOKEN,
+    turnstile: {},
   },
 
   pages: true,
 
-  modules: ['@nuxtjs/i18n', '@nuxtjs/sitemap', '@nuxtjs/robots', '@nuxt/test-utils/module', '@nuxtjs/plausible'],
+  modules: [
+    '@nuxtjs/i18n',
+    '@nuxtjs/sitemap',
+    '@nuxtjs/robots',
+    '@nuxt/test-utils/module',
+    '@nuxtjs/plausible',
+    '@nuxtjs/turnstile',
+    '@nuxt/scripts'
+  ],
+
+  turnstile: {
+    siteKey: '0x4AAAAAAB6qjcMIsPV_C49q'
+  },
 
   i18n: {
     baseUrl: 'https://waldemarenns.de',

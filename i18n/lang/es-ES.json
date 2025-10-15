@@ -1,0 +1,199 @@
+{
+  "home": {
+    "nice_to_meet_you": "bienvenido, encantado 👋🏼",
+    "welcome": "¡Hola! Gracias por visitar mi página y conocerme\n¡Déjame presentarte mi trabajo y mi persona 🚀",
+    "tell_me_more": "Cuéntame más",
+    "hero": {
+      "developer": "Desarrollador de Software",
+      "freelancer": "Freelancer",
+      "consultant": "Consultor",
+      "headline": "Construyendo soluciones digitales que impulsan tu negocio",
+      "subtitle": "Creo soluciones digitales y proporciono consultoría estratégica para ayudar a las empresas a crecer.",
+      "cta_primary": "Iniciar Tu Proyecto",
+      "cta_secondary": "Saber Más"
+    },
+    "about_me": {
+      "title": "Por qué elegirme",
+      "subtitle": "Transformo desafíos empresariales complejos en soluciones digitales elegantes que generan resultados reales.",
+      "what_i_do": {
+        "title": "Lo que hago",
+        "content": "Me especializo en crear aplicaciones web de alto rendimiento y plataformas SaaS que ayudan a las empresas a crecer. Desde el concepto hasta el despliegue, entrego soluciones que no solo funcionan, sino que están diseñadas para crecer con tu negocio."
+      },
+      "my_approach": {
+        "title": "Mi enfoque",
+        "content": "Cada proyecto comienza entendiendo tus objetivos. Combino experiencia técnica con perspicacia empresarial para crear soluciones que resuelven problemas reales y entregan valor medible a tus clientes."
+      },
+      "track_record": {
+        "title": "Resultados comprobados",
+        "content": "7+ años entregando proyectos exitosos para empresas de diversas industrias. He ayudado a negocios a lanzar productos, optimizar operaciones y escalar su presencia digital con código moderno y mantenible."
+      },
+      "why_work_with_me": {
+        "title": "Asociación, no solo desarrollo",
+        "content": "Obtienes más que código – consigues un socio estratégico que entiende las necesidades del negocio. Comunicación clara, entrega confiable y soluciones construidas para el éxito a largo plazo."
+      }
+    },
+    "services": {
+      "title": "Cómo puedo ayudarte",
+      "subtitle": "Soluciones integrales adaptadas a las necesidades de tu negocio, desde el concepto hasta la implementación y más allá.",
+      "services": "Servicios",
+      "popular_badge": "Más Popular",
+      
+      "frontend_title": "Aplicaciones Web Modernas",
+      "frontend_description": "Transforma tus ideas en experiencias web impresionantes y de alto rendimiento que los usuarios aman y en las que las empresas confían.",
+      "frontend_feature_1": "Aplicaciones ultrarrápidas optimizadas para SEO",
+      "frontend_feature_2": "Diseño responsive que funciona en todos los dispositivos",
+      "frontend_feature_3": "Progressive Web Apps con capacidades offline",
+      "frontend_cta": "Construye tu Web App",
+      
+      "saas_title": "Soluciones SaaS Full-Stack",
+      "saas_description": "Lanza tu producto SaaS con confianza. Construyo plataformas escalables que crecen con tu negocio.",
+      "saas_feature_1": "Arquitectura multi-tenant con aislamiento seguro de datos",
+      "saas_feature_2": "Facturación por suscripción e integración de pagos",
+      "saas_feature_3": "Funciones en tiempo real y desarrollo de API",
+      "saas_cta": "Lanza tu SaaS",
+      
+      "consulting_title": "Consultoría Técnica",
+      "consulting_description": "Orientación estratégica para navegar decisiones técnicas complejas y optimizar tu proceso de desarrollo.",
+      "consulting_feature_1": "Revisiones y optimización de arquitectura",
+      "consulting_feature_2": "Selección y migración de stack tecnológico",
+      "consulting_feature_3": "Formación de equipos e implementación de mejores prácticas",
+      "consulting_cta": "Obtén Asesoría Experta",
+      
+      "value_prop_title": "¿Por qué trabajar conmigo?",
+      "value_prop_description": "No solo escribo código: me asocio contigo para entender tus objetivos comerciales y entregar soluciones que generen resultados reales. Con un enfoque en código limpio y mantenible y las mejores prácticas modernas, me aseguro de que tu inversión continúe generando valor mucho después del lanzamiento.",
+      
+      "frontend_title_old": "Desarrollo frontend con Vue y TypeScript",
+      "frontend_text_1": "Implementación de aplicaciones web y sitios web modernos y eficientes.",
+      "frontend_text_2": "Mi profunda experiencia en Vue y su ecosistema garantiza que mis soluciones estén actualizadas con tecnología de vanguardia y mejores prácticas.",
+      "saas": "SaaS y más con Laravel",
+      "saas_text_1": "Desde la configuración y el desarrollo hasta el lanzamiento y la implementación. Soluciones escalables y estables para las necesidades de tu negocio.",
+      "saas_text_2": "Soluciones personalizadas para sistemas de reservas, gestión de inventario, pasarelas de pago y desarrollo de API.",
+      "consultancy": "Consultoría",
+      "consultancy_text_1": "Ofrezco asesoramiento sólido y planificación estratégica para tus proyectos de desarrollo web.",
+      "consultancy_text_2": "Con mi experiencia en desarrollo frontend y backend y gestión de equipos, puedo ayudarte a tomar las decisiones tecnológicas correctas e implementar tus proyectos de manera eficiente."
+    },
+    "methods": {
+      "title": "Cómo trabajo",
+      "subtitle": "Un enfoque probado que garantiza el éxito de tu proyecto, a tiempo y dentro del presupuesto.",
+      
+      "agile_title": "Ágil y Adaptable",
+      "agile_description": "Tu proyecto evoluciona con tus necesidades. Reuniones regulares y desarrollo iterativo significan que siempre tienes el control y puedes cambiar cuando sea necesario.",
+      "agile_badge_1": "Actualizaciones Semanales",
+      "agile_badge_2": "Alcance Flexible",
+      "agile_badge_3": "Iteraciones Rápidas",
+      
+      "quality_title": "Construido para Durar",
+      "quality_description": "Cada línea de código es probada y documentada. Tu inversión está protegida con soluciones mantenibles y escalables que crecen con tu negocio.",
+      "quality_badge_1": "Pruebas Automatizadas",
+      "quality_badge_2": "Revisiones de Código",
+      "quality_badge_3": "Documentación",
+      
+      "infrastructure_title": "Moderno y Seguro",
+      "infrastructure_description": "Desplegado en infraestructura cloud confiable con copias de seguridad automáticas, monitoreo y actualizaciones de seguridad. Tu aplicación se mantiene rápida y segura.",
+      "infrastructure_badge_1": "Alojamiento Cloud",
+      "infrastructure_badge_2": "Escalado Automático",
+      "infrastructure_badge_3": "Monitoreo 24/7",
+      
+      "communication_title": "Comunicación Clara",
+      "communication_description": "Sin jerga técnica, solo actualizaciones claras sobre el progreso. Siempre sabrás dónde está tu proyecto y qué viene después.",
+      "communication_badge_1": "Actualizaciones Regulares",
+      "communication_badge_2": "Acceso Directo",
+      "communication_badge_3": "Precios Transparentes",
+      
+      "methods": "Mis métodos de trabajo",
+      "titles": {
+        "agile": "Métodos ágiles",
+        "ci_cd": "CI/CD",
+        "git_flow": "Git Flow y resultados limpios",
+        "testing": "Pruebas y aseguramiento de la calidad"
+      },
+      "agile": "Aplico métodos ágiles como SCRUM, Kanban o Scrumban para adaptarme de manera flexible a los cambios durante el proyecto e incorporar retroalimentación regular para la mejora continua. A través de iteraciones cortas y reuniones regulares, aseguro que los requisitos se mantengan actualizados y factibles.",
+      "ci_cd": "Usando CI/CD en GitHub y GitLab, optimizo el proceso de desarrollo con pruebas automáticas y despliegue continuo, asegurando que los cambios en el código se transfieran de manera segura y rápida a producción. Esto me permite entregar software funcional en cualquier momento mientras mantengo la calidad. Dependiendo del stack, también utilizo herramientas como Laravel Forge en proyectos de Laravel.",
+      "git_flow": "Trabajo con una combinación de Git Flow y GitHub Flow para garantizar ramas bien estructuradas tanto para ciclos de desarrollo a largo plazo como de ritmo rápido. Me aseguro de que las ramas para características, correcciones y lanzamientos estén claramente separadas, evitando errores comunes como trabajar directamente en la rama master, mensajes de commit poco claros o saltarse revisiones de código. Las buenas prácticas, como el rebasing regular y el uso de pull requests, mantienen la base de código limpia y rastreable.",
+      "testing": "Las pruebas son una parte fundamental de mi trabajo, de las que nunca o rara vez me salto. Las pruebas unitarias con TDD, las pruebas de componentes con Cypress para elementos de UI o las pruebas E2E para verificar la funcionalidad principal del software de principio a fin, aseguran que el código sea robusto y mantenible desde el principio, reduciendo los riesgos para futuros cambios."
+    },
+    "blog": {
+      "blog_text": "Las últimas ideas, consejos y actualizaciones de mi trabajo como desarrollador de software: prácticos y actuales."
+    }
+  },
+  "badges": {
+    "laravel": "Laravel",
+    "vue": "VueJS",
+    "typescript": "TypeScript",
+    "nuxt": "NuxtJS",
+    "nestjs": "NestJS",
+    "python": "Python"
+  },
+  "cta": {
+    "lets_talk": "Hablemos",
+    "start_your_business_idea": "Comienza tu idea de negocio",
+    "get_consultancy": "Obtener consultoría",
+    "connect": "Conectar",
+    "get_in_touch": "contactar",
+    "send_message": "Enviar Mensaje"
+  },
+  "dividers": {
+    "interested": "¿Interesado?"
+  },
+  "contact": {
+    "title": "Ponte en contacto",
+    "text": "Construyamos algo genial, escríbeme un mensaje:",
+    "mail": {
+      "error": "Se produjo un error al enviar su información de contacto. Por favor, inténtelo de nuevo más tarde.",
+      "success": "Tu mensaje se ha enviado correctamente. Me pondré en contacto contigo lo antes posible."
+    }
+  },
+  "form": {
+    "labels": {
+      "email": "Email"
+    },
+    "placeholders": {
+      "email": "Email",
+      "contact_message": "Hablemos sobre ...",
+      "name": "Tu nombre"
+    }
+  },
+  "footer": {
+    "imprint": "Aviso legal",
+    "privacy": "Privacidad",
+    "legal": "Legal",
+    "more": "Más",
+    "blog": "Blog",
+    "languages": "Idiomas"
+  },
+  "navbar": {
+    "links": {
+      "about_me": "Por qué elegirme",
+      "services": "Servicios"
+    }
+  },
+  "meta": {
+    "titles": {
+      "imprint": "Aviso legal",
+      "privacy": "Privacidad"
+    },
+    "descriptions": {
+      "home": "Waldemar Enns, experto en desarrollo frontend y software, soluciones personalizadas, especializado en Vue.js, TypeScript, Laravel, SEO para buscadores y mas.",
+      "imprint": "Información legal del sitio web de Waldemar Enns, incluyendo datos de contacto y detalles de acuerdo a las leyes aplicables para la transparencia online.",
+      "privacy": "Política de privacidad de Waldemar Enns. Información sobre la protección de datos personales y el cumplimiento de las normativas de privacidad."
+    }
+  },
+  "errors": {
+    "return_back_home": "Volver a inicio",
+    "title": "¡Vaya! Algo salió mal."
+  },
+  "post": {
+    "published_at": "Publicado el",
+    "edited_at": "Procesado el",
+    "have_a_read": "Leer ahora"
+  },
+  "posts": {
+    "read_something_about": "Lea algo sobre:",
+    "coming_soon": "Próximamente",
+    "coming_soon_description": "Mi blog está actualmente en construcción. Pronto encontrarás artículos sobre desarrollo web, mejores prácticas e ideas de mis proyectos.",
+    "blog_placeholder": "¡Contenido del blog próximamente!"
+  },
+  "read_more": "leer más"
+}
+
+
