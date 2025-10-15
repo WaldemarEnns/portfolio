@@ -30,12 +30,18 @@ const [privacyPolicyAgreed, privacyPolicyAgreedAttrs] = defineField('privacyPoli
 const contactMailPending = ref(false)
 const contactMailError = ref(false)
 const contactMailSuccess = ref(false)
+const captchaToken = ref<string | null>(null)
 
 // Animation states
 const formFocused = ref(false)
 const currentField = ref('')
 
 const onSubmit = handleSubmit(async (values, { resetForm }) => {
+  if (!captchaToken.value) {
+    contactMailError.value = true
+    return
+  }
+
   contactMailPending.value = true
 
   const { status } = await useFetch(CONTACT_MAIL_ENDPOINT, {
@@ -43,7 +49,10 @@ const onSubmit = handleSubmit(async (values, { resetForm }) => {
     headers: {
       'Content-Type': 'application/json',
     },
-    body: values,
+    body: {
+      ...values,
+      captchaToken: captchaToken.value,
+    },
   })
 
   if (status.value === 'error') {
@@ -52,6 +61,7 @@ const onSubmit = handleSubmit(async (values, { resetForm }) => {
     contactMailError.value = false
     contactMailSuccess.value = true
     resetForm()
+    captchaToken.value = null
     // Reset success message after 5 seconds
     setTimeout(() => {
       contactMailSuccess.value = false
@@ -259,14 +269,19 @@ const removeFocus = () => {
                 </label>
               </div>
 
+              <!-- CAPTCHA -->
+              <div class="form-control flex items-center justify-center">
+                <NuxtTurnstile v-model="captchaToken" />
+              </div>
+
               <!-- Submit Button -->
               <div class="flex justify-center pt-4">
                 <button
                   :class="[
                     'btn btn-primary btn-lg group relative overflow-hidden transition-all duration-300',
-                    !meta.valid || contactMailPending ? 'btn-disabled' : 'hover:shadow-lg hover:shadow-primary/25 hover:scale-105'
+                    !meta.valid || contactMailPending || !captchaToken ? 'btn-disabled' : 'hover:shadow-lg hover:shadow-primary/25 hover:scale-105'
                   ]"
-                  :disabled="!meta.valid || contactMailPending"
+                  :disabled="!meta.valid || contactMailPending || !captchaToken"
                   type="submit"
                 >
                   <span class="relative z-10 flex items-center gap-2">
