@@ -143,12 +143,25 @@
     }
   },
   "form": {
+    "labels": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message"
+    },
     "placeholders": {
       "email": "Email",
       "contact_message": "Let's talk about ...",
       "name": "Your name"
+    },
+    "errors": {
+      "name_required": "Name is required",
+      "email_invalid": "Please enter a valid email address",
+      "message_required": "Message is required"
     }
   },
+  "i_agree": "I agree to the",
+  "data_processing": "for data processing",
+  "other_ways_to_connect": "Or connect with me on social media:",
   "footer": {
     "imprint": "Imprint",
     "privacy": "Privacy",
@@ -160,6 +173,7 @@
   "navbar": {
     "links": {
       "about_me": "Why Choose Me",
+      "career": "Career & Skills",
       "services": "Services"
     }
   },

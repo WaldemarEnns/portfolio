@@ -14,6 +14,12 @@ function scrollToAbout () {
   })
 }
 
+function scrollToCareer () {
+  document.querySelector('#career-skills')!.scrollIntoView({
+    behavior: 'smooth'
+  })
+}
+
 </script>
 
 <template>
@@ -24,6 +30,7 @@ function scrollToAbout () {
     <div v-if="currentRoute.path === '/'" class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1">
         <li><a @click="scrollToAbout" href="#about">{{ $t('navbar.links.about_me') }}</a></li>
+        <li><a @click="scrollToCareer" href="#career-skills">{{ $t('navbar.links.career') }}</a></li>
       </ul>
     </div>
     <div class="navbar-end">
