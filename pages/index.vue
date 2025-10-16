@@ -151,8 +151,9 @@ function scrollToAbout () {
       </div>
     </div>
   </section>
- 
-  
+
+  <!-- Career and Skills Showcase -->
+  <CareerSkills />
 
   <div class="divider">{{ t('dividers.interested') }}</div>
 </template>

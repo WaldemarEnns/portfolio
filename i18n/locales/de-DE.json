@@ -190,5 +190,85 @@
     "coming_soon_description": "Mein Blog befindet sich derzeit im Aufbau. Bald findest du hier Artikel über Webentwicklung, Best Practices und Einblicke in meine Projekte.",
     "blog_placeholder": "Blog-Inhalte kommen bald!"
   },
-  "read_more": "lies mehr"
+  "read_more": "lies mehr",
+  "career": {
+    "title": "Meine Karriere & Expertise",
+    "subtitle": "Eine Reise durch spezialisierte Fähigkeiten und praxisnahe Lösungen, die messbare Ergebnisse für Unternehmen liefern.",
+    "timeline_title": "Karriereweg",
+    "skills_title": "Kernkompetenzen",
+    "skills_subtitle": "Klicke auf eine Fähigkeit, um spezifische Projekte und Implementierungen zu sehen, die ich geliefert habe.",
+    "projects_delivered": "Wichtige Projekte & Lösungen",
+    "click_to_see_projects": "Klicken für Projekte",
+    "click_to_hide": "Klicken zum Verstecken",
+    "cta_title": "Benötigst du genau diese Fähigkeiten für dein Projekt?",
+    "cta_description": "Ob Vue-Migrationen, Authentifizierungssysteme oder skalierbare Backend-Architekturen – ich war dort, habe es getan und kann auch dir helfen.",
+    "cta_button": "Lass uns über dein Projekt sprechen",
+    "timeline": {
+      "current_job": {
+        "title": "Senior Full-Stack Entwickler",
+        "period": "2018 - Heute",
+        "description": "Leitung der Entwicklung unternehmensweiter Anwendungen, Architektur skalierbarer Lösungen und Mentoring von Entwicklungsteams. Spezialisiert auf hochperformante SaaS-Plattformen und Modernisierung von Legacy-Systemen."
+      },
+      "freelance": {
+        "title": "Freiberuflicher Software-Berater",
+        "period": "2016 - Heute",
+        "description": "Unterstützung von Unternehmen verschiedener Branchen bei der Lösung komplexer technischer Herausforderungen. Von Startup-MVPs bis zu Unternehensmigrationen – maßgeschneiderte Lösungen, die Wachstum und Effizienz fördern."
+      },
+      "education": {
+        "title": "Informatikstudium",
+        "period": "2015 - 2017",
+        "description": "Studium der Informatik mit Schwerpunkt auf Software-Engineering und Webtechnologien. Praktisches Lernen durch reale Projekte und Freelance-Arbeit, um letztendlich Karrieremöglichkeiten zu verfolgen."
+      }
+    },
+    "skills": {
+      "vue_migrations": {
+        "title": "Vue.js Migrations-Spezialist",
+        "description": "Experte für die Migration großer Anwendungen von Vue 2 zu Vue 3, Implementierung der Composition API und Modernisierung von Codebasen mit TypeScript.",
+        "project_1_label": "E-Commerce-Plattform Migration",
+        "project_1_desc": "Migration einer 50.000+ LOC Vue 2 Anwendung zu Vue 3 ohne Ausfallzeit. Performance-Verbesserung um 40% und Bundle-Größenreduzierung um 30%.",
+        "project_2_label": "Admin-Dashboard Modernisierung",
+        "project_2_desc": "Refactoring von Options API zu Composition API, Einführung von Pinia State Management und TypeScript für Type Safety über 200+ Komponenten."
+      },
+      "keycloak": {
+        "title": "Keycloak Authentifizierung & Theming",
+        "description": "Entwicklung sicherer, individuell gestalteter Authentifizierungsflows mit Keycloak. SSO-Implementierung, benutzerdefinierte Themes und Integration verschiedener Identity Provider.",
+        "project_1_label": "Multi-Tenant SSO Plattform",
+        "project_1_desc": "Implementierung einer Keycloak-basierten SSO für 50+ Unternehmenskunden mit individuell gestalteten Login-Flows, SAML/OAuth2-Integrationen und rollenbasierter Zugriffskontrolle.",
+        "project_2_label": "White-Label Authentifizierungssystem",
+        "project_2_desc": "Erstellung vollständig anpassbarer Keycloak-Themes mit dynamischem Branding, unterstützt 20+ Kundenmarken ohne Code-Änderungen pro Deployment."
+      },
+      "laravel": {
+        "title": "Laravel Backend-Architektur",
+        "description": "Entwicklung robuster, skalierbarer Backend-Systeme mit Laravel. API-Entwicklung, Queue-Systeme, Event Sourcing und Datenbankoptimierung für hochfrequentierte Anwendungen.",
+        "project_1_label": "Buchungssystem API",
+        "project_1_desc": "Entwicklung einer hochperformanten REST API, die 100k+ Buchungen/Monat mit komplexer Geschäftslogik, Zahlungsintegrationen und automatisierter Terminplanung verarbeitet.",
+        "project_2_label": "Bestandsverwaltungsplattform",
+        "project_2_desc": "Aufbau eines Echtzeit-Bestandssystems mit Event Sourcing, das Multi-Warehouse-Operationen, automatische Nachbestellungen und Lieferantenintegrationen handhabt."
+      },
+      "golang": {
+        "title": "Go Microservices Entwicklung",
+        "description": "Hochperformante Microservices und nebenläufige Systeme in Go. Entwicklung skalierbarer APIs, Datenverarbeitungs-Pipelines und Echtzeitsysteme.",
+        "project_1_label": "Echtzeit-Analytics-Engine",
+        "project_1_desc": "Aufbau eines Go-basierten Analytics-Prozessors, der 1M+ Events/Tag mit Sub-Sekunden-Latenz verarbeitet, unter Verwendung von gRPC für Inter-Service-Kommunikation.",
+        "project_2_label": "Zahlungsverarbeitungs-Service",
+        "project_2_desc": "Entwicklung eines fehlertoleranten Zahlungs-Microservice mit Circuit Breakern, Retries und Idempotenz-Handling für Finanztransaktionen."
+      },
+      "python": {
+        "title": "Python Automatisierung & APIs",
+        "description": "FastAPI-Backends, Datenverarbeitungs-Pipelines und Automatisierungs-Skripte. Entwicklung effizienter Tools für Datentransformation und Geschäftsprozessautomatisierung.",
+        "project_1_label": "Daten-ETL-Pipeline",
+        "project_1_desc": "Erstellung eines automatisierten ETL-Systems, das täglich 500GB+ Daten verarbeitet, transformiert und zwischen mehreren Systemen mit Fehlerwiederherstellung synchronisiert.",
+        "project_2_label": "FastAPI Microservice",
+        "project_2_desc": "Aufbau einer hochperformanten REST API mit FastAPI, die ML-Modell-Vorhersagen mit <100ms Antwortzeit und automatischer Dokumentation bereitstellt."
+      },
+      "nestjs": {
+        "title": "NestJS Enterprise-Anwendungen",
+        "description": "TypeScript-first Backend-Entwicklung mit NestJS. GraphQL APIs, Microservices-Architektur und unternehmenstaugliche Anwendungen mit sauberer Architektur.",
+        "project_1_label": "GraphQL API Gateway",
+        "project_1_desc": "Architektur eines GraphQL-Gateways mit NestJS, das 8 Microservices in eine einzige API vereint, mit Authentifizierung, Caching und Rate Limiting.",
+        "project_2_label": "Echtzeit-Kollaborationsplattform",
+        "project_2_desc": "Aufbau eines WebSocket-basierten Kollaborationssystems mit NestJS, das 1000+ gleichzeitige Benutzer mit Echtzeit-Updates und Konfliktauflösung unterstützt."
+      }
+    }
+  }
 }
