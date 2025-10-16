@@ -32,6 +32,30 @@
         "content": "Obtienes más que código – consigues un socio estratégico que entiende las necesidades del negocio. Comunicación clara, entrega confiable y soluciones construidas para el éxito a largo plazo."
       }
     },
+    "projects": {
+      "title": "Proyectos Seleccionados",
+      "subtitle": "Descubre algunas de las soluciones que he construido para clientes de diferentes industrias.",
+      "problem_solution": "Problema y Solución",
+      "tech_stack": "Stack Tecnológico",
+      "view_details": "Ver Detalles",
+      "cta_text": "¿Listo para dar vida a tu proyecto?",
+      "cta_button": "Comienza tu Proyecto",
+      "project1": {
+        "title": "Plataforma de E-commerce",
+        "description": "Una solución integral de tienda online con capacidades avanzadas de gestión de inventario y procesamiento de pagos.",
+        "problem_solution": "El cliente necesitaba una plataforma de e-commerce escalable con seguimiento de inventario en tiempo real e integración de múltiples pasarelas de pago."
+      },
+      "project2": {
+        "title": "Dashboard de Análisis SaaS",
+        "description": "Una plataforma de análisis multi-inquilino que proporciona insights en tiempo real y reportes personalizables para clientes B2B.",
+        "problem_solution": "La empresa requería una solución de análisis de marca blanca con control de acceso basado en roles y generación automatizada de reportes."
+      },
+      "project3": {
+        "title": "App de Gestión de Tareas",
+        "description": "Una herramienta colaborativa de gestión de proyectos con actualizaciones en tiempo real y funciones inteligentes de automatización de tareas.",
+        "problem_solution": "El equipo necesitaba un sistema centralizado de gestión de flujo de trabajo con notificaciones automatizadas y seguimiento de progreso."
+      }
+    },
     "services": {
       "title": "Cómo puedo ayudarte",
       "subtitle": "Soluciones integrales adaptadas a las necesidades de tu negocio, desde el concepto hasta la implementación y más allá.",
@@ -122,7 +146,11 @@
     "typescript": "TypeScript",
     "nuxt": "NuxtJS",
     "nestjs": "NestJS",
-    "python": "Python"
+    "python": "Python",
+    "stripe": "Stripe",
+    "postgresql": "PostgreSQL",
+    "fastapi": "FastAPI",
+    "redis": "Redis"
   },
   "cta": {
     "lets_talk": "Hablemos",

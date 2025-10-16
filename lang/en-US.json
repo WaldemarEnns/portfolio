@@ -32,6 +32,30 @@
         "content": "You get more than code – you get a strategic partner who understands business needs. Clear communication, reliable delivery, and solutions built for long-term success."
       }
     },
+    "projects": {
+      "title": "Selected Projects",
+      "subtitle": "Discover some of the solutions I've built for clients across different industries.",
+      "problem_solution": "Problem & Solution",
+      "tech_stack": "Tech Stack",
+      "view_details": "View Details",
+      "cta_text": "Ready to bring your project to life?",
+      "cta_button": "Start Your Project",
+      "project1": {
+        "title": "E-commerce Platform",
+        "description": "A comprehensive online store solution with advanced inventory management and payment processing capabilities.",
+        "problem_solution": "Client needed a scalable e-commerce platform with real-time inventory tracking and multiple payment gateways integration."
+      },
+      "project2": {
+        "title": "SaaS Analytics Dashboard",
+        "description": "A multi-tenant analytics platform providing real-time insights and customizable reporting for B2B clients.",
+        "problem_solution": "Business required a white-label analytics solution with role-based access control and automated report generation."
+      },
+      "project3": {
+        "title": "Task Management App",
+        "description": "A collaborative project management tool with real-time updates and intelligent task automation features.",
+        "problem_solution": "Team needed a centralized workflow management system with automated notifications and progress tracking."
+      }
+    },
     "services": {
       "title": "How I Can Help You",
       "subtitle": "Comprehensive solutions tailored to your business needs, from concept to deployment and beyond.",
@@ -121,7 +145,11 @@
     "typescript": "TypeScript",
     "nuxt": "NuxtJS",
     "nestjs": "NestJS",
-    "python": "Python"
+    "python": "Python",
+    "stripe": "Stripe",
+    "postgresql": "PostgreSQL",
+    "fastapi": "FastAPI",
+    "redis": "Redis"
   },
   "cta": {
     "lets_talk": "Let's talk",
