@@ -75,6 +75,7 @@ export default defineNuxtConfig({
       flag: '🇪🇸'
     }],
     lazy: true,
+    langDir: 'lang',
     defaultLocale: 'de',
   },
 
