@@ -1,0 +1,278 @@
+{
+  "home": {
+    "nice_to_meet_you": "bienvenido, encantado 👋🏼",
+    "welcome": "¡Hola! Gracias por visitar mi página y conocerme\n¡Déjame presentarte mi trabajo y mi persona 🚀",
+    "tell_me_more": "Cuéntame más",
+    "hero": {
+      "developer": "Desarrollador de Software",
+      "freelancer": "Freelancer",
+      "consultant": "Consultor",
+      "headline": "Construyendo soluciones digitales que impulsan tu negocio",
+      "subtitle": "Creo soluciones digitales y proporciono consultoría estratégica para ayudar a las empresas a crecer.",
+      "cta_primary": "Iniciar Tu Proyecto",
+      "cta_secondary": "Saber Más"
+    },
+    "about_me": {
+      "title": "Por qué elegirme",
+      "subtitle": "Transformo desafíos empresariales complejos en soluciones digitales elegantes que generan resultados reales.",
+      "what_i_do": {
+        "title": "Lo que hago",
+        "content": "Me especializo en crear aplicaciones web de alto rendimiento y plataformas SaaS que ayudan a las empresas a crecer. Desde el concepto hasta el despliegue, entrego soluciones que no solo funcionan, sino que están diseñadas para crecer con tu negocio."
+      },
+      "my_approach": {
+        "title": "Mi enfoque",
+        "content": "Cada proyecto comienza entendiendo tus objetivos. Combino experiencia técnica con perspicacia empresarial para crear soluciones que resuelven problemas reales y entregan valor medible a tus clientes."
+      },
+      "track_record": {
+        "title": "Resultados comprobados",
+        "content": "7+ años entregando proyectos exitosos para empresas de diversas industrias. He ayudado a negocios a lanzar productos, optimizar operaciones y escalar su presencia digital con código moderno y mantenible."
+      },
+      "why_work_with_me": {
+        "title": "Asociación, no solo desarrollo",
+        "content": "Obtienes más que código – consigues un socio estratégico que entiende las necesidades del negocio. Comunicación clara, entrega confiable y soluciones construidas para el éxito a largo plazo."
+      }
+    },
+    "services": {
+      "title": "Cómo puedo ayudarte",
+      "subtitle": "Soluciones integrales adaptadas a las necesidades de tu negocio, desde el concepto hasta la implementación y más allá.",
+      "services": "Servicios",
+      "popular_badge": "Más Popular",
+      "frontend_title": "Aplicaciones Web Modernas",
+      "frontend_description": "Transforma tus ideas en experiencias web impresionantes y de alto rendimiento que los usuarios aman y en las que las empresas confían.",
+      "frontend_feature_1": "Aplicaciones ultrarrápidas optimizadas para SEO",
+      "frontend_feature_2": "Diseño responsive que funciona en todos los dispositivos",
+      "frontend_feature_3": "Progressive Web Apps con capacidades offline",
+      "frontend_cta": "Construye tu Web App",
+      "saas_title": "Soluciones SaaS Full-Stack",
+      "saas_description": "Lanza tu producto SaaS con confianza. Construyo plataformas escalables que crecen con tu negocio.",
+      "saas_feature_1": "Arquitectura multi-tenant con aislamiento seguro de datos",
+      "saas_feature_2": "Facturación por suscripción e integración de pagos",
+      "saas_feature_3": "Funciones en tiempo real y desarrollo de API",
+      "saas_cta": "Lanza tu SaaS",
+      "consulting_title": "Consultoría Técnica",
+      "consulting_description": "Orientación estratégica para navegar decisiones técnicas complejas y optimizar tu proceso de desarrollo.",
+      "consulting_feature_1": "Revisiones y optimización de arquitectura",
+      "consulting_feature_2": "Selección y migración de stack tecnológico",
+      "consulting_feature_3": "Formación de equipos e implementación de mejores prácticas",
+      "consulting_cta": "Obtén Asesoría Experta",
+      "value_prop_title": "¿Por qué trabajar conmigo?",
+      "value_prop_description": "No solo escribo código: me asocio contigo para entender tus objetivos comerciales y entregar soluciones que generen resultados reales. Con un enfoque en código limpio y mantenible y las mejores prácticas modernas, me aseguro de que tu inversión continúe generando valor mucho después del lanzamiento.",
+      "frontend_title_old": "Desarrollo frontend con Vue y TypeScript",
+      "frontend_text_1": "Implementación de aplicaciones web y sitios web modernos y eficientes.",
+      "frontend_text_2": "Mi profunda experiencia en Vue y su ecosistema garantiza que mis soluciones estén actualizadas con tecnología de vanguardia y mejores prácticas.",
+      "saas": "SaaS y más con Laravel",
+      "saas_text_1": "Desde la configuración y el desarrollo hasta el lanzamiento y la implementación. Soluciones escalables y estables para las necesidades de tu negocio.",
+      "saas_text_2": "Soluciones personalizadas para sistemas de reservas, gestión de inventario, pasarelas de pago y desarrollo de API.",
+      "consultancy": "Consultoría",
+      "consultancy_text_1": "Ofrezco asesoramiento sólido y planificación estratégica para tus proyectos de desarrollo web.",
+      "consultancy_text_2": "Con mi experiencia en desarrollo frontend y backend y gestión de equipos, puedo ayudarte a tomar las decisiones tecnológicas correctas e implementar tus proyectos de manera eficiente."
+    },
+    "methods": {
+      "title": "Cómo trabajo",
+      "subtitle": "Un enfoque probado que garantiza el éxito de tu proyecto, a tiempo y dentro del presupuesto.",
+      "agile_title": "Ágil y Adaptable",
+      "agile_description": "Tu proyecto evoluciona con tus necesidades. Reuniones regulares y desarrollo iterativo significan que siempre tienes el control y puedes cambiar cuando sea necesario.",
+      "agile_badge_1": "Actualizaciones Semanales",
+      "agile_badge_2": "Alcance Flexible",
+      "agile_badge_3": "Iteraciones Rápidas",
+      "quality_title": "Construido para Durar",
+      "quality_description": "Cada línea de código es probada y documentada. Tu inversión está protegida con soluciones mantenibles y escalables que crecen con tu negocio.",
+      "quality_badge_1": "Pruebas Automatizadas",
+      "quality_badge_2": "Revisiones de Código",
+      "quality_badge_3": "Documentación",
+      "infrastructure_title": "Moderno y Seguro",
+      "infrastructure_description": "Desplegado en infraestructura cloud confiable con copias de seguridad automáticas, monitoreo y actualizaciones de seguridad. Tu aplicación se mantiene rápida y segura.",
+      "infrastructure_badge_1": "Alojamiento Cloud",
+      "infrastructure_badge_2": "Escalado Automático",
+      "infrastructure_badge_3": "Monitoreo 24/7",
+      "communication_title": "Comunicación Clara",
+      "communication_description": "Sin jerga técnica, solo actualizaciones claras sobre el progreso. Siempre sabrás dónde está tu proyecto y qué viene después.",
+      "communication_badge_1": "Actualizaciones Regulares",
+      "communication_badge_2": "Acceso Directo",
+      "communication_badge_3": "Precios Transparentes",
+      "methods": "Mis métodos de trabajo",
+      "titles": {
+        "agile": "Métodos ágiles",
+        "ci_cd": "CI/CD",
+        "git_flow": "Git Flow y resultados limpios",
+        "testing": "Pruebas y aseguramiento de la calidad"
+      },
+      "agile": "Aplico métodos ágiles como SCRUM, Kanban o Scrumban para adaptarme de manera flexible a los cambios durante el proyecto e incorporar retroalimentación regular para la mejora continua. A través de iteraciones cortas y reuniones regulares, aseguro que los requisitos se mantengan actualizados y factibles.",
+      "ci_cd": "Usando CI/CD en GitHub y GitLab, optimizo el proceso de desarrollo con pruebas automáticas y despliegue continuo, asegurando que los cambios en el código se transfieran de manera segura y rápida a producción. Esto me permite entregar software funcional en cualquier momento mientras mantengo la calidad. Dependiendo del stack, también utilizo herramientas como Laravel Forge en proyectos de Laravel.",
+      "git_flow": "Trabajo con una combinación de Git Flow y GitHub Flow para garantizar ramas bien estructuradas tanto para ciclos de desarrollo a largo plazo como de ritmo rápido. Me aseguro de que las ramas para características, correcciones y lanzamientos estén claramente separadas, evitando errores comunes como trabajar directamente en la rama master, mensajes de commit poco claros o saltarse revisiones de código. Las buenas prácticas, como el rebasing regular y el uso de pull requests, mantienen la base de código limpia y rastreable.",
+      "testing": "Las pruebas son una parte fundamental de mi trabajo, de las que nunca o rara vez me salto. Las pruebas unitarias con TDD, las pruebas de componentes con Cypress para elementos de UI o las pruebas E2E para verificar la funcionalidad principal del software de principio a fin, aseguran que el código sea robusto y mantenible desde el principio, reduciendo los riesgos para futuros cambios."
+    },
+    "blog": {
+      "blog_text": "Las últimas ideas, consejos y actualizaciones de mi trabajo como desarrollador de software: prácticos y actuales."
+    }
+  },
+  "badges": {
+    "laravel": "Laravel",
+    "vue": "VueJS",
+    "typescript": "TypeScript",
+    "nuxt": "NuxtJS",
+    "nestjs": "NestJS",
+    "python": "Python"
+  },
+  "cta": {
+    "lets_talk": "Hablemos",
+    "start_your_business_idea": "Comienza tu idea de negocio",
+    "get_consultancy": "Obtener consultoría",
+    "connect": "Conectar",
+    "get_in_touch": "contactar",
+    "send_message": "Enviar Mensaje"
+  },
+  "dividers": {
+    "interested": "¿Interesado?"
+  },
+  "contact": {
+    "title": "Ponte en contacto",
+    "text": "Construyamos algo genial, escríbeme un mensaje:",
+    "mail": {
+      "error": "Se produjo un error al enviar su información de contacto. Por favor, inténtelo de nuevo más tarde.",
+      "success": "Tu mensaje se ha enviado correctamente. Me pondré en contacto contigo lo antes posible."
+    }
+  },
+  "form": {
+    "labels": {
+      "name": "Nombre",
+      "email": "Email",
+      "message": "Mensaje"
+    },
+    "placeholders": {
+      "email": "Email",
+      "contact_message": "Hablemos sobre ...",
+      "name": "Tu nombre"
+    },
+    "errors": {
+      "name_required": "El nombre es obligatorio",
+      "email_invalid": "Por favor, introduce una dirección de email válida",
+      "message_required": "El mensaje es obligatorio"
+    }
+  },
+  "footer": {
+    "imprint": "Aviso legal",
+    "privacy": "Privacidad",
+    "legal": "Legal",
+    "more": "Más",
+    "blog": "Blog",
+    "languages": "Idiomas"
+  },
+  "navbar": {
+    "links": {
+      "about_me": "Por qué elegirme",
+      "services": "Servicios",
+      "career": "Carrera y Habilidades"
+    }
+  },
+  "meta": {
+    "titles": {
+      "imprint": "Aviso legal",
+      "privacy": "Privacidad"
+    },
+    "descriptions": {
+      "home": "Waldemar Enns, experto en desarrollo frontend y software, soluciones personalizadas, especializado en Vue.js, TypeScript, Laravel, SEO para buscadores y mas.",
+      "imprint": "Información legal del sitio web de Waldemar Enns, incluyendo datos de contacto y detalles de acuerdo a las leyes aplicables para la transparencia online.",
+      "privacy": "Política de privacidad de Waldemar Enns. Información sobre la protección de datos personales y el cumplimiento de las normativas de privacidad."
+    }
+  },
+  "errors": {
+    "return_back_home": "Volver a inicio",
+    "title": "¡Vaya! Algo salió mal."
+  },
+  "post": {
+    "published_at": "Publicado el",
+    "edited_at": "Procesado el",
+    "have_a_read": "Leer ahora"
+  },
+  "posts": {
+    "read_something_about": "Lea algo sobre:",
+    "coming_soon": "Próximamente",
+    "coming_soon_description": "Mi blog está actualmente en construcción. Pronto encontrarás artículos sobre desarrollo web, mejores prácticas e ideas de mis proyectos.",
+    "blog_placeholder": "¡Contenido del blog próximamente!"
+  },
+  "read_more": "leer más",
+  "i_agree": "Acepto la",
+  "data_processing": "para el procesamiento de datos",
+  "other_ways_to_connect": "O conéctate conmigo en las redes sociales:",
+  "career": {
+    "title": "Mi Carrera y Experiencia",
+    "subtitle": "Un viaje a través de habilidades especializadas y soluciones del mundo real que entregan resultados medibles para empresas.",
+    "timeline_title": "Trayectoria Profesional",
+    "skills_title": "Experiencia Técnica Principal",
+    "skills_subtitle": "Haz clic en cualquier habilidad para ver proyectos específicos e implementaciones que he entregado.",
+    "projects_delivered": "Proyectos y Soluciones Clave",
+    "click_to_see_projects": "Clic para ver proyectos",
+    "click_to_hide": "Clic para ocultar",
+    "cta_title": "¿Necesitas estas habilidades exactas para tu proyecto?",
+    "cta_description": "Ya sean migraciones de Vue, sistemas de autenticación o arquitecturas backend escalables: he estado allí, lo he hecho y también puedo ayudarte.",
+    "cta_button": "Hablemos de tu proyecto",
+    "timeline": {
+      "current_job": {
+        "title": "Desarrollador Full-Stack Senior",
+        "period": "2018 - Presente",
+        "description": "Liderando el desarrollo de aplicaciones a escala empresarial, arquitectando soluciones escalables y mentoreando equipos de desarrollo. Especializado en crear plataformas SaaS de alto rendimiento y modernizar sistemas legacy."
+      },
+      "freelance": {
+        "title": "Consultor de Software Freelance",
+        "period": "2016 - Presente",
+        "description": "Ayudando a empresas de varias industrias a resolver desafíos técnicos complejos. Desde MVPs de startups hasta migraciones empresariales, entregando soluciones personalizadas que impulsan el crecimiento y la eficiencia."
+      },
+      "education": {
+        "title": "Estudios de Informática",
+        "period": "2015 - 2017",
+        "description": "Estudié Informática con enfoque en ingeniería de software y tecnologías web. Aprendizaje práctico aplicado a través de proyectos del mundo real y trabajo freelance, persiguiendo finalmente oportunidades de carrera."
+      }
+    },
+    "skills": {
+      "vue_migrations": {
+        "title": "Especialista en Migraciones Vue.js",
+        "description": "Experto en migrar aplicaciones a gran escala de Vue 2 a Vue 3, implementando Composition API y modernizando bases de código con TypeScript.",
+        "project_1_label": "Migración de Plataforma E-Commerce",
+        "project_1_desc": "Migré aplicación Vue 2 de 50.000+ LOC a Vue 3 sin tiempo de inactividad. Mejoré el rendimiento en 40% y reduje el tamaño del bundle en 30%.",
+        "project_2_label": "Modernización de Dashboard Admin",
+        "project_2_desc": "Refactoricé Options API a Composition API, introduje gestión de estado con Pinia e implementé TypeScript para seguridad de tipos en 200+ componentes."
+      },
+      "keycloak": {
+        "title": "Autenticación y Temas Keycloak",
+        "description": "Construcción de flujos de autenticación seguros y personalizados con Keycloak. Implementación SSO, temas personalizados e integración con varios proveedores de identidad.",
+        "project_1_label": "Plataforma SSO Multi-Tenant",
+        "project_1_desc": "Implementé SSO basado en Keycloak para 50+ clientes empresariales con flujos de inicio de sesión personalizados, integraciones SAML/OAuth2 y control de acceso basado en roles.",
+        "project_2_label": "Sistema de Autenticación White-Label",
+        "project_2_desc": "Creé temas Keycloak completamente personalizables con marca dinámica, soportando 20+ marcas de clientes sin cambios de código por despliegue."
+      },
+      "laravel": {
+        "title": "Arquitectura Backend Laravel",
+        "description": "Construcción de sistemas backend robustos y escalables con Laravel. Desarrollo de APIs, sistemas de colas, event sourcing y optimización de bases de datos para aplicaciones de alto tráfico.",
+        "project_1_label": "API de Sistema de Reservas",
+        "project_1_desc": "Desarrollé API REST de alto rendimiento manejando 100k+ reservas/mes con lógica de negocio compleja, integraciones de pago y programación automatizada.",
+        "project_2_label": "Plataforma de Gestión de Inventario",
+        "project_2_desc": "Construí sistema de inventario en tiempo real con event sourcing, manejando operaciones multi-almacén, reordenamiento automático e integraciones con proveedores."
+      },
+      "golang": {
+        "title": "Desarrollo de Microservicios en Go",
+        "description": "Microservicios de alto rendimiento y sistemas concurrentes en Go. Construcción de APIs escalables, pipelines de procesamiento de datos y sistemas en tiempo real.",
+        "project_1_label": "Motor de Análisis en Tiempo Real",
+        "project_1_desc": "Construí procesador de análisis basado en Go manejando 1M+ eventos/día con latencia sub-segundo, usando gRPC para comunicación entre servicios.",
+        "project_2_label": "Servicio de Procesamiento de Pagos",
+        "project_2_desc": "Desarrollé microservicio de pagos tolerante a fallos con circuit breakers, reintentos y manejo de idempotencia para transacciones financieras."
+      },
+      "python": {
+        "title": "Automatización y APIs en Python",
+        "description": "Backends FastAPI, pipelines de procesamiento de datos y scripts de automatización. Construcción de herramientas eficientes para transformación de datos y automatización de procesos empresariales.",
+        "project_1_label": "Pipeline ETL de Datos",
+        "project_1_desc": "Creé sistema ETL automatizado procesando 500GB+ de datos diariamente, transformando y sincronizando datos entre múltiples sistemas con recuperación de errores.",
+        "project_2_label": "Microservicio FastAPI",
+        "project_2_desc": "Construí API REST de alto rendimiento con FastAPI, sirviendo predicciones de modelos ML con tiempo de respuesta <100ms y documentación automática."
+      },
+      "nestjs": {
+        "title": "Aplicaciones Empresariales NestJS",
+        "description": "Desarrollo backend TypeScript-first con NestJS. APIs GraphQL, arquitectura de microservicios y aplicaciones de grado empresarial con arquitectura limpia.",
+        "project_1_label": "Gateway API GraphQL",
+        "project_1_desc": "Arquitectura de gateway GraphQL con NestJS, unificando 8 microservicios en una sola API, con autenticación, caché y limitación de tasa.",
+        "project_2_label": "Plataforma de Colaboración en Tiempo Real",
+        "project_2_desc": "Construí sistema de colaboración basado en WebSocket con NestJS, soportando 1000+ usuarios concurrentes con actualizaciones en tiempo real y resolución de conflictos."
+      }
+    }
+  }
+}
