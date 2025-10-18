@@ -307,7 +307,11 @@ function toggleCategory(categoryId: string) {
                 <div class="flex items-center gap-4 mb-4">
                   <div 
                     class="w-16 h-16 rounded-xl flex items-center justify-center shadow-lg"
-                    :class="[skill.color, skill.color === 'bg-primary' ? 'text-primary-content' : skill.color === 'bg-secondary' ? 'text-secondary-content' : 'text-accent-content']"
+                    :class="{
+                      'bg-primary text-primary-content': skill.color === 'bg-primary',
+                      'bg-secondary text-secondary-content': skill.color === 'bg-secondary',
+                      'bg-accent text-accent-content': skill.color === 'bg-accent'
+                    }"
                   >
                     <font-awesome-icon :icon="skill.icon" class="text-2xl" />
                   </div>
@@ -393,13 +397,13 @@ function toggleCategory(categoryId: string) {
               {{ t('career.cta_description') }}
             </p>
             <div class="card-actions justify-center">
-              <RainbowButton
-                class="btn btn-primary btn-lg"
+              <button
+                class="btn btn-primary"
                 @click="() => document.querySelector('#contact')!.scrollIntoView({ behavior: 'smooth' })"
               >
-                {{ t('career.cta_button') }}
-                <font-awesome-icon icon="fa-solid fa-arrow-right" class="ml-2" />
-              </RainbowButton>
+                {{ t('cta.get_in_touch') }}
+                <font-awesome-icon icon="fa-solid fa-envelope" class="ml-2" />
+              </button>
             </div>
           </div>
         </div>
