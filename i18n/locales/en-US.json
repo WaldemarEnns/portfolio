@@ -143,12 +143,25 @@
     }
   },
   "form": {
+    "labels": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message"
+    },
     "placeholders": {
       "email": "Email",
       "contact_message": "Let's talk about ...",
       "name": "Your name"
+    },
+    "errors": {
+      "name_required": "Name is required",
+      "email_invalid": "Please enter a valid email address",
+      "message_required": "Message is required"
     }
   },
+  "i_agree": "I agree to the",
+  "data_processing": "for data processing",
+  "other_ways_to_connect": "Or connect with me on social media:",
   "footer": {
     "imprint": "Imprint",
     "privacy": "Privacy",
@@ -160,6 +173,7 @@
   "navbar": {
     "links": {
       "about_me": "Why Choose Me",
+      "career": "Career & Skills",
       "services": "Services"
     }
   },
@@ -189,5 +203,85 @@
     "coming_soon_description": "My blog is currently under construction. Soon you'll find articles about web development, best practices, and insights from my projects.",
     "blog_placeholder": "Blog content coming soon!"
   },
-  "read_more": "read more"
+  "read_more": "read more",
+  "career": {
+    "title": "My Career & Expertise",
+    "subtitle": "A journey through specialized skills and real-world solutions that deliver measurable results for businesses.",
+    "timeline_title": "Career Journey",
+    "skills_title": "Core Technical Expertise",
+    "skills_subtitle": "Click on any skill to see specific projects and implementations I've delivered.",
+    "projects_delivered": "Key Projects & Solutions",
+    "click_to_see_projects": "Click to see projects",
+    "click_to_hide": "Click to hide",
+    "cta_title": "Need These Exact Skills for Your Project?",
+    "cta_description": "Whether it's Vue migrations, authentication systems, or scalable backend architectures – I've been there, done that, and can help you too.",
+    "cta_button": "Let's Discuss Your Project",
+    "timeline": {
+      "current_job": {
+        "title": "Senior Full-Stack Developer",
+        "period": "2018 - Present",
+        "description": "Leading development of enterprise-scale applications, architecting scalable solutions, and mentoring development teams. Specialized in building high-performance SaaS platforms and modernizing legacy systems."
+      },
+      "freelance": {
+        "title": "Freelance Software Consultant",
+        "period": "2016 - Present",
+        "description": "Helping businesses across various industries solve complex technical challenges. From startup MVPs to enterprise migrations, delivering tailored solutions that drive growth and efficiency."
+      },
+      "education": {
+        "title": "Computer Science Studies",
+        "period": "2015 - 2017",
+        "description": "Studied Computer Science with focus on software engineering and web technologies. Applied practical learning through real-world projects and freelance work, ultimately pursuing career opportunities."
+      }
+    },
+    "skills": {
+      "vue_migrations": {
+        "title": "Vue.js Migration Specialist",
+        "description": "Expert in migrating large-scale applications from Vue 2 to Vue 3, implementing Composition API, and modernizing codebases with TypeScript.",
+        "project_1_label": "E-Commerce Platform Migration",
+        "project_1_desc": "Migrated 50,000+ LOC Vue 2 application to Vue 3 with zero downtime. Improved performance by 40% and reduced bundle size by 30%.",
+        "project_2_label": "Admin Dashboard Modernization",
+        "project_2_desc": "Refactored Options API to Composition API, introduced Pinia state management, and implemented TypeScript for type safety across 200+ components."
+      },
+      "keycloak": {
+        "title": "Keycloak Authentication & Theming",
+        "description": "Building secure, custom-branded authentication flows with Keycloak. SSO implementation, custom themes, and integration with various identity providers.",
+        "project_1_label": "Multi-Tenant SSO Platform",
+        "project_1_desc": "Implemented Keycloak-based SSO for 50+ enterprise clients with custom branded login flows, SAML/OAuth2 integrations, and role-based access control.",
+        "project_2_label": "White-Label Authentication System",
+        "project_2_desc": "Created fully customizable Keycloak themes with dynamic branding, supporting 20+ client brands with zero code changes per deployment."
+      },
+      "laravel": {
+        "title": "Laravel Backend Architecture",
+        "description": "Building robust, scalable backend systems with Laravel. API development, queue systems, event sourcing, and database optimization for high-traffic applications.",
+        "project_1_label": "Booking System API",
+        "project_1_desc": "Developed high-performance REST API handling 100k+ bookings/month with complex business logic, payment integrations, and automated scheduling.",
+        "project_2_label": "Inventory Management Platform",
+        "project_2_desc": "Built real-time inventory system with event sourcing, handling multi-warehouse operations, automated reordering, and supplier integrations."
+      },
+      "golang": {
+        "title": "Go Microservices Development",
+        "description": "High-performance microservices and concurrent systems in Go. Building scalable APIs, data processing pipelines, and real-time systems.",
+        "project_1_label": "Real-Time Analytics Engine",
+        "project_1_desc": "Built Go-based analytics processor handling 1M+ events/day with sub-second latency, using gRPC for inter-service communication.",
+        "project_2_label": "Payment Processing Service",
+        "project_2_desc": "Developed fault-tolerant payment microservice with circuit breakers, retries, and idempotency handling for financial transactions."
+      },
+      "python": {
+        "title": "Python Automation & APIs",
+        "description": "FastAPI backends, data processing pipelines, and automation scripts. Building efficient tools for data transformation and business process automation.",
+        "project_1_label": "Data ETL Pipeline",
+        "project_1_desc": "Created automated ETL system processing 500GB+ data daily, transforming and syncing data between multiple systems with error recovery.",
+        "project_2_label": "FastAPI Microservice",
+        "project_2_desc": "Built high-performance REST API with FastAPI, serving ML model predictions with <100ms response time and automatic documentation."
+      },
+      "nestjs": {
+        "title": "NestJS Enterprise Applications",
+        "description": "TypeScript-first backend development with NestJS. GraphQL APIs, microservices architecture, and enterprise-grade applications with clean architecture.",
+        "project_1_label": "GraphQL API Gateway",
+        "project_1_desc": "Architected GraphQL gateway with NestJS, unifying 8 microservices into single API, with authentication, caching, and rate limiting.",
+        "project_2_label": "Real-Time Collaboration Platform",
+        "project_2_desc": "Built WebSocket-based collaboration system with NestJS, supporting 1000+ concurrent users with real-time updates and conflict resolution."
+      }
+    }
+  }
 }

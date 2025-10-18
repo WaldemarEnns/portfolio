@@ -44,7 +44,7 @@ function scrollToAbout () {
         </div>
 
         <div class="relative mb-8">
-          <h2 class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold leading-tight bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+          <h2 class="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold leading-tight bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
             {{ t('home.hero.headline') }}
           </h2>
           <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-primary to-secondary rounded-full"></div>
@@ -151,8 +151,9 @@ function scrollToAbout () {
       </div>
     </div>
   </section>
- 
-  
+
+  <!-- Career and Skills Showcase -->
+  <CareerSkills />
 
   <div class="divider">{{ t('dividers.interested') }}</div>
 </template>

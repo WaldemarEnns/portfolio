@@ -17,7 +17,7 @@ export default {
     ]
   },
   darkMode: 'selector',
-  safelist: ['dark'],
+  safelist: ['dark', 'bg-accent', 'text-accent-content', 'border-accent'],
   theme: {
     container: {
       padding: '2rem',
@@ -44,10 +44,6 @@ export default {
         muted: {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
