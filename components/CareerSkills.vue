@@ -22,7 +22,7 @@ const skills: SkillCard[] = [
     titleKey: 'career.skills.vue_migrations.title',
     descriptionKey: 'career.skills.vue_migrations.description',
     icon: 'fa-brands fa-vuejs',
-    color: 'from-emerald-500 to-green-600',
+    color: 'bg-primary',
     tags: ['Vue 2', 'Vue 3', 'Composition API', 'Pinia'],
     projects: [
       { 
@@ -40,7 +40,7 @@ const skills: SkillCard[] = [
     titleKey: 'career.skills.keycloak.title',
     descriptionKey: 'career.skills.keycloak.description',
     icon: 'fa-solid fa-shield-halved',
-    color: 'from-blue-500 to-cyan-600',
+    color: 'bg-secondary',
     tags: ['Keycloak', 'SSO', 'OAuth2', 'Custom Themes'],
     projects: [
       { 
@@ -58,7 +58,7 @@ const skills: SkillCard[] = [
     titleKey: 'career.skills.laravel.title',
     descriptionKey: 'career.skills.laravel.description',
     icon: 'fa-brands fa-laravel',
-    color: 'from-red-500 to-orange-600',
+    color: 'bg-accent',
     tags: ['Laravel', 'REST APIs', 'Queue Jobs', 'Event Sourcing'],
     projects: [
       { 
@@ -76,7 +76,7 @@ const skills: SkillCard[] = [
     titleKey: 'career.skills.golang.title',
     descriptionKey: 'career.skills.golang.description',
     icon: 'fa-solid fa-code',
-    color: 'from-sky-500 to-blue-600',
+    color: 'bg-primary',
     tags: ['Go', 'Microservices', 'gRPC', 'High Performance'],
     projects: [
       { 
@@ -94,7 +94,7 @@ const skills: SkillCard[] = [
     titleKey: 'career.skills.python.title',
     descriptionKey: 'career.skills.python.description',
     icon: 'fa-brands fa-python',
-    color: 'from-yellow-500 to-blue-600',
+    color: 'bg-secondary',
     tags: ['Python', 'FastAPI', 'Data Processing', 'Automation'],
     projects: [
       { 
@@ -112,7 +112,7 @@ const skills: SkillCard[] = [
     titleKey: 'career.skills.nestjs.title',
     descriptionKey: 'career.skills.nestjs.description',
     icon: 'fa-solid fa-server',
-    color: 'from-pink-500 to-red-600',
+    color: 'bg-accent',
     tags: ['NestJS', 'TypeScript', 'GraphQL', 'Microservices'],
     projects: [
       { 
@@ -181,17 +181,17 @@ function toggleCategory(categoryId: string) {
     <div class="container mx-auto">
       <!-- Section Header -->
       <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold mb-4">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4 text-base-content">
           {{ t('career.title') }}
         </h2>
-        <p class="text-xl text-base-content/70 max-w-3xl mx-auto">
+        <p class="text-xl text-base-content max-w-3xl mx-auto opacity-90">
           {{ t('career.subtitle') }}
         </p>
       </div>
 
       <!-- Career Timeline -->
       <div class="mb-20">
-        <h3 class="text-3xl font-bold text-center mb-12">
+        <h3 class="text-3xl font-bold text-center mb-12 text-base-content">
           {{ t('career.timeline_title') }}
         </h3>
         
@@ -216,11 +216,11 @@ function toggleCategory(categoryId: string) {
                 <!-- Content Card -->
                 <div class="flex-1 w-full">
                   <div 
-                    class="card bg-base-200 shadow-xl hover-card-special border-2 border-transparent hover:border-opacity-50 transition-all duration-300"
+                    class="card bg-base-200 shadow-xl hover-card-special border-2 transition-all duration-300"
                     :class="{
-                      'hover:border-primary': item.color === 'primary',
-                      'hover:border-secondary': item.color === 'secondary',
-                      'hover:border-accent': item.color === 'accent'
+                      'border-primary/30 hover:border-primary': item.color === 'primary',
+                      'border-secondary/30 hover:border-secondary': item.color === 'secondary',
+                      'border-accent/30 hover:border-accent': item.color === 'accent'
                     }"
                   >
                     <div class="card-body">
@@ -236,7 +236,7 @@ function toggleCategory(categoryId: string) {
                           <font-awesome-icon :icon="item.icon" class="text-xl" />
                         </div>
                         <div class="flex-1">
-                          <h4 class="card-title text-2xl mb-2">
+                          <h4 class="card-title text-2xl mb-2 text-base-content">
                             {{ t(item.titleKey) }}
                           </h4>
                           <div 
@@ -249,7 +249,7 @@ function toggleCategory(categoryId: string) {
                           >
                             {{ t(item.periodKey) }}
                           </div>
-                          <p class="text-base-content/80">
+                          <p class="text-base-content opacity-90">
                             {{ t(item.descriptionKey) }}
                           </p>
                         </div>
@@ -280,10 +280,10 @@ function toggleCategory(categoryId: string) {
 
       <!-- Skills Section -->
       <div class="mb-12">
-        <h3 class="text-3xl font-bold text-center mb-4">
+        <h3 class="text-3xl font-bold text-center mb-4 text-base-content">
           {{ t('career.skills_title') }}
         </h3>
-        <p class="text-center text-base-content/70 mb-12 max-w-2xl mx-auto">
+        <p class="text-center text-base-content mb-12 max-w-2xl mx-auto opacity-90">
           {{ t('career.skills_subtitle') }}
         </p>
 
@@ -298,26 +298,26 @@ function toggleCategory(categoryId: string) {
             class="skill-card-wrapper"
           >
             <div 
-              class="card bg-base-200 shadow-xl hover-card h-full cursor-pointer transition-all duration-300"
-              :class="{ 'ring-4 ring-primary ring-opacity-50': selectedCategory === skill.id }"
+              class="card bg-base-200 shadow-xl hover-card h-full cursor-pointer transition-all duration-300 border-2"
+              :class="selectedCategory === skill.id ? 'border-primary ring-2 ring-primary ring-offset-2 ring-offset-base-100' : 'border-base-300 hover:border-primary/50'"
               @click="toggleCategory(skill.id)"
             >
               <div class="card-body">
                 <!-- Icon and Title -->
                 <div class="flex items-center gap-4 mb-4">
                   <div 
-                    class="w-16 h-16 rounded-xl flex items-center justify-center bg-gradient-to-br text-white shadow-lg"
-                    :class="skill.color"
+                    class="w-16 h-16 rounded-xl flex items-center justify-center shadow-lg"
+                    :class="[skill.color, skill.color === 'bg-primary' ? 'text-primary-content' : skill.color === 'bg-secondary' ? 'text-secondary-content' : 'text-accent-content']"
                   >
                     <font-awesome-icon :icon="skill.icon" class="text-2xl" />
                   </div>
-                  <h4 class="card-title text-xl flex-1">
+                  <h4 class="card-title text-xl flex-1 text-base-content">
                     {{ t(skill.titleKey) }}
                   </h4>
                 </div>
 
                 <!-- Description -->
-                <p class="text-base-content/70 mb-4">
+                <p class="text-base-content mb-4 opacity-90">
                   {{ t(skill.descriptionKey) }}
                 </p>
 
@@ -326,7 +326,7 @@ function toggleCategory(categoryId: string) {
                   <div 
                     v-for="tag in skill.tags" 
                     :key="tag"
-                    class="badge badge-sm badge-outline"
+                    class="badge badge-sm badge-outline badge-primary"
                   >
                     {{ tag }}
                   </div>
@@ -341,8 +341,8 @@ function toggleCategory(categoryId: string) {
                   leave-from-class="opacity-100 max-h-96"
                   leave-to-class="opacity-0 max-h-0"
                 >
-                  <div v-if="selectedCategory === skill.id" class="border-t border-base-300 pt-4 overflow-hidden">
-                    <h5 class="font-bold mb-3 flex items-center gap-2">
+                  <div v-if="selectedCategory === skill.id" class="border-t border-primary/30 pt-4 overflow-hidden">
+                    <h5 class="font-bold mb-3 flex items-center gap-2 text-base-content">
                       <font-awesome-icon icon="fa-solid fa-check-circle" class="text-success" />
                       {{ t('career.projects_delivered') }}
                     </h5>
@@ -350,12 +350,12 @@ function toggleCategory(categoryId: string) {
                       <li 
                         v-for="(project, idx) in skill.projects" 
                         :key="idx"
-                        class="bg-base-300 rounded-lg p-3"
+                        class="bg-base-300 rounded-lg p-3 border border-base-content/10"
                       >
-                        <div class="font-semibold text-sm mb-1">
+                        <div class="font-semibold text-sm mb-1 text-base-content">
                           {{ t(project.labelKey) }}
                         </div>
-                        <div class="text-xs text-base-content/60">
+                        <div class="text-xs text-base-content opacity-80">
                           {{ t(project.descKey) }}
                         </div>
                       </li>
@@ -364,7 +364,7 @@ function toggleCategory(categoryId: string) {
                 </transition>
 
                 <!-- Click Indicator -->
-                <div class="text-center mt-4 text-sm text-base-content/50">
+                <div class="text-center mt-4 text-sm text-base-content opacity-70">
                   <font-awesome-icon 
                     :icon="selectedCategory === skill.id ? 'fa-solid fa-chevron-up' : 'fa-solid fa-chevron-down'" 
                     class="animate-bounce"
@@ -384,12 +384,12 @@ function toggleCategory(categoryId: string) {
         :visible-once="{ opacity: 1, y: 0, transition: { delay: 600 } }"
         class="text-center mt-16"
       >
-        <div class="card bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 border-2 border-primary/30 shadow-2xl max-w-3xl mx-auto">
+        <div class="card bg-base-200 border-2 border-primary shadow-2xl max-w-3xl mx-auto hover-card-special">
           <div class="card-body">
-            <h3 class="text-2xl font-bold mb-4">
+            <h3 class="text-2xl font-bold mb-4 text-base-content">
               {{ t('career.cta_title') }}
             </h3>
-            <p class="text-base-content/80 mb-6">
+            <p class="text-base-content mb-6 opacity-90">
               {{ t('career.cta_description') }}
             </p>
             <div class="card-actions justify-center">
