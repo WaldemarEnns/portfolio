@@ -95,7 +95,7 @@ function scrollToAbout () {
         <div class="card bg-base-200 shadow-lg hover-card">
           <div class="card-body">
             <h3 class="card-title text-xl mb-4">
-              <font-awesome-icon icon="fa-solid fa-target" class="text-secondary"></font-awesome-icon>
+              <font-awesome-icon icon="fa-solid fa-bullseye" class="text-secondary"></font-awesome-icon>
               {{ t('home.about_me.my_approach.title') }}
             </h3>
             <p class="text-base-content/80">{{ t('home.about_me.my_approach.content') }}</p>
