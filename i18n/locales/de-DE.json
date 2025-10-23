@@ -185,10 +185,13 @@
     "have_a_read": "Jetzt lesen"
   },
   "posts": {
+    "title": "Blog",
+    "description": "Neueste Einblicke, Tipps und Updates aus meiner Arbeit als Softwareentwickler",
     "read_something_about": "Lies etwas über:",
     "coming_soon": "Demnächst verfügbar",
     "coming_soon_description": "Mein Blog befindet sich derzeit im Aufbau. Bald findest du hier Artikel über Webentwicklung, Best Practices und Einblicke in meine Projekte.",
-    "blog_placeholder": "Blog-Inhalte kommen bald!"
+    "blog_placeholder": "Blog-Inhalte kommen bald!",
+    "no_posts": "Noch keine Blog-Posts verfügbar."
   },
   "read_more": "lies mehr"
 }
