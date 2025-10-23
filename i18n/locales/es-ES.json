@@ -37,31 +37,26 @@
       "subtitle": "Soluciones integrales adaptadas a las necesidades de tu negocio, desde el concepto hasta la implementación y más allá.",
       "services": "Servicios",
       "popular_badge": "Más Popular",
-      
       "frontend_title": "Aplicaciones Web Modernas",
       "frontend_description": "Transforma tus ideas en experiencias web impresionantes y de alto rendimiento que los usuarios aman y en las que las empresas confían.",
       "frontend_feature_1": "Aplicaciones ultrarrápidas optimizadas para SEO",
       "frontend_feature_2": "Diseño responsive que funciona en todos los dispositivos",
       "frontend_feature_3": "Progressive Web Apps con capacidades offline",
       "frontend_cta": "Construye tu Web App",
-      
       "saas_title": "Soluciones SaaS Full-Stack",
       "saas_description": "Lanza tu producto SaaS con confianza. Construyo plataformas escalables que crecen con tu negocio.",
       "saas_feature_1": "Arquitectura multi-tenant con aislamiento seguro de datos",
       "saas_feature_2": "Facturación por suscripción e integración de pagos",
       "saas_feature_3": "Funciones en tiempo real y desarrollo de API",
       "saas_cta": "Lanza tu SaaS",
-      
       "consulting_title": "Consultoría Técnica",
       "consulting_description": "Orientación estratégica para navegar decisiones técnicas complejas y optimizar tu proceso de desarrollo.",
       "consulting_feature_1": "Revisiones y optimización de arquitectura",
       "consulting_feature_2": "Selección y migración de stack tecnológico",
       "consulting_feature_3": "Formación de equipos e implementación de mejores prácticas",
       "consulting_cta": "Obtén Asesoría Experta",
-      
       "value_prop_title": "¿Por qué trabajar conmigo?",
       "value_prop_description": "No solo escribo código: me asocio contigo para entender tus objetivos comerciales y entregar soluciones que generen resultados reales. Con un enfoque en código limpio y mantenible y las mejores prácticas modernas, me aseguro de que tu inversión continúe generando valor mucho después del lanzamiento.",
-      
       "frontend_title_old": "Desarrollo frontend con Vue y TypeScript",
       "frontend_text_1": "Implementación de aplicaciones web y sitios web modernos y eficientes.",
       "frontend_text_2": "Mi profunda experiencia en Vue y su ecosistema garantiza que mis soluciones estén actualizadas con tecnología de vanguardia y mejores prácticas.",
@@ -75,31 +70,26 @@
     "methods": {
       "title": "Cómo trabajo",
       "subtitle": "Un enfoque probado que garantiza el éxito de tu proyecto, a tiempo y dentro del presupuesto.",
-      
       "agile_title": "Ágil y Adaptable",
       "agile_description": "Tu proyecto evoluciona con tus necesidades. Reuniones regulares y desarrollo iterativo significan que siempre tienes el control y puedes cambiar cuando sea necesario.",
       "agile_badge_1": "Actualizaciones Semanales",
       "agile_badge_2": "Alcance Flexible",
       "agile_badge_3": "Iteraciones Rápidas",
-      
       "quality_title": "Construido para Durar",
       "quality_description": "Cada línea de código es probada y documentada. Tu inversión está protegida con soluciones mantenibles y escalables que crecen con tu negocio.",
       "quality_badge_1": "Pruebas Automatizadas",
       "quality_badge_2": "Revisiones de Código",
       "quality_badge_3": "Documentación",
-      
       "infrastructure_title": "Moderno y Seguro",
       "infrastructure_description": "Desplegado en infraestructura cloud confiable con copias de seguridad automáticas, monitoreo y actualizaciones de seguridad. Tu aplicación se mantiene rápida y segura.",
       "infrastructure_badge_1": "Alojamiento Cloud",
       "infrastructure_badge_2": "Escalado Automático",
       "infrastructure_badge_3": "Monitoreo 24/7",
-      
       "communication_title": "Comunicación Clara",
       "communication_description": "Sin jerga técnica, solo actualizaciones claras sobre el progreso. Siempre sabrás dónde está tu proyecto y qué viene después.",
       "communication_badge_1": "Actualizaciones Regulares",
       "communication_badge_2": "Acceso Directo",
       "communication_badge_3": "Precios Transparentes",
-      
       "methods": "Mis métodos de trabajo",
       "titles": {
         "agile": "Métodos ágiles",
@@ -145,12 +135,19 @@
   },
   "form": {
     "labels": {
-      "email": "Email"
+      "name": "Nombre",
+      "email": "Email",
+      "message": "Mensaje"
     },
     "placeholders": {
       "email": "Email",
       "contact_message": "Hablemos sobre ...",
       "name": "Tu nombre"
+    },
+    "errors": {
+      "name_required": "El nombre es obligatorio",
+      "email_invalid": "Por favor, introduce una dirección de email válida",
+      "message_required": "El mensaje es obligatorio"
     }
   },
   "footer": {
@@ -164,7 +161,8 @@
   "navbar": {
     "links": {
       "about_me": "Por qué elegirme",
-      "services": "Servicios"
+      "services": "Servicios",
+      "career": "Carrera y Habilidades"
     }
   },
   "meta": {
@@ -193,5 +191,88 @@
     "coming_soon_description": "Mi blog está actualmente en construcción. Pronto encontrarás artículos sobre desarrollo web, mejores prácticas e ideas de mis proyectos.",
     "blog_placeholder": "¡Contenido del blog próximamente!"
   },
-  "read_more": "leer más"
+  "read_more": "leer más",
+  "i_agree": "Acepto la",
+  "data_processing": "para el procesamiento de datos",
+  "other_ways_to_connect": "O conéctate conmigo en las redes sociales:",
+  "career": {
+    "title": "Mi Carrera y Experiencia",
+    "subtitle": "Un viaje a través de habilidades especializadas y soluciones del mundo real que entregan resultados medibles para empresas.",
+    "timeline_title": "Trayectoria Profesional",
+    "skills_title": "Experiencia Técnica Principal",
+    "skills_subtitle": "Haz clic en cualquier habilidad para ver proyectos específicos e implementaciones que he entregado.",
+    "projects_delivered": "Proyectos y Soluciones Clave",
+    "click_to_see_projects": "Clic para ver proyectos",
+    "click_to_hide": "Clic para ocultar",
+    "cta_title": "¿Necesitas estas habilidades exactas para tu proyecto?",
+    "cta_description": "Ya sean migraciones de Vue, sistemas de autenticación o arquitecturas backend escalables: he estado allí, lo he hecho y también puedo ayudarte.",
+    "cta_button": "Hablemos de tu proyecto",
+    "timeline": {
+      "current_job": {
+        "title": "Desarrollador Full-Stack Senior",
+        "period": "2018 - Presente",
+        "description": "Liderando el desarrollo de aplicaciones a escala empresarial, arquitectando soluciones escalables y mentoreando equipos de desarrollo. Especializado en crear plataformas SaaS de alto rendimiento y modernizar sistemas legacy."
+      },
+      "freelance": {
+        "title": "Consultor de Software Freelance",
+        "period": "2016 - Presente",
+        "description": "Ayudando a empresas de varias industrias a resolver desafíos técnicos complejos. Desde MVPs de startups hasta migraciones empresariales, entregando soluciones personalizadas que impulsan el crecimiento y la eficiencia."
+      },
+      "education": {
+        "title": "Estudios de Informática",
+        "period": "2015 - 2017",
+        "description": "Estudié Informática con enfoque en ingeniería de software y tecnologías web. Aprendizaje práctico aplicado a través de proyectos del mundo real y trabajo freelance, persiguiendo finalmente oportunidades de carrera."
+      }
+    },
+    "skills": {
+      "vue_migrations": {
+        "title": "Especialista en Migraciones Vue.js",
+        "description": "Experto en migrar aplicaciones a gran escala de Vue 2 a Vue 3, implementando Composition API y modernizando bases de código con TypeScript.",
+        "project_1_label": "Migración de Plataforma E-Commerce",
+        "project_1_desc": "Migré aplicación Vue 2 de 50.000+ LOC a Vue 3 sin tiempo de inactividad. Mejoré el rendimiento en 40% y reduje el tamaño del bundle en 30%.",
+        "project_2_label": "Modernización de Dashboard Admin",
+        "project_2_desc": "Refactoricé Options API a Composition API, introduje gestión de estado con Pinia e implementé TypeScript para seguridad de tipos en 200+ componentes."
+      },
+      "keycloak": {
+        "title": "Autenticación y Temas Keycloak",
+        "description": "Construcción de flujos de autenticación seguros y personalizados con Keycloak. Implementación SSO, temas personalizados e integración con varios proveedores de identidad.",
+        "project_1_label": "Plataforma SSO Multi-Tenant",
+        "project_1_desc": "Implementé SSO basado en Keycloak para 50+ clientes empresariales con flujos de inicio de sesión personalizados, integraciones SAML/OAuth2 y control de acceso basado en roles.",
+        "project_2_label": "Sistema de Autenticación White-Label",
+        "project_2_desc": "Creé temas Keycloak completamente personalizables con marca dinámica, soportando 20+ marcas de clientes sin cambios de código por despliegue."
+      },
+      "laravel": {
+        "title": "Arquitectura Backend Laravel",
+        "description": "Construcción de sistemas backend robustos y escalables con Laravel. Desarrollo de APIs, sistemas de colas, event sourcing y optimización de bases de datos para aplicaciones de alto tráfico.",
+        "project_1_label": "API de Sistema de Reservas",
+        "project_1_desc": "Desarrollé API REST de alto rendimiento manejando 100k+ reservas/mes con lógica de negocio compleja, integraciones de pago y programación automatizada.",
+        "project_2_label": "Plataforma de Gestión de Inventario",
+        "project_2_desc": "Construí sistema de inventario en tiempo real con event sourcing, manejando operaciones multi-almacén, reordenamiento automático e integraciones con proveedores."
+      },
+      "golang": {
+        "title": "Desarrollo de Microservicios en Go",
+        "description": "Microservicios de alto rendimiento y sistemas concurrentes en Go. Construcción de APIs escalables, pipelines de procesamiento de datos y sistemas en tiempo real.",
+        "project_1_label": "Motor de Análisis en Tiempo Real",
+        "project_1_desc": "Construí procesador de análisis basado en Go manejando 1M+ eventos/día con latencia sub-segundo, usando gRPC para comunicación entre servicios.",
+        "project_2_label": "Servicio de Procesamiento de Pagos",
+        "project_2_desc": "Desarrollé microservicio de pagos tolerante a fallos con circuit breakers, reintentos y manejo de idempotencia para transacciones financieras."
+      },
+      "python": {
+        "title": "Automatización y APIs en Python",
+        "description": "Backends FastAPI, pipelines de procesamiento de datos y scripts de automatización. Construcción de herramientas eficientes para transformación de datos y automatización de procesos empresariales.",
+        "project_1_label": "Pipeline ETL de Datos",
+        "project_1_desc": "Creé sistema ETL automatizado procesando 500GB+ de datos diariamente, transformando y sincronizando datos entre múltiples sistemas con recuperación de errores.",
+        "project_2_label": "Microservicio FastAPI",
+        "project_2_desc": "Construí API REST de alto rendimiento con FastAPI, sirviendo predicciones de modelos ML con tiempo de respuesta <100ms y documentación automática."
+      },
+      "nestjs": {
+        "title": "Aplicaciones Empresariales NestJS",
+        "description": "Desarrollo backend TypeScript-first con NestJS. APIs GraphQL, arquitectura de microservicios y aplicaciones de grado empresarial con arquitectura limpia.",
+        "project_1_label": "Gateway API GraphQL",
+        "project_1_desc": "Arquitectura de gateway GraphQL con NestJS, unificando 8 microservicios en una sola API, con autenticación, caché y limitación de tasa.",
+        "project_2_label": "Plataforma de Colaboración en Tiempo Real",
+        "project_2_desc": "Construí sistema de colaboración basado en WebSocket con NestJS, soportando 1000+ usuarios concurrentes con actualizaciones en tiempo real y resolución de conflictos."
+      }
+    }
+  }
 }
