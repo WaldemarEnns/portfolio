@@ -20,6 +20,12 @@ function scrollToAbout () {
     behavior: 'smooth'
   })
 }
+
+function scrollToWorkshops () {
+  document.querySelector('#workshops')!.scrollIntoView({
+    behavior: 'smooth'
+  })
+}
 </script>
 
 <template>
@@ -151,8 +157,292 @@ function scrollToAbout () {
       </div>
     </div>
   </section>
- 
-  
+
+  <section id="workshops" class="container m-auto py-16 relative overflow-hidden">
+    <!-- Background gradient decoration -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-gradient-to-b from-primary/5 to-transparent rounded-full blur-3xl pointer-events-none"></div>
+
+    <!-- Hero Header -->
+    <div class="text-center mb-8 relative z-10">
+      <div class="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full mb-6">
+        <font-awesome-icon icon="fa-solid fa-sparkles" class="text-primary"></font-awesome-icon>
+        <span class="text-sm font-semibold text-primary">{{ t('home.workshops.badge') }}</span>
+      </div>
+      
+      <h2 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+        {{ t('home.workshops.hero_title') }}
+      </h2>
+      
+      <p class="text-xl md:text-2xl text-base-content/70 max-w-3xl mx-auto mb-6 font-medium">
+        {{ t('home.workshops.hero_subtitle') }}
+      </p>
+      
+      <!-- Stats Bar -->
+      <div class="flex flex-wrap justify-center gap-6 md:gap-12 text-sm md:text-base text-base-content/60 bg-base-200/50 backdrop-blur-sm rounded-2xl px-6 py-4 max-w-2xl mx-auto">
+        <div class="flex items-center gap-2">
+          <font-awesome-icon icon="fa-solid fa-calendar" class="text-primary"></font-awesome-icon>
+          <span>2 Workshops</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <font-awesome-icon icon="fa-solid fa-clock" class="text-secondary"></font-awesome-icon>
+          <span>{{ t('home.workshops.stats_duration') }}</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <font-awesome-icon icon="fa-solid fa-globe" class="text-accent"></font-awesome-icon>
+          <span>{{ t('home.workshops.stats_format') }}</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <font-awesome-icon icon="fa-solid fa-layer-group" class="text-primary"></font-awesome-icon>
+          <span>{{ t('home.workshops.stats_level') }}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feature Highlights -->
+    <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16 relative z-10">
+      <div class="card bg-gradient-to-br from-primary/5 to-transparent border border-primary/10 shadow-lg hover-card group">
+        <div class="card-body text-center">
+          <div class="w-14 h-14 mx-auto mb-4 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            <font-awesome-icon icon="fa-solid fa-bolt" class="text-2xl text-primary"></font-awesome-icon>
+          </div>
+          <h3 class="font-bold text-lg mb-2">{{ t('home.workshops.feature_1_title') }}</h3>
+          <p class="text-base-content/70 text-sm">{{ t('home.workshops.feature_1_desc') }}</p>
+        </div>
+      </div>
+
+      <div class="card bg-gradient-to-br from-secondary/5 to-transparent border border-secondary/10 shadow-lg hover-card group">
+        <div class="card-body text-center">
+          <div class="w-14 h-14 mx-auto mb-4 rounded-2xl bg-secondary/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            <font-awesome-icon icon="fa-solid fa-code" class="text-2xl text-secondary"></font-awesome-icon>
+          </div>
+          <h3 class="font-bold text-lg mb-2">{{ t('home.workshops.feature_2_title') }}</h3>
+          <p class="text-base-content/70 text-sm">{{ t('home.workshops.feature_2_desc') }}</p>
+        </div>
+      </div>
+
+      <div class="card bg-gradient-to-br from-accent/5 to-transparent border border-accent/10 shadow-lg hover-card group">
+        <div class="card-body text-center">
+          <div class="w-14 h-14 mx-auto mb-4 rounded-2xl bg-accent/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            <font-awesome-icon icon="fa-solid fa-chalkboard-user" class="text-2xl text-accent"></font-awesome-icon>
+          </div>
+          <h3 class="font-bold text-lg mb-2">{{ t('home.workshops.feature_3_title') }}</h3>
+          <p class="text-base-content/70 text-sm">{{ t('home.workshops.feature_3_desc') }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Workshop Cards -->
+    <div class="mb-16 relative z-10">
+      <h3 class="text-2xl font-bold text-center mb-8">{{ t('home.workshops.workshops_title') }}</h3>
+      
+      <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <!-- Workshop 1: AI Agentic Coding Fundamentals -->
+        <div class="card bg-base-200 shadow-xl hover-card border-t-4 border-primary">
+          <div class="card-body">
+            <div class="flex justify-between items-start mb-4">
+              <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                <font-awesome-icon icon="fa-solid fa-robot" class="text-xl text-primary"></font-awesome-icon>
+              </div>
+              <div class="badge badge-primary">{{ t('home.workshops.card_1_badge') }}</div>
+            </div>
+            
+            <h4 class="card-title text-xl mb-4">{{ t('home.workshops.card_1_title') }}</h4>
+            
+            <p class="text-base-content/70 text-sm mb-4">{{ t('home.workshops.card_1_desc') }}</p>
+            
+            <ul class="space-y-2 mb-6">
+              <li class="flex items-start gap-2 text-sm">
+                <font-awesome-icon icon="fa-solid fa-check" class="text-primary mt-1"></font-awesome-icon>
+                <span>{{ t('home.workshops.card_1_feature_1') }}</span>
+              </li>
+              <li class="flex items-start gap-2 text-sm">
+                <font-awesome-icon icon="fa-solid fa-check" class="text-primary mt-1"></font-awesome-icon>
+                <span>{{ t('home.workshops.card_1_feature_2') }}</span>
+              </li>
+              <li class="flex items-start gap-2 text-sm">
+                <font-awesome-icon icon="fa-solid fa-check" class="text-primary mt-1"></font-awesome-icon>
+                <span>{{ t('home.workshops.card_1_feature_3') }}</span>
+              </li>
+              <li class="flex items-start gap-2 text-sm">
+                <font-awesome-icon icon="fa-solid fa-check" class="text-primary mt-1"></font-awesome-icon>
+                <span>{{ t('home.workshops.card_1_feature_4') }}</span>
+              </li>
+            </ul>
+            
+            <div class="flex flex-wrap gap-2 pt-4 border-t border-base-300">
+              <div class="badge badge-outline py-2 px-4">
+                <font-awesome-icon icon="fa-solid fa-terminal" class="mr-1"></font-awesome-icon>
+                claude-code
+              </div>
+              <div class="badge badge-outline py-2 px-4">
+                <font-awesome-icon icon="fa-solid fa-code" class="mr-1"></font-awesome-icon>
+                opencode
+              </div>
+              <div class="badge badge-outline py-2 px-4">
+                <font-awesome-icon icon="fa-solid fa-i-cursor" class="mr-1"></font-awesome-icon>
+                cursor
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Workshop 2: Team Training -->
+        <div class="card bg-base-200 shadow-xl hover-card border-t-4 border-accent">
+          <div class="card-body">
+            <div class="flex justify-between items-start mb-4">
+              <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center">
+                <font-awesome-icon icon="fa-solid fa-users" class="text-xl text-accent"></font-awesome-icon>
+              </div>
+              <div class="badge badge-accent">{{ t('home.workshops.card_2_badge') }}</div>
+            </div>
+            
+            <h4 class="card-title text-xl mb-4">{{ t('home.workshops.card_2_title') }}</h4>
+            
+            <p class="text-base-content/70 text-sm mb-4">{{ t('home.workshops.card_2_desc') }}</p>
+            
+            <ul class="space-y-2 mb-6">
+              <li class="flex items-start gap-2 text-sm">
+                <font-awesome-icon icon="fa-solid fa-check" class="text-accent mt-1"></font-awesome-icon>
+                <span>{{ t('home.workshops.card_2_feature_1') }}</span>
+              </li>
+              <li class="flex items-start gap-2 text-sm">
+                <font-awesome-icon icon="fa-solid fa-check" class="text-accent mt-1"></font-awesome-icon>
+                <span>{{ t('home.workshops.card_2_feature_2') }}</span>
+              </li>
+              <li class="flex items-start gap-2 text-sm">
+                <font-awesome-icon icon="fa-solid fa-check" class="text-accent mt-1"></font-awesome-icon>
+                <span>{{ t('home.workshops.card_2_feature_3') }}</span>
+              </li>
+              <li class="flex items-start gap-2 text-sm">
+                <font-awesome-icon icon="fa-solid fa-check" class="text-accent mt-1"></font-awesome-icon>
+                <span>{{ t('home.workshops.card_2_feature_4') }}</span>
+              </li>
+            </ul>
+            
+            <div class="flex flex-wrap gap-2 pt-4 border-t border-base-300">
+              <div class="badge badge-outline py-2 px-4">
+                <font-awesome-icon icon="fa-solid fa-building" class="mr-1"></font-awesome-icon>
+                Enterprise
+              </div>
+              <div class="badge badge-outline py-2 px-4">
+                <font-awesome-icon icon="fa-solid fa-graduation-cap" class="mr-1"></font-awesome-icon>
+                Training
+              </div>
+              <div class="badge badge-outline py-2 px-4">
+                <font-awesome-icon icon="fa-solid fa-handshake" class="mr-1"></font-awesome-icon>
+                Support
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pricing Section -->
+    <div class="mb-16 relative z-10">
+      <h3 class="text-2xl font-bold text-center mb-8">{{ t('home.workshops.pricing_title') }}</h3>
+      
+      <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <!-- Individual -->
+        <div class="card bg-base-200 shadow-lg hover-card">
+          <div class="card-body text-center">
+            <h4 class="text-lg font-bold mb-2">{{ t('home.workshops.pricing_individual_title') }}</h4>
+            <div class="text-4xl font-bold text-primary mb-2">$299</div>
+            <p class="text-sm text-base-content/60 mb-4">{{ t('home.workshops.pricing_individual_desc') }}</p>
+            <ul class="text-left space-y-2 mb-6 text-sm">
+              <li class="flex items-center gap-2">
+                <font-awesome-icon icon="fa-solid fa-check" class="text-primary"></font-awesome-icon>
+                {{ t('home.workshops.pricing_individual_feature_1') }}
+              </li>
+              <li class="flex items-center gap-2">
+                <font-awesome-icon icon="fa-solid fa-check" class="text-primary"></font-awesome-icon>
+                {{ t('home.workshops.pricing_individual_feature_2') }}
+              </li>
+              <li class="flex items-center gap-2">
+                <font-awesome-icon icon="fa-solid fa-check" class="text-primary"></font-awesome-icon>
+                {{ t('home.workshops.pricing_individual_feature_3') }}
+              </li>
+            </ul>
+            <button class="btn btn-outline btn-primary w-full" @click="scrollToContact">
+              {{ t('home.workshops.pricing_cta_individual') }}
+            </button>
+          </div>
+        </div>
+
+        <!-- Team (Popular) -->
+        <div class="card bg-gradient-to-br from-primary/10 to-secondary/10 shadow-xl border-2 border-primary relative hover-card">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2">
+            <div class="badge badge-primary">{{ t('home.workshops.pricing_popular') }}</div>
+          </div>
+          <div class="card-body text-center pt-8">
+            <h4 class="text-lg font-bold mb-2">{{ t('home.workshops.pricing_team_title') }}</h4>
+            <div class="text-4xl font-bold text-primary mb-2">$999</div>
+            <p class="text-sm text-base-content/60 mb-4">{{ t('home.workshops.pricing_team_desc') }}</p>
+            <ul class="text-left space-y-2 mb-6 text-sm">
+              <li class="flex items-center gap-2">
+                <font-awesome-icon icon="fa-solid fa-check" class="text-primary"></font-awesome-icon>
+                {{ t('home.workshops.pricing_team_feature_1') }}
+              </li>
+              <li class="flex items-center gap-2">
+                <font-awesome-icon icon="fa-solid fa-check" class="text-primary"></font-awesome-icon>
+                {{ t('home.workshops.pricing_team_feature_2') }}
+              </li>
+              <li class="flex items-center gap-2">
+                <font-awesome-icon icon="fa-solid fa-check" class="text-primary"></font-awesome-icon>
+                {{ t('home.workshops.pricing_team_feature_3') }}
+              </li>
+              <li class="flex items-center gap-2">
+                <font-awesome-icon icon="fa-solid fa-check" class="text-primary"></font-awesome-icon>
+                {{ t('home.workshops.pricing_team_feature_4') }}
+              </li>
+            </ul>
+            <button class="btn btn-primary w-full" @click="scrollToContact">
+              {{ t('home.workshops.pricing_cta_team') }}
+            </button>
+          </div>
+        </div>
+
+        <!-- Enterprise -->
+        <div class="card bg-base-200 shadow-lg hover-card">
+          <div class="card-body text-center">
+            <h4 class="text-lg font-bold mb-2">{{ t('home.workshops.pricing_enterprise_title') }}</h4>
+            <div class="text-4xl font-bold text-accent mb-2">{{ t('home.workshops.pricing_enterprise_price') }}</div>
+            <p class="text-sm text-base-content/60 mb-4">{{ t('home.workshops.pricing_enterprise_desc') }}</p>
+            <ul class="text-left space-y-2 mb-6 text-sm">
+              <li class="flex items-center gap-2">
+                <font-awesome-icon icon="fa-solid fa-check" class="text-accent"></font-awesome-icon>
+                {{ t('home.workshops.pricing_enterprise_feature_1') }}
+              </li>
+              <li class="flex items-center gap-2">
+                <font-awesome-icon icon="fa-solid fa-check" class="text-accent"></font-awesome-icon>
+                {{ t('home.workshops.pricing_enterprise_feature_2') }}
+              </li>
+              <li class="flex items-center gap-2">
+                <font-awesome-icon icon="fa-solid fa-check" class="text-accent"></font-awesome-icon>
+                {{ t('home.workshops.pricing_enterprise_feature_3') }}
+              </li>
+            </ul>
+            <button class="btn btn-outline btn-accent w-full" @click="scrollToContact">
+              {{ t('home.workshops.pricing_cta_enterprise') }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Final CTA -->
+    <div class="text-center relative z-10">
+      <h3 class="text-2xl font-bold mb-4">{{ t('home.workshops.final_cta_title') }}</h3>
+      <p class="text-base-content/70 max-w-xl mx-auto mb-6">{{ t('home.workshops.final_cta_desc') }}</p>
+      <RainbowButton
+        class="btn btn-primary btn-lg text-white"
+        @click="scrollToContact"
+      >
+        {{ t('home.workshops.final_cta_button') }}
+        <font-awesome-icon icon="fa-solid fa-arrow-right" class="ml-2"></font-awesome-icon>
+      </RainbowButton>
+    </div>
+  </section>
 
   <div class="divider">{{ t('dividers.interested') }}</div>
 </template>
