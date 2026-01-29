@@ -12,7 +12,7 @@
 .hover-card:hover {
   transform: perspective(1000px) rotateX(-2deg) rotateY(3deg) scale(1.02) translateY(-4px);
   @apply shadow-2xl;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25),
               0 0 0 1px rgba(255, 255, 255, 0.1);
 }
 
@@ -25,7 +25,273 @@
 .hover-card-special:hover {
   transform: perspective(1000px) rotateX(-3deg) rotateY(-2deg) scale(1.03) translateY(-6px);
   @apply shadow-2xl;
-  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.3), 
+  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.3),
               0 0 0 1px rgba(255, 255, 255, 0.15),
               0 0 20px rgba(59, 130, 246, 0.1);
+}
+
+/* Prose styling for blog content */
+.prose {
+  color: hsl(var(--bc));
+  line-height: 1.75;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  color: hsl(var(--bc));
+  font-weight: 700;
+  margin-top: 2em;
+  margin-bottom: 0.75em;
+  line-height: 1.3;
+}
+
+.prose h1 {
+  font-size: 2.25em;
+  margin-top: 0;
+}
+
+.prose h2 {
+  font-size: 1.75em;
+  border-bottom: 2px solid hsl(var(--b3));
+  padding-bottom: 0.5em;
+}
+
+.prose h3 {
+  font-size: 1.5em;
+}
+
+.prose h4 {
+  font-size: 1.25em;
+}
+
+.prose p {
+  margin-bottom: 1.5em;
+}
+
+.prose p:last-child {
+  margin-bottom: 0;
+}
+
+/* Links */
+.prose a {
+  color: hsl(var(--p));
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+.prose a:hover {
+  color: hsl(var(--s));
+  text-decoration-color: hsl(var(--s));
+}
+
+.prose a:focus {
+  outline: 2px solid hsl(var(--p));
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Lists */
+.prose ul,
+.prose ol {
+  margin-bottom: 1.5em;
+  padding-left: 1.5em;
+}
+
+.prose ul {
+  list-style-type: disc;
+}
+
+.prose ol {
+  list-style-type: decimal;
+}
+
+.prose li {
+  margin-bottom: 0.5em;
+}
+
+.prose li::marker {
+  color: hsl(var(--p));
+}
+
+/* Code */
+.prose code {
+  background-color: hsl(var(--b2));
+  color: hsl(var(--bc));
+  padding: 0.2em 0.4em;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+}
+
+.prose pre {
+  background-color: #1a1a2e;
+  color: #e4e4e7;
+  padding: 1.25em;
+  border-radius: 0.75rem;
+  overflow-x: auto;
+  margin-bottom: 1.5em;
+  border: 1px solid hsl(var(--p) / 0.3);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+
+.prose pre code {
+  background-color: transparent;
+  padding: 0;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* Shiki syntax highlighting - brighter colors for better contrast */
+.prose pre.shiki,
+.prose pre.shiki.shiki-themes {
+  background-color: #1e1e2e !important;
+  background: #1e1e2e !important;
+}
+
+.prose pre.shiki code {
+  color: #f8f8f2;
+}
+
+/* Make Shiki tokens brighter */
+.prose pre.shiki .line {
+  color: #f8f8f2;
+}
+
+/* Force all Shiki spans to be bright */
+.prose pre.shiki span {
+  color: #f8f8f2 !important;
+}
+
+/* Specific syntax token colors - Dracula theme brightened */
+.prose pre.shiki .token.keyword,
+.prose pre.shiki span[class*="keyword"] {
+  color: #ff79c6 !important;
+}
+
+.prose pre.shiki .token.string,
+.prose pre.shiki span[class*="string"] {
+  color: #f1fa8c !important;
+}
+
+.prose pre.shiki .token.function,
+.prose pre.shiki span[class*="function"] {
+  color: #50fa7b !important;
+}
+
+.prose pre.shiki .token.comment,
+.prose pre.shiki span[class*="comment"] {
+  color: #6272a4 !important;
+}
+
+.prose pre.shiki .token.number,
+.prose pre.shiki span[class*="number"] {
+  color: #bd93f9 !important;
+}
+
+.prose pre.shiki .token.operator,
+.prose pre.shiki span[class*="operator"] {
+  color: #ff79c6 !important;
+}
+
+/* Brighten all Shiki dark theme tokens */
+.prose pre.shiki span[style*="--shiki-dark"] {
+  filter: brightness(1.4) contrast(1.2) !important;
+}
+
+/* Inline code in dark context */
+.prose p code,
+.prose li code {
+  background-color: hsl(var(--b3));
+  color: hsl(var(--p));
+  font-weight: 500;
+}
+
+/* Blockquotes */
+.prose blockquote {
+  border-left: 4px solid hsl(var(--p));
+  padding-left: 1.5em;
+  margin: 1.5em 0;
+  font-style: italic;
+  color: hsl(var(--bc) / 0.8);
+}
+
+.prose blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* Horizontal Rules */
+.prose hr {
+  border: 0;
+  border-top: 2px solid hsl(var(--b3));
+  margin: 2.5em 0;
+}
+
+/* Tables */
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5em;
+}
+
+.prose th,
+.prose td {
+  padding: 0.75em 1em;
+  text-align: left;
+  border-bottom: 1px solid hsl(var(--b3));
+}
+
+.prose th {
+  font-weight: 600;
+  background-color: hsl(var(--b2));
+  color: hsl(var(--bc));
+}
+
+.prose tr:hover {
+  background-color: hsl(var(--b2) / 0.5);
+}
+
+/* Strong and Emphasis */
+.prose strong {
+  color: hsl(var(--bc));
+  font-weight: 700;
+}
+
+.prose em {
+  font-style: italic;
+}
+
+/* Images */
+.prose img {
+  border-radius: 0.75rem;
+  margin: 1.5em 0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.prose figure {
+  margin: 1.5em 0;
+}
+
+.prose figcaption {
+  text-align: center;
+  font-size: 0.875em;
+  color: hsl(var(--bc) / 0.6);
+  margin-top: 0.5em;
+}
+
+/* Reading Progress Bar */
+#reading-progress {
+  background: linear-gradient(to right, hsl(var(--p)), hsl(var(--s)), hsl(var(--a)));
+  height: 4px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  z-index: 9999;
+  transition: width 0.1s ease-out;
 }
