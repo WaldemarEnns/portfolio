@@ -225,6 +225,89 @@
   color: hsl(var(--s)) !important;
 }
 
+/* Enhanced punctuation, brackets, and general text */
+.prose pre.shiki .token.punctuation,
+.prose pre.shiki span[class*="punctuation"] {
+  color: hsl(var(--bc) / 0.7) !important;
+}
+
+/* Brackets and braces specifically */
+.prose pre.shiki .token.bracket,
+.prose pre.shiki span[class*="bracket"],
+.prose pre.shiki .token.brace,
+.prose pre.shiki span[class*="brace"],
+.prose pre.shiki .token.parenthesis,
+.prose pre.shiki span[class*="parenthesis"] {
+  color: hsl(var(--bc) / 0.8) !important;
+}
+
+/* Make strings stand out more - especially for module names */
+.prose pre.shiki .token.string {
+  color: hsl(var(--s)) !important;
+  font-weight: 500;
+}
+
+/* Property names (like 'modules') */
+.prose pre.shiki .token.property,
+.prose pre.shiki span[class*="property"] {
+  color: hsl(var(--bc)) !important;
+  font-weight: 500;
+}
+
+/* Method names and imports */
+.prose pre.shiki .token.import,
+.prose pre.shiki span[class*="import"],
+.prose pre.shiki .token.module,
+.prose pre.shiki span[class*="module"] {
+  color: hsl(var(--p)) !important;
+  font-weight: 600;
+}
+
+/* Make @nuxt modules brighter and more prominent */
+.prose pre.shiki .token.string:contains("@nuxt"),
+.prose pre.shiki span[class*="string"]:contains("@nuxt") {
+  color: hsl(var(--sf)) !important;
+  font-weight: 600;
+  filter: brightness(1.3);
+}
+
+/* Alternative approach - target strings with @ symbol */
+.prose pre.shiki .token.string[style*="@nuxt"],
+.prose pre.shiki span[class*="string"][style*="@nuxt"] {
+  color: hsl(var(--sf)) !important;
+  font-weight: 600;
+}
+
+/* Global enhancement for all strings to make them more visible */
+.prose pre.shiki .token.string {
+  color: hsl(var(--sf)) !important;
+  font-weight: 500;
+  filter: brightness(1.1);
+}
+
+/* Make strings that look like module names even brighter */
+.prose pre.shiki .token.string {
+  color: hsl(var(--sf)) !important;
+  font-weight: 500;
+}
+
+/* Brighter secondary colors for strings that are likely module names */
+.prose pre.shiki .string {
+  color: hsl(var(--sf)) !important;
+  opacity: 1 !important;
+}
+
+/* Extra bright highlighting for secondary color theme elements */
+.prose pre.shiki .token.string {
+  color: hsl(var(--sf)) !important;
+  text-shadow: 0 0 1px hsl(var(--sf) / 0.3);
+}
+
+/* General operator colors */
+.prose pre.shiki .token.operator {
+  color: hsl(var(--bc) / 0.8) !important;
+}
+
 /* Inline code in dark context */
 .prose p code,
 .prose li code {
