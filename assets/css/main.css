@@ -147,61 +147,82 @@
   font-size: inherit;
 }
 
-/* Shiki syntax highlighting - brighter colors for better contrast */
+/* High-contrast syntax highlighting for current color scheme */
 .prose pre.shiki,
 .prose pre.shiki.shiki-themes {
-  background-color: #1e1e2e !important;
-  background: #1e1e2e !important;
+  background-color: hsl(var(--b2)) !important;
+  border: 1px solid hsl(var(--b3));
 }
 
+/* Enhance contrast for syntax tokens in both light and dark themes */
+.prose pre.shiki {
+  /* Ensure proper contrast ratios */
+  --shiki-light-bg: hsl(var(--b2));
+  --shiki-dark-bg: hsl(var(--b2));
+}
+
+/* Improve readability of code content */
 .prose pre.shiki code {
-  color: #f8f8f2;
+  color: hsl(var(--bc));
 }
 
-/* Make Shiki tokens brighter */
+/* Syntax highlighting enhancements for better readability */
 .prose pre.shiki .line {
-  color: #f8f8f2;
+  color: hsl(var(--bc));
 }
 
-/* Force all Shiki spans to be bright */
-.prose pre.shiki span {
-  color: #f8f8f2 !important;
-}
-
-/* Specific syntax token colors - Dracula theme brightened */
+/* Enhanced syntax token colors with proper contrast */
 .prose pre.shiki .token.keyword,
 .prose pre.shiki span[class*="keyword"] {
-  color: #ff79c6 !important;
+  color: hsl(var(--p)) !important;
+  font-weight: 600;
 }
 
 .prose pre.shiki .token.string,
 .prose pre.shiki span[class*="string"] {
-  color: #f1fa8c !important;
+  color: hsl(var(--s)) !important;
 }
 
 .prose pre.shiki .token.function,
 .prose pre.shiki span[class*="function"] {
-  color: #50fa7b !important;
+  color: hsl(var(--a)) !important;
 }
 
 .prose pre.shiki .token.comment,
 .prose pre.shiki span[class*="comment"] {
-  color: #6272a4 !important;
+  color: hsl(var(--bc) / 0.6) !important;
+  font-style: italic;
 }
 
 .prose pre.shiki .token.number,
 .prose pre.shiki span[class*="number"] {
-  color: #bd93f9 !important;
+  color: hsl(var(--pf)) !important;
 }
 
 .prose pre.shiki .token.operator,
 .prose pre.shiki span[class*="operator"] {
-  color: #ff79c6 !important;
+  color: hsl(var(--sf)) !important;
 }
 
-/* Brighten all Shiki dark theme tokens */
-.prose pre.shiki span[style*="--shiki-dark"] {
-  filter: brightness(1.4) contrast(1.2) !important;
+.prose pre.shiki .token.variable,
+.prose pre.shiki span[class*="variable"] {
+  color: hsl(var(--bc)) !important;
+}
+
+.prose pre.shiki .token.class-name,
+.prose pre.shiki span[class*="class"] {
+  color: hsl(var(--a)) !important;
+  font-weight: 600;
+}
+
+.prose pre.shiki .token.tag,
+.prose pre.shiki span[class*="tag"] {
+  color: hsl(var(--p)) !important;
+}
+
+.prose pre.shiki .token.attr-name,
+.prose pre.shiki span[class*="attr"] {
+  color: hsl(var(--s)) !important;
 }
 
 /* Inline code in dark context */
