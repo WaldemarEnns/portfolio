@@ -185,7 +185,8 @@
     "get_consultancy": "Get consultancy",
     "connect": "Connect",
     "get_in_touch": "get in touch",
-    "send_message": "Send Message"
+    "send_message": "Send Message",
+    "back_to_home": "Home"
   },
   "dividers": {
     "interested": "Interested?"

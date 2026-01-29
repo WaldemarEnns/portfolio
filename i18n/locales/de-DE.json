@@ -186,7 +186,8 @@
     "get_consultancy": "Beratung anfragen",
     "connect": "Verbinden",
     "get_in_touch": "Kontakt",
-    "send_message": "Nachricht senden"
+    "send_message": "Nachricht senden",
+    "back_to_home": "Startseite"
   },
   "dividers": {
     "interested": "Interessiert?"

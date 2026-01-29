@@ -186,7 +186,8 @@
     "get_consultancy": "Obtener consultoría",
     "connect": "Conectar",
     "get_in_touch": "contactar",
-    "send_message": "Enviar Mensaje"
+    "send_message": "Enviar Mensaje",
+    "back_to_home": "Inicio"
   },
   "dividers": {
     "interested": "¿Interesado?"
