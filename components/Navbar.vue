@@ -2,7 +2,15 @@
 const { currentRoute } = useRouter()
 const localePath = useLocalePath()
 
-const isBlog = computed(() => currentRoute.value.path.startsWith('/posts'))
+const isBlog = computed(() => {
+  const routeName = currentRoute.value.name?.toString() || ''
+  return routeName.includes('posts-slug') || routeName.includes('posts-index')
+})
+
+const isHomePage = computed(() => {
+  const routeName = currentRoute.value.name?.toString() || ''
+  return routeName.includes('home') || routeName === 'index'
+})
 
 function scrollToContact () {
   document.querySelector('#contact')!.scrollIntoView({
@@ -29,7 +37,7 @@ function scrollToWorkshops () {
     <div class="navbar-start">
       <NuxtLink :to="localePath('home')" class="btn btn-ghost text-xl">waldemar enns</NuxtLink>
     </div>
-    <div v-if="!isBlog && currentRoute.path === '/'" class="navbar-center hidden lg:flex">
+    <div v-if="!isBlog && isHomePage" class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1">
         <li><a @click="scrollToAbout" href="#about">{{ $t('navbar.links.about_me') }}</a></li>
         <li><a @click="scrollToWorkshops" href="#workshops">{{ $t('navbar.links.workshops') }}</a></li>
