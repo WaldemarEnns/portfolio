@@ -13,7 +13,13 @@ const description = computed(() => {
 </script>
 
 <template>
-  <div>
+  <div class="min-h-screen bg-base-100 relative">
+    <!-- Subtle background gradient decoration -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden">
+      <div class="absolute -top-1/4 -right-1/4 w-1/2 h-1/2 bg-gradient-to-br from-primary/5 to-transparent rounded-full blur-3xl"></div>
+      <div class="absolute -bottom-1/4 -left-1/4 w-1/2 h-1/2 bg-gradient-to-tr from-secondary/5 to-transparent rounded-full blur-3xl"></div>
+    </div>
+    
     <Html :lang="head.htmlAttrs.lang" :dir="head.htmlAttrs.dir">
       <Head>
         <template v-for="link in head.link" :key="link.id">
@@ -26,9 +32,11 @@ const description = computed(() => {
         </template>
         <Meta v-if="description" name="description" :content="description" />
       </Head>
-      <Body>
+      <Body class="relative z-10">
         <Navbar />
-        <slot />
+        <main class="relative z-10">
+          <slot />
+        </main>
         <Footer />
       </Body>
     </Html>
