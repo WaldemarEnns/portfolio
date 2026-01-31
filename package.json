@@ -34,16 +34,16 @@
   },
   "devDependencies": {
     "@inspira-ui/plugins": "^0.0.1",
-    "@nuxt/test-utils": "^3.14.2",
-    "@tailwindcss/typography": "^0.5.15",
-    "autoprefixer": "^10.4.20",
+    "@nuxt/test-utils": "^3.20.1",
+    "@tailwindcss/typography": "^0.5.19",
+    "autoprefixer": "^10.4.22",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "daisyui": "^4.12.10",
     "postcss": "^8.4.41",
-    "tailwind-merge": "^3.0.1",
+    "tailwind-merge": "^3.4.0",
     "tailwindcss": "^3.4.17",
     "tailwindcss-animate": "^1.0.7",
-    "vitest": "^2.1.1"
+    "vitest": "^3.2.4"
   }
 }
