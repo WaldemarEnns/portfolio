@@ -3,7 +3,6 @@ title: "Welcome to My Blog – Let's Grow Together"
 description: 'Personal insights from 7+ years in web development, AI workshops, and the story behind my work'
 date: '2026-01-30'
 tags: ['personal', 'web development', 'vue', 'nuxt', 'ai', 'workshops']
-image: '/me-2022.JPG'
 ---
 
 ::intro-section{src="/me-2022.JPG" alt="Waldemar Enns - Software Developer and Consultant" width="400" height="400"}
