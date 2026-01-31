@@ -85,10 +85,10 @@ useSeoMeta({
 
     <!-- Hero Section -->
     <header class="relative bg-base-200">
-      <!-- Background Image with Overlay -->
-      <div v-if="post.image" class="absolute inset-0">
+      <!-- Background Image with Overlay (only if heroImage is explicitly set) -->
+      <div v-if="post.heroImage" class="absolute inset-0">
         <img
-          :src="post.image"
+          :src="post.heroImage"
           :alt="post.title"
           class="w-full h-full object-cover"
         />

@@ -15,6 +15,7 @@ export default defineContentConfig({
           description: z.string(),
           date: z.string(),
           image: z.string().optional(),
+          heroImage: z.string().optional(),
           tags: z.array(z.string()).optional(),
         })
       })
