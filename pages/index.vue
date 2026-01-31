@@ -167,7 +167,7 @@ function scrollToWorkshops () {
       <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent inline-flex items-center gap-2 sm:gap-3 justify-center flex-wrap px-4">
         {{ t('home.workshops.hero_title') }}
         <span class="badge badge-primary py-1.5 px-3 sm:py-2 sm:px-4 text-sm sm:text-base font-bold shadow-lg shadow-primary/30 -rotate-6 hover:rotate-0 hover:scale-110 transition-all duration-300" style="animation: gentle-pulse 3s ease-in-out infinite;">
-          <font-awesome-icon icon="fa-solid fa-sparkles" class="mr-1 sm:mr-2"></font-awesome-icon>
+          <font-awesome-icon icon="fa-solid fa-star" class="mr-1 sm:mr-2"></font-awesome-icon>
           {{ t('home.workshops.badge') }}
         </span>
       </h2>
