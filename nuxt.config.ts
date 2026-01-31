@@ -40,9 +40,10 @@ export default defineNuxtConfig({
   pages: true,
 
   modules: [
-    '@nuxtjs/i18n',
-    '@nuxtjs/sitemap',
+    '@nuxtjs/sitemap', // Must be before @nuxt/content for proper integration
     '@nuxtjs/robots',
+    '@nuxt/content',
+    '@nuxtjs/i18n',
     '@nuxt/test-utils/module',
     '@nuxtjs/plausible',
     '@nuxtjs/turnstile',
@@ -85,5 +86,22 @@ export default defineNuxtConfig({
 
   robots: {
     sitemap: '/sitemap_index.xml',
+  },
+
+  content: {
+    locales: ['en', 'de', 'es'],
+    defaultLocale: 'de',
+    highlight: {
+      theme: {
+        default: 'github-light',
+        dark: 'github-dark',
+      },
+    },
+    markdown: {
+      toc: {
+        depth: 3,
+        searchDepth: 3,
+      },
+    },
   }
 })

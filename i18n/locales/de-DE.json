@@ -186,7 +186,8 @@
     "get_consultancy": "Beratung anfragen",
     "connect": "Verbinden",
     "get_in_touch": "Kontakt",
-    "send_message": "Nachricht senden"
+    "send_message": "Nachricht senden",
+    "back_to_home": "Startseite"
   },
   "dividers": {
     "interested": "Interessiert?"
@@ -242,10 +243,14 @@
     "have_a_read": "Jetzt lesen"
   },
   "posts": {
+    "title": "Blog",
+    "description": "Neueste Einblicke, Tipps und Updates aus meiner Arbeit als Softwareentwickler",
     "read_something_about": "Lies etwas über:",
     "coming_soon": "Demnächst verfügbar",
     "coming_soon_description": "Mein Blog befindet sich derzeit im Aufbau. Bald findest du hier Artikel über Webentwicklung, Best Practices und Einblicke in meine Projekte.",
-    "blog_placeholder": "Blog-Inhalte kommen bald!"
+    "blog_placeholder": "Blog-Inhalte kommen bald!",
+    "no_posts_title": "Noch keine Posts",
+    "no_posts": "Noch keine Blog-Posts verfügbar."
   },
   "read_more": "lies mehr"
 }

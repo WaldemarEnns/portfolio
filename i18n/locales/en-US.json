@@ -185,7 +185,8 @@
     "get_consultancy": "Get consultancy",
     "connect": "Connect",
     "get_in_touch": "get in touch",
-    "send_message": "Send Message"
+    "send_message": "Send Message",
+    "back_to_home": "Home"
   },
   "dividers": {
     "interested": "Interested?"
@@ -241,10 +242,14 @@
     "have_a_read": "Have a read"
   },
   "posts": {
+    "title": "Blog",
+    "description": "Latest insights, tips, and updates from my work as a software developer – practical and up-to-date.",
     "read_something_about": "Read something about:",
     "coming_soon": "Coming Soon",
     "coming_soon_description": "My blog is currently under construction. Soon you'll find articles about web development, best practices, and insights from my projects.",
-    "blog_placeholder": "Blog content coming soon!"
+    "blog_placeholder": "Blog content coming soon!",
+    "no_posts_title": "No posts yet",
+    "no_posts": "No blog posts available yet."
   },
   "read_more": "read more"
 }
