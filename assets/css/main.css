@@ -1,5 +1,7 @@
 @import "tailwindcss";
-@plugin "daisyui";
+@plugin "daisyui" {
+  themes: forest --default, dark --prefersdark;
+}
 
 /* Custom hover effects for About Me cards */
 .hover-card {
