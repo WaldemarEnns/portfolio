@@ -79,7 +79,7 @@ function scrollToWorkshops () {
     />
   </div>
 
-  <section id="about" class="container m-auto py-16">
+  <section id="about" class="container m-auto py-16 px-4">
     <div class="text-center mb-12">
       <h2 class="text-3xl md:text-4xl font-bold mb-4">{{ t('home.about_me.title') }}</h2>
       <p class="text-xl text-base-content/70 max-w-2xl mx-auto">{{ t('home.about_me.subtitle') }}</p>
@@ -158,7 +158,7 @@ function scrollToWorkshops () {
     </div>
   </section>
 
-  <section id="workshops" class="container m-auto py-16">
+  <section id="workshops" class="container m-auto py-16 px-4">
 
     <div class="text-center mb-12">
       <h2 class="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent inline-flex items-center gap-2 sm:gap-3 justify-center flex-wrap">
