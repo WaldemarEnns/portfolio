@@ -32,6 +32,62 @@
         "content": "Du erhältst mehr als Code – du bekommst einen strategischen Partner, der Geschäftsbedürfnisse versteht. Klare Kommunikation, zuverlässige Lieferung und Lösungen für langfristigen Erfolg."
       }
     },
+    "workshops": {
+      "badge": "Neu",
+      "hero_title": "KI-Entwicklung meistern",
+      "hero_subtitle": "Meistere KI-gestütztes Coding und transformiere deinen Workflow mit praktischen Workshops",
+      "stats_workshops": "2 Workshops",
+      "stats_duration": "2 Stunden jeder",
+      "stats_format": "Live Online",
+      "stats_level": "Alle Level",
+      "feature_1_title": "10x schnellere Entwicklung",
+      "feature_1_desc": "Lerne, KI-Tools zu nutzen, um deine Coding-Geschwindigkeit und Effizienz dramatisch zu steigern",
+      "feature_2_title": "Praxisprojekte",
+      "feature_2_desc": "Hands-on Coding-Sessions mit praktischen Beispielen, nicht nur Theorie",
+      "feature_3_title": "Expert-Led Training",
+      "feature_3_desc": "Lerne von einem erfahrenen Entwickler, der diese Tools täglich nutzt",
+      "workshops_title": "Was du lernen wirst",
+      "card_1_title": "KI Agentic Coding Grundlagen",
+      "card_1_badge": "Grundlagen",
+      "card_1_desc": "Beherrsche die führenden KI-Entwicklungstools und lerne, wie du KI-unterstütztes Coding nutzt.",
+      "card_1_feature_1": "claude-code, opencode und cursor einrichten",
+      "card_1_feature_2": "Prompts schreiben, die hochwertigen Code generieren",
+      "card_1_feature_3": "Debuggen und Refactoring mit KI-Unterstützung",
+      "card_1_feature_4": "Best Practices für KI-gestützte Entwicklung",
+      "card_2_title": "Team-Schulungen",
+      "card_2_badge": "Individuell",
+      "card_2_desc": "Maßgeschneiderte Workshops für Entwicklungsteams zur Skalierung der KI-Adoption.",
+      "card_2_feature_1": "Team-spezifische Workflow-Optimierung",
+      "card_2_feature_2": "Code-Review und Zusammenarbeit mit KI",
+      "card_2_feature_3": "Wissenstransfer und Dokumentation",
+      "card_2_feature_4": "Kontinuierliche Unterstützung und Follow-up",
+      "pricing_title": "Wähle deinen Plan",
+      "pricing_individual_title": "Einzelperson",
+      "pricing_individual_desc": "Perfekt für Einzelentwickler",
+      "pricing_individual_feature_1": "Zugang zu beiden Workshops",
+      "pricing_individual_feature_2": "Live Q&A-Sessions",
+      "pricing_individual_feature_3": "Workshop-Aufzeichnungen",
+      "pricing_cta_individual": "Loslegen",
+      "pricing_popular": "Beliebteste Wahl",
+      "pricing_team_title": "Team",
+      "pricing_team_desc": "Bis zu 10 Teammitglieder",
+      "pricing_team_feature_1": "Alles aus Einzelperson",
+      "pricing_team_feature_2": "Team-Collaboration-Übungen",
+      "pricing_team_feature_3": "Individueller Workshop-Content",
+      "pricing_team_feature_4": "30-Tage Follow-up-Support",
+      "pricing_cta_team": "Team-Workshop buchen",
+      "pricing_enterprise_title": "Enterprise",
+      "pricing_enterprise_price": "Individuell",
+      "pricing_enterprise_desc": "Für größere Organisationen",
+      "pricing_enterprise_feature_1": "Unbegrenzte Teammitglieder",
+      "pricing_enterprise_feature_2": "Vollständig angepasster Lehrplan",
+      "pricing_enterprise_feature_3": "Dedizierter Support",
+      "pricing_cta_enterprise": "Kontaktieren",
+      "final_cta_title": "Bereit, dein Coding zu transformieren?",
+      "final_cta_desc": "Trete 50+ Entwicklern bei, die ihren Workflow bereits mit KI supercharged haben. Buche deinen Workshop heute.",
+      "final_cta_button": "Workshop buchen",
+      "cta": "Workshop buchen"
+    },
     "services": {
       "title": "Wie ich dir helfen kann",
       "subtitle": "Maßgeschneiderte Lösungen für deine Geschäftsanforderungen, von der Konzeption bis zur Bereitstellung und darüber hinaus.",
@@ -130,7 +186,8 @@
     "get_consultancy": "Beratung anfragen",
     "connect": "Verbinden",
     "get_in_touch": "Kontakt",
-    "send_message": "Nachricht senden"
+    "send_message": "Nachricht senden",
+    "back_to_home": "Startseite"
   },
   "dividers": {
     "interested": "Interessiert?"
@@ -161,7 +218,8 @@
   "navbar": {
     "links": {
       "about_me": "Warum mich wählen",
-      "services": "Dienstleistungen"
+      "services": "Dienstleistungen",
+      "workshops": "Workshops"
     }
   },
   "meta": {
@@ -185,10 +243,14 @@
     "have_a_read": "Jetzt lesen"
   },
   "posts": {
+    "title": "Blog",
+    "description": "Neueste Einblicke, Tipps und Updates aus meiner Arbeit als Softwareentwickler",
     "read_something_about": "Lies etwas über:",
     "coming_soon": "Demnächst verfügbar",
     "coming_soon_description": "Mein Blog befindet sich derzeit im Aufbau. Bald findest du hier Artikel über Webentwicklung, Best Practices und Einblicke in meine Projekte.",
-    "blog_placeholder": "Blog-Inhalte kommen bald!"
+    "blog_placeholder": "Blog-Inhalte kommen bald!",
+    "no_posts_title": "Noch keine Posts",
+    "no_posts": "Noch keine Blog-Posts verfügbar."
   },
   "read_more": "lies mehr"
 }
