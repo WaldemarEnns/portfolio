@@ -32,6 +32,62 @@
         "content": "Obtienes más que código – consigues un socio estratégico que entiende las necesidades del negocio. Comunicación clara, entrega confiable y soluciones construidas para el éxito a largo plazo."
       }
     },
+    "workshops": {
+      "badge": "Nuevo",
+      "hero_title": "Supercharge Your Development with AI",
+      "hero_subtitle": "Domina la codificación con IA y transforma tu workflow con talleres prácticos",
+      "stats_workshops": "2 Workshops",
+      "stats_duration": "2 Horas Cada Uno",
+      "stats_format": "En Vivo Online",
+      "stats_level": "Todos los Niveles",
+      "feature_1_title": "Desarrollo 10x Más Rápido",
+      "feature_1_desc": "Aprende a aprovechar las herramientas de IA para acelerar dramáticamente tu velocidad y eficiencia de codificación",
+      "feature_2_title": "Proyectos Reales",
+      "feature_2_desc": "Sesiones de codificación prácticas con ejemplos prácticos, no solo teoría",
+      "feature_3_title": "Formación Experta",
+      "feature_3_desc": "Aprende de un desarrollador experimentado que usa estas herramientas diariamente",
+      "workshops_title": "Lo Que Aprenderás",
+      "card_1_title": "Fundamentos de AI Agentic Coding",
+      "card_1_badge": "Fundamentos",
+      "card_1_desc": "Domina las principales herramientas de desarrollo con IA y aprende cómo aprovechar la codificación asistida por IA.",
+      "card_1_feature_1": "Configurar claude-code, opencode y cursor",
+      "card_1_feature_2": "Escribir prompts que generen código de alta calidad",
+      "card_1_feature_3": "Depurar y refactorizar con asistencia de IA",
+      "card_1_feature_4": "Mejores prácticas para desarrollo asistido por IA",
+      "card_2_title": "Formación de Equipos",
+      "card_2_badge": "Personalizado",
+      "card_2_desc": "Talleres personalizados diseñados para equipos de desarrollo para escalar la adopción de IA.",
+      "card_2_feature_1": "Optimización de workflow específica para equipos",
+      "card_2_feature_2": "Code review y colaboración con IA",
+      "card_2_feature_3": "Compartir conocimiento y documentación",
+      "card_2_feature_4": "Soporte continuo y seguimiento",
+      "pricing_title": "Elige Tu Plan",
+      "pricing_individual_title": "Individual",
+      "pricing_individual_desc": "Perfecto para desarrolladores individuales",
+      "pricing_individual_feature_1": "Acceso a ambos workshops",
+      "pricing_individual_feature_2": "Sesiones de Q&A en vivo",
+      "pricing_individual_feature_3": "Grabaciones de los workshops",
+      "pricing_cta_individual": "Empezar",
+      "pricing_popular": "Más Popular",
+      "pricing_team_title": "Equipo",
+      "pricing_team_desc": "Hasta 10 miembros del equipo",
+      "pricing_team_feature_1": "Todo lo del plan Individual",
+      "pricing_team_feature_2": "Ejercicios de colaboración en equipo",
+      "pricing_team_feature_3": "Contenido de workshop personalizado",
+      "pricing_team_feature_4": "Soporte de seguimiento de 30 días",
+      "pricing_cta_team": "Reservar Workshop de Equipo",
+      "pricing_enterprise_title": "Enterprise",
+      "pricing_enterprise_price": "Personalizado",
+      "pricing_enterprise_desc": "Para organizaciones más grandes",
+      "pricing_enterprise_feature_1": "Miembros de equipo ilimitados",
+      "pricing_enterprise_feature_2": "Currículo completamente personalizado",
+      "pricing_enterprise_feature_3": "Soporte dedicado",
+      "pricing_cta_enterprise": "Contáctanos",
+      "final_cta_title": "¿Listo para Transformar tu Codificación?",
+      "final_cta_desc": "Únete a más de 50 desarrolladores que ya han supercharged su workflow con IA. Reserva tu workshop hoy.",
+      "final_cta_button": "Reservar Tu Workshop",
+      "cta": "Reservar un Workshop"
+    },
     "services": {
       "title": "Cómo puedo ayudarte",
       "subtitle": "Soluciones integrales adaptadas a las necesidades de tu negocio, desde el concepto hasta la implementación y más allá.",
@@ -130,7 +186,8 @@
     "get_consultancy": "Obtener consultoría",
     "connect": "Conectar",
     "get_in_touch": "contactar",
-    "send_message": "Enviar Mensaje"
+    "send_message": "Enviar Mensaje",
+    "back_to_home": "Inicio"
   },
   "dividers": {
     "interested": "¿Interesado?"
@@ -164,7 +221,8 @@
   "navbar": {
     "links": {
       "about_me": "Por qué elegirme",
-      "services": "Servicios"
+      "services": "Servicios",
+      "workshops": "Workshops"
     }
   },
   "meta": {
@@ -188,10 +246,14 @@
     "have_a_read": "Leer ahora"
   },
   "posts": {
+    "title": "Blog",
+    "description": "Últimas ideas, consejos y actualizaciones de mi trabajo como desarrollador de software",
     "read_something_about": "Lea algo sobre:",
     "coming_soon": "Próximamente",
     "coming_soon_description": "Mi blog está actualmente en construcción. Pronto encontrarás artículos sobre desarrollo web, mejores prácticas e ideas de mis proyectos.",
-    "blog_placeholder": "¡Contenido del blog próximamente!"
+    "blog_placeholder": "¡Contenido del blog próximamente!",
+    "no_posts_title": "Aún no hay publicaciones",
+    "no_posts": "Aún no hay publicaciones disponibles."
   },
   "read_more": "leer más"
 }
