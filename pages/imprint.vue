@@ -7,7 +7,7 @@ definePageMeta({
 </script>
 
 <template>
-  <article class="container prose mt-12 text-center m-auto">
+  <article class="container prose mt-12 text-center m-auto px-4">
     <h1>Impressum</h1>
 
     <p>

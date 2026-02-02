@@ -1,6 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: forest --default, dark --prefersdark;
+}
 
 /* Custom hover effects for About Me cards */
 .hover-card {
@@ -286,12 +287,6 @@
 }
 
 /* Make strings that look like module names even brighter */
-.prose pre.shiki .token.string {
-  color: hsl(var(--sf)) !important;
-  font-weight: 500;
-}
-
-/* Brighter secondary colors for strings that are likely module names */
 .prose pre.shiki .string {
   color: hsl(var(--sf)) !important;
   opacity: 1 !important;
