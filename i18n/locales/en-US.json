@@ -215,10 +215,12 @@
     "languages": "Languages"
   },
   "navbar": {
+    "language": "Language",
     "links": {
       "about_me": "Why Choose Me",
       "services": "Services",
-      "workshops": "Workshops"
+      "workshops": "Workshops",
+      "blog": "Blog"
     }
   },
   "meta": {

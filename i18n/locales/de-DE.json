@@ -216,10 +216,12 @@
     "languages": "Sprachen"
   },
   "navbar": {
+    "language": "Sprache",
     "links": {
       "about_me": "Warum mich wählen",
       "services": "Dienstleistungen",
-      "workshops": "Workshops"
+      "workshops": "Workshops",
+      "blog": "Blog"
     }
   },
   "meta": {
