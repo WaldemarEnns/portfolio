@@ -80,7 +80,7 @@ function closeMobileMenu () {
       <ul class="menu menu-horizontal px-1">
         <li>
           <NuxtLink :to="localePath('/posts')" class="gap-2">
-            <font-awesome-icon icon="fa-solid fa-book-open"></font-awesome-icon>
+            <font-awesome-icon icon="fa-solid fa-book-open" class="w-5 text-center"></font-awesome-icon>
             Blog
           </NuxtLink>
         </li>
@@ -89,12 +89,12 @@ function closeMobileMenu () {
     
     <div class="navbar-end">
       <NuxtLink v-if="isBlog" :to="localePath('/')" class="btn btn-ghost btn-sm gap-2 hidden sm:inline-flex">
-        <font-awesome-icon icon="fa-solid fa-home"></font-awesome-icon>
+        <font-awesome-icon icon="fa-solid fa-home" class="w-5 text-center"></font-awesome-icon>
         {{ $t('cta.back_to_home') || 'Home' }}
       </NuxtLink>
-      <a v-else class="btn btn-primary btn-sm" @click="scrollToContact" href="#contact">
+      <a v-else class="btn btn-primary btn-sm gap-2" @click="scrollToContact" href="#contact">
+        <font-awesome-icon icon="fa-solid fa-envelope-open" class="w-5 text-center"></font-awesome-icon>
         {{ $t('cta.get_in_touch') }}
-        <font-awesome-icon icon="fa-solid fa-envelope-open"></font-awesome-icon>
       </a>
     </div>
   </div>
@@ -131,44 +131,44 @@ function closeMobileMenu () {
       <ul class="menu menu-lg p-4">
         <li class="menu-title">Navigation</li>
         <li v-if="!isBlog && isHomePage">
-          <a @click="scrollToAbout" href="#about">
-            <font-awesome-icon icon="fa-solid fa-user" class="mr-2"></font-awesome-icon>
+          <a @click="scrollToAbout" href="#about" class="gap-2">
+            <font-awesome-icon icon="fa-solid fa-user" class="w-5 text-center"></font-awesome-icon>
             {{ $t('navbar.links.about_me') }}
           </a>
         </li>
         <li v-if="!isBlog && isHomePage">
-          <a @click="scrollToWorkshops" href="#workshops">
-            <font-awesome-icon icon="fa-solid fa-chalkboard-user" class="mr-2"></font-awesome-icon>
+          <a @click="scrollToWorkshops" href="#workshops" class="gap-2">
+            <font-awesome-icon icon="fa-solid fa-chalkboard-user" class="w-5 text-center"></font-awesome-icon>
             {{ $t('navbar.links.workshops') }}
           </a>
         </li>
         <li>
-          <NuxtLink :to="localePath('/posts')" @click="closeMobileMenu">
-            <font-awesome-icon icon="fa-solid fa-book-open" class="mr-2"></font-awesome-icon>
+          <NuxtLink :to="localePath('/posts')" @click="closeMobileMenu" class="gap-2">
+            <font-awesome-icon icon="fa-solid fa-book-open" class="w-5 text-center"></font-awesome-icon>
             {{ $t('navbar.links.blog') || 'Blog' }}
           </NuxtLink>
         </li>
         <li v-if="!isBlog && isHomePage">
-          <a @click="scrollToContact" href="#contact">
-            <font-awesome-icon icon="fa-solid fa-envelope" class="mr-2"></font-awesome-icon>
+          <a @click="scrollToContact" href="#contact" class="gap-2">
+            <font-awesome-icon icon="fa-solid fa-envelope" class="w-5 text-center"></font-awesome-icon>
             {{ $t('cta.get_in_touch') }}
           </a>
         </li>
         
         <li class="menu-title mt-6">{{ $t('navbar.language') || 'Language' }}</li>
         <li>
-          <NuxtLink :to="switchLocalePath('de')" @click="closeMobileMenu">
-            <span class="mr-2">🇩🇪</span> Deutsch
+          <NuxtLink :to="switchLocalePath('de')" @click="closeMobileMenu" class="gap-2">
+            <span>🇩🇪</span> Deutsch
           </NuxtLink>
         </li>
         <li>
-          <NuxtLink :to="switchLocalePath('en')" @click="closeMobileMenu">
-            <span class="mr-2">🇬🇧</span> English
+          <NuxtLink :to="switchLocalePath('en')" @click="closeMobileMenu" class="gap-2">
+            <span>🇬🇧</span> English
           </NuxtLink>
         </li>
         <li>
-          <NuxtLink :to="switchLocalePath('es')" @click="closeMobileMenu">
-            <span class="mr-2">🇪🇸</span> Español
+          <NuxtLink :to="switchLocalePath('es')" @click="closeMobileMenu" class="gap-2">
+            <span>🇪🇸</span> Español
           </NuxtLink>
         </li>
       </ul>
