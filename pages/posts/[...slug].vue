@@ -107,7 +107,7 @@ useSeoMeta({
           </NuxtLink>
 
           <!-- Title -->
-          <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+          <h1 class="text-3xl md:text-4xl font-bold mb-6 leading-tight">
             {{ post.title }}
           </h1>
           
@@ -166,7 +166,7 @@ useSeoMeta({
                 </div>
               </div>
               <div class="text-center sm:text-left">
-                <h3 class="text-xl font-bold mb-2">Waldemar Enns</h3>
+                <p class="text-xl font-bold mb-2">Waldemar Enns</p>
                 <p class="text-base-content/70 mb-4">
                   Full-stack developer, freelancer, and consultant passionate about building great software and teaching others.
                 </p>

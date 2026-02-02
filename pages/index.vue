@@ -40,7 +40,7 @@ function scrollToWorkshops () {
           alt="A picture of me in a suit."
         />
         
-        <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
+        <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 leading-tight">
           Waldemar Enns
         </h1>
 
@@ -50,7 +50,7 @@ function scrollToWorkshops () {
         </div>
 
         <div class="relative mb-8">
-          <h2 class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold leading-tight bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+          <h2 class="text-lg sm:text-xl md:text-2xl font-semibold leading-tight bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
             {{ t('home.hero.headline') }}
           </h2>
           <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-primary to-secondary rounded-full"></div>
@@ -81,7 +81,7 @@ function scrollToWorkshops () {
 
   <section id="about" class="container m-auto py-16 px-4">
     <div class="text-center mb-12">
-      <h2 class="text-3xl md:text-4xl font-bold mb-4">{{ t('home.about_me.title') }}</h2>
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">{{ t('home.about_me.title') }}</h2>
       <p class="text-xl text-base-content/70 max-w-2xl mx-auto">{{ t('home.about_me.subtitle') }}</p>
     </div>
     
@@ -161,7 +161,7 @@ function scrollToWorkshops () {
   <section id="workshops" class="container m-auto py-16 px-4">
 
     <div class="text-center mb-12">
-      <h2 class="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent inline-flex items-center gap-2 sm:gap-3 justify-center flex-wrap">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent inline-flex items-center gap-2 sm:gap-3 justify-center flex-wrap">
         {{ t('home.workshops.hero_title') }}
         <span class="badge badge-primary py-1.5 px-3 sm:py-2 sm:px-4 text-sm sm:text-base font-bold shadow-lg shadow-primary/30 -rotate-6 hover:rotate-0 hover:scale-110 transition-all duration-300" style="animation: gentle-pulse 3s ease-in-out infinite;">
           <font-awesome-icon icon="fa-solid fa-star" class="mr-1 sm:mr-2"></font-awesome-icon>
