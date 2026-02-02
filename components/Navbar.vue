@@ -63,9 +63,9 @@ function closeMobileMenu () {
         </button>
         <!-- Mobile Dropdown Menu -->
         <ul 
+          v-show="mobileMenuOpen"
           tabindex="0" 
           class="menu menu-sm dropdown-content bg-base-100 rounded-box z-50 mt-3 w-52 p-2 shadow-lg"
-          :class="{ 'hidden': !mobileMenuOpen }"
           @click="closeMobileMenu"
         >
           <li v-if="!isBlog && isHomePage">
