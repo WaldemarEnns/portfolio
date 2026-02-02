@@ -49,49 +49,17 @@ function closeMobileMenu () {
   <div class="navbar bg-base-100/80 backdrop-blur-md sticky top-0 z-40 border-b border-base-200">
     <div class="navbar-start">
       <!-- Mobile Menu Button -->
-      <div class="dropdown lg:hidden">
-        <button 
-          tabindex="0" 
-          class="btn btn-ghost btn-circle"
-          @click="toggleMobileMenu"
-          aria-label="Toggle menu"
-        >
-          <font-awesome-icon 
-            :icon="mobileMenuOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'" 
-            class="text-xl"
-          />
-        </button>
-        <!-- Mobile Dropdown Menu -->
-        <ul 
-          v-show="mobileMenuOpen"
-          tabindex="0" 
-          class="menu menu-sm dropdown-content bg-base-100 rounded-box z-50 mt-3 w-52 p-2 shadow-lg"
-          @click="closeMobileMenu"
-        >
-          <li v-if="!isBlog && isHomePage">
-            <a @click="scrollToAbout" href="#about">{{ $t('navbar.links.about_me') }}</a>
-          </li>
-          <li v-if="!isBlog && isHomePage">
-            <a @click="scrollToWorkshops" href="#workshops">{{ $t('navbar.links.workshops') }}</a>
-          </li>
-          <li v-if="isBlog">
-            <NuxtLink :to="localePath('/posts')" class="gap-2">
-              <font-awesome-icon icon="fa-solid fa-book-open"></font-awesome-icon>
-              Blog
-            </NuxtLink>
-          </li>
-          <li>
-            <NuxtLink :to="localePath('/posts')" class="gap-2">
-              <font-awesome-icon icon="fa-solid fa-book-open"></font-awesome-icon>
-              {{ $t('navbar.links.blog') || 'Blog' }}
-            </NuxtLink>
-          </li>
-          <li class="menu-title pt-2">{{ $t('navbar.language') || 'Language' }}</li>
-          <li><NuxtLink :to="switchLocalePath('de')">🇩🇪 Deutsch</NuxtLink></li>
-          <li><NuxtLink :to="switchLocalePath('en')">🇬🇧 English</NuxtLink></li>
-          <li><NuxtLink :to="switchLocalePath('es')">🇪🇸 Español</NuxtLink></li>
-        </ul>
-      </div>
+      <button 
+        class="btn btn-ghost btn-circle lg:hidden"
+        @click="toggleMobileMenu"
+        aria-label="Toggle menu"
+        aria-expanded="mobileMenuOpen"
+      >
+        <font-awesome-icon 
+          :icon="mobileMenuOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'" 
+          class="text-xl"
+        />
+      </button>
       
       <NuxtLink :to="localePath('home')" class="btn btn-ghost text-xl">waldemar enns</NuxtLink>
     </div>
@@ -130,4 +98,80 @@ function closeMobileMenu () {
       </a>
     </div>
   </div>
+  
+  <!-- Mobile Menu Overlay -->
+  <Transition
+    enter-active-class="transition-opacity duration-200"
+    enter-from-class="opacity-0"
+    enter-to-class="opacity-100"
+    leave-active-class="transition-opacity duration-200"
+    leave-from-class="opacity-100"
+    leave-to-class="opacity-0"
+  >
+    <div 
+      v-show="mobileMenuOpen"
+      class="fixed inset-0 bg-black/50 z-40 lg:hidden"
+      @click="closeMobileMenu"
+    ></div>
+  </Transition>
+  
+  <!-- Mobile Menu Drawer -->
+  <Transition
+    enter-active-class="transition-transform duration-300 ease-out"
+    enter-from-class="-translate-x-full"
+    enter-to-class="translate-x-0"
+    leave-active-class="transition-transform duration-200 ease-in"
+    leave-from-class="translate-x-0"
+    leave-to-class="-translate-x-full"
+  >
+    <div
+      v-show="mobileMenuOpen"
+      class="fixed top-[64px] left-0 bottom-0 w-72 bg-base-100 z-50 shadow-2xl lg:hidden overflow-y-auto"
+    >
+      <ul class="menu menu-lg p-4">
+        <li class="menu-title">Navigation</li>
+        <li v-if="!isBlog && isHomePage">
+          <a @click="scrollToAbout" href="#about">
+            <font-awesome-icon icon="fa-solid fa-user" class="mr-2"></font-awesome-icon>
+            {{ $t('navbar.links.about_me') }}
+          </a>
+        </li>
+        <li v-if="!isBlog && isHomePage">
+          <a @click="scrollToWorkshops" href="#workshops">
+            <font-awesome-icon icon="fa-solid fa-chalkboard-user" class="mr-2"></font-awesome-icon>
+            {{ $t('navbar.links.workshops') }}
+          </a>
+        </li>
+        <li>
+          <NuxtLink :to="localePath('/posts')" @click="closeMobileMenu">
+            <font-awesome-icon icon="fa-solid fa-book-open" class="mr-2"></font-awesome-icon>
+            {{ $t('navbar.links.blog') || 'Blog' }}
+          </NuxtLink>
+        </li>
+        <li v-if="!isBlog && isHomePage">
+          <a @click="scrollToContact" href="#contact">
+            <font-awesome-icon icon="fa-solid fa-envelope" class="mr-2"></font-awesome-icon>
+            {{ $t('cta.get_in_touch') }}
+          </a>
+        </li>
+        
+        <li class="menu-title mt-6">{{ $t('navbar.language') || 'Language' }}</li>
+        <li>
+          <NuxtLink :to="switchLocalePath('de')" @click="closeMobileMenu">
+            <span class="mr-2">🇩🇪</span> Deutsch
+          </NuxtLink>
+        </li>
+        <li>
+          <NuxtLink :to="switchLocalePath('en')" @click="closeMobileMenu">
+            <span class="mr-2">🇬🇧</span> English
+          </NuxtLink>
+        </li>
+        <li>
+          <NuxtLink :to="switchLocalePath('es')" @click="closeMobileMenu">
+            <span class="mr-2">🇪🇸</span> Español
+          </NuxtLink>
+        </li>
+      </ul>
+    </div>
+  </Transition>
 </template>
