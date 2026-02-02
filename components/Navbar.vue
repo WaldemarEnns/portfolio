@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const { currentRoute } = useRouter()
 const localePath = useLocalePath()
+const switchLocalePath = useSwitchLocalePath()
 
 const isBlog = computed(() => {
   const routeName = currentRoute.value.name?.toString() || ''
