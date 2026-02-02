@@ -219,10 +219,12 @@
     "languages": "Idiomas"
   },
   "navbar": {
+    "language": "Idioma",
     "links": {
       "about_me": "Por qué elegirme",
       "services": "Servicios",
-      "workshops": "Workshops"
+      "workshops": "Workshops",
+      "blog": "Blog"
     }
   },
   "meta": {

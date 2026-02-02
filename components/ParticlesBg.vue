@@ -1,5 +1,6 @@
 <template>
   <div
+    v-if="shouldShowParticles"
     ref="canvasContainerRef"
     :class="$props.class"
     aria-hidden="true"
@@ -9,7 +10,7 @@
 </template>
 
 <script setup lang="ts">
-import { useMouse, useDevicePixelRatio } from "@vueuse/core";
+import { useMouse, useDevicePixelRatio, useMediaQuery } from "@vueuse/core";
 
 type Circle = {
   x: number;
@@ -40,6 +41,23 @@ const props = withDefaults(defineProps<Props>(), {
   class: "",
 });
 
+// Check for reduced motion preference and mobile
+const prefersReducedMotion = useMediaQuery('(prefers-reduced-motion: reduce)');
+const isMobile = useMediaQuery('(max-width: 768px)');
+
+// Determine if particles should be shown
+const shouldShowParticles = computed(() => {
+  return !prefersReducedMotion.value;
+});
+
+// Adjust quantity based on device
+const effectiveQuantity = computed(() => {
+  if (isMobile.value) {
+    return Math.floor(props.quantity * 0.3); // Reduce to 30% on mobile
+  }
+  return props.quantity;
+});
+
 const canvasRef = ref<HTMLCanvasElement | null>(null);
 const canvasContainerRef = ref<HTMLDivElement | null>(null);
 const context = ref<CanvasRenderingContext2D | null>(null);
@@ -48,6 +66,7 @@ const mouse = reactive<{ x: number; y: number }>({ x: 0, y: 0 });
 const canvasSize = reactive<{ w: number; h: number }>({ w: 0, h: 0 });
 const { x: mouseX, y: mouseY } = useMouse();
 const { pixelRatio } = useDevicePixelRatio();
+const animationFrameId = ref<number | null>(null);
 
 const color = computed(() => {
   // Remove the leading '#' if it's present
@@ -72,6 +91,8 @@ const color = computed(() => {
 });
 
 onMounted(() => {
+  if (!shouldShowParticles.value) return;
+  
   if (canvasRef.value) {
     context.value = canvasRef.value.getContext("2d");
   }
@@ -83,18 +104,31 @@ onMounted(() => {
 
 onBeforeUnmount(() => {
   window.removeEventListener("resize", initCanvas);
+  if (animationFrameId.value) {
+    cancelAnimationFrame(animationFrameId.value);
+  }
 });
 
 watch([mouseX, mouseY], () => {
   onMouseMove();
 });
 
+watch([isMobile, prefersReducedMotion], () => {
+  // Reinitialize when device type or motion preference changes
+  if (shouldShowParticles.value) {
+    initCanvas();
+  }
+});
+
 function initCanvas() {
+  if (!shouldShowParticles.value) return;
   resizeCanvas();
   drawParticles();
 }
 
 function onMouseMove() {
+  if (!shouldShowParticles.value || isMobile.value) return; // Disable mouse interaction on mobile
+  
   if (canvasRef.value) {
     const rect = canvasRef.value.getBoundingClientRect();
     const { w, h } = canvasSize;
@@ -171,7 +205,7 @@ function clearContext() {
 
 function drawParticles() {
   clearContext();
-  const particleCount = props.quantity;
+  const particleCount = effectiveQuantity.value;
   for (let i = 0; i < particleCount; i++) {
     const circle = circleParams();
     drawCircle(circle);
@@ -190,6 +224,8 @@ function remapValue(
 }
 
 function animate() {
+  if (!shouldShowParticles.value) return;
+  
   clearContext();
   circles.value.forEach((circle, i) => {
     // Handle the alpha value
@@ -212,10 +248,13 @@ function animate() {
 
     circle.x += circle.dx;
     circle.y += circle.dy;
+    
+    // Reduce magnetism effect on mobile
+    const magnetismFactor = isMobile.value ? 0.3 : 1;
     circle.translateX +=
-      (mouse.x / (props.staticity / circle.magnetism) - circle.translateX) / props.ease;
+      ((mouse.x / (props.staticity / circle.magnetism) - circle.translateX) / props.ease) * magnetismFactor;
     circle.translateY +=
-      (mouse.y / (props.staticity / circle.magnetism) - circle.translateY) / props.ease;
+      ((mouse.y / (props.staticity / circle.magnetism) - circle.translateY) / props.ease) * magnetismFactor;
 
     // circle gets out of the canvas
     if (
@@ -244,6 +283,6 @@ function animate() {
       );
     }
   });
-  window.requestAnimationFrame(animate);
+  animationFrameId.value = window.requestAnimationFrame(animate);
 }
 </script>
