@@ -40,6 +40,7 @@ const description = computed(() => {
         <slot />
         <Contact />
         <Footer />
+        <BackToTop />
       </Body>
     </Html>
   </div>

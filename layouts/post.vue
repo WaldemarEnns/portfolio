@@ -38,6 +38,7 @@ const description = computed(() => {
           <slot />
         </main>
         <Footer />
+        <BackToTop />
       </Body>
     </Html>
   </div>
