@@ -421,5 +421,5 @@ function scrollToWorkshops () {
     </div>
   </section>
 
-  <div class="divider">{{ t('dividers.interested') }}</div>
+  <div class="divider divider-gradient text-primary">{{ t('dividers.interested') }}</div>
 </template>
