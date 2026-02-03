@@ -32,12 +32,12 @@ function scrollToWorkshops () {
   <div class="hero relative bg-base-200 min-h-screen">
     <div class="hero-content text-center z-10">
       <div class="max-w-2xl">
-        <img
-          class="mask mask-squircle sepia-0 w-[120px] sm:w-[160px] md:w-[180px] lg:w-[200px] xl:w-[200px] m-auto mb-8"
-          src="/assets/images/me-nice.webp"
-          width="200"
-          height="200" 
+        <MorphingImage
+          src="/images/me-nice.webp"
           alt="A picture of me in a suit."
+          :width="400"
+          :height="400"
+          class="m-auto mb-8"
         />
         
         <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 leading-tight">

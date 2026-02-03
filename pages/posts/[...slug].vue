@@ -159,7 +159,7 @@ useSeoMeta({
               <div class="w-20 h-20 rounded-full bg-gradient-to-br from-primary via-secondary to-accent p-1 flex-shrink-0">
                 <div class="w-full h-full rounded-full bg-base-100 flex items-center justify-center overflow-hidden">
                   <img
-                    src="/assets/images/me-nice.webp"
+                    src="/images/me-nice.webp"
                     alt="Waldemar Enns"
                     class="w-full h-full object-cover"
                   />
