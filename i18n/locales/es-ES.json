@@ -257,5 +257,8 @@
     "no_posts_title": "Aún no hay publicaciones",
     "no_posts": "Aún no hay publicaciones disponibles."
   },
-  "read_more": "leer más"
+  "read_more": "leer más",
+  "common": {
+    "cancel": "Cancelar"
+  }
 }

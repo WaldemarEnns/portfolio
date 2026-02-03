@@ -64,7 +64,7 @@ const { data: posts } = await useAsyncData('blog-posts', () => {
           :to="post.path"
           class="block group"
         >
-          <article class="card bg-base-200 shadow-lg hover-card border border-base-300 overflow-hidden">
+          <article class="card bg-base-200 shadow-lg hover-card border border-base-content/10 overflow-hidden">
             <div class="flex flex-col md:flex-row">
               <!-- Featured Image -->
               <div v-if="post.image" class="md:w-1/3 h-48 md:h-auto relative overflow-hidden">
@@ -133,6 +133,11 @@ const { data: posts } = await useAsyncData('blog-posts', () => {
         <p class="text-lg text-base-content/60">
           {{ t('posts.no_posts') }}
         </p>
+      </div>
+
+      <!-- Contact CTA -->
+      <div class="mt-16 pt-8 border-t border-base-content/10">
+        <ContactSection />
       </div>
     </div>
   </section>

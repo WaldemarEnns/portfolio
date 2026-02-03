@@ -394,3 +394,14 @@
   z-index: 9999;
   transition: width 0.1s ease-out;
 }
+
+/* Custom gradient divider */
+.divider-gradient {
+  @apply divider;
+}
+
+.divider-gradient::before,
+.divider-gradient::after {
+  background: linear-gradient(to right, hsl(var(--p)), hsl(var(--s)), hsl(var(--a))) !important;
+  height: 2px !important;
+}

@@ -46,7 +46,7 @@ function closeMobileMenu () {
 </script>
 
 <template>
-  <div class="navbar bg-base-100/80 backdrop-blur-md sticky top-0 z-40 border-b border-base-200">
+  <div class="navbar bg-base-100/80 backdrop-blur-md sticky top-0 z-40 border-b border-base-content/10">
     <div class="navbar-start">
       <!-- Mobile Menu Button -->
       <button 
