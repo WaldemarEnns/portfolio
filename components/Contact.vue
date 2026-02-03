@@ -53,7 +53,7 @@ const onSubmit = async () => {
         </div>
 
         <!-- Form Container -->
-        <div class="card bg-base-100 shadow-2xl border border-primary/20 backdrop-blur-sm">
+        <div class="card bg-base-100 shadow-2xl border border-base-content/10 backdrop-blur-sm">
           <div class="card-body p-8 md:p-12">
             <!-- Success/Error Messages -->
             <Transition

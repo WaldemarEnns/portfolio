@@ -96,7 +96,7 @@ const onSubmit = async () => {
             >
               <div
                 v-if="isOpen"
-                class="card bg-base-100 shadow-2xl border border-primary/20 w-full max-w-2xl max-h-[90vh] overflow-y-auto"
+                class="card bg-base-100 shadow-2xl border border-base-content/10 w-full max-w-2xl max-h-[90vh] overflow-y-auto"
               >
                 <div class="card-body p-6 md:p-8">
                   <!-- Header -->
@@ -202,7 +202,7 @@ const onSubmit = async () => {
                   </ContactForm>
 
                   <!-- Social Links -->
-                  <div class="mt-6 pt-4 border-t border-primary/30 text-center">
+                  <div class="mt-6 pt-4 border-t border-base-content/10 text-center">
                     <p class="text-sm text-base-content/60 mb-3">{{ t('other_ways_to_connect') }}</p>
                     <div class="flex justify-center gap-3">
                       <a

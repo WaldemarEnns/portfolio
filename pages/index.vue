@@ -145,7 +145,7 @@ function scrollToWorkshops () {
           </div>
         </div>
 
-        <div class="card bg-gradient-to-br from-primary/10 to-secondary/10 border border-primary/20 shadow-lg hover-card-special">
+        <div class="card bg-gradient-to-br from-primary/10 to-secondary/10 border border-base-content/10 shadow-lg hover-card-special">
           <div class="card-body">
             <h3 class="card-title text-xl mb-4">
               <font-awesome-icon icon="fa-solid fa-handshake" class="text-primary"></font-awesome-icon>
@@ -347,7 +347,7 @@ function scrollToWorkshops () {
         </div>
 
         <!-- Team (Popular) -->
-        <div class="card bg-gradient-to-br from-primary/10 to-secondary/10 border border-primary/20 shadow-lg relative hover-card-special">
+        <div class="card bg-gradient-to-br from-primary/10 to-secondary/10 border border-base-content/10 shadow-lg relative hover-card-special">
           <div class="absolute -top-3 left-1/2 -translate-x-1/2">
             <div class="badge badge-primary badge-sm">{{ t('home.workshops.pricing_popular') }}</div>
           </div>

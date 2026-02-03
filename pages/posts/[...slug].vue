@@ -153,7 +153,7 @@ useSeoMeta({
         </div>
 
         <!-- Author Section -->
-        <div class="mt-16 pt-8 border-t border-primary/30">
+        <div class="mt-16 pt-8 border-t border-base-content/10">
           <div class="card bg-base-200 shadow-lg">
             <div class="card-body flex flex-col sm:flex-row items-center gap-6">
               <div class="w-20 h-20 rounded-full bg-gradient-to-br from-primary via-secondary to-accent p-1 flex-shrink-0">
@@ -216,7 +216,7 @@ useSeoMeta({
         </div>
 
         <!-- Navigation -->
-        <div class="mt-12 pt-8 border-t border-secondary/30">
+        <div class="mt-12 pt-8 border-t border-base-content/10">
           <NuxtLink
             :to="localePath('/posts')"
             class="btn btn-outline btn-primary gap-2"
@@ -227,7 +227,7 @@ useSeoMeta({
         </div>
 
         <!-- Contact CTA -->
-        <div class="mt-16 pt-8 border-t border-accent/30">
+        <div class="mt-16 pt-8 border-t border-base-content/10">
           <ContactSection />
         </div>
       </div>
