@@ -254,5 +254,8 @@
     "no_posts_title": "Noch keine Posts",
     "no_posts": "Noch keine Blog-Posts verfügbar."
   },
-  "read_more": "lies mehr"
+  "read_more": "lies mehr",
+  "common": {
+    "cancel": "Abbrechen"
+  }
 }

@@ -134,6 +134,11 @@ const { data: posts } = await useAsyncData('blog-posts', () => {
           {{ t('posts.no_posts') }}
         </p>
       </div>
+
+      <!-- Contact CTA -->
+      <div class="mt-16 pt-8 border-t border-base-300">
+        <ContactSection />
+      </div>
     </div>
   </section>
 </template>

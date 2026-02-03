@@ -225,6 +225,11 @@ useSeoMeta({
             Back to all articles
           </NuxtLink>
         </div>
+
+        <!-- Contact CTA -->
+        <div class="mt-16 pt-8 border-t border-base-300">
+          <ContactSection />
+        </div>
       </div>
     </div>
   </article>
