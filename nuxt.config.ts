@@ -48,8 +48,19 @@ export default defineNuxtConfig({
     '@nuxtjs/plausible',
     '@nuxtjs/turnstile',
     '@nuxt/scripts',
-    '@nuxt/image'
+    '@nuxt/image',
+    '@nuxt/fonts'
   ],
+
+  fonts: {
+    defaults: {
+      weights: [400, 500, 600, 700],
+      styles: ['normal', 'italic'],
+    },
+    experimental: {
+      processCSSVariables: true,
+    },
+  },
 
   image: {
     quality: 80,
