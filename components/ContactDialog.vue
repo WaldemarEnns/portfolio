@@ -1,7 +1,5 @@
 <script setup lang="ts">
-const { t } = useI18n({
-  useScope: 'local'
-})
+const { t } = useI18n()
 
 const localePath = useLocalePath()
 const isOpen = ref(false)
@@ -57,7 +55,7 @@ const onSubmit = async () => {
       class="btn btn-primary btn-lg group relative overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-primary/25 hover:scale-105"
     >
       <span class="relative z-10 flex items-center gap-2">
-        <span>{{ $t('cta.get_in_touch') }}</span>
+        <span>{{ t('cta.get_in_touch') }}</span>
         <font-awesome-icon
           icon="fa-solid fa-paper-plane"
           class="transition-transform duration-300 group-hover:translate-x-1"
@@ -103,9 +101,9 @@ const onSubmit = async () => {
                   <div class="flex items-center justify-between mb-6">
                     <div>
                       <h2 class="text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-                        {{ $t('contact.title') }}
+                        {{ t('contact.title') }}
                       </h2>
-                      <p class="text-base-content/70 mt-1">{{ $t('contact.text') }}</p>
+                      <p class="text-base-content/70 mt-1">{{ t('contact.text') }}</p>
                     </div>
                     <button
                       @click="closeDialog"
@@ -131,7 +129,7 @@ const onSubmit = async () => {
                       class="alert alert-error mb-4"
                     >
                       <font-awesome-icon icon="fa-solid fa-exclamation-triangle"></font-awesome-icon>
-                      <span>{{ $t('contact.mail.error') }}</span>
+                      <span>{{ t('contact.mail.error') }}</span>
                     </div>
                   </Transition>
 
@@ -149,7 +147,7 @@ const onSubmit = async () => {
                       class="alert alert-success mb-4"
                     >
                       <font-awesome-icon icon="fa-solid fa-check"></font-awesome-icon>
-                      <span>{{ $t('contact.mail.success') }}</span>
+                      <span>{{ t('contact.mail.success') }}</span>
                     </div>
                   </Transition>
 
@@ -177,7 +175,7 @@ const onSubmit = async () => {
                         type="button"
                         class="btn btn-ghost"
                       >
-                        {{ $t('common.cancel') }}
+                        {{ t('common.cancel') }}
                       </button>
                       <button
                         :class="[
@@ -189,7 +187,7 @@ const onSubmit = async () => {
                       >
                         <span class="relative z-10 flex items-center gap-2">
                           <span v-if="pending" class="loading loading-spinner loading-sm"></span>
-                          <span v-else>{{ $t('cta.send_message') }}</span>
+                          <span v-else>{{ t('cta.send_message') }}</span>
                           <font-awesome-icon
                             v-if="!pending"
                             icon="fa-solid fa-paper-plane"
@@ -240,16 +238,4 @@ const onSubmit = async () => {
   </div>
 </template>
 
-<i18n lang="json">
-  {
-    "de": {
-      "other_ways_to_connect": "Oder verbinde dich über soziale Medien"
-    },
-    "en": {
-      "other_ways_to_connect": "Or connect via social media"
-    },
-    "es": {
-      "other_ways_to_connect": "O conéctate a través de redes sociales"
-    }
-  }
-</i18n>
+

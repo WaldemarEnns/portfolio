@@ -1,7 +1,5 @@
 <script setup lang="ts">
-const { t } = useI18n({
-  useScope: 'local'
-})
+const { t } = useI18n()
 
 const localePath = useLocalePath()
 
@@ -110,7 +108,7 @@ const iconClass = (field: string) => {
             name="senderName"
             type="text"
             :class="inputClass('name', !!errors.senderName)"
-            :placeholder="$t('form.placeholders.name')"
+            :placeholder="t('form.placeholders.name')"
           />
           <font-awesome-icon
             icon="fa-solid fa-user"
@@ -139,7 +137,7 @@ const iconClass = (field: string) => {
             name="fromMail"
             type="email"
             :class="inputClass('email', !!errors.fromMail)"
-            :placeholder="$t('form.placeholders.email')"
+            :placeholder="t('form.placeholders.email')"
           />
           <font-awesome-icon
             icon="fa-solid fa-envelope"
@@ -166,7 +164,7 @@ const iconClass = (field: string) => {
           :disabled="isPending"
           @focus="setFocus('message')"
           @blur="removeFocus"
-          :placeholder="$t('form.placeholders.contact_message')"
+          :placeholder="t('form.placeholders.contact_message')"
           :class="textareaClass(!!errors.message)"
           :rows="size === 'compact' ? 4 : 5"
           name="message"
@@ -200,7 +198,7 @@ const iconClass = (field: string) => {
           :class="size === 'compact' ? 'checkbox checkbox-primary checkbox-sm' : 'checkbox checkbox-primary'"
         />
         <span :class="size === 'compact' ? 'label-text text-sm' : 'label-text'">
-          {{ t('i_agree') }} <NuxtLink class="link link-primary font-medium" :to="localePath('privacy-policy')">{{ $t('meta.titles.privacy') }}</NuxtLink> {{ t('data_processing') }}
+          {{ t('i_agree') }} <NuxtLink class="link link-primary font-medium" :to="localePath('privacy-policy')">{{ t('meta.titles.privacy') }}</NuxtLink> {{ t('data_processing') }}
         </span>
       </label>
     </div>
@@ -222,7 +220,7 @@ const iconClass = (field: string) => {
         >
           <span class="relative z-10 flex items-center gap-2">
             <span v-if="isPending" class="loading loading-spinner" :class="size === 'compact' ? 'loading-sm' : ''"></span>
-            <span v-else>{{ $t('cta.send_message') }}</span>
+            <span v-else>{{ t('cta.send_message') }}</span>
             <font-awesome-icon
               v-if="!isPending"
               icon="fa-solid fa-paper-plane"
@@ -255,56 +253,3 @@ const iconClass = (field: string) => {
   opacity: 0;
 }
 </style>
-
-<i18n lang="json">
-  {
-    "de": {
-      "i_agree": "Ich stimme zu, dass meine Daten gemäß der",
-      "data_processing": "für die Kontaktaufnahme gespeichert und verarbeitet werden.",
-      "form": {
-        "labels": {
-          "name": "Dein Name",
-          "email": "Deine E-Mail",
-          "message": "Deine Nachricht"
-        },
-        "errors": {
-          "name_required": "Bitte gib deinen Namen ein",
-          "email_invalid": "Bitte gib eine gültige E-Mail-Adresse ein",
-          "message_required": "Bitte schreibe eine Nachricht"
-        }
-      }
-    },
-    "en": {
-      "i_agree": "I agree that my data will be stored and processed according to the",
-      "data_processing": "for contacting purposes.",
-      "form": {
-        "labels": {
-          "name": "Your Name",
-          "email": "Your Email",
-          "message": "Your Message"
-        },
-        "errors": {
-          "name_required": "Please enter your name",
-          "email_invalid": "Please enter a valid email address",
-          "message_required": "Please write a message"
-        }
-      }
-    },
-    "es": {
-      "i_agree": "Acepto que mis datos se almacenen y procesen según la",
-      "data_processing": "para fines de contacto.",
-      "form": {
-        "labels": {
-          "name": "Tu Nombre",
-          "email": "Tu Correo",
-          "message": "Tu Mensaje"
-        },
-        "errors": {
-          "name_required": "Por favor ingresa tu nombre",
-          "email_invalid": "Por favor ingresa un correo válido",
-          "message_required": "Por favor escribe un mensaje"
-        }
-      }
-    }
-  }
-</i18n>

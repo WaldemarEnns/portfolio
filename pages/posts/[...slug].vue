@@ -87,10 +87,13 @@ useSeoMeta({
     <header class="relative bg-base-200">
       <!-- Background Image with Overlay (only if heroImage is explicitly set) -->
       <div v-if="post.heroImage" class="absolute inset-0">
-        <img
+        <NuxtImg
           :src="post.heroImage"
           :alt="post.title"
           class="w-full h-full object-cover"
+          loading="eager"
+          format="webp"
+          sizes="100vw"
         />
         <div class="absolute inset-0 bg-gradient-to-b from-base-200/90 via-base-200/95 to-base-100"></div>
       </div>
@@ -158,10 +161,14 @@ useSeoMeta({
             <div class="card-body flex flex-col sm:flex-row items-center gap-6">
               <div class="w-20 h-20 rounded-full bg-gradient-to-br from-primary via-secondary to-accent p-1 flex-shrink-0">
                 <div class="w-full h-full rounded-full bg-base-100 flex items-center justify-center overflow-hidden">
-                  <img
+                  <NuxtImg
                     src="/images/me-nice.webp"
                     alt="Waldemar Enns"
                     class="w-full h-full object-cover"
+                    loading="lazy"
+                    format="webp"
+                    width="80"
+                    height="80"
                   />
                 </div>
               </div>

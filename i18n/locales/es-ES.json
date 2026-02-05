@@ -201,15 +201,24 @@
     }
   },
   "form": {
-    "labels": {
-      "email": "Email"
-    },
     "placeholders": {
       "email": "Email",
       "contact_message": "Hablemos sobre ...",
       "name": "Tu nombre"
+    },
+    "labels": {
+      "name": "Tu Nombre",
+      "email": "Tu Correo",
+      "message": "Tu Mensaje"
+    },
+    "errors": {
+      "name_required": "Por favor ingresa tu nombre",
+      "email_invalid": "Por favor ingresa un correo válido",
+      "message_required": "Por favor escribe un mensaje"
     }
   },
+  "i_agree": "Acepto que mis datos se almacenen y procesen según la",
+  "data_processing": "para fines de contacto.",
   "footer": {
     "imprint": "Aviso legal",
     "privacy": "Privacidad",
@@ -260,5 +269,6 @@
   "read_more": "leer más",
   "common": {
     "cancel": "Cancelar"
-  }
+  },
+  "other_ways_to_connect": "O conéctate a través de redes sociales"
 }

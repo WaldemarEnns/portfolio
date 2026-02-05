@@ -204,8 +204,20 @@
       "email": "Email",
       "contact_message": "Let's talk about ...",
       "name": "Your name"
+    },
+    "labels": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "message": "Your Message"
+    },
+    "errors": {
+      "name_required": "Please enter your name",
+      "email_invalid": "Please enter a valid email address",
+      "message_required": "Please write a message"
     }
   },
+  "i_agree": "I agree that my data will be stored and processed according to the",
+  "data_processing": "for contacting purposes.",
   "footer": {
     "imprint": "Imprint",
     "privacy": "Privacy",
@@ -256,5 +268,6 @@
   "read_more": "read more",
   "common": {
     "cancel": "Cancel"
-  }
+  },
+  "other_ways_to_connect": "Or connect via social media"
 }
