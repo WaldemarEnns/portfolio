@@ -69,14 +69,16 @@ function scrollToWorkshops () {
       </div>
     </div>
 
-    <ParticlesBg
-      class="absolute inset-0"
-      :quantity="100"
-      :ease="100"
-      :color="'#FFF'"
-      :staticity="10"
-      refresh
-    />
+    <ClientOnly>
+      <LazyParticlesBg
+        class="absolute inset-0"
+        :quantity="100"
+        :ease="100"
+        :color="'#FFF'"
+        :staticity="10"
+        refresh
+      />
+    </ClientOnly>
   </div>
 
   <section id="about" class="container m-auto py-16 px-4">
