@@ -205,8 +205,20 @@
       "email": "Email",
       "contact_message": "Lass uns sprechen, über ...",
       "name": "Dein Name"
+    },
+    "labels": {
+      "name": "Dein Name",
+      "email": "Deine E-Mail",
+      "message": "Deine Nachricht"
+    },
+    "errors": {
+      "name_required": "Bitte gib deinen Namen ein",
+      "email_invalid": "Bitte gib eine gültige E-Mail-Adresse ein",
+      "message_required": "Bitte schreibe eine Nachricht"
     }
   },
+  "i_agree": "Ich stimme zu, dass meine Daten gemäß der",
+  "data_processing": "für die Kontaktaufnahme gespeichert und verarbeitet werden.",
   "footer": {
     "imprint": "Impressum",
     "privacy": "Datenschutz",
@@ -257,5 +269,6 @@
   "read_more": "lies mehr",
   "common": {
     "cancel": "Abbrechen"
-  }
+  },
+  "other_ways_to_connect": "Oder verbinde dich über soziale Medien"
 }
