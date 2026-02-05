@@ -47,8 +47,22 @@ export default defineNuxtConfig({
     '@nuxt/test-utils/module',
     '@nuxtjs/plausible',
     '@nuxtjs/turnstile',
-    '@nuxt/scripts'
+    '@nuxt/scripts',
+    '@nuxt/image'
   ],
+
+  image: {
+    quality: 80,
+    format: ['webp', 'avif'],
+    screens: {
+      xs: 320,
+      sm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
+      xxl: 1536,
+    },
+  },
 
   turnstile: {
     siteKey: process.env.NUXT_TURNSTILE_SITE_KEY

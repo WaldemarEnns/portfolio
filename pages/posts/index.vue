@@ -68,10 +68,13 @@ const { data: posts } = await useAsyncData('blog-posts', () => {
             <div class="flex flex-col md:flex-row">
               <!-- Featured Image -->
               <div v-if="post.image" class="md:w-1/3 h-48 md:h-auto relative overflow-hidden">
-                <img
+                <NuxtImg
                   :src="post.image"
                   :alt="post.title"
                   class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                  format="webp"
+                  sizes="sm:100vw md:33vw"
                 />
                 <div class="absolute inset-0 bg-gradient-to-t from-base-200/80 to-transparent md:bg-gradient-to-r"></div>
               </div>

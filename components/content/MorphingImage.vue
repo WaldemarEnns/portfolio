@@ -1,11 +1,12 @@
 <template>
   <div class="morphing-image-container">
-    <img 
-      :src="src" 
-      :alt="alt" 
+    <NuxtImg
+      :src="src"
+      :alt="alt"
       :width="width"
       :height="height"
       loading="lazy"
+      format="webp"
       class="morphing-image"
     />
   </div>
