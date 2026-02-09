@@ -1,7 +1,5 @@
 <script setup lang="ts">
-const { t } = useI18n({
-  useScope: 'local'
-})
+const { t } = useI18n()
 
 const turnstileToken = ref('')
 
@@ -47,9 +45,9 @@ const onSubmit = async () => {
         <!-- Header -->
         <div class="text-center mb-12">
           <h2 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-            {{ $t('contact.title') }}
+            {{ t('contact.title') }}
           </h2>
-          <p class="text-xl text-base-content/70">{{ $t('contact.text') }}</p>
+          <p class="text-xl text-base-content/70">{{ t('contact.text') }}</p>
         </div>
 
         <!-- Form Container -->
@@ -70,7 +68,7 @@ const onSubmit = async () => {
                 class="alert alert-error mb-6"
               >
                 <font-awesome-icon icon="fa-solid fa-exclamation-triangle"></font-awesome-icon>
-                <span>{{ $t('contact.mail.error') }}</span>
+                <span>{{ t('contact.mail.error') }}</span>
               </div>
             </Transition>
             
@@ -88,7 +86,7 @@ const onSubmit = async () => {
                 class="alert alert-success mb-6"
               >
                 <font-awesome-icon icon="fa-solid fa-check"></font-awesome-icon>
-                <span>{{ $t('contact.mail.success') }}</span>
+                <span>{{ t('contact.mail.success') }}</span>
               </div>
             </Transition>
 
@@ -121,7 +119,7 @@ const onSubmit = async () => {
                 >
                   <span class="relative z-10 flex items-center gap-2">
                     <span v-if="pending" class="loading loading-spinner loading-sm"></span>
-                    <span v-else>{{ $t('cta.send_message') }}</span>
+                    <span v-else>{{ t('cta.send_message') }}</span>
                     <font-awesome-icon 
                       v-if="!pending" 
                       icon="fa-solid fa-paper-plane" 
@@ -168,17 +166,3 @@ const onSubmit = async () => {
     </div>
   </section>
 </template>
-
-<i18n lang="json">
-  {
-    "de": {
-      "other_ways_to_connect": "Oder verbinde dich über soziale Medien"
-    },
-    "en": {
-      "other_ways_to_connect": "Or connect via social media"
-    },
-    "es": {
-      "other_ways_to_connect": "O conéctate a través de redes sociales"
-    }
-  }
-</i18n>
