@@ -13,6 +13,11 @@ const isHomePage = computed(() => {
   return routeName.includes('home') || routeName === 'index'
 })
 
+const isServices = computed(() => {
+  const routeName = currentRoute.value.name?.toString() || ''
+  return routeName.includes('services')
+})
+
 const mobileMenuOpen = ref(false)
 
 function scrollToContact () {
@@ -65,10 +70,15 @@ function closeMobileMenu () {
     </div>
     
     <!-- Desktop Menu -->
-    <div v-if="!isBlog && isHomePage" class="navbar-center hidden lg:flex">
+    <div v-if="!isBlog && (isHomePage || isServices)" class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1">
-        <li><a @click="scrollToAbout" href="#about">{{ $t('navbar.links.about_me') }}</a></li>
-        <li><a @click="scrollToWorkshops" href="#workshops">{{ $t('navbar.links.workshops') }}</a></li>
+        <li v-if="isHomePage"><a @click="scrollToAbout" href="#about">{{ $t('navbar.links.about_me') }}</a></li>
+        <li v-if="isHomePage"><a @click="scrollToWorkshops" href="#workshops">{{ $t('navbar.links.workshops') }}</a></li>
+        <li>
+          <NuxtLink :to="localePath('/services/ai')">
+            {{ $t('navbar.links.services') || 'AI Services' }}
+          </NuxtLink>
+        </li>
         <li>
           <NuxtLink :to="localePath('/posts')">
             {{ $t('navbar.links.blog') || 'Blog' }}
@@ -78,6 +88,11 @@ function closeMobileMenu () {
     </div>
     <div v-if="isBlog" class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1">
+        <li>
+          <NuxtLink :to="localePath('/services/ai')">
+            {{ $t('navbar.links.services') || 'AI Services' }}
+          </NuxtLink>
+        </li>
         <li>
           <NuxtLink :to="localePath('/posts')" class="gap-2">
             <font-awesome-icon icon="fa-solid fa-book-open" class="w-5 text-center"></font-awesome-icon>
@@ -130,17 +145,23 @@ function closeMobileMenu () {
     >
       <ul class="menu menu-lg p-4">
         <li class="menu-title">Navigation</li>
-        <li v-if="!isBlog && isHomePage">
+        <li v-if="!isBlog && (isHomePage || isServices)">
           <a @click="scrollToAbout" href="#about" class="gap-2">
             <font-awesome-icon icon="fa-solid fa-user" class="w-5 text-center"></font-awesome-icon>
             {{ $t('navbar.links.about_me') }}
           </a>
         </li>
-        <li v-if="!isBlog && isHomePage">
+        <li v-if="!isBlog && (isHomePage || isServices)">
           <a @click="scrollToWorkshops" href="#workshops" class="gap-2">
             <font-awesome-icon icon="fa-solid fa-chalkboard-user" class="w-5 text-center"></font-awesome-icon>
             {{ $t('navbar.links.workshops') }}
           </a>
+        </li>
+        <li>
+          <NuxtLink :to="localePath('/services/ai')" @click="closeMobileMenu" class="gap-2">
+            <font-awesome-icon icon="fa-solid fa-sparkles" class="w-5 text-center"></font-awesome-icon>
+            {{ $t('navbar.links.services') || 'AI Services' }}
+          </NuxtLink>
         </li>
         <li>
           <NuxtLink :to="localePath('/posts')" @click="closeMobileMenu" class="gap-2">
@@ -148,7 +169,7 @@ function closeMobileMenu () {
             {{ $t('navbar.links.blog') || 'Blog' }}
           </NuxtLink>
         </li>
-        <li v-if="!isBlog && isHomePage">
+        <li v-if="!isBlog && (isHomePage || isServices)">
           <a @click="scrollToContact" href="#contact" class="gap-2">
             <font-awesome-icon icon="fa-solid fa-envelope" class="w-5 text-center"></font-awesome-icon>
             {{ $t('cta.get_in_touch') }}
