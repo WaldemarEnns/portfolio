@@ -159,7 +159,7 @@ function closeMobileMenu () {
         </li>
         <li>
           <NuxtLink :to="localePath('/services/ai')" @click="closeMobileMenu" class="gap-2">
-            <font-awesome-icon icon="fa-solid fa-sparkles" class="w-5 text-center"></font-awesome-icon>
+            <font-awesome-icon icon="fa-solid fa-wand-magic-sparkles" class="w-5 text-center"></font-awesome-icon>
             {{ $t('navbar.links.services') || 'AI Services' }}
           </NuxtLink>
         </li>
