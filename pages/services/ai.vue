@@ -177,7 +177,7 @@ function scrollToContact() {
         <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 md:col-span-2 lg:col-span-1">
           <div class="card-body p-6 lg:p-8">
             <div class="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center mb-6">
-              <font-awesome-icon icon="fa-solid fa-network-wired" class="text-2xl text-accent"></font-awesome-icon>
+              <font-awesome-icon icon="fa-solid fa-gears" class="text-2xl text-accent"></font-awesome-icon>
             </div>
             
             <h3 class="card-title text-xl lg:text-2xl mb-4">

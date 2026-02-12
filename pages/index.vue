@@ -201,7 +201,7 @@ function scrollToWorkshops () {
       <div class="card bg-base-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
         <div class="card-body text-center p-6">
           <div class="w-14 h-14 mx-auto mb-4 rounded-2xl bg-accent/10 flex items-center justify-center">
-            <font-awesome-icon icon="fa-solid fa-network-wired" class="text-2xl text-accent"></font-awesome-icon>
+            <font-awesome-icon icon="fa-solid fa-gears" class="text-2xl text-accent"></font-awesome-icon>
           </div>
           <h3 class="font-bold text-lg mb-2">{{ t('home.workshops.teaser_automation_title') }}</h3>
           <p class="text-base-content/70 text-sm">{{ t('home.workshops.teaser_automation_desc') }}</p>
