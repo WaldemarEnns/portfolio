@@ -264,14 +264,6 @@
   font-weight: 600;
 }
 
-/* Make @nuxt modules brighter and more prominent */
-.prose pre.shiki .token.string:contains("@nuxt"),
-.prose pre.shiki span[class*="string"]:contains("@nuxt") {
-  color: hsl(var(--sf)) !important;
-  font-weight: 600;
-  filter: brightness(1.3);
-}
-
 /* Alternative approach - target strings with @ symbol */
 .prose pre.shiki .token.string[style*="@nuxt"],
 .prose pre.shiki span[class*="string"][style*="@nuxt"] {
