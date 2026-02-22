@@ -7,6 +7,11 @@ definePageMeta({
   description: 'meta.descriptions.home'
 })
 
+defineOgImage('Default', {
+  title: 'Waldemar Enns',
+  description: t('home.hero.headline')
+})
+
 function scrollToContact () {
   document.querySelector('#contact')!.scrollIntoView({
     behavior: 'smooth'

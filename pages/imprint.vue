@@ -1,8 +1,15 @@
 <script setup lang="ts">
+const { t } = useI18n()
+
 definePageMeta({
   name: 'imprint',
   title: 'meta.titles.imprint',
   description: 'meta.descriptions.imprint'
+})
+
+defineOgImage('Default', {
+  title: t('meta.titles.imprint'),
+  description: t('meta.descriptions.imprint')
 })
 </script>
 

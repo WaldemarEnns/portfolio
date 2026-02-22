@@ -12,6 +12,11 @@ useSeoMeta({
   description: () => t('posts.description'),
 })
 
+defineOgImage('Default', {
+  title: t('posts.title'),
+  description: t('posts.description')
+})
+
 // Calculate reading time (approx 200 words per minute)
 function calculateReadingTime(content: any): number {
   const wordsPerMinute = 200
