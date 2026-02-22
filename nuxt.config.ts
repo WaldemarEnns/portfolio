@@ -49,7 +49,8 @@ export default defineNuxtConfig({
     '@nuxtjs/turnstile',
     '@nuxt/scripts',
     '@nuxt/image',
-    '@nuxt/fonts'
+    '@nuxt/fonts',
+    'nuxt-og-image'
   ],
 
   fonts: {

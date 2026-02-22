@@ -68,11 +68,19 @@ useSeoMeta({
   description: post.value?.description,
   ogTitle: post.value?.title,
   ogDescription: post.value?.description,
-  ogImage: post.value?.image,
   ogType: 'article',
   twitterCard: 'summary_large_image',
   articlePublishedTime: post.value?.date,
   articleTag: post.value?.tags,
+})
+
+// Set OG Image for blog post
+defineOgImage('BlogPost', {
+  title: post.value?.title || '',
+  description: post.value?.description || '',
+  date: formattedDate.value,
+  tags: post.value?.tags || [],
+  readingTime: readingTime.value
 })
 </script>
 

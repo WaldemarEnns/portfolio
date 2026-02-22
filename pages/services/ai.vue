@@ -12,6 +12,11 @@ useSeoMeta({
   description: t('services.ai.meta_description')
 })
 
+defineOgImage('Default', {
+  title: t('services.ai.hero_title'),
+  description: t('services.ai.hero_subtitle')
+})
+
 function scrollToContact() {
   document.querySelector('#contact')!.scrollIntoView({
     behavior: 'smooth'

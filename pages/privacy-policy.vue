@@ -1,8 +1,15 @@
 <script setup lang="ts">
+const { t } = useI18n()
+
 definePageMeta({
   name: 'privacy-policy',
   title: 'meta.titles.privacy',
   description: 'meta.descriptions.privacy'
+})
+
+defineOgImage('Default', {
+  title: t('meta.titles.privacy'),
+  description: t('meta.descriptions.privacy')
 })
 </script>
 
