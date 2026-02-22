@@ -36,6 +36,7 @@ import {
   faRightFromBracket,
   faRobot,
   faRocket,
+  faServer,
   faStar,
   faTerminal,
   faUser,
@@ -56,6 +57,7 @@ import {
   faGithub,
   faLaravel,
   faLinkedin,
+  faPython,
   faVuejs
 } from '@fortawesome/free-brands-svg-icons'
 
@@ -95,6 +97,7 @@ library.add(
   faRightFromBracket,
   faRobot,
   faRocket,
+  faServer,
   faStar,
   faTerminal,
   faUser,
@@ -115,6 +118,7 @@ library.add(
   faGithub,
   faLaravel,
   faLinkedin,
+  faPython,
   faVuejs
 )
 
