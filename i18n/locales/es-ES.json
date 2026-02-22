@@ -137,6 +137,18 @@
       "consultancy_text_1": "Ofrezco asesoramiento sólido y planificación estratégica para tus proyectos de desarrollo web.",
       "consultancy_text_2": "Con mi experiencia en desarrollo frontend y backend y gestión de equipos, puedo ayudarte a tomar las decisiones tecnológicas correctas e implementar tus proyectos de manera eficiente."
     },
+    "tech_stack": {
+      "title": "Mi Stack Tecnológico",
+      "subtitle": "Las tecnologías con las que trabajo diariamente para entregar soluciones de alta calidad."
+    },
+    "services_overview": {
+      "ai_title": "Servicios de IA",
+      "ai_desc": "Bots de IA, talleres y automatizaciones para desarrolladores y empresas.",
+      "frontend_desc": "Aplicaciones web modernas con Vue, Nuxt y TypeScript.",
+      "saas_desc": "Plataformas SaaS escalables con Laravel y NestJS.",
+      "consulting_desc": "Consultoría estratégica para decisiones técnicas.",
+      "learn_more": "Más información"
+    },
     "methods": {
       "title": "Cómo trabajo",
       "subtitle": "Un enfoque probado que garantiza el éxito de tu proyecto, a tiempo y dentro del presupuesto.",
@@ -241,6 +253,7 @@
     "links": {
       "about_me": "Por qué elegirme",
       "services": "Servicios",
+      "ai_services": "Servicios de IA",
       "workshops": "Workshops",
       "blog": "Blog"
     }

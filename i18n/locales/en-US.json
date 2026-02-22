@@ -136,6 +136,18 @@
       "consultancy_text_1": "I offer sound advice and strategic planning for your web development projects.",
       "consultancy_text_2": "With my experience in front-end and back-end development and team management, I can help you make the right technological decisions and implement your projects efficiently."
     },
+    "tech_stack": {
+      "title": "My Tech Stack",
+      "subtitle": "The technologies I work with daily to deliver high-quality solutions."
+    },
+    "services_overview": {
+      "ai_title": "AI Services",
+      "ai_desc": "AI bots, workshops, and automations for developers and businesses.",
+      "frontend_desc": "Modern web applications with Vue, Nuxt, and TypeScript.",
+      "saas_desc": "Scalable SaaS platforms with Laravel and NestJS.",
+      "consulting_desc": "Strategic consulting for technical decisions.",
+      "learn_more": "Learn more"
+    },
     "methods": {
       "title": "How I Work",
       "subtitle": "A proven approach that ensures your project succeeds, on time and on budget.",
@@ -240,6 +252,7 @@
     "links": {
       "about_me": "Why Choose Me",
       "services": "Services",
+      "ai_services": "AI Services",
       "workshops": "Workshops",
       "blog": "Blog"
     }
