@@ -1,6 +1,7 @@
 <script setup lang="ts">
-const { t, locale } = useI18n()
+const { t } = useI18n()
 const localePath = useLocalePath()
+const { scrollToContact } = useScrollTo()
 
 definePageMeta({
   name: 'ai-services',
@@ -16,12 +17,6 @@ defineOgImage('Default', {
   title: t('services.ai.hero_title'),
   description: t('services.ai.hero_subtitle')
 })
-
-function scrollToContact() {
-  document.querySelector('#contact')!.scrollIntoView({
-    behavior: 'smooth'
-  })
-}
 </script>
 
 <template>
