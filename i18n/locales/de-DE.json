@@ -137,6 +137,18 @@
       "consultancy_text_1": "Ich biete fundierte Beratung und strategische Planung für deine Webentwicklungsprojekte.",
       "consultancy_text_2": "Mit meiner Erfahrung in der Frontend- und Backend-Entwicklung sowie im Teammanagement helfe ich dir, die richtigen technologischen Entscheidungen zu treffen und deine Projekte effizient umzusetzen."
     },
+    "tech_stack": {
+      "title": "Mein Tech-Stack",
+      "subtitle": "Die Technologien, mit denen ich täglich arbeite, um hochwertige Lösungen zu liefern."
+    },
+    "services_overview": {
+      "ai_title": "KI-Dienstleistungen",
+      "ai_desc": "KI-Bots, Workshops und Automatisierungen für Entwickler und Unternehmen.",
+      "frontend_desc": "Moderne Web-Anwendungen mit Vue, Nuxt und TypeScript.",
+      "saas_desc": "Skalierbare SaaS-Plattformen mit Laravel und NestJS.",
+      "consulting_desc": "Strategische Beratung für technische Entscheidungen.",
+      "learn_more": "Mehr erfahren"
+    },
     "methods": {
       "title": "So arbeite ich",
       "subtitle": "Ein bewährter Ansatz, der den Erfolg deines Projekts sicherstellt - pünktlich und im Budget.",
@@ -241,6 +253,7 @@
     "links": {
       "about_me": "Warum mich wählen",
       "services": "Dienstleistungen",
+      "ai_services": "KI-Services",
       "workshops": "Workshops",
       "blog": "Blog"
     }
