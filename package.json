@@ -47,7 +47,7 @@
     "daisyui": "^5.5.16",
     "nuxt-og-image": "^6.0.0-beta.30",
     "postcss": "^8.4.41",
-    "satori": "^0.19.2",
+    "satori": "^0.25.0",
     "tailwind-merge": "^3.4.0",
     "tailwindcss": "^4.1.18",
     "tailwindcss-animate": "^1.0.7",
