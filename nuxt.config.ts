@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2024-04-03',
+  compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
 
   css: [
@@ -36,8 +36,6 @@ export default defineNuxtConfig({
       secretKey: process.env.NUXT_TURNSTILE_SECRET_KEY,
     },
   },
-
-  pages: true,
 
   modules: [
     '@nuxtjs/sitemap', // Must be before @nuxt/content for proper integration
@@ -85,24 +83,25 @@ export default defineNuxtConfig({
     locales: [{
       code: 'en',
       file: 'en-US.json',
-      iso: 'en-US',
+      language: 'en-US',
       name: 'English',
       flag: '🇺🇸'
     }, {
       code: 'de',
       file: 'de-DE.json',
-      iso: 'de-DE',
+      language: 'de-DE',
       name: 'Deutsch',
       flag: '🇩🇪'
     }, {
       code: 'es',
       file: 'es-ES.json',
-      iso: 'es-ES',
+      language: 'es-ES',
       name: 'Español',
       flag: '🇪🇸'
     }],
     lazy: true,
     defaultLocale: 'de',
+    langDir: 'locales',
   },
 
   site: {

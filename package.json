@@ -28,7 +28,7 @@
     "@vueuse/core": "^14.2.0",
     "better-sqlite3": "^12.4.1",
     "motion-v": "^1.7.2",
-    "nuxt": "3.19.3",
+    "nuxt": "^4.4.2",
     "postmark": "^4.0.7",
     "vee-validate": "^4.13.2",
     "vue": "latest",
