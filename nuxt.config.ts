@@ -38,6 +38,7 @@ export default defineNuxtConfig({
   },
 
   modules: [
+    'nuxt-security',
     '@nuxtjs/sitemap', // Must be before @nuxt/content for proper integration
     '@nuxtjs/robots',
     '@nuxt/content',
@@ -111,6 +112,84 @@ export default defineNuxtConfig({
 
   robots: {
     sitemap: '/sitemap_index.xml',
+  },
+
+  security: {
+    headers: {
+      contentSecurityPolicy: {
+        'default-src': ["'self'"],
+        'script-src': [
+          "'self'",
+          "'nonce-{{nonce}}'",
+          'https://plausible.io',
+          'https://challenges.cloudflare.com',
+        ],
+        'script-src-attr': [
+          "'unsafe-hashes'",
+          // @nuxt/image onerror handler: this.setAttribute('data-error', 1)
+          "'sha256-bwK6T5wZVTANitXbrTsel7kl/PyCjCd/Dq5Qoz3imjM='",
+        ],
+        'style-src': [
+          "'self'",
+          "'nonce-{{nonce}}'",
+          "'unsafe-hashes'",
+          // Vue v-show: style="" (empty) and style="display:none;"
+          "'sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU='",
+          "'sha256-0EZqoz+oBhx7gF4nvY2bSqoGyy4zLjNF+SDQXGp/ZrY='",
+          // Vue runtime-dom inline <style> injection
+          "'sha256-WkCqVJ6FRErYJESB6IfF3p/817TwoS1efId687pMqsk='",
+          'https://fonts.googleapis.com',
+        ],
+        'font-src': [
+          "'self'",
+          'https://fonts.gstatic.com',
+          'data:',
+        ],
+        'img-src': [
+          "'self'",
+          'data:',
+          'blob:',
+        ],
+        'connect-src': [
+          "'self'",
+          'https://plausible.io',
+          'https://challenges.cloudflare.com',
+        ],
+        'frame-src': [
+          'https://challenges.cloudflare.com',
+        ],
+        'object-src': ["'none'"],
+        'base-uri': ["'self'"],
+        'form-action': ["'self'"],
+        'frame-ancestors': ["'none'"],
+        'upgrade-insecure-requests': true,
+      },
+      crossOriginEmbedderPolicy: false,
+      xFrameOptions: 'DENY',
+      xContentTypeOptions: 'nosniff',
+      referrerPolicy: 'strict-origin-when-cross-origin',
+      xXSSProtection: '0',
+      permissionsPolicy: {
+        camera: [],
+        microphone: [],
+        geolocation: [],
+      },
+    },
+    rateLimiter: {
+      tokensPerInterval: 10,
+      interval: 'hour',
+      headers: true,
+      driver: { name: 'lruCache' },
+      throwError: true,
+    },
+    ssg: {
+      meta: true,
+      hashScripts: true,
+      hashStyles: false,
+      nitroHeaders: true,
+      exportToPresets: true,
+    },
+    sri: false,
   },
 
   content: {
