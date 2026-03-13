@@ -190,6 +190,8 @@ export default defineNuxtConfig({
       exportToPresets: true,
     },
     sri: false,
+    // Turnstile already provides CSRF-equivalent protection on the contact form
+    csrf: false,
   },
 
   content: {
