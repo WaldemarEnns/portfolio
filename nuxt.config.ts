@@ -190,8 +190,9 @@ export default defineNuxtConfig({
       exportToPresets: true,
     },
     sri: false,
-    // Turnstile already provides CSRF-equivalent protection on the contact form
-    csrf: false,
+    // xssValidator blocks POST bodies with HTML chars (e.g. < > in messages)
+    // Turnstile handles abuse; message content goes to Postmark as plain text
+    xssValidator: false,
   },
 
   content: {
