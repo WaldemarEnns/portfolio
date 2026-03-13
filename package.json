@@ -52,5 +52,12 @@
     "tailwindcss": "^4.1.18",
     "tailwindcss-animate": "^1.0.7",
     "vitest": "^4.0.18"
+  },
+  "overrides": {
+    "fast-xml-parser": ">=5.3.8",
+    "serialize-javascript": ">=7.0.3",
+    "node-forge": ">=1.3.2",
+    "js-yaml": ">=4.1.1",
+    "minimatch": ">=9.0.7"
   }
 }
