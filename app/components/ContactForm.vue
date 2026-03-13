@@ -38,7 +38,7 @@ const emit = defineEmits<{
   'update:name': [value: string]
   'update:message': [value: string]
   'update:privacyPolicyAgreed': [value: boolean]
-  'submit': []
+  'submit': [turnstileToken: string]
   'focus': [field: string]
   'blur': []
 }>()
@@ -46,7 +46,7 @@ const emit = defineEmits<{
 const turnstileToken = ref('')
 
 const onSubmit = () => {
-  emit('submit')
+  emit('submit', turnstileToken.value)
 }
 
 const setFocus = (field: string) => {

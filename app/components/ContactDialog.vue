@@ -23,8 +23,6 @@ const {
   removeFocus,
 } = useContactMail()
 
-const turnstileToken = ref('')
-
 const openDialog = () => {
   isOpen.value = true
   resetStatus()
@@ -34,8 +32,8 @@ const closeDialog = () => {
   isOpen.value = false
 }
 
-const onSubmit = async () => {
-  await submit(turnstileToken.value)
+const onSubmit = async (turnstileToken: string) => {
+  await submit(turnstileToken)
   
   if (isSuccess.value) {
     // Reset form after successful submission

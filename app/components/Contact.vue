@@ -1,8 +1,6 @@
 <script setup lang="ts">
 const { t } = useI18n()
 
-const turnstileToken = ref('')
-
 const {
   email,
   name,
@@ -21,8 +19,8 @@ const {
   removeFocus,
 } = useContactMail()
 
-const onSubmit = async () => {
-  await submit(turnstileToken.value)
+const onSubmit = async (turnstileToken: string) => {
+  await submit(turnstileToken)
   
   if (isSuccess.value) {
     // Reset success message after 5 seconds
