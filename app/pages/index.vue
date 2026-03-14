@@ -138,6 +138,8 @@ defineOgImage('Default', {
     </div>
   </section>
 
+  <ProjectsSection />
+
   <section id="services" class="container m-auto py-16 px-4 bg-base-100">
     <div class="text-center mb-12">
       <h2 class="text-2xl md:text-3xl font-bold mb-4">{{ t('home.services.title') }}</h2>
