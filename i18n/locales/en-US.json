@@ -188,6 +188,12 @@
       "git_flow": "I work with a mix of Git Flow and GitHub Flow to ensure well-structured branches for both long-term and fast-paced development cycles. I make sure branches for features, fixes, and releases are clearly separated, avoiding common mistakes like working directly on the master branch, unclear commit messages, or skipping code reviews. Best practices like regular rebasing and the use of pull requests keep the codebase clean and traceable.",
       "testing": "Testing is a fundamental part of my work, which I never or rarely skip. Unit tests with TDD, component tests with Cypress for UI elements, or E2E tests to verify the core functionality of the software from A to Z ensure that the code is robust and maintainable from the start, reducing risks for future changes."
     },
+    "projects": {
+      "title": "My Projects",
+      "subtitle": "Selected projects from my work as a freelance developer.",
+      "view_project": "View Project",
+      "built_with": "Built with"
+    },
     "blog": {
       "blog_text": "Latest insights, tips, and updates from my work as a software developer – practical and up-to-date."
     }

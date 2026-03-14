@@ -4,6 +4,18 @@ import { asOgImageCollection } from 'nuxt-og-image/content'
 
 export default defineContentConfig({
   collections: {
+    projects: defineCollection({
+      type: 'data',
+      source: 'projects/*.md',
+      schema: z.object({
+        title: z.string(),
+        description: z.string(),
+        tags: z.array(z.string()),
+        url: z.string().optional(),
+        image: z.string().optional(),
+        featured: z.boolean().optional(),
+      })
+    }),
     blog: defineCollection(
       asSitemapCollection(
         asOgImageCollection({
